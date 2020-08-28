@@ -164,6 +164,12 @@ Python has the following data types built-in by default, in these categories:
 | Boolean Type | bool |
 | Binary Types |	bytes, bytearray, memoryview |
 
+```python
+x = 5
+print(type(x)) 
+```
+output:- <class 'int'>
+
 
 
 
