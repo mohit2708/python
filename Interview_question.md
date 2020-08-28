@@ -203,7 +203,7 @@ There are four collection data types in the Python programming language:
  * __Set__ is a collection which is unordered and unindexed. No duplicate members.
  * __Dictionary__ is a collection which is unordered, changeable and indexed. No duplicate members.
 
-##### List
+# List
 A list is a collection which is ordered and changeable. In Python lists are written with square brackets[], separated by commas.
 ```python
 my_list = ["apple", "banana", "cherry"]
@@ -235,7 +235,7 @@ cherry<br>
 ['cherry', 'orange', 'kiwi', 'melon', 'mango']<br>
 ['orange', 'kiwi', 'melon']
 
-__List Change Item Value__
+### List Change Item Value
 ```python
 thislist = ["apple", "banana", "cherry"]
 thislist[1] = "blackcurrant"
@@ -243,7 +243,7 @@ print(thislist)
 ```
 Output:- ['apple', 'blackcurrant', 'cherry']
 
-__List Add Items__
+### List Add Items
 ```python
 thislist = ["apple", "banana", "cherry"]
 thislist.append("orange")
@@ -257,7 +257,7 @@ print(thislist)
 ```
 Output:- ['apple', 'orange', 'banana', 'cherry']
 
-__List Remove Items__
+### List Remove Items
 ```python
 thislist = ["apple", "banana", "cherry"]
 thislist.remove("banana")
@@ -278,6 +278,33 @@ thislist.pop(1)
 print(thislist)
 ```
 Output:-['apple', 'cherry']
+
+* The __del__ keyword removes the specified index:
+```python
+thislist = ["apple", "banana", "cherry"]
+del thislist[0]
+print(thislist)
+```
+Output:- ['banana', 'cherry']
+
+* The del keyword can also delete the list completely:
+```python
+thislist = ["apple", "banana", "cherry"]
+del thislist
+print(thislist)
+```
+
+* The __clear()__ method empties the list: 
+```python
+thislist = ["apple", "banana", "cherry"]
+thislist.clear()
+print(thislist)
+```
+Output:- []
+
+
+
+
 
 
 
