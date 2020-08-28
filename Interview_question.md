@@ -302,6 +302,65 @@ print(thislist)
 ```
 Output:- []
 
+### Copy a List
+* Make a copy of a list with the __copy()__ method:
+```python
+thislist = ["apple", "banana", "cherry"]
+mylist = thislist.copy()
+print(mylist)
+```
+Output:- ['apple', 'banana', 'cherry']
+
+* Make a copy of a list with the __list()__ method:
+```python
+thislist = ["apple", "banana", "cherry"]
+mylist = list(thislist)
+print(mylist)
+```
+Output:- ['apple', 'banana', 'cherry']
+
+### Join Two Lists
+* One of the easiest ways are by using the + operator.
+```python
+list1 = ["a", "b" , "c"]
+list2 = [1, 2, 3]
+list3 = list1 + list2
+print(list3)
+```
+Output:- ['a', 'b', 'c', 1, 2, 3]
+
+* Another way to join two lists are by appending all the items from list2 into list1, one by one:
+```python
+list1 = ["a", "b" , "c"]
+list2 = [1, 2, 3]
+
+for x in list2:
+  list1.append(x)
+
+print(list1)
+```
+Output:- ['a', 'b', 'c', 1, 2, 3]
+
+* Use the __extend()__ method to add list2 at the end of list1:
+```python
+list1 = ["a", "b" , "c"]
+list2 = [1, 2, 3]
+list3 = [1, 1, 3]
+list1.extend(list2)
+list1.extend(list3)
+print(list1)
+```
+Output:-
+['a', 'b', 'c', 1, 2, 3, 1, 2, 3]
+
+### list() Constructor
+It is also possible to use the __list()__ constructor to make a new list.
+```python
+thislist = list(("apple", "banana", "cherry"))
+print(thislist)
+```
+output:- ['apple', 'banana', 'cherry']
+
 
 
 
