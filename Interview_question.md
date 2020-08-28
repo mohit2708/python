@@ -375,7 +375,53 @@ output:- ['apple', 'banana', 'cherry']
 
 ### Object-Oriented Programming (OOP)
 __How to create a class__<br>
-To define a class in Python, you can use the class keyword, followed by the class name and a colon. Inside the class, an ____init____ method has to be defined with def. This is the initializer that you can later use to instantiate objects. It's similar to a constructor in Java. ____init____ must always be present! It takes one argument: self, which refers to the object itself. Inside the method, the pass keyword is used as of now, because Python expects you to type something there.
+To define a class in Python, you can use the class keyword, followed by the class name and a colon. Inside the class, an __init__ method has to be defined with def. This is the initializer that you can later use to instantiate objects. It's similar to a constructor in Java. __init__ must always be present! It takes one argument: self, which refers to the object itself. Inside the method, the pass keyword is used as of now, because Python expects you to type something there.<br>
+
+__Instantiating objects__<br>
+```python
+mohit = Person()
+print(mohit)
+```
+
+__Example__
+```python
+class Person:
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+
+p1 = Person("John", 36)
+
+print(p1.name)
+print(p1.age)
+```
+
+__Example__
+```python
+class Dog:
+
+    def __init__(self, name, age):  
+        self.name = name
+        self.age = age
+
+    def bark(self):
+        print("bark bark!")
+
+    def doginfo(self):
+        print(self.name + " is " + str(self.age) + " year(s) old.")
+        
+ozzy = Dog("Ozzy", 2)
+skippy = Dog("Skippy", 12)
+filou = Dog("Filou", 8)
+
+ozzy.bark()
+skippy.doginfo()
+filou.doginfo()
+```
+Output:-<br>bark bark!<br>
+Skippy is 12 year(s) old.<br>
+Filou is 8 year(s) old.<br>
+
 
 
 
