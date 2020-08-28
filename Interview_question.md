@@ -170,8 +170,92 @@ print(type(x))
 ```
 output:- <class 'int'>
 
+### Ques. Python Strings?
+##### String Literals
+'hello' is the same as "hello".
+
+##### Assign String to a Variable
+```python
+a = "Hello"
+print(a)
+```
+Output:- Hello
+
+##### Multiline Strings
+You can assign a multiline string to a variable by using three quotes:
+```python
+a = """Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua."""
+print(a)
+```
+Output:-<br>
+Lorem ipsum dolor sit amet,<br>
+consectetur adipiscing elit,<br>
+sed do eiusmod tempor incididunt<br>
+ut labore et dolore magna aliqua.<br>
+
+### Python Collections (Arrays)?
+There are four collection data types in the Python programming language:
+ * __List__ is a collection which is ordered and changeable. Allows duplicate members.
+ * __Tuple__ is a collection which is ordered and unchangeable. Allows duplicate members.
+ * __Set__ is a collection which is unordered and unindexed. No duplicate members.
+ * __Dictionary__ is a collection which is unordered, changeable and indexed. No duplicate members.
+
+##### List
+A list is a collection which is ordered and changeable. In Python lists are written with square brackets[], separated by commas.
+```python
+my_list = ["apple", "banana", "cherry"]
+my_list = [1, "Hello", 3.4]
+my_list = ["mouse", [8, 4, 6], ['a']] #A list can also have another list as an item. This is called a nested list.
+print(my_list)
+```
+output:-<br>
+["apple", "banana", "cherry"]
+[1, "Hello", 3.4]
+["mouse", [8, 4, 6], ['a']]
 
 
+```python
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(thislist[1])
+print(thislist[2:5])
+print(thislist[:4])
+print(thislist[2:])
+print(thislist[-1])
+print(thislist[-4:-1])
+print(thislist[-4:-1])
+```
+Output:- <br>
+banana<br>
+['cherry', 'orange', 'kiwi']<br>
+['apple', 'banana', 'cherry', 'orange']<br>
+cherry<br>
+['cherry', 'orange', 'kiwi', 'melon', 'mango']<br>
+['orange', 'kiwi', 'melon']
+
+__List Change Item Value__
+```python
+thislist = ["apple", "banana", "cherry"]
+thislist[1] = "blackcurrant"
+print(thislist)
+```
+Output:- ['apple', 'blackcurrant', 'cherry']
+
+__List Add Items__
+```python
+thislist = ["apple", "banana", "cherry"]
+thislist.append("orange")
+print(thislist) 
+```
+Output:- ['apple', 'banana', 'cherry', 'orange']
+```python
+thislist = ["apple", "banana", "cherry"]
+thislist.insert(1, "orange")
+print(thislist)
+```
+Output:- ['apple', 'orange', 'banana', 'cherry']
 
 
 
