@@ -257,6 +257,27 @@ print(thislist)
 ```
 Output:- ['apple', 'orange', 'banana', 'cherry']
 
+__List Remove Items__
+```python
+thislist = ["apple", "banana", "cherry"]
+thislist.remove("banana")
+print(thislist)
+```
+Output:- ['apple', 'cherry']
+
+* The __pop()__ method removes the specified index, (or the last item if index is not specified):
+```python
+thislist = ["apple", "banana", "cherry"]
+thislist.pop()
+print(thislist)
+```
+Output:-['apple', 'banana']
+```python
+thislist = ["apple", "banana", "cherry"]
+thislist.pop(1)
+print(thislist)
+```
+Output:-['apple', 'cherry']
 
 
 
