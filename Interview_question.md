@@ -235,7 +235,7 @@ cherry<br>
 ['cherry', 'orange', 'kiwi', 'melon', 'mango']<br>
 ['orange', 'kiwi', 'melon']
 
-### List Change Item Value
+### List Change/replace Item Value
 ```python
 thislist = ["apple", "banana", "cherry"]
 thislist[1] = "blackcurrant"
@@ -360,6 +360,17 @@ thislist = list(("apple", "banana", "cherry"))
 print(thislist)
 ```
 output:- ['apple', 'banana', 'cherry']
+
+
+### Ques. Difference between List and Tuples in Python?
+| List | Tuples |
+|:---:|:---:|
+|List is mutable.|Tuple is immutable.|
+|List iteration is slower and is time consuming.|Tuple iteration is faster.|
+|List is useful for insertion and deletion operations.|Tuple is useful for readonly operations like accessing elements.|
+|List consumes more memory.|Tuples consumes less memory.|
+|	List provides many in-built methods.|Tuples have less in-built methods.|
+|List operations are more error prone|Tuples operations are safe.|
 
 
 
