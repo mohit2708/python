@@ -14,6 +14,7 @@ Example
 ```python
 >>> import html
 >>> import html.parser
+import mysql.connector
 ```
 ye buil in packege hote hai<br>
 agar or karne hai to pip ki help sa karenge
