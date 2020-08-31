@@ -2,6 +2,7 @@
 
 * Open a Web browser and go to https://www.python.org/downloads/.
 * __To check if you have python installed__ open cmd and __python --version__
+* __Python path set:-__ C:\Users\Mohit Saxena\AppData\Local\Programs\Python\Python38-32
 
 ## In CMD
 ```php
