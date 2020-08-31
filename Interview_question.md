@@ -9,7 +9,15 @@
   * system scripting.
   
 ### Build-In Python Module
-https://docs.python.org/3/py-modindex.html
+https://docs.python.org/3/py-modindex.html<br>
+Example
+```python
+>>> import html
+>>> import html.parser
+```
+ye buil in packege hote hai<br>
+agar or karne hai to pip ki help sa karenge
+
 
 ### Ques. Python Comments?
 __single Line Comments__
