@@ -21,5 +21,5 @@ For exit python from cmd type __exit();__
   * and type __print("Hello, World!")__
 ###### For Run
   * go to the directery in cmd D:\python>
-  * D:\python>test.py
+  * D:\python>python test.py
   * Hello, World!
