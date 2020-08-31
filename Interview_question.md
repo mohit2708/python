@@ -1,5 +1,6 @@
 ### Ques. What are the key features of Python?
 * Python is a high-level, interpreted, interactive and object-oriented scripting language.
+* Python is an interpreter language. It means it executes the code line by line.
 * It was created by Guido van Rossum, and released in 1991.
 * It is used for:
   * web development (server-side),
@@ -7,7 +8,9 @@
   * mathematics,
   * system scripting.
   
-  
+### Build-In Python Module
+https://docs.python.org/3/py-modindex.html
+
 ### Ques. Python Comments?
 __single Line Comments__
 ```python
