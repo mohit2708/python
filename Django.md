@@ -90,6 +90,28 @@ def individual_post(request):
 
 ```
 
+## Template calling
+```python
+====setting.py=========
+ 'DIRS': ['templates'],
+ =======create template folder in root directiry where is managed file=====
+ =======and create file index.html ================
+ <h1>Hello</h1>
+ =====views.py=======
+from django.shortcuts import render
+from django.http import HttpResponse
+def individual_post(request):
+    return render(request, 'index.html')
+=======urls.py=======
+from django.contrib import admin
+from django.urls import path
+from .import views
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', views.individual_post, name='individual_post'),
+]
+```
+
 
 ## Check version
 
