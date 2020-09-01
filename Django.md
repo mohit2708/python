@@ -24,6 +24,10 @@ __Activating a virtual environment:-__
 ```python
 .\env\Scripts\activate
 ```
+```python
+C:\Users\mohits4\env\Scripts>activate    //envirment mai jane ke liye
+(env) C:\Users\mohits4\env\Scripts>      //envirment se bhar aane ke liye
+```
 You can confirm you’re in the virtual environment by checking the location of your Python interpreter, it should point to the env directory.
 ```python
 where python
