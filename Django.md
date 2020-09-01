@@ -48,6 +48,17 @@ cd projectName
 Python manage.py runserver
 ```
 
+### Envirment mai version check karna
+```python
+(env) C:\Users\mohits4>django-admin --version
+```
+
+### envirment mai django delete karna
+```python
+(env) C:\Users\mohits4>pip uninstall django
+```
+
+
 
 ## Check version
 
