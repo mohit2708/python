@@ -68,6 +68,28 @@ pass
 (env) C:\Users\mohits4\env\Scripts\testdjango>python manage.py createsuperuser
 ```
 
+### View calling
+```python
+=========urls.py======================
+from .import views
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', views.individual_post, name='individual_post'),
+]
+======create viesw.py file=============
+from django.shortcuts import render
+from django.http import HttpResponse
+
+def index(request):
+    return HttpResponse('Hello, welcome to the index page.')
+
+
+def individual_post(request):
+    return HttpResponse('Hi, this is where an individual post will be. mohit')
+
+```
+
 
 ## Check version
 
