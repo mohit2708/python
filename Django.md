@@ -58,6 +58,15 @@ Python manage.py runserver
 (env) C:\Users\mohits4>pip uninstall django
 ```
 
+## Create admin interface
+```python
+(env) C:\Users\mohits4\env\Scripts\testdjango>python manage.py migrate
+(env) C:\Users\mohits4\env\Scripts\testdjango>python manage.py createsuperuser
+user
+email
+pass
+(env) C:\Users\mohits4\env\Scripts\testdjango>python manage.py createsuperuser
+```
 
 
 ## Check version
