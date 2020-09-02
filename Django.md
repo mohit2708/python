@@ -15,7 +15,8 @@
 ```python
 d:\mohit> py -m venv virtual-name
 d:\mohit>cd virtual-name\Scripts\activate
-<virtual-name> d:\mohit>
+<virtual-name> d:\mohit> py -m pip install Django
+<virtual-name> d:\mohit> django-admin --version
 ```
 
 __Installing virtualenv:-__
@@ -72,6 +73,8 @@ user
 email
 pass
 (env) C:\Users\mohits4\env\Scripts\testdjango>python manage.py createsuperuser
+
+pip freeze > requirements.txt
 ```
 
 ### View calling
