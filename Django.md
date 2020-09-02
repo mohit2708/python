@@ -12,6 +12,12 @@
 * Uninstall Django :--> pip uninstall django
 
 ## Installing Creating a virtual environment
+```python
+d:\mohit> py -m venv virtual-name
+d:\mohit>cd virtual-name\Scripts\activate
+<virtual-name> d:\mohit>
+```
+
 __Installing virtualenv:-__
 ```python
 py -m pip install --user virtualenv
