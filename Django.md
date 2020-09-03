@@ -135,4 +135,16 @@ urlpatterns = [
 ```pyhon
 <virtual-name> d:\mohit\projectName> python manage.py startapp <app_name>
 ```
+```python
+====settings.py======
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'crud',
+]
+```
 
