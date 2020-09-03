@@ -75,9 +75,8 @@ Python manage.py runserver
 user
 email
 pass
-(env) C:\Users\mohits4\env\Scripts\testdjango>python manage.py createsuperuser
-
-pip freeze > requirements.txt
+(env) C:\Users\mohits4\env\Scripts\testdjango> python manage.py runserver
+(env) C:\Users\mohits4\env\Scripts\testdjango> pip freeze > requirements.txt
 ```
 
 ### View calling
@@ -146,5 +145,20 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'crud',
 ]
+====model.py=========
+from django.db import models
+# Create your models here.
+class crudst(models.Model):
+    stname = models.CharField(max_length = 200)
+    stemail = models.EmailField(max_length = 100)
+    staddress = models.CharField(max_length = 100)
+    stmobile = models.IntegerField()
+    stgender = models.CharField(max_length=10)
+    
+=====admin.py======
+from django.contrib import admin
+from crud.models import crudst
+# Register your models here.
+admin.site.register(crudst)     //app supar admin mai show hone ke liye
 ```
 
