@@ -163,5 +163,10 @@ from crud.models import crudst
 # Register your models here.
 admin.site.register(crudst)     //app supar admin mai show hone ke liye
 admin.site.register(crudst1)     //app supar admin mai show hone ke liye
+====and go to cmd //jha manage.py hota hai====
+D:\mohit\projectName> python manage.py makemigrations
+D:\mohit\projectName> python manage.py migrate
+
+
 ```
 
