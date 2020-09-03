@@ -130,3 +130,9 @@ urlpatterns = [
 * pip check --> pip --version
 * django check --> django-admin --version
 
+
+## create app
+```pyhon
+<virtual-name> d:\mohit\projectName> python manage.py startapp <app_name>
+```
+
