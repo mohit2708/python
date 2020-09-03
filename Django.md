@@ -14,12 +14,12 @@
 ## Installing Creating a virtual environment
 ```python
 d:\mohit> python -m venv virtual-name
-d:\mohit>cd virtual-name\Scripts\activate
-d:\mohit\virtual-name\Scripts> activate
-<virtual-name> d:\mohit> pip install django
-<virtual-name> d:\mohit> django-admin --version
-<virtual-name> d:\mohit> django-admin startproject projectName
-<virtual-name> d:\mohit\projectName> python manage.py runserver
+d:\mohit>cd virtual-name\Scripts
+d:\mohit\virtual-name\Scripts> activate             // env activate
+<virtual-name> d:\mohit> pip install django         // install django
+<virtual-name> d:\mohit> django-admin --version     // to check django version
+<virtual-name> d:\mohit> django-admin startproject projectName  //project create
+<virtual-name> d:\mohit\projectName> python manage.py runserver // run server
 ```
 
 __Installing virtualenv:-__
