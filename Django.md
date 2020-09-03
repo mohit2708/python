@@ -158,7 +158,10 @@ class crudst(models.Model):
 =====admin.py======
 from django.contrib import admin
 from crud.models import crudst
+#from .models import crudst, crudst1 //aise bhi likh sakte hai
+
 # Register your models here.
 admin.site.register(crudst)     //app supar admin mai show hone ke liye
+admin.site.register(crudst1)     //app supar admin mai show hone ke liye
 ```
 
