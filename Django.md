@@ -7,9 +7,6 @@
 * Install Python https://www.python.org/downloads/
 * python check version --> python --version/py -V
 * Check pip version --> pip --version
-* Installing Django Open cmd --> pip install django
-* django check version --> python -m django --version/django-admin --version
-* Uninstall Django :--> pip uninstall django
 
 ## Installing Creating a virtual environment
 ```python
@@ -17,6 +14,7 @@ d:\mohit> python -m venv virtual-name
 d:\mohit>cd virtual-name\Scripts
 d:\mohit\virtual-name\Scripts> activate             // env activate
 <virtual-name> d:\mohit> pip install django         // install django
+<virtual-name> d:\mohit> pip uninstall django         // agar uninstall django
 <virtual-name> d:\mohit> django-admin --version     // to check django version
 <virtual-name> d:\mohit> django-admin startproject projectName  //project create
 <virtual-name> d:\mohit\projectName> python manage.py runserver // run server
