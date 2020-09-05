@@ -50,6 +50,50 @@ urlpatterns = [
 ]
 ```
 
+### View calling
+```python
+=========urls.py======================
+from .import views
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', views.individual_post, name='individual_post'),
+]
+======create viesw.py file=============
+from django.shortcuts import render
+from django.http import HttpResponse
+
+def index(request):
+    return HttpResponse('Hello, welcome to the index page.')
+
+
+def individual_post(request):
+    return HttpResponse('Hi, this is where an individual post will be. mohit')
+
+```
+
+## view calling using template
+```python
+====setting.py=========
+ 'DIRS': ['templates'],
+ =======create template folder in root directiry where is managed file=====
+ =======and create file index.html ================
+ <h1>Hello</h1>
+ =====views.py=======
+from django.shortcuts import render
+from django.http import HttpResponse
+def individual_post(request):
+    return render(request, 'index.html')
+=======urls.py=======
+from django.contrib import admin
+from django.urls import path
+from .import views
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', views.individual_post, name='individual_post'),
+]
+```
+
 __Installing virtualenv:-__
 ```python
 py -m pip install --user virtualenv
@@ -107,49 +151,7 @@ pass
 (env) C:\Users\mohits4\env\Scripts\testdjango> pip freeze > requirements.txt
 ```
 
-### View calling
-```python
-=========urls.py======================
-from .import views
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', views.individual_post, name='individual_post'),
-]
-======create viesw.py file=============
-from django.shortcuts import render
-from django.http import HttpResponse
-
-def index(request):
-    return HttpResponse('Hello, welcome to the index page.')
-
-
-def individual_post(request):
-    return HttpResponse('Hi, this is where an individual post will be. mohit')
-
-```
-
-## Template calling
-```python
-====setting.py=========
- 'DIRS': ['templates'],
- =======create template folder in root directiry where is managed file=====
- =======and create file index.html ================
- <h1>Hello</h1>
- =====views.py=======
-from django.shortcuts import render
-from django.http import HttpResponse
-def individual_post(request):
-    return render(request, 'index.html')
-=======urls.py=======
-from django.contrib import admin
-from django.urls import path
-from .import views
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', views.individual_post, name='individual_post'),
-]
-```
 
 
 ## create app
