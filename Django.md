@@ -96,6 +96,27 @@ urlpatterns = [
 ]
 ```
 
+## add 2 value
+```python
+=====urls.py==========
+path('add/', views.add1, name='addvalue'),
+======koi html file=================
+<form action="{% url 'addvalue' %}">
+	<input type="text" name="num1">
+	<input type="text" name="num2">
+	<input type="submit">
+</form>
+======result.html file=====
+results : {{result}}
+==========views.py===========
+def add1(request):
+    val1 = int(request.GET["num1"])
+    val2 = int(request.GET["num2"])
+    res = val1 + val2
+    return render(request, "result.html", {'result':res})
+```
+
+
 __Installing virtualenv:-__
 ```python
 py -m pip install --user virtualenv
