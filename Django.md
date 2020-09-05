@@ -79,11 +79,13 @@ def individual_post(request):
  =======create template folder in root directiry where is managed file=====
  =======and create file index.html ================
  <h1>Hello</h1>
+ <h1>Hello {{name}}</h1>
  =====views.py=======
 from django.shortcuts import render
 from django.http import HttpResponse
 def individual_post(request):
     return render(request, 'index.html')
+    return render(request,"signup.html", {'name':'mohit'})
 =======urls.py=======
 from django.contrib import admin
 from django.urls import path
