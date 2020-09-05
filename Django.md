@@ -23,6 +23,16 @@ d:\mohit\virtual-name\Scripts> activate             // env activate
 ## create app
 ```pyhon
 <virtual-name> d:\mohit\projectName> python manage.py startapp <app_name>
+====settings.py======
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    '<app_name>',
+]
 ```
 
 ## Url Seeting
@@ -178,20 +188,7 @@ pass
 
 
 ## create app
-```pyhon
-<virtual-name> d:\mohit\projectName> python manage.py startapp <app_name>
-```
 ```python
-====settings.py======
-INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'crud',
-]
 ====model.py=========
 from django.db import models
 # Create your models here.
