@@ -14,10 +14,40 @@ d:\mohit> python -m venv virtual-name
 d:\mohit>cd virtual-name\Scripts
 d:\mohit\virtual-name\Scripts> activate             // env activate
 <virtual-name> d:\mohit> pip install django         // install django
-<virtual-name> d:\mohit> pip uninstall django         // agar uninstall django
+<virtual-name> d:\mohit> pip uninstall django         // uninstall django
 <virtual-name> d:\mohit> django-admin --version     // to check django version
 <virtual-name> d:\mohit> django-admin startproject projectName  //project create
 <virtual-name> d:\mohit\projectName> python manage.py runserver // run server
+```
+
+## create app
+```pyhon
+<virtual-name> d:\mohit\projectName> python manage.py startapp <app_name>
+```
+
+## Url Seeting
+```python
+========Main urls.py=========
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('', include('crud.urls')),
+    path('admin/', admin.site.urls),    
+]
+==========urls.py file create in your app===============
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('signup/', views.signup),
+    path('login/', views.login),
+    path('', views.individual_post),
+    path('create', views.stinsert, name='create1'),
+    path('edit/<int:id>', views.edit),  
+    path('update/<int:id>', views.update, name='update'),
+    path('delete/<int:id>', views.delete_st), 
+]
 ```
 
 __Installing virtualenv:-__
@@ -120,12 +150,6 @@ urlpatterns = [
     path('', views.individual_post, name='individual_post'),
 ]
 ```
-
-
-## Check version
-
-* pip check --> pip --version
-* django check --> django-admin --version
 
 
 ## create app
