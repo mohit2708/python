@@ -124,6 +124,19 @@ def add1(request):
     val2 = int(request.GET["num2"])
     res = val1 + val2
     return render(request, "result.html", {'result':res})
+============jab method post ho to===========================
+<form method="post" action="{% url 'addvalue' %}">
+	{% csrf_token %}
+	<input type="text" name="num1">
+	<input type="text" name="num2">
+	<input type="submit">
+</form>
+===views.py=====
+def add1(request):
+    val1 = int(request.POST["num1"])
+    val2 = int(request.POST["num2"])
+    res = val1 + val2
+    return render(request, "result.html", {'result':res})
 ```
 
 
