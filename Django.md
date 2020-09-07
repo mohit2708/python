@@ -140,6 +140,23 @@ def add1(request):
     return render(request, "result.html", {'result':res})
 ```
 
+## Create Model
+
+```python
+from django.db import models
+# Create your models here.
+class crudst(models.Model):
+    stname = models.CharField(max_length = 200)
+    stemail = models.EmailField(max_length = 100)
+    staddress = models.CharField(max_length = 100)
+    stmobile = models.IntegerField()
+    stgender = models.CharField(max_length=10)
+    
+=========after these command run===========
+
+```
+
+
 
 __Installing virtualenv:-__
 ```python
