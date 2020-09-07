@@ -146,14 +146,18 @@ def add1(request):
 from django.db import models
 # Create your models here.
 class crudst(models.Model):
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    
     stname = models.CharField(max_length = 200)
     stemail = models.EmailField(max_length = 100)
     staddress = models.CharField(max_length = 100)
     stmobile = models.IntegerField()
     stgender = models.CharField(max_length=10)
     
-=========after these command run===========
-
+====and go to cmd //jha manage.py hota hai====
+D:\mohit\projectName> python manage.py makemigrations
+D:\mohit\projectName> python manage.py migrate
 ```
 
 
