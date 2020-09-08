@@ -385,6 +385,20 @@ output:- ['apple', 'banana', 'cherry']
 |List operations are more error prone|Tuples operations are safe.|
 
 
+### Dictionaries
+A dictionary is a collection which is unordered, changeable and indexed. In Python dictionaries are written with curly brackets, and they have keys and values.<br>
+Example:-
+```python
+thisdict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict)
+Output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
+```
+
+
 ### Object-Oriented Programming (OOP)
 __How to create a class__<br>
 To define a class in Python, you can use the class keyword, followed by the class name and a colon. Inside the class, an __init__ method has to be defined with def. This is the initializer that you can later use to instantiate objects. It's similar to a constructor in Java. __init__ must always be present! It takes one argument: self, which refers to the object itself. Inside the method, the pass keyword is used as of now, because Python expects you to type something there.<br>
