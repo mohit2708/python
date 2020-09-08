@@ -396,6 +396,37 @@ thisdict =	{
 }
 print(thisdict)
 Output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
+=========Accessing Items Type 1========
+thisdict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = thisdict["model"]
+x = thisdict.get("model") // Accessing Items Type 1
+print(x)
+Output:- Mustang
+==========Change Values============
+thisdict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict["year"] = 2018
+print(thisdict)
+Output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 2018}
+==========Loop Through a Dictionary=============
+thisdict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+for x in thisdict:
+print(x)
+Output:- 
+brand
+model
+year
 ```
 
 
