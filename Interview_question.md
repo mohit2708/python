@@ -415,7 +415,7 @@ thisdict =	{
 thisdict["year"] = 2018
 print(thisdict)
 Output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 2018}
-==========Loop Through a Dictionary=============
+==========Loop Through a Dictionary Type 1=============
 thisdict =	{
   "brand": "Ford",
   "model": "Mustang",
@@ -427,7 +427,63 @@ Output:-
 brand
 model
 year
+==========Loop Through a Dictionary Type 2=============
+thisdict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+for x in thisdict:
+print(thisdict[x])
+Output:- 
+Ford
+Mustang
+1964
+==========Loop Through a Dictionary Type 3=============
+thisdict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+for x in thisdict.values():
+print(x)
+Output:- 
+Ford
+Mustang
+1964
+==========Loop Through a Dictionary Type 4=============
+thisdict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+for x, y in thisdict.items():
+print(x, y)
+Output:- 
+brand Ford
+model Mustang
+year 1964
+===========Check if Key Exists===========
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+if "model" in thisdict:
+print("Yes, 'model' is one of the keys in the thisdict dictionary")
+Output:-
+Yes, 'model' is one of the keys in the thisdict dictionary
+=====Dictionary Length==========
+thisdict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(len(thisdict))
+Output:- 3
 ```
+
+
 
 
 ### Object-Oriented Programming (OOP)
