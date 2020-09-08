@@ -492,7 +492,7 @@ print(thisdict)
 Output:-
 {'brand': 'Ford', 'model': 'Mustang', 'year': 1964, 'color': 'red'}
 ========Removing Items=============
-The pop() method removes the item with the specified key name
+*** The pop() method removes the item with the specified key name
 thisdict =	{
   "brand": "Ford",
   "model": "Mustang",
@@ -502,13 +502,13 @@ thisdict.pop("model")
 print(thisdict)
 Output:- {'brand': 'Ford', 'year': 1964}
 
-The popitem() method removes the last inserted item (in versions before 3.7, a random item is removed instead):
+*** The popitem() method removes the last inserted item (in versions before 3.7, a random item is removed instead):
 
 thisdict.popitem()
 print(thisdict)
 Output:- {'brand': 'Ford', 'model': 'Mustang'}
 
-The del keyword removes the item with the specified key name:
+*** The del keyword removes the item with the specified key name:
 thisdict =	{
   "brand": "Ford",
   "model": "Mustang",
@@ -519,7 +519,7 @@ print(thisdict)
 Output:- {'brand': 'Ford', 'year': 1964}
 
 
-The del keyword can also delete the dictionary completely:
+*** The del keyword can also delete the dictionary completely:
 thisdict =	{
   "brand": "Ford",
   "model": "Mustang",
@@ -543,6 +543,21 @@ thisdict =	{
 thisdict.clear()
 print(thisdict)
 Output:- {}
+===========Copy a Dictionary===================
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+mydict = thisdict.copy()
+print(mydict)
+Output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
+
+*** Another way to make a copy is to use the built-in function dict()
+mydict = dict(thisdict)
+print(mydict)
+Output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
+
 
 
 
