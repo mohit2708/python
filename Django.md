@@ -162,6 +162,51 @@ D:\mohit\projectName> python manage.py makemigrations
 D:\mohit\projectName> python manage.py migrate
 ```
 
+## Registration
+```python
+=====model.py========
+from django.db import models
+# Create your models here.
+class Auth(models.Model):
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    username = models.CharField(max_length=100)
+    email = models.CharField(max_length=100)
+    password = models.CharField(max_length=20)
+    re_password = models.CharField(max_length=20)
+==========views.py========
+from django.shortcuts import render, redirect
+from django.http import HttpResponse
+from django.contrib import messages
+from django.contrib.auth.models import User, auth
+from auth_app.models import Auth
+
+def handalsighnup(request):    
+    try:
+        if request.method == 'POST':
+            fi_name= request.POST.get('f_name')            
+            last_name= request.POST['last_name']
+            username = request.POST.get('username')
+            email = request.POST.get('email')
+            password = request.POST.get('password')
+            confirm_password = request.POST.get('confirm_password')
+
+            Auth.objects.update_or_create(username=username, email=email, last_name=last_name, first_name=fi_name, password=password, re_password=confirm_password)            
+            return render(request, 'auth/signup.html')
+        else:
+            return render(request, 'auth/signup.html')
+    except Exception as e:
+        print("error:::", e)
+==urls.py====
+path('signup1', views.handalsighnup, name='signup'),
+=====signup.html=======
+<form method="post" action="/signup1">
+        {% csrf_token %}
+<div class="col"><input type="text" class="form-control" name="f_name" placeholder="First Name" required="required"></div>
+<div class="col"><input type="text" class="form-control" name="last_name" placeholder="Last Name" required="required"></div>
+<input class="btn btn-primary btn-lg" type="submit">
+```
+
 
 
 __Installing virtualenv:-__
