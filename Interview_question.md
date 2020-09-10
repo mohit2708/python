@@ -228,7 +228,7 @@ output:-<br>
 [1, "Hello", 3.4]
 ["mouse", [8, 4, 6], ['a']]
 
-
+##### Example of List
 ```python
 thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
 print(thislist[1])                //Access Item ke liye
@@ -247,35 +247,23 @@ cherry                                                  //Negative Indexing
 ['orange', 'kiwi', 'melon']                             //-4 sa -1 tak
 ```
 
-### List Change/replace Item Value
+##### Examples Of list
 ```python
 thislist = ["apple", "banana", "cherry"]
-thislist[1] = "blackcurrant"
-print(thislist)
-```
-Output:- ['apple', 'blackcurrant', 'cherry']
+thislist[1] = "blackcurrant"                          //List Change/replace Item Value
+thislist.append("orange")                             //List Add Items   
+thislist.insert(1, "orange")                          //add Items in partcular postion
+thislist.remove("banana")                             //Remove Items
+print(thislist)                                        
 
-### List Add Items
-```python
-thislist = ["apple", "banana", "cherry"]
-thislist.append("orange")
-print(thislist) 
+Output:- 
+['apple', 'blackcurrant', 'cherry']                    //List Change/replace Item Value
+['apple', 'banana', 'cherry', 'orange']                //List Add Items 
+['apple', 'orange', 'banana', 'cherry']                //add Items in partcular postion
+['apple', 'cherry']                                    //Remove Items
 ```
-Output:- ['apple', 'banana', 'cherry', 'orange']
-```python
-thislist = ["apple", "banana", "cherry"]
-thislist.insert(1, "orange")
-print(thislist)
-```
-Output:- ['apple', 'orange', 'banana', 'cherry']
 
-### List Remove Items
-```python
-thislist = ["apple", "banana", "cherry"]
-thislist.remove("banana")
-print(thislist)
-```
-Output:- ['apple', 'cherry']
+
 
 * The __pop()__ method removes the specified index, (or the last item if index is not specified):
 ```python
