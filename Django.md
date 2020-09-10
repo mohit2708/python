@@ -13,7 +13,7 @@
 d:\mohit> python -m venv virtual-name
 d:\mohit>cd virtual-name\Scripts
 d:\mohit\virtual-name\Scripts> activate             // env activate
-<virtual-name> d:\mohit> pip install django         // install django
+<virtual-name> d:\mohit> python -m pip install django         // install django
 <virtual-name> d:\mohit> pip uninstall django         // uninstall django
 <virtual-name> d:\mohit> django-admin --version     // to check django version
 <virtual-name> d:\mohit> django-admin startproject projectName  //project create
