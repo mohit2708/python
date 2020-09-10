@@ -87,6 +87,7 @@ def individual_post(request):
 ```python
 ====setting.py=========
  'DIRS': ['templates'],
+# "DIRS": ["personal_portfolio/templates/"],
  =======create template folder in root directiry where is managed file=====
  =======and create file index.html ================
  <h1>Hello</h1>
@@ -150,6 +151,12 @@ class crudst(models.Model):
     last_name = models.CharField(max_length=100)
     email = models.EmailField(unique=True, max_length=100, blank=False)
     username = models.CharField(unique=True, max_length=255)
+    description = models.TextField()
+    image = models.FilePathField(path="/img")
+    created_on = models.DateTimeField(auto_now_add=True)
+    last_modified = models.DateTimeField(auto_now=True)
+    categories = models.ManyToManyField('Category', related_name='posts')
+    post = models.ForeignKey('Post', on_delete=models.CASCADE)
     
     active = models.BooleanField(default=True)  # can login
     date_joined = models.DateTimeField(auto_now_add=True)
