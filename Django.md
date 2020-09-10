@@ -60,6 +60,68 @@ urlpatterns = [
     path('delete/<int:id>', views.delete_st), 
 ]
 ```
+### Super User In Django
+```python
+====jha manage.py hota hai wha tak ka path======
+(env) D:\mohit\blog\blog_project> python manage.py migrate
+(env) D:\mohit\blog\blog_project> python manage.py createsuperuser
+user
+email
+pass
+(env) C:\Users\mohits4\env\Scripts\testdjango> python manage.py runserver
+```
+
+## Create Model
+
+```python
+from django.db import models
+# Create your models here.
+class crudst(models.Model):
+    first_name = models.CharField(max_length=100, blank=True, null=True)
+    last_name = models.CharField(max_length=100)
+    email = models.EmailField(unique=True, max_length=100, blank=False)
+    username = models.CharField(unique=True, max_length=255)
+    description = models.TextField()
+    image = models.FilePathField(path="/img")
+    created_on = models.DateTimeField(auto_now_add=True)
+    last_modified = models.DateTimeField(auto_now=True)
+    categories = models.ManyToManyField('Category', related_name='posts')
+    post = models.ForeignKey('Post', on_delete=models.CASCADE)
+    
+    active = models.BooleanField(default=True)  # can login
+    date_joined = models.DateTimeField(auto_now_add=True)    
+    stmobile = models.IntegerField()   
+    
+class Category(models.Model):
+    name = models.CharField(max_length=20)
+
+class Post(models.Model):
+    title = models.CharField(max_length=255)
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    last_modified = models.DateTimeField(auto_now=True)
+    categories = models.ManyToManyField('Category', related_name='posts')
+
+class Comment(models.Model):
+    author = models.CharField(max_length=60)
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    post = models.ForeignKey('Post', on_delete=models.CASCADE)    
+    
+====and go to cmd //jha manage.py hota hai====
+D:\mohit\projectName> python manage.py makemigrations <app_name>
+D:\mohit\projectName> python manage.py migrate
+```
+
+### Show app in your admin
+```python
+from django.contrib import admin
+from blog_app.models import Post, Comment, Category
+# Register your models here.
+admin.site.register(Post)     //app supar admin mai show hone ke liye
+admin.site.register(Comment)     //app supar admin mai show hone ke liye
+admin.site.register(Category)     //app supar admin mai show hone ke liye
+```
 
 ### View calling
 ```python
@@ -141,33 +203,7 @@ def add1(request):
     return render(request, "result.html", {'result':res})
 ```
 
-## Create Model
 
-```python
-from django.db import models
-# Create your models here.
-class crudst(models.Model):
-    first_name = models.CharField(max_length=100, blank=True, null=True)
-    last_name = models.CharField(max_length=100)
-    email = models.EmailField(unique=True, max_length=100, blank=False)
-    username = models.CharField(unique=True, max_length=255)
-    description = models.TextField()
-    image = models.FilePathField(path="/img")
-    created_on = models.DateTimeField(auto_now_add=True)
-    last_modified = models.DateTimeField(auto_now=True)
-    categories = models.ManyToManyField('Category', related_name='posts')
-    post = models.ForeignKey('Post', on_delete=models.CASCADE)
-    
-    active = models.BooleanField(default=True)  # can login
-    date_joined = models.DateTimeField(auto_now_add=True)
-    
-    stmobile = models.IntegerField()   
-    
-    
-====and go to cmd //jha manage.py hota hai====
-D:\mohit\projectName> python manage.py makemigrations
-D:\mohit\projectName> python manage.py migrate
-```
 
 ## Registration
 ```python
@@ -216,31 +252,9 @@ path('signup1', views.handalsighnup, name='signup'),
 
 
 
-__Installing virtualenv:-__
-```python
-py -m pip install --user virtualenv
-```
-__Creating a virtual environment:-__
-```python
-py -m venv env
-```
-__Activating a virtual environment:-__
-```python
-.\env\Scripts\activate
-```
-```python
-C:\Users\mohits4\env\Scripts>activate    //envirment mai jane ke liye
-(env) C:\Users\mohits4\env\Scripts>      //envirment se bhar aane ke liye
-```
-You can confirm you’re in the virtual environment by checking the location of your Python interpreter, it should point to the env directory.
-```python
-where python
-.../env/bin/python.exe
-```
-__Leaving the virtual environment:-__
-```python
-deactivate
-```
+
+
+
 __Installing packages:-__
 ```python
 pip install requests
@@ -253,44 +267,10 @@ Python manage.py runserver
 ```
 
 
-## Create admin interface
+### for transfer project
 ```python
-(env) C:\Users\mohits4\env\Scripts\testdjango>python manage.py migrate
-(env) C:\Users\mohits4\env\Scripts\testdjango>python manage.py createsuperuser
-user
-email
-pass
-(env) C:\Users\mohits4\env\Scripts\testdjango> python manage.py runserver
 (env) C:\Users\mohits4\env\Scripts\testdjango> pip freeze > requirements.txt
 ```
 
 
-
-
-
-```python
-====model.py=========
-from django.db import models
-# Create your models here.
-class crudst(models.Model):
-    stname = models.CharField(max_length = 200)
-    stemail = models.EmailField(max_length = 100)
-    staddress = models.CharField(max_length = 100)
-    stmobile = models.IntegerField()
-    stgender = models.CharField(max_length=10)
-    
-=====admin.py======
-from django.contrib import admin
-from crud.models import crudst
-#from .models import crudst, crudst1 //aise bhi likh sakte hai
-
-# Register your models here.
-admin.site.register(crudst)     //app supar admin mai show hone ke liye
-admin.site.register(crudst1)     //app supar admin mai show hone ke liye
-====and go to cmd //jha manage.py hota hai====
-D:\mohit\projectName> python manage.py makemigrations
-D:\mohit\projectName> python manage.py migrate
-
-
-```
 
