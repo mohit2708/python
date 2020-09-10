@@ -237,15 +237,15 @@ print(thislist[:4])               //Range of Indexes (4 tak)
 print(thislist[2:])               //2 to the end.
 print(thislist[-1])               //Negative Indexing
 print(thislist[-4:-1])            //-4 sa -1 tak
-```
-Output:- 
-banana<br>                                                  //Access Item
-['cherry', 'orange', 'kiwi']<br>                            //Range of Indexes (2 sa 5 tak)
-['apple', 'banana', 'cherry', 'orange']<br>                 //Range of Indexes (4 tak)
-['cherry', 'orange', 'kiwi', 'melon', 'mango']<br>          //2 to the end.
-cherry<br>                                                  //Negative Indexing
-['orange', 'kiwi', 'melon']                                 //-4 sa -1 tak
 
+Output:- 
+banana                                                  //Access Item
+['cherry', 'orange', 'kiwi']                            //Range of Indexes (2 sa 5 tak)
+['apple', 'banana', 'cherry', 'orange']                 //Range of Indexes (4 tak)
+['cherry', 'orange', 'kiwi', 'melon', 'mango']          //2 to the end.
+cherry                                                  //Negative Indexing
+['orange', 'kiwi', 'melon']                             //-4 sa -1 tak
+```
 
 ### List Change/replace Item Value
 ```python
