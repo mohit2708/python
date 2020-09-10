@@ -28,7 +28,7 @@ print("Hello, World!")
 
 print("Hello, World!") #This is a comment
 ```
-__Multi Line Comments__
+__Multi Line Comments(OR)Docstring__
 ```python
 """
 This is a comment
@@ -231,21 +231,21 @@ output:-<br>
 
 ```python
 thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
-print(thislist[1])
-print(thislist[2:5])
-print(thislist[:4])
-print(thislist[2:])
-print(thislist[-1])
-print(thislist[-4:-1])
-print(thislist[-4:-1])
+print(thislist[1])                //Access Item ke liye
+print(thislist[2:5])              //Range of Indexes (2 sa 5 tak)
+print(thislist[:4])               //Range of Indexes (4 tak)
+print(thislist[2:])               //2 to the end.
+print(thislist[-1])               //Negative Indexing
+print(thislist[-4:-1])            //-4 sa -1 tak
 ```
-Output:- <br>
-banana<br>
-['cherry', 'orange', 'kiwi']<br>
-['apple', 'banana', 'cherry', 'orange']<br>
-cherry<br>
-['cherry', 'orange', 'kiwi', 'melon', 'mango']<br>
-['orange', 'kiwi', 'melon']
+Output:- 
+banana<br>                                                  //Access Item
+['cherry', 'orange', 'kiwi']<br>                            //Range of Indexes (2 sa 5 tak)
+['apple', 'banana', 'cherry', 'orange']<br>                 //Range of Indexes (4 tak)
+['cherry', 'orange', 'kiwi', 'melon', 'mango']<br>          //2 to the end.
+cherry<br>                                                  //Negative Indexing
+['orange', 'kiwi', 'melon']                                 //-4 sa -1 tak
+
 
 ### List Change/replace Item Value
 ```python
