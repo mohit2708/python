@@ -215,7 +215,7 @@ There are four collection data types in the Python programming language:
  * __Set__ is a collection which is unordered and unindexed. No duplicate members.
  * __Dictionary__ is a collection which is unordered, changeable and indexed. No duplicate members.
 
-# List
+### Ques. What is List?
 A list is a collection which is ordered and changeable. In Python lists are written with square brackets[], separated by commas.
 ```python
 my_list = ["apple", "banana", "cherry"]
@@ -254,6 +254,8 @@ thislist[1] = "blackcurrant"                          //List Change/replace Item
 thislist.append("orange")                             //List Add Items   
 thislist.insert(1, "orange")                          //add Items in partcular postion
 thislist.remove("banana")                             //Remove Items
+thislist.pop()                                        //remove the last item using pop
+thislist.pop(1)                                       //remove the particular item using pop keyword
 print(thislist)                                        
 
 Output:- 
@@ -261,23 +263,13 @@ Output:-
 ['apple', 'banana', 'cherry', 'orange']                //List Add Items 
 ['apple', 'orange', 'banana', 'cherry']                //add Items in partcular postion
 ['apple', 'cherry']                                    //Remove Items
+['apple', 'banana']                                    //remove the last item using pop
+['apple', 'cherry']                                    //remove the particular item using pop keyword
+
 ```
 
 
 
-* The __pop()__ method removes the specified index, (or the last item if index is not specified):
-```python
-thislist = ["apple", "banana", "cherry"]
-thislist.pop()
-print(thislist)
-```
-Output:-['apple', 'banana']
-```python
-thislist = ["apple", "banana", "cherry"]
-thislist.pop(1)
-print(thislist)
-```
-Output:-['apple', 'cherry']
 
 * The __del__ keyword removes the specified index:
 ```python
