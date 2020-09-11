@@ -270,6 +270,7 @@ Python manage.py runserver
 ### for transfer project
 ```python
 (env) C:\Users\mohits4\env\Scripts\testdjango> pip freeze > requirements.txt
+(env) C:\Users\mohits4\env\Scripts\testdjango> pip install -r requirements.txt
 ```
 
 
