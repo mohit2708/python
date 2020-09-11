@@ -256,6 +256,9 @@ thislist.insert(1, "orange")                          //add Items in partcular p
 thislist.remove("banana")                             //Remove Items
 thislist.pop()                                        //remove the last item using pop
 thislist.pop(1)                                       //remove the particular item using pop keyword
+del thislist[0]                                       //The __del__ keyword removes the specified index:
+del thislist                                          //The del keyword can also delete the list completely:
+thislist.clear()                                      //The __clear()__ method empties the list:
 print(thislist)                                        
 
 Output:- 
@@ -265,34 +268,12 @@ Output:-
 ['apple', 'cherry']                                    //Remove Items
 ['apple', 'banana']                                    //remove the last item using pop
 ['apple', 'cherry']                                    //remove the particular item using pop keyword
+['banana', 'cherry']                                   //The __del__ keyword removes the specified index:
+....................                                   //The del keyword can also delete the list completely:
+[]                                                     //The __clear()__ method empties the list:
 
 ```
 
-
-
-
-* The __del__ keyword removes the specified index:
-```python
-thislist = ["apple", "banana", "cherry"]
-del thislist[0]
-print(thislist)
-```
-Output:- ['banana', 'cherry']
-
-* The del keyword can also delete the list completely:
-```python
-thislist = ["apple", "banana", "cherry"]
-del thislist
-print(thislist)
-```
-
-* The __clear()__ method empties the list: 
-```python
-thislist = ["apple", "banana", "cherry"]
-thislist.clear()
-print(thislist)
-```
-Output:- []
 
 ### Copy a List
 * Make a copy of a list with the __copy()__ method:
