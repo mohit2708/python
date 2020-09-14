@@ -66,5 +66,35 @@ def login(request):
     </form>
 ======Home.html===========
 <h1>Home</h1>
+```
 
+### Extra Field Badane hai to
+```python
+===========create forms.py===========
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
+from django import forms
+
+class SignUpForm(UserCreationForm):
+    email = forms.EmailField()
+    first_name = forms.CharField(max_length=100)
+    last_name = forms.CharField(max_length=100)
+    mobile = forms.CharField(max_length=100)
+
+    class Meta:
+        model = User
+        fields = ('username', 'first_name', 'last_name', 'email', 'mobile', 'password1', 'password2')
+ ============views.py============
+ from .forms import SignUpForm
+
+# Create your views here.
+def signup(request):
+    if request.method == 'POST':
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('/login')
+    else:
+        form = SignUpForm()
+    return render(request, 'signup.html', {'form': form})
 ```
