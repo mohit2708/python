@@ -41,6 +41,15 @@ def signup(request):
     else:
         form = UserCreationForm()
     return render(request, 'signup.html', {'form': form})
+
+def login(request):
+    if request.method == 'POST':
+        form = AuthenticationForm(data=request.POST)
+        if form.is_valid():
+            return render(request, 'home.html')
+    else:
+        form = AuthenticationForm()
+    return render(request, 'login.html', {'form': form})
 =========signup.html================
 <h1>Signup</h1>
     <form action="/signup/" method="post">
@@ -55,5 +64,7 @@ def signup(request):
         {{ form }}
         <input type="submit" value="Log In">
     </form>
+======Home.html===========
+<h1>Home</h1>
 
 ```
