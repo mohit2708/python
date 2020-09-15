@@ -27,9 +27,11 @@ urlpatterns = [
     path('login/', views.login),    
 ]
 ========views.py=========
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.shortcuts import render, redirect
+from .forms import SignUpForm
+from django.contrib import messages, auth
 
 # Create your views here.
 def signup(request):
@@ -42,14 +44,25 @@ def signup(request):
         form = UserCreationForm()
     return render(request, 'signup.html', {'form': form})
 
-def login(request):
+def do_login(request):
     if request.method == 'POST':
-        form = AuthenticationForm(data=request.POST)
-        if form.is_valid():
-            return render(request, 'home.html')
+        username = request.POST.get('username')
+        passw = request.POST.get('password')
+        user = authenticate(request, username=username, password=passw)
+        if user is not None:
+            form = login(request,user)
+            messages.success(request, f' wecome {username} !!')
+            return redirect('/home')
     else:
         form = AuthenticationForm()
     return render(request, 'login.html', {'form': form})
+    
+def home(request):
+    return render(request, 'home.html', {'username': request.user.username})
+
+def do_logout(request):
+    auth.logout(request)
+    return render(request,'logout.html')
 =========signup.html================
 <h1>Signup</h1>
     <form action="/signup/" method="post">
@@ -65,7 +78,25 @@ def login(request):
         <input type="submit" value="Log In">
     </form>
 ======Home.html===========
-<h1>Home</h1>
+ <ul class="nav navbar-nav navbar-right">
+        {% if user.is_authenticated %} 
+      <li><a href="{% url "logout" %}"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
+      {% else %}
+      <li><a href="{% url "signup" %}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="{% url "login" %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      {% endif %}
+    </ul>
+------------
+<div class="container">
+    {% block start %}
+  {{ username }}  
+  {% if request.user.is_authenticated %}
+  Hello {{ request.user.first_name }}, <a href="{% url "logout" %}">Logout</a>
+{% else %}
+<a href="{% url "login" %}">Log-in</a>
+{% endif %}
+  {% endblock %}
+</div>
 ```
 
 ### Extra Field Badane hai to
