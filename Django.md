@@ -298,5 +298,73 @@ Python manage.py runserver
 (env) C:\Users\mohits4\env\Scripts\testdjango> pip install -r requirements.txt
 ```
 
+### html form view using views.py
+```python
+=========models.py====================
+from django.db import models
+from django.utils import timezone
 
+# Create your models here.
+PRIORITY_CHOICES = (('critical', 'Critical'),
+                    ('major', 'Major'),
+                    ('medium', 'Medium'),
+                    ('minor', 'Minor'),
+                    ('trivial', 'Trivial'))
+        
+TYPE_CHOICES = (('bug', 'Bug'),
+                ('feature', 'Feature'))
+    
+class Ticket(models.Model):
+
+    title = models.CharField(max_length=64, default=' ', blank=False)
+    description = models.TextField(blank=False)
+    priority = models.CharField(max_length=8, choices=PRIORITY_CHOICES, default='trivial')
+    ticket_type = models.CharField(max_length=7, choices=TYPE_CHOICES, default='bug')
+    date_added = models.DateTimeField(default=timezone.now, blank=False, editable=False)
+    created_by = models.CharField(max_length=32, default=' ', blank=False, editable=False)
+
+    def __str__(self):
+        return self.title
+============views.py===========
+from django.shortcuts import render
+from . import forms
+from issue_traking.forms import TicketForm
+# Create your views here.
+
+def index(request):
+
+    if request.method == 'POST':
+        form = TicketForm(request.POST)
+        if form.is_valid():
+            pass
+    form = TicketForm()
+    return render(request, 'index.html', {'form':form})
+===============index.html================
+{% extends "home.html" %}
+{% block start %}
+<form method="post" action="" class="createticketform" enctype="multipart/form-data">
+        <fieldset class="form-group">
+            <legend>Create a new ticket</legend>
+            {% csrf_token %}
+            <div class="form-group">
+                <label>Title:</label>
+                <input type="text" class="form-control" id="title" name="title">
+            </div>   
+            <div class="form-group">
+                <label>Description:</label>
+                <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+            </div> 
+            <div class="form-group">
+                <label>File Upload:</label>
+                <input type="file" class="form-control" id="file_upload" name="file_upload">
+            </div>
+            <div class="form-group">
+                <label>Tickit Type:</label>
+                {{form.ticket_type}}
+            </div>
+            <button type="submit" class="btn btn-primary">Create</button>
+        </fieldset>
+    </form>
+{% endblock start %}
+```
 
