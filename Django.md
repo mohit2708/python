@@ -325,6 +325,15 @@ class Ticket(models.Model):
 
     def __str__(self):
         return self.title
+===========form.py=========
+from django import forms
+from issue_traking.models import Ticket
+
+class TicketForm(forms.ModelForm):
+    
+    class Meta:
+        model = Ticket
+        fields = '__all__'
 ============views.py===========
 from django.shortcuts import render
 from . import forms
