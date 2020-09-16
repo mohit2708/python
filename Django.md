@@ -334,6 +334,8 @@ class TicketForm(forms.ModelForm):
     class Meta:
         model = Ticket
         fields = '__all__'
+      # fields = ('post','post2','category',)
+
 ============views.py===========
 from django.shortcuts import render
 from . import forms
