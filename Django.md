@@ -71,6 +71,16 @@ pass
 (env) C:\Users\mohits4\env\Scripts\testdjango> python manage.py runserver
 ```
 
+### Show app in your admin
+```python
+from django.contrib import admin
+from blog_app.models import Post, Comment, Category
+# Register your models here.
+admin.site.register(Post)     //app supar admin mai show hone ke liye
+admin.site.register(Comment)     //app supar admin mai show hone ke liye
+admin.site.register(Category)     //app supar admin mai show hone ke liye
+```
+
 ## Create Model
 
 ```python
@@ -113,15 +123,6 @@ D:\mohit\projectName> python manage.py makemigrations <app_name>
 D:\mohit\projectName> python manage.py migrate
 ```
 
-### Show app in your admin
-```python
-from django.contrib import admin
-from blog_app.models import Post, Comment, Category
-# Register your models here.
-admin.site.register(Post)     //app supar admin mai show hone ke liye
-admin.site.register(Comment)     //app supar admin mai show hone ke liye
-admin.site.register(Category)     //app supar admin mai show hone ke liye
-```
 
 ### View calling
 ```python
