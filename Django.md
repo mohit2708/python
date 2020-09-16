@@ -73,6 +73,7 @@ pass
 
 ### Show app in your admin
 ```python
+=========admin.py=====
 from django.contrib import admin
 from blog_app.models import Post, Comment, Category
 # Register your models here.
