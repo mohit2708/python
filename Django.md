@@ -304,6 +304,32 @@ urlpatterns = [
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 ```
 
+### simple Slider  in loop
+```python
+==========views.py===========
+def index(request):
+    products = Product.objects.all()
+    #print(products)   
+    params = {'product':products}
+    return render(request, 'ecomm/index.html', params)
+========index.html==============
+<ol class="carousel-indicators">
+	{% for i in product %}
+        <li class="{% if forloop.first %} active{% endif %}" data-slide-to="{{i}}" data-target="#myCarousel"></li>
+        {% endfor %}
+</ol>
+------------------------
+{% for i in product %}
+<div class="item {% if forloop.first %} active{% endif %}" id="slide2">
+<img src="{{i.image.url}}" >
+<div class="carousel-caption">
+<h4>{{i.product_name}}</h4>
+<p>hi you</p>
+</div>
+</div>
+{% endfor %}
+      
+```
 
 __Installing packages:-__
 ```python
