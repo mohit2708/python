@@ -281,7 +281,27 @@ kuch bhi
 {% endblock start %}
 ```
 
+### Image ke liye settings
+```python
+=======model.py=========
+image = models.ImageField(upload_to="ecomm/images", default="")
 
+======settings.py=========
+import os
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
+========urls.py==========
+from django.conf.urls.static import static
+from django.conf import settings
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('auth_app.urls')),
+    path('issues/', include('issue_traking.urls')),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+```
 
 
 __Installing packages:-__
