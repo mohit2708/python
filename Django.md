@@ -282,6 +282,7 @@ kuch bhi
 ```
 
 ### Image ke liye settings
+create media folder in root.
 ```python
 =======model.py=========
 image = models.ImageField(upload_to="ecomm/images", default="")
