@@ -119,6 +119,10 @@ class Comment(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     post = models.ForeignKey('Post', on_delete=models.CASCADE)    
     
+    
+    def __str__(self):
+        return self.author
+    
 ====and go to cmd //jha manage.py hota hai====
 D:\mohit\projectName> python manage.py makemigrations <app_name>
 D:\mohit\projectName> python manage.py migrate
