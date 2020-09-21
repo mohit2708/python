@@ -133,6 +133,7 @@ D:\mohit\projectName> python manage.py migrate
 ```python
 =========urls.py======================
 from .import views
+from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
