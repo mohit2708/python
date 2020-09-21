@@ -229,6 +229,7 @@ from django.http import HttpResponse
 from django.contrib import messages
 from django.contrib.auth.models import User, auth
 from auth_app.models import Auth
+from issue_traking.forms import TicketForm
 
 def handalsighnup(request):    
     try:
@@ -243,9 +244,13 @@ def handalsighnup(request):
             Auth.objects.update_or_create(username=username, email=email, last_name=last_name, first_name=fi_name, password=password, re_password=confirm_password)            
             return render(request, 'auth/signup.html')
         else:
+		#form = TicketForm()
+		#return render(request,'index.html', {'form':form})
             return render(request, 'auth/signup.html')
     except Exception as e:
         print("error:::", e)
++++++++++2 Type+++++++++++++
+
 ==urls.py====
 path('signup1', views.handalsighnup, name='signup'),
 =====signup.html=======
@@ -253,6 +258,7 @@ path('signup1', views.handalsighnup, name='signup'),
         {% csrf_token %}
 <div class="col"><input type="text" class="form-control" name="f_name" placeholder="First Name" required="required"></div>
 <div class="col"><input type="text" class="form-control" name="last_name" placeholder="Last Name" required="required"></div>
+{{form.ticket_type}}
 <input class="btn btn-primary btn-lg" type="submit">
 ```
 
