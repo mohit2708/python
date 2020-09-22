@@ -437,3 +437,17 @@ def index(request):
 {% endblock start %}
 ```
 
+
+### Install cripsy tag
+```python
+--------------------------------------
+-->  pip install django-crispy-forms
+---------------------------------------
+INSTALLED_APPS = (
+    ...
+    'crispy_forms',
+)
+-----------------------------------------
+{% load crispy_forms_tags %}
+{{form|crispy }}
+```
