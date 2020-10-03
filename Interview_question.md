@@ -1,4 +1,4 @@
-- ### Ques. What are the key features of Python?
+### Ques. What are the key features of Python?
 * Python is a high-level, interpreted, interactive and object-oriented scripting language.
 * Python is an interpreter language. It means it executes the code line by line.
 * It was created by Guido van Rossum, and released in 1991.
