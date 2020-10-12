@@ -1,7 +1,7 @@
 ### Ques. What are the key features of Python?
 * Python is a high-level, interpreted, interactive and object-oriented scripting language.
 * Python is an interpreter language. It means it executes the code line by line.
-* It was created by Guido van Rossum, and released in 1991.
+* It was created by __Guido van Rossum__, and released in __1991__.
 * It is used for:
   * web development (server-side),
   * software development,
@@ -524,7 +524,8 @@ Output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
 
 
 ```
-
+### What is pep 8?
+PEP stands for Python Enhancement Proposal. It is a set of rules that specify how to format Python code for maximum readability.
 
 
 
