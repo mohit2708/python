@@ -30,12 +30,12 @@
 9. Pylons
 
 ### Ques. File Extensions in Python?
-* .py –The normal extension for a Python source file
-* .pyc- The compiled bytecode
-* .pyd- A Windows DLL file
-* .pyo- A file created with optimizations
-* .pyw- A Python script for Windows
-* .pyz- A Python script archive
+* __.py–__ The normal extension for a Python source file
+* __.pyc-__ The compiled bytecode
+* __.pyd-__ A Windows DLL file
+* __.pyo-__ A file created with optimizations
+* __.pyw-__ A Python script for Windows
+* __.pyz-__ A Python script archive
 
 
 
