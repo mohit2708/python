@@ -7,6 +7,8 @@
 ```
 Control Panel\System and Security\System
 -->  adanced system setting -->  advanced --> environment varibal ---> path set 
+
+C:\Python27
 ```
 
 ### Pip Install
