@@ -50,6 +50,9 @@ import mysql.connector
 ye buil in packege hote hai<br>
 agar or karne hai to pip ki help sa karenge
 
+### Ques. Is indentation required in python?
+Indentation is necessary for Python. It specifies a block of code. All code within loops, classes, functions, etc is specified within an indented block. It is usually done using four space characters. If your code is not indented necessarily, it will not execute accurately and will throw errors as well.
+![indentation](https://github.com/mohit2708/python/blob/master/image/indentation.PNG)
 
 ### Ques. Python Comments?
 __single Line Comments__
