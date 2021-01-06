@@ -11,7 +11,7 @@ Some of the companies that make use of Django are Instagram, DISCUS, Mozilla Fir
 * Extremely fast
 
 ### Ques. How do you check for the version of Django installed on your system?
-```
+```python
 you can open the command prompt and enter the following command:
 python -m django –version
 ```
