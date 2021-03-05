@@ -603,7 +603,54 @@ output:-
 {'apple', 'banana', 'cherry'}
 ```
 
+#### Acesss Items of set:-
+* Loop through the set, and print the values:
+```python
+thisset = {"apple", "banana", "cherry"}
+for x in thisset:
+  print(x)
+output:-
+apple
+cherry
+banana
+```
+* Check if "banana" is present in the set:
+```python
+thisset = {"apple", "banana", "cherry"}
+print("banana" in thisset)
+output:-
+True
+```
+#### Add Items of set:-
+* To add one item to a set use the add() method.
+```python
+thisset = {"apple", "banana", "cherry"}
+thisset.add("orange")
+print(thisset)
+Output:-
+{'cherry', 'orange', 'apple', 'banana'}
+```
 
+#### Add Sets
+* To __add__ items from __another set__ into the __current set__, use the __update()__ method.
+```python
+thisset = {"apple", "banana", "cherry"}
+tropical = {"pineapple", "mango", "papaya"}
+thisset.update(tropical)
+print(thisset)
+output:-
+{'apple', 'mango', 'cherry', 'pineapple', 'banana', 'papaya'}
+```
+#### Add Any Iterable
+* The object in the update() method does not have be a set, it can be any iterable object (tuples, lists, dictionaries etc.).
+```python
+thisset = {"apple", "banana", "cherry"}
+mylist = ["kiwi", "orange"]
+thisset.update(mylist)
+print(thisset)
+Output:-
+{'banana', 'cherry', 'apple', 'orange', 'kiwi'}
+```
 
 
 ### What is pep 8?
