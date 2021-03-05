@@ -631,7 +631,7 @@ Output:-
 {'cherry', 'orange', 'apple', 'banana'}
 ```
 
-#### Add Sets
+#### Add Sets/Update Method
 * To __add__ items from __another set__ into the __current set__, use the __update()__ method.
 ```python
 thisset = {"apple", "banana", "cherry"}
@@ -651,6 +651,36 @@ print(thisset)
 Output:-
 {'banana', 'cherry', 'apple', 'orange', 'kiwi'}
 ```
+
+#### Remove Item
+* To remove an item in a set, use the __remove()__ , or the __discard()__ or __pop()__ method.
+* __Note:-__ If the item to remove does not exist, remove() will raise an error.
+```python
+thisset = {"apple", "banana", "cherry"}
+thisset.remove("banana")
+print(thisset)
+Output:-
+{'apple', 'cherry'}
+```
+* __Note:-__ If the item to remove does not exist, __discard()__ will NOT raise an error.
+```python
+thisset = {"apple", "banana", "cherry"}
+thisset.discard("banana")
+print(thisset)
+Output:-
+{'apple', 'cherry'}
+```
+* __Note:-__ You can also use the pop() method to remove an item, but this method will remove the last item. Remember that sets are unordered, so you will not know what item that gets removed.
+```python
+thisset = {"apple", "banana", "cherry"}
+x = thisset.pop()
+print(x) #removed item
+print(thisset) #the set after removal
+Output:-
+banana
+{'cherry', 'apple'}
+```
+
 
 
 ### What is pep 8?
