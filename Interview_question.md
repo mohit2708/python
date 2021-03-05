@@ -558,11 +558,23 @@ Output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
 * Sets are used to store multiple items in a single variable.
 * A set is a collection which is both unordered and unindexed.
 * Sets are written with curly brackets.
+* __syntex:-__ myset = {"apple", "banana", "cherry"}
+* Example:-
+```
+thisset = {"apple", "banana", "cherry"}
+print(thisset)
+Output: {'cherry', 'apple', 'banana'}
+```
 
-###### Note:-
+##### Note:-
 
 * Sets are unordered, so you cannot be sure in which order the items will appear.
 * Set items are unordered, unchangeable, and do not allow duplicate values.
+* __Unordered__ means that the items in a set do not have a defined order.
+* __Sets are unchangeable__, meaning that we cannot change the items after the set has been created.(Once a set is created, you cannot change its items, but you can add new items.)
+* Sets __Duplicates__ Not Allowed.
+
+
 
 
 ### What is pep 8?
