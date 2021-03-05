@@ -680,6 +680,23 @@ Output:-
 banana
 {'cherry', 'apple'}
 ```
+* The clear() method empties the set:
+```python
+thisset = {"apple", "banana", "cherry"}
+thisset.clear()
+print(thisset)
+output:-
+set()
+```
+
+* The del keyword will delete the set completely:
+```python
+thisset = {"apple", "banana", "cherry"}
+del thisset
+print(thisset) #this will raise an error because the set no longer exists
+output:-
+Error
+```
 
 
 
