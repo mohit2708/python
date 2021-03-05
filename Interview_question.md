@@ -560,7 +560,7 @@ Output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
 * Sets are written with curly brackets.
 * __syntex:-__ myset = {"apple", "banana", "cherry"}
 * Example:-
-```
+```python
 thisset = {"apple", "banana", "cherry"}
 print(thisset)
 Output: {'cherry', 'apple', 'banana'}
@@ -573,6 +573,21 @@ Output: {'cherry', 'apple', 'banana'}
 * __Unordered__ means that the items in a set do not have a defined order.
 * __Sets are unchangeable__, meaning that we cannot change the items after the set has been created.(Once a set is created, you cannot change its items, but you can add new items.)
 * Sets __Duplicates__ Not Allowed.
+```python
+thisset = {"apple", "banana", "cherry", "apple"}
+print(thisset)
+Output:-
+{'banana', 'cherry', 'apple'}
+```
+
+#### Get the Length of a Set
+```python
+thisset = {"apple", "banana", "cherry"}
+print(len(thisset))
+Output:-
+3
+```
+
 
 
 
