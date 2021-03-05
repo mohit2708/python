@@ -579,6 +579,13 @@ print(thisset)
 Output:-
 {'banana', 'cherry', 'apple'}
 ```
+* Set items can be of any data type.(String, int and boolean)
+```python
+set1 = {"abc", 34, True, 40, "male"}
+print(set1)
+output:-
+{True, 34, 40, 'male', 'abc'}
+```
 
 #### Get the Length of a Set
 ```python
@@ -587,7 +594,14 @@ print(len(thisset))
 Output:-
 3
 ```
-
+#### set() Constructor:-
+* It is also possible to use the set() constructor to make a set(the double round-brackets).
+```python
+thisset = set(("apple", "banana", "cherry"))
+print(thisset)
+output:-
+{'apple', 'banana', 'cherry'}
+```
 
 
 
