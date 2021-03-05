@@ -552,12 +552,19 @@ Output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
 mydict = dict(thisdict)
 print(mydict)
 Output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
-
-
-
-
-
 ```
+
+### Ques. What is Set?
+* Sets are used to store multiple items in a single variable.
+* A set is a collection which is both unordered and unindexed.
+* Sets are written with curly brackets.
+
+###### Note:-
+
+* Sets are unordered, so you cannot be sure in which order the items will appear.
+* Set items are unordered, unchangeable, and do not allow duplicate values.
+
+
 ### What is pep 8?
 PEP stands for Python Enhancement Proposal. It is a set of rules that specify how to format Python code for maximum readability.
 
