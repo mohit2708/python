@@ -250,7 +250,17 @@ There are four collection data types in the Python programming language:
  * __Dictionary__ is a collection which is unordered, changeable and indexed. No duplicate members.
 
 ### Ques. What is List?
-A list is a collection which is ordered and changeable. In Python lists are written with square brackets[], separated by commas.
+* Lists are used to store multiple items in a single variable.
+* List items are ordered, changeable, and allow duplicate values.
+ 1. The list is __changeable__, meaning that we can change, add, and remove items in a list after it has been created.
+ 2. Since lists are indexed, lists can have items with the __same value.__
+    ```python
+    thislist = ["apple", "banana", "cherry", "apple", "cherry"]
+    print(thislist)
+    output:-
+    ['apple', 'banana', 'cherry', 'apple', 'cherry']
+    ```
+* In Python lists are written with square brackets[], separated by commas.
 ```python
 my_list = ["apple", "banana", "cherry"]
 my_list = [1, "Hello", 3.4]
@@ -277,7 +287,7 @@ banana                                                  //Access Item
 ['cherry', 'orange', 'kiwi']                            //Range of Indexes (2 sa 5 tak)
 ['apple', 'banana', 'cherry', 'orange']                 //Range of Indexes (4 tak)
 ['cherry', 'orange', 'kiwi', 'melon', 'mango']          //2 to the end.
-cherry                                                  //Negative Indexing
+mango                                                  //Negative Indexing
 ['orange', 'kiwi', 'melon']                             //-4 sa -1 tak
 ```
 
