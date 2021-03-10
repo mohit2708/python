@@ -565,9 +565,7 @@ thisset = {"apple", "banana", "cherry"}
 print(thisset)
 Output: {'cherry', 'apple', 'banana'}
 ```
-
 ##### Note:-
-
 * Sets are unordered, so you cannot be sure in which order the items will appear.
 * Set items are unordered, unchangeable, and do not allow duplicate values.
 * __Unordered__ means that the items in a set do not have a defined order.
@@ -587,7 +585,7 @@ output:-
 {True, 34, 40, 'male', 'abc'}
 ```
 
-#### Get the Length of a Set
+ 1. **Get the Length of a Set**
 ```python
 thisset = {"apple", "banana", "cherry"}
 print(len(thisset))
