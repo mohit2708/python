@@ -71,6 +71,37 @@ pass
 (env) C:\Users\mohits4\env\Scripts\testdjango> python manage.py runserver
 ```
 
+### Mysql Connectivity
+In Command line
+```python
+pip install mysqlclient
+```
+in Setting.py
+```pyhton
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'pythontest',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '3306',
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+            
+         }   
+    }
+}
+```
+In Command line
+```python
+python manage.py migrate
+python manage.py runserver
+```
+
+
+
+
 ### Show app in your admin
 ```python
 =========admin.py=====
