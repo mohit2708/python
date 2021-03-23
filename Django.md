@@ -71,37 +71,6 @@ pass
 (env) C:\Users\mohits4\env\Scripts\testdjango> python manage.py runserver
 ```
 
-### Mysql Connectivity
-In Command line
-```python
-pip install mysqlclient
-```
-in Setting.py
-```pyhton
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'pythontest',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'PORT': '3306',
-        'OPTIONS': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
-            
-         }   
-    }
-}
-```
-In Command line
-```python
-python manage.py migrate
-python manage.py runserver
-```
-
-
-
-
 ### Show app in your admin
 ```python
 =========admin.py=====
@@ -136,6 +105,9 @@ class crudst(models.Model):
     
 class Category(models.Model):
     name = models.CharField(max_length=20)
+    
+    def __str__(self):
+        return self.name	#django admin mai admin frount mai name sa list show hogi
 
 class Post(models.Model):
     title = models.CharField(max_length=255)
@@ -143,6 +115,9 @@ class Post(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)
     categories = models.ManyToManyField('Category', related_name='posts')
+    
+    def __str__(self):
+        return self.title	# django admin mai admin frount mai title sa list show hogi
 
 class Comment(models.Model):
     author = models.CharField(max_length=60)
@@ -157,6 +132,35 @@ class Comment(models.Model):
 ====and go to cmd //jha manage.py hota hai====
 D:\mohit\projectName> python manage.py makemigrations <app_name>
 D:\mohit\projectName> python manage.py migrate
+```
+
+
+### Mysql Connectivity
+In Command line
+```python
+pip install mysqlclient
+```
+in Setting.py
+```pyhton
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'pythontest',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '3306',
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+            
+         }   
+    }
+}
+```
+In Command line
+```python
+python manage.py migrate
+python manage.py runserver
 ```
 
 
