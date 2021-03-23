@@ -15,7 +15,7 @@ d:\mohit>cd virtual-name\Scripts
 d:\mohit\virtual-name\Scripts> activate             // env activate
 <virtual-name> d:\mohit> python -m pip install django         // install django
 <virtual-name> d:\mohit> pip uninstall django         // uninstall django
-<virtual-name> d:\mohit> django-admin --version     // to check django version
+<virtual-name> d:\mohit> django-admin --version or python -m django --version     // to check django version
 <virtual-name> d:\mohit> django-admin startproject projectName  //project create
 <virtual-name> d:\mohit\projectName> python manage.py runserver // run server
 ```
