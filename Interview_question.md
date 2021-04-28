@@ -54,6 +54,12 @@ agar or karne hai to pip ki help sa karenge
 Indentation is necessary for Python. It specifies a block of code. All code within loops, classes, functions, etc is specified within an indented block. It is usually done using four space characters. If your code is not indented necessarily, it will not execute accurately and will throw errors as well.
 ![indentation](https://github.com/mohit2708/python/blob/master/image/indentation.PNG)
 
+### Ques. How is memory managed in Python?
+* Python also has an inbuilt garbage collector, which recycles all the unused memory and so that it can be made available to the heap space.
+* Memory management in python is managed by Python private heap space. All Python objects and data structures are located in a private heap. The programmer does not have access to this private heap. The python interpreter takes care of this instead.
+* The allocation of heap space for Python objects is done by Python’s memory manager. The core API gives access to some tools for the programmer to code.
+
+
 ### Ques. Python Comments?
 __single Line Comments__
 ```python
