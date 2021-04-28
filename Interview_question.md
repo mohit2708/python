@@ -60,6 +60,9 @@ Indentation is necessary for Python. It specifies a block of code. All code with
 * Memory management in python is managed by Python private heap space. All Python objects and data structures are located in a private heap. The programmer does not have access to this private heap. The python interpreter takes care of this instead.
 * The allocation of heap space for Python objects is done by Python’s memory manager. The core API gives access to some tools for the programmer to code.
 
+### Ques. What is PEP 8?
+* PEP stands for __Python Enhancement Proposal__. It is a set of rules that specify how to format Python code for maximum readability.
+
 
 ### Ques. Python Comments?
 __single Line Comments__
