@@ -1,7 +1,8 @@
 ### Ques. What are the key features of Python?
+* It was created by __Guido van Rossum__, and released in __1991__.
 * Python is an __interpreter__ language. It means it executes the code line by line.
 * Python is a high-level, interpreted, interactive and object-oriented scripting language.
-* It was created by __Guido van Rossum__, and released in __1991__.
+
 * It is used for:
   * web development (server-side),
   * software development,
