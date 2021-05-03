@@ -396,7 +396,8 @@ output:- ['apple', 'banana', 'cherry']
 |List iteration is slower and is time consuming.|Tuple iteration is faster.|
 |List is useful for insertion and deletion operations.|Tuple is useful for readonly operations like accessing elements.|
 |List consumes more memory.|Tuples consumes less memory.|
-|	List provides many in-built methods.|Tuples have less in-built methods.|
+|List is stored in two blocks of memory (One is fixed sized and the other is variable sized for storing data)|Tuple is stored in a single block of memory.|
+|List provides many in-built methods.|Tuples have less in-built methods.|
 |List operations are more error prone|Tuples operations are safe.|
 |Syntax: list_1 = [10, ‘Chelsea’, 20]	|Syntax: tup_1 = (10, ‘Chelsea’ , 20)|
 
