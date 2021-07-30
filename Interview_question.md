@@ -4,10 +4,12 @@
 
 | No. | Questions |
 |:----:| ---------
-|1  | [What are the key features of Python?](#Ques-What-are-the-key-features-of-Python) |
-|   | [Features of Python?](#Ques-Features-of-Python) |
-|   | [Python Frameworks?](#Ques-Python-Frameworks) |
-
+| 1 | [What are the key features of Python?](#Ques-What-are-the-key-features-of-Python) |
+| 2 | [Features of Python?](#Ques-Features-of-Python) |
+| 3 | [Python Frameworks?](#Ques-Python-Frameworks) |
+| 4 | [Python Frameworks?](#Ques-Python-Frameworks) |
+| 5 | [File Extensions in Python?](#Ques-File-Extensions-in-Python) |
+| 6 | [What is built-in module in Python?](#Ques-What-is-built-in-module-in-Python) |
 
 **[⬆ Back to Top](#table-of-contents)**
 ### Ques. What are the key features of Python?
@@ -22,6 +24,7 @@
   * system scripting.
  
  
+**[⬆ Back to Top](#table-of-contents)**
 ### Ques. Features of Python?
 1. __Easy:-__ Python is very easy to learn and understand; using this Python tutorial, any beginner can understand the basics of Python.
 2. __Interpreted:-__ It is interpreted(executed) line by line. This makes it easy to test and debug.
@@ -31,6 +34,8 @@
 6. __GUI Programming:-__ You can use it to develop a GUI (Graphical User Interface). One way to do this is through Tkinter.
 7. __Large Library:-__ Python provides you with a large standard library. You can use it to implement a variety of functions without needing to reinvent the wheel every time. Just pick the code you need and continue. This lets you focus on other important tasks.
 
+
+**[⬆ Back to Top](#table-of-contents)**
 ### Ques. Python Frameworks?
 1. Django
 2. Flask
@@ -42,6 +47,8 @@
 8. SciPy
 9. Pylons
 
+
+**[⬆ Back to Top](#table-of-contents)**
 ### Ques. File Extensions in Python?
 * __.py–__ The normal extension for a Python source file
 * __.pyc-__ The compiled bytecode
@@ -51,8 +58,8 @@
 * __.pyz-__ A Python script archive
 
 
-
-### Build-In Python Module
+**[⬆ Back to Top](#table-of-contents)**
+### Ques. What is built-in module in Python?
 https://docs.python.org/3/py-modindex.html<br>
 Example
 ```python
