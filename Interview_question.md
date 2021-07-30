@@ -4,9 +4,9 @@
 
 | No. | Questions |
 |:----:| ---------
-|1  | [What is Laravel?](#Ques-What-is-Laravel) |
-|   | [What is the Features of Laravel?](#Ques-What-is-the-Features-of-Laravel) |
-|   | [What are pros and cons of using Laravel Framework?](#Ques-What-are-pros-and-cons-of-using-Laravel-Framework) |
+|1  | [What are the key features of Python?](#Ques-What-are-the-key-features-of-Python) |
+|   | [Features of Python?](#Ques-Features-of-Python) |
+|   | [Python Frameworks?](#Ques-Python-Frameworks) |
 
 
 **[⬆ Back to Top](#table-of-contents)**
