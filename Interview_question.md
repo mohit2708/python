@@ -46,7 +46,6 @@
 8. SciPy
 9. Pylons
 
-
 **[⬆ Back to Top](#table-of-contents)**
 ### Ques. File Extensions in Python?
 * __.py–__ The normal extension for a Python source file
@@ -56,6 +55,26 @@
 * __.pyw-__ A Python script for Windows
 * __.pyz-__ A Python script archive
 
+
+### Ques. Python Comments?
+__single Line Comments:-__ Comments starts with a #
+```python
+#This is a comment
+print("Hello, World!")
+
+print("Hello, World!") #This is a comment
+```
+__Multi Line Comments(OR)Docstring__
+* To add a multiline comment you could insert a # for each line.
+* you can add a multiline string (triple quotes) in your code, and place your comment inside it.
+```python
+"""
+This is a comment
+written in
+more than just one line
+"""
+print("Hello, World!")
+```
 
 **[⬆ Back to Top](#table-of-contents)**
 ### Ques. What is built-in module in Python?
@@ -82,23 +101,7 @@ Indentation is necessary for Python. It specifies a block of code. All code with
 * PEP stands for __Python Enhancement Proposal__. It is a set of rules that specify how to format Python code for maximum readability.
 
 
-### Ques. Python Comments?
-__single Line Comments__
-```python
-#This is a comment
-print("Hello, World!")
 
-print("Hello, World!") #This is a comment
-```
-__Multi Line Comments(OR)Docstring__
-```python
-"""
-This is a comment
-written in
-more than just one line
-"""
-print("Hello, World!")
-```
 
 ### Ques. Python Variables?
  * A variable name must start with a letter or the underscore character
