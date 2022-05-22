@@ -76,33 +76,6 @@ more than just one line
 print("Hello, World!")
 ```
 
-**[⬆ Back to Top](#table-of-contents)**
-### Ques. What is built-in module in Python?
-https://docs.python.org/3/py-modindex.html<br>
-Example
-```python
->>> import html
->>> import html.parser
-import mysql.connector
-```
-ye buil in packege hote hai<br>
-agar or karne hai to pip ki help sa karenge
-
-### Ques. Is indentation required in python?
-Indentation is necessary for Python. It specifies a block of code. All code within loops, classes, functions, etc is specified within an indented block. It is usually done using four space characters. If your code is not indented necessarily, it will not execute accurately and will throw errors as well.
-![indentation](https://github.com/mohit2708/python/blob/master/image/indentation.PNG)
-
-### Ques. How is memory managed in Python?
-* Python also has an inbuilt garbage collector, which recycles all the unused memory and so that it can be made available to the heap space.
-* Memory management in python is managed by Python private heap space. All Python objects and data structures are located in a private heap. The programmer does not have access to this private heap. The python interpreter takes care of this instead.
-* The allocation of heap space for Python objects is done by Python’s memory manager. The core API gives access to some tools for the programmer to code.
-
-### Ques. What is PEP 8?
-* PEP stands for __Python Enhancement Proposal__. It is a set of rules that specify how to format Python code for maximum readability.
-
-
-
-
 ### Ques. Python Variables?
  * A variable name must start with a letter or the underscore character
  * A variable name cannot start with a number
@@ -203,6 +176,32 @@ myfunc()
 print("Python is " + x)
 ```
 output:- Python is fantastic<br>Python is awesome
+
+**[⬆ Back to Top](#table-of-contents)**
+### Ques. What is built-in module in Python?
+https://docs.python.org/3/py-modindex.html<br>
+Example
+```python
+>>> import html
+>>> import html.parser
+import mysql.connector
+```
+ye buil in packege hote hai<br>
+agar or karne hai to pip ki help sa karenge
+
+### Ques. Is indentation required in python?
+Indentation is necessary for Python. It specifies a block of code. All code within loops, classes, functions, etc is specified within an indented block. It is usually done using four space characters. If your code is not indented necessarily, it will not execute accurately and will throw errors as well.
+![indentation](https://github.com/mohit2708/python/blob/master/image/indentation.PNG)
+
+### Ques. How is memory managed in Python?
+* Python also has an inbuilt garbage collector, which recycles all the unused memory and so that it can be made available to the heap space.
+* Memory management in python is managed by Python private heap space. All Python objects and data structures are located in a private heap. The programmer does not have access to this private heap. The python interpreter takes care of this instead.
+* The allocation of heap space for Python objects is done by Python’s memory manager. The core API gives access to some tools for the programmer to code.
+
+### Ques. What is PEP 8?
+* PEP stands for __Python Enhancement Proposal__. It is a set of rules that specify how to format Python code for maximum readability.
+
+
 
 ### Ques. Global Keyword?
 In Python, global keyword allows you to modify the variable outside of the current scope. It is used to create a global variable and make changes to the variable in a local context.<br>
