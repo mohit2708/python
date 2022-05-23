@@ -113,21 +113,23 @@ print(x)
 output:-Mohit
 
 <details>
-  <summary>__Assign Value to Multiple Variables__</summary>
-      ```python
-      x, y, z = "Orange", "Banana", "Cherry"
+  <summary>Assign Value to Multiple Variables</summary>
+  
+  ```python
+     x, y, z = "Orange", "Banana", "Cherry"
       print(x)
       print(y)
       print(z)
-      ```
-      output:- Orange<br>Banana<br>Cherry
-      ```python
+  ```
+  output:- Orange<br>Banana<br>Cherry
+ 
+   ```python
       x = y = z = "Orange"
       print(x)
       print(y)
       print(z)
-      ```
-      output:- Orange<br>Orange<br>Orange
+  ```
+  output:- Orange<br>Orange<br>Orange
 </details>
 
 __Output Variables(combine both text and a variable)__
