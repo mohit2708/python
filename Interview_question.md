@@ -4,12 +4,11 @@
 
 | No. | Questions |
 |:----:| ---------
-| 1 | [What are the key features of Python?](#Ques-What-are-the-key-features-of-Python) |
+| 1 | [What Is Python?](#Ques-what-is-Python) |
 | 2 | [Features of Python?](#Ques-Features-of-Python) |
-| 3 | [Python Frameworks?](#Ques-Python-Frameworks) |
-| 4 | [Python Frameworks?](#Ques-Python-Frameworks) |
-| 5 | [File Extensions in Python?](#Ques-File-Extensions-in-Python) |
-| 6 | [What is built-in module in Python?](#Ques-What-is-built-in-module-in-Python) |
+| 2 | [Python Frameworks?](#Ques-Python-Frameworks) |
+| 3 | [File Extensions in Python?](#Ques-File-Extensions-in-Python) |
+| 4 | [What is built-in module in Python?](#Ques-What-is-built-in-module-in-Python) |
 
 
 ### Ques. What is Python?
@@ -199,56 +198,6 @@ x = 5
 print(type(x)) 
 ```
 output:- <class 'int'>
-
-
-**[⬆ Back to Top](#table-of-contents)**
-### Ques. What is built-in module in Python?
-https://docs.python.org/3/py-modindex.html<br>
-Example
-```python
->>> import html
->>> import html.parser
-import mysql.connector
-```
-ye buil in packege hote hai<br>
-agar or karne hai to pip ki help sa karenge
-
-### Ques. Is indentation required in python?
-Indentation is necessary for Python. It specifies a block of code. All code within loops, classes, functions, etc is specified within an indented block. It is usually done using four space characters. If your code is not indented necessarily, it will not execute accurately and will throw errors as well.
-![indentation](https://github.com/mohit2708/python/blob/master/image/indentation.PNG)
-
-### Ques. How is memory managed in Python?
-* Python also has an inbuilt garbage collector, which recycles all the unused memory and so that it can be made available to the heap space.
-* Memory management in python is managed by Python private heap space. All Python objects and data structures are located in a private heap. The programmer does not have access to this private heap. The python interpreter takes care of this instead.
-* The allocation of heap space for Python objects is done by Python’s memory manager. The core API gives access to some tools for the programmer to code.
-
-### Ques. What is PEP 8?
-* PEP stands for __Python Enhancement Proposal__. It is a set of rules that specify how to format Python code for maximum readability.
-
-### Ques. Global Keyword?
-In Python, global keyword allows you to modify the variable outside of the current scope. It is used to create a global variable and make changes to the variable in a local context.<br>
-__Rules of global Keyword__
- * When we create a variable inside a function, it is local by default.
- * When we define a variable outside of a function, it is global by default. You don't have to use global keyword.
- * We use global keyword to read and write a global variable inside a function.
- __Example__
- ```python
- def myfunc():
-  global x
-  x = "fantastic"
-myfunc()
-print("Python is " + x)
- ```
- Output:-Python is fantastic
-  ```python
-x = "awesome"
-def myfunc():
-  global x
-  x = "fantastic"
-myfunc()
-print("Python is " + x)
-```
-output:-Python is fantastic
 
 
 ### Ques. Python Strings?
@@ -452,6 +401,139 @@ ut labore et dolore magna aliqua.<br>
     ```
 
 </details>
+ 
+<details>
+  <summary>Escape Characters</summary>
+
+* An escape character is a backslash \ followed by the character you want to insert.
+ 
+  ```python
+    txt = "We are the so-called \"Vikings\" from the north."
+    print(txt) 
+
+    output:- We are the so-called "Vikings" from the north.
+  ```
+
+### Single Quote
+  ```python
+    txt = 'It\'s alright.'
+    print(txt)  
+
+    output:- It's alright.
+  ```
+
+### Backslash 
+  ```python
+    txt = "This will insert one \\ (backslash)."
+    print(txt)   
+
+    output:- This will insert one \ (backslash).
+  ```
+
+### New Line 
+  ```python
+    txt = "Hello\nWorld!"
+    print(txt)    
+
+    output:- 
+Hello
+World!
+  ```
+
+### Carriage Return
+    ```python
+    txt = "Hello\rWorld!"
+    print(txt)
+
+    Output:-
+Hello
+World!
+    ```
+
+### Tab
+    ```python
+    txt = "Hello\tWorld!"
+    print(txt)
+
+    Output:- Hello   World!
+    ```
+
+### Backspace
+    ```python
+    txt = "Hello \bWorld!"
+    print(txt)
+
+    Output:- HelloWorld!
+    ```
+
+### Octal value	
+    ```python
+    txt = "\110\145\154\154\157"
+    print(txt)
+
+    Output:- Hello
+    ```
+
+### Hex value
+    ```python
+    txt = "\x48\x65\x6c\x6c\x6f"
+    print(txt) 
+
+    Output:- Hello
+    ```
+ 
+</details>
+
+
+
+**[⬆ Back to Top](#table-of-contents)**
+### Ques. What is built-in module in Python?
+https://docs.python.org/3/py-modindex.html<br>
+Example
+```python
+>>> import html
+>>> import html.parser
+import mysql.connector
+```
+ye buil in packege hote hai<br>
+agar or karne hai to pip ki help sa karenge
+
+### Ques. Is indentation required in python?
+Indentation is necessary for Python. It specifies a block of code. All code within loops, classes, functions, etc is specified within an indented block. It is usually done using four space characters. If your code is not indented necessarily, it will not execute accurately and will throw errors as well.
+![indentation](https://github.com/mohit2708/python/blob/master/image/indentation.PNG)
+
+### Ques. How is memory managed in Python?
+* Python also has an inbuilt garbage collector, which recycles all the unused memory and so that it can be made available to the heap space.
+* Memory management in python is managed by Python private heap space. All Python objects and data structures are located in a private heap. The programmer does not have access to this private heap. The python interpreter takes care of this instead.
+* The allocation of heap space for Python objects is done by Python’s memory manager. The core API gives access to some tools for the programmer to code.
+
+### Ques. What is PEP 8?
+* PEP stands for __Python Enhancement Proposal__. It is a set of rules that specify how to format Python code for maximum readability.
+
+### Ques. Global Keyword?
+In Python, global keyword allows you to modify the variable outside of the current scope. It is used to create a global variable and make changes to the variable in a local context.<br>
+__Rules of global Keyword__
+ * When we create a variable inside a function, it is local by default.
+ * When we define a variable outside of a function, it is global by default. You don't have to use global keyword.
+ * We use global keyword to read and write a global variable inside a function.
+ __Example__
+ ```python
+ def myfunc():
+  global x
+  x = "fantastic"
+myfunc()
+print("Python is " + x)
+ ```
+ Output:-Python is fantastic
+  ```python
+x = "awesome"
+def myfunc():
+  global x
+  x = "fantastic"
+myfunc()
+print("Python is " + x)
+```
+output:-Python is fantastic
 
 
 ### Python Collections (Arrays)?
