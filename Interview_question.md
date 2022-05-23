@@ -177,6 +177,25 @@ print("Python is " + x)
 ```
 output:- Python is fantastic<br>Python is awesome
 
+### Ques. How to check What type of datatype?
+Python has the following data types built-in by default, in these categories:
+|:----:| ---------|
+|Text Type | str("Hello World") |
+| Numeric Types | int(20), float(20.5), complex(1j) |
+| Sequence Types | list, tuple, range |
+| Mapping Type | dict
+| Set Types | set, frozenset |
+| Boolean Type | bool |
+| Binary Types |	bytes, bytearray, memoryview |
+
+* We can get the data type of any object by using the __type()__ function.
+```python
+x = 5
+print(type(x)) 
+```
+output:- <class 'int'>
+
+
 **[⬆ Back to Top](#table-of-contents)**
 ### Ques. What is built-in module in Python?
 https://docs.python.org/3/py-modindex.html<br>
@@ -228,23 +247,7 @@ print("Python is " + x)
 ```
 output:-Python is fantastic
 
-### Ques. How to check What type of datatype?
-Python has the following data types built-in by default, in these categories:
-|  |  |
-|:----:| ---------|
-|Text Type | str |
-| Numeric Types | int, float, complex |
-| Sequence Types | list, tuple, range |
-| Mapping Type | dict
-| Set Types | set, frozenset |
-| Boolean Type | bool |
-| Binary Types |	bytes, bytearray, memoryview |
 
-```python
-x = 5
-print(type(x)) 
-```
-output:- <class 'int'>
 
 ### Ques. Python Strings?
 ##### String Literals
