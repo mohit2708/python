@@ -179,6 +179,7 @@ output:- Python is fantastic<br>Python is awesome
 
 ### Ques. How to check What type of datatype?
 Python has the following data types built-in by default, in these categories:
+| | |
 |:----:| ---------|
 |Text Type | str("Hello World") |
 | Numeric Types | int(20), float(20.5), complex(1j) |
