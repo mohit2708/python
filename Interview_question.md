@@ -225,8 +225,6 @@ Indentation is necessary for Python. It specifies a block of code. All code with
 ### Ques. What is PEP 8?
 * PEP stands for __Python Enhancement Proposal__. It is a set of rules that specify how to format Python code for maximum readability.
 
-
-
 ### Ques. Global Keyword?
 In Python, global keyword allows you to modify the variable outside of the current scope. It is used to create a global variable and make changes to the variable in a local context.<br>
 __Rules of global Keyword__
@@ -279,6 +277,49 @@ Lorem ipsum dolor sit amet,<br>
 consectetur adipiscing elit,<br>
 sed do eiusmod tempor incididunt<br>
 ut labore et dolore magna aliqua.<br>
+
+<details>
+  <summary>Slicing Strings</summary>
+ 
+* We can return a range of characters by using the slice syntax.
+* Get the characters from position 2 to position 5 (not included).
+ 
+  ```python
+    b = "Hello, World!"
+    print(b[2:5])
+ 
+    output:- llo
+  ```
+ 
+* Slice From the Start
+  * Get the characters from the start to position 5 (not included):
+  ```python
+   b = "Hello, World!"
+   print(b[:5])
+ 
+   output:- Hello
+  ```
+ 
+ * Slice To the End
+   * Get the characters from position 2, and all the way to the end:
+  ```python
+   b = "Hello, World!"
+   print(b[2:])
+ 
+   output:- llo, World!
+  ```
+ 
+ * Negative Indexing
+   * Get the characters from position 2, and all the way to the end:
+  ```python
+   b = "Hello, World!"
+   print(b[-5:-2])
+ 
+   output:- orl
+  ```
+ 
+</details>
+
 
 ### Python Collections (Arrays)?
 There are four collection data types in the Python programming language:
