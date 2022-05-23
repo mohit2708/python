@@ -291,7 +291,7 @@ ut labore et dolore magna aliqua.<br>
     output:- llo
   ```
  
-* Slice From the Start
+### Slice From the Start
   * Get the characters from the start to position 5 (not included):
   ```python
    b = "Hello, World!"
@@ -300,7 +300,7 @@ ut labore et dolore magna aliqua.<br>
    output:- Hello
   ```
  
- * Slice To the End
+### Slice To the End
    * Get the characters from position 2, and all the way to the end:
   ```python
    b = "Hello, World!"
@@ -309,7 +309,7 @@ ut labore et dolore magna aliqua.<br>
    output:- llo, World!
   ```
  
- * Negative Indexing
+### Negative Indexing
    * Get the characters from position 2, and all the way to the end:
   ```python
    b = "Hello, World!"
@@ -317,6 +317,62 @@ ut labore et dolore magna aliqua.<br>
  
    output:- orl
   ```
+ 
+</details>
+
+<details>
+  <summary>Modify Strings</summary>
+ 
+### Upper Case.
+* The __upper()__ method returns the string in upper case:
+ 
+  ```python
+    a = "Hello, World!"
+    print(a.upper())
+ 
+    output:- HELLO, WORLD!
+  ```
+ 
+### Lower Case
+  * The __lower()__ method returns the string in lower case:
+
+  ```python
+    a = "Hello, World!"
+    print(a.lower())
+ 
+   output:- hello, world!
+  ```
+ 
+### Remove Whitespace
+   * Whitespace is the space before and/or after the actual text, and very often you want to remove this space.
+   * The __strip()__ method removes any whitespace from the beginning or the end:
+
+  ```python
+    a = " Hello, World! "
+    print(a.strip())
+ 
+   output:- Hello, World!
+  ```
+ 
+### Replace String
+   * The __replace()__ method replaces a string with another string:
+  ```python
+    a = "Hello, World!"
+    print(a.replace("H", "J"))
+ 
+   output:- Jello, World!
+  ```
+
+### Split String
+   * The split() method splits the string into substrings if it finds instances of the separator:
+   ```python
+    a = "Hello, World!"
+    b = a.split(",")
+    print(b)
+
+    output:- ['Hello', ' World!']
+   ```
+
  
 </details>
 
