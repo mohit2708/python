@@ -373,7 +373,33 @@ ut labore et dolore magna aliqua.<br>
     output:- ['Hello', ' World!']
    ```
 
+</details>
+
+<details>
+  <summary>String Concatenation</summary>
  
+* To concatenate, or combine, two strings you can use the + operator.
+ 
+  ```python
+    a = "Hello"
+    b = "World"
+    c = a + b
+    print(c)
+ 
+    output:- HelloWorld
+  ```
+ 
+* To add a space between them, add a " ":
+
+  ```python
+    a = "Hello"
+    b = "World"
+    c = a + " " + b
+    print(c)
+ 
+   output:- Hello World
+  ```
+
 </details>
 
 
