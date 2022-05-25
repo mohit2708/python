@@ -703,6 +703,35 @@ print(thisdict)
 Output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
 ```
 
+* __Get Keys:__ The keys() method will return a list of all the keys in the dictionary.
+
+  ```python
+    thisdict = {
+    "brand": "Ford",
+    "model": "Mustang",
+    "year": 1964
+    }
+
+    x = thisdict.keys()
+    print(x)
+    output:- dict_keys(['brand', 'model', 'year'])
+  ```
+
+
+* __Get Values__ The values() method will return a list of all the values in the dictionary.
+  ```python
+    thisdict = {
+    "brand": "Ford",
+    "model": "Mustang",
+    "year": 1964
+    }
+
+    x = thisdict.values()
+
+    print(x)
+    output:-  dict_values(['Ford', 'Mustang', 1964])
+  ```
+
 **Duplicates Not Allowed**
 ```python
 thisdict = {
@@ -727,6 +756,20 @@ print(len(thisdict))
 Output:- 3
 ```
 
+* __Get Items__ The items() method will return each item in a dictionary, as tuples in a list.
+  ```python
+    thisdict = {
+    "brand": "Ford",
+    "model": "Mustang",
+    "year": 1964
+    }
+
+    x = thisdict.items()
+
+    print(x)
+    output:- dict_items([('brand', 'Ford'), ('model', 'Mustang'), ('year', 1964)])
+  ```
+
 **Dictionary Items - Data Types:** The values in dictionary items can be of any data type.
 ```python
 thisdict = {
@@ -739,10 +782,7 @@ print(thisdict)
 Output:- {'brand': 'Ford', 'electric': False, 'year': 1964, 'colors': ['red', 'white', 'blue']}
 ```
 
-<details>
-  <summary>Accessing Items</summary>
-
-* You can access the items of a dictionary by referring to its key name, inside square brackets.
+* __Access Item__ You can access the items of a dictionary by referring to its key name, inside square brackets.
   ```python
     thisdict =	{
         "brand": "Ford",
@@ -754,7 +794,7 @@ Output:- {'brand': 'Ford', 'electric': False, 'year': 1964, 'colors': ['red', 'w
     output:- Mustang
   ```
 
-* There is also a method called __get()__ that will give you the same result.
+* __Access Item using get() Method__ There is also a method called __get()__ that will give you the same result.
 
   ```python
     thisdict =	{
@@ -767,75 +807,46 @@ Output:- {'brand': 'Ford', 'electric': False, 'year': 1964, 'colors': ['red', 'w
     output:- Mustang
   ```
 
-* __Get Keys:__ The keys() method will return a list of all the keys in the dictionary.
-
-  ```python
+* __Check if Key Exists__ To determine if a specified key is present in a dictionary use the in keyword.
+    ```python
     thisdict = {
-    "brand": "Ford",
-    "model": "Mustang",
-    "year": 1964
+        "brand": "Ford",
+        "model": "Mustang",
+        "year": 1964
     }
-
-    x = thisdict.keys()
-    print(x)
-    output:- dict_keys(['brand', 'model', 'year'])
+    if "model" in thisdict:
+    print("Yes, 'model' is one of the keys in the thisdict dictionary")
+    output:- Yes, 'model' is one of the keys in the thisdict dictionary
   ```
 
-* Add a new item to the original dictionary, and see that the keys list gets updated as well.
-  ```python
-    car = {
-    "brand": "Ford",
-    "model": "Mustang",
-    "year": 1964
+* __Change Values__ You can change the value of a specific item by referring to its key name.
+    ```python
+    thisdict =	{
+        "brand": "Ford",
+        "model": "Mustang",
+        "year": 1964
     }
+    thisdict["year"] = 2018
+    print(thisdict)
 
-    x = car.keys()
-
-    print(x) #before the change
-
-    car["color"] = "white"
-
-    print(x) #after the change
-    output:-     
-    dict_keys(['brand', 'model', 'year'])
-    dict_keys(['brand', 'model', 'year', 'color'])
+    output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 2018}
   ```
 
-* __Get Values__ The values() method will return a list of all the values in the dictionary.
-  ```python
+* __Change Values using Update__ The update() method will update the dictionary with the items from the given argument.
+    ```python
     thisdict = {
-    "brand": "Ford",
-    "model": "Mustang",
-    "year": 1964
+        "brand": "Ford",
+        "model": "Mustang",
+        "year": 1964
     }
+    thisdict.update({"year": 2020})
 
-    x = thisdict.values()
+    print(thisdict)
 
-    print(x)
-    output:-  dict_values(['Ford', 'Mustang', 1964])
+    output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 2020}
   ```
 
-* Make a change in the original dictionary, and see that the values list gets updated as well.
-  ```python
-    car = {
-    "brand": "Ford",
-    "model": "Mustang",
-    "year": 1964
-    }
-
-    x = car.values()
-
-    print(x) #before the change
-
-    car["year"] = 2020
-
-    print(x) #after the change
-    output:- 
-    dict_values(['Ford', 'Mustang', 1964])
-    dict_values(['Ford', 'Mustang', 2020])
-  ```
-
-* Add a new item to the original dictionary, and see that the values list gets updated as well.
+* __Add Dictionary Items__ add a new item to the original dictionary, and see that the values list gets updated as well.
   ```python
     car = {
     "brand": "Ford",
@@ -855,33 +866,11 @@ Output:- {'brand': 'Ford', 'electric': False, 'year': 1964, 'colors': ['red', 'w
     dict_values(['Ford', 'Mustang', 1964, 'red'])
   ```
 
-* __Get Items__ The items() method will return each item in a dictionary, as tuples in a list.
-  ```python
-    thisdict = {
-    "brand": "Ford",
-    "model": "Mustang",
-    "year": 1964
-    }
 
-    x = thisdict.items()
 
-    print(x)
-    output:- dict_items([('brand', 'Ford'), ('model', 'Mustang'), ('year', 1964)])
-  ```
 
-* __Check if Key Exists__ To determine if a specified key is present in a dictionary use the in keyword.
-```python
-    thisdict = {
-    "brand": "Ford",
-    "model": "Mustang",
-    "year": 1964
-    }
-    if "model" in thisdict:
-    print("Yes, 'model' is one of the keys in the thisdict dictionary")
-    output:- Yes, 'model' is one of the keys in the thisdict dictionary
-  ```
 
-</details>
+
 
 
 
@@ -896,15 +885,6 @@ x = thisdict["model"]
 x = thisdict.get("model") // Accessing Items Type 1
 print(x)
 Output:- Mustang
-==========Change Values============
-thisdict =	{
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
-}
-thisdict["year"] = 2018
-print(thisdict)
-Output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 2018}
 ==========Loop Through a Dictionary Type 1=============
 thisdict =	{
   "brand": "Ford",
@@ -953,34 +933,6 @@ Output:-
 brand Ford
 model Mustang
 year 1964
-===========Check if Key Exists===========
-thisdict = {
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
-}
-if "model" in thisdict:
-print("Yes, 'model' is one of the keys in the thisdict dictionary")
-Output:-
-Yes, 'model' is one of the keys in the thisdict dictionary
-=====Dictionary Length==========
-thisdict =	{
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
-}
-print(len(thisdict))
-Output:- 3
-========Adding Items==========
-thisdict =	{
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
-}
-thisdict["color"] = "red"
-print(thisdict)
-Output:-
-{'brand': 'Ford', 'model': 'Mustang', 'year': 1964, 'color': 'red'}
 ========Removing Items=============
 *** The pop() method removes the item with the specified key name
 thisdict =	{
