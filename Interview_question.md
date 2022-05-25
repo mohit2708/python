@@ -732,7 +732,7 @@ Output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
     output:-  dict_values(['Ford', 'Mustang', 1964])
   ```
 
-**Duplicates Not Allowed**
+* __Duplicates Not Allowed__
 ```python
 thisdict = {
   "brand": "Ford",
@@ -744,7 +744,7 @@ print(thisdict)
 Output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 2020}
 ```
 
-**Dictionary Length:** To determine how many items a dictionary has, use the len() function.
+* __Dictionary Length:__ To determine how many items a dictionary has, use the len() function.
 ```python
 thisdict = {
   "brand": "Ford",
@@ -770,7 +770,7 @@ Output:- 3
     output:- dict_items([('brand', 'Ford'), ('model', 'Mustang'), ('year', 1964)])
   ```
 
-**Dictionary Items - Data Types:** The values in dictionary items can be of any data type.
+* __Dictionary Items - Data Types:__ The values in dictionary items can be of any data type.
 ```python
 thisdict = {
   "brand": "Ford",
@@ -866,25 +866,137 @@ Output:- {'brand': 'Ford', 'electric': False, 'year': 1964, 'colors': ['red', 'w
     dict_values(['Ford', 'Mustang', 1964, 'red'])
   ```
 
+* __Removing item using pop() methods__ The pop() method removes the item with the specified key name.
+  ```python
+    thisdict =	{
+    "brand": "Ford",
+    "model": "Mustang",
+    "year": 1964
+    }
+    thisdict.pop("model")
+    print(thisdict)
+    output:-  {'brand': 'Ford', 'year': 1964}
+  ```
 
+* The __Removing item using popitem() methods__ method removes the last inserted item (in versions before 3.7, a random item is removed instead).
+  ```python
+    thisdict =	{
+    "brand": "Ford",
+    "model": "Mustang",
+    "year": 1964
+    }
+    thisdict.popitem()
+    print(thisdict)
+    output:-  {'brand': 'Ford', 'model': 'Mustang'}
+  ```
 
+* The __Removing item using del methods__ keyword removes the item with the specified key name.
+  ```python
+    thisdict =	{
+    "brand": "Ford",
+    "model": "Mustang",
+    "year": 1964
+    }
+    del thisdict["model"]
+    print(thisdict)
+    output:-  {'brand': 'Ford', 'year': 1964}
+  ```
 
+* The __Removing item using del methods__ keyword can also delete the dictionary completely.
+  ```python
+    thisdict =	{
+    "brand": "Ford",
+    "model": "Mustang",
+    "year": 1964
+    }
+    del thisdict
+    print(thisdict)
+    output:-  this will cause an error because "thisdict" no longer exists.
+  ```
 
+* The __Removing item using clear() methods__ method empties the dictionary.
+  ```python
+    thisdict =	{
+    "brand": "Ford",
+    "model": "Mustang",
+    "year": 1964
+    }
+    thisdict.clear()
+    print(thisdict)
+    output:-  {}
+  ```
 
+* Copy a Dictionary using __copy()__ method.
+  ```python
+    thisdict =	{
+    "brand": "Ford",
+    "model": "Mustang",
+    "year": 1964
+    }
+    mydict = thisdict.copy()
+    print(mydict)
+    output:-  {'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
+  ```
+
+* Copy a Dictionary using __dict()__ method.
+  ```python
+    thisdict =	{
+    "brand": "Ford",
+    "model": "Mustang",
+    "year": 1964
+    }
+    mydict = dict(thisdict)
+    print(mydict)
+    output:-  {'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
+  ```
+
+* __Python - Nested Dictionaries__ A dictionary can contain dictionaries, this is called nested dictionaries.
+```python
+    myfamily = {
+        "child1" : {
+            "name" : "Emil",
+            "year" : 2004
+        },
+        "child2" : {
+            "name" : "Tobias",
+            "year" : 2007
+        },
+        "child3" : {
+            "name" : "Linus",
+            "year" : 2011
+        }
+    }
+    print(myfamily)
+    Output:- {'child1': {'name': 'Emil', 'year': 2004}, 'child2': {'name': 'Tobias', 'year': 2007}, 'child3': {'name': 'Linus', 'year': 2011}}
+```
+```python
+    child1 = {
+        "name" : "Emil",
+        "year" : 2004
+    }
+    child2 = {
+        "name" : "Tobias",
+        "year" : 2007
+    }
+    child3 = {
+        "name" : "Linus",
+        "year" : 2011
+    }
+
+    myfamily = {
+        "child1" : child1,
+        "child2" : child2,
+        "child3" : child3
+    }
+
+    print(myfamily)
+    Output:- {'child1': {'name': 'Emil', 'year': 2004}, 'child2': {'name': 'Tobias', 'year': 2007}, 'child3': {'name': 'Linus', 'year': 2011}}
+```
 
 
 
 ```python
-=========Accessing Items Type 1========
-thisdict =	{
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
-}
-x = thisdict["model"]
-x = thisdict.get("model") // Accessing Items Type 1
-print(x)
-Output:- Mustang
+
 ==========Loop Through a Dictionary Type 1=============
 thisdict =	{
   "brand": "Ford",
@@ -933,58 +1045,7 @@ Output:-
 brand Ford
 model Mustang
 year 1964
-========Removing Items=============
-*** The pop() method removes the item with the specified key name
-thisdict =	{
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
-}
-thisdict.pop("model")
-print(thisdict)
-Output:- {'brand': 'Ford', 'year': 1964}
 
-*** The popitem() method removes the last inserted item (in versions before 3.7, a random item is removed instead):
-
-thisdict.popitem()
-print(thisdict)
-Output:- {'brand': 'Ford', 'model': 'Mustang'}
-
-*** The del keyword removes the item with the specified key name:
-thisdict =	{
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
-}
-del thisdict["model"]
-print(thisdict)
-Output:- {'brand': 'Ford', 'year': 1964}
-
-
-*** The del keyword can also delete the dictionary completely:
-thisdict =	{
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
-}
-del thisdict
-print(thisdict)
-Output:- 
-Traceback (most recent call last):
-  File "demo_dictionary_del3.py", line 7, in <module>
-    print(thisdict) #this will cause an error because "thisdict" no longer exists.
-NameError: name 'thisdict' is not defined
-
-
-*** The clear() method empties the dictionary:
-thisdict =	{
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
-}
-thisdict.clear()
-print(thisdict)
-Output:- {}
 ===========Copy a Dictionary===================
 thisdict = {
   "brand": "Ford",
