@@ -686,8 +686,12 @@ output:- ['apple', 'banana', 'cherry']
 |Syntax: list_1 = [10, ‘Chelsea’, 20]	|Syntax: tup_1 = (10, ‘Chelsea’ , 20)|
 
 
-### Dictionaries
-A dictionary is a collection which is unordered, changeable and indexed. In Python dictionaries are written with curly brackets, and they have keys and values.<br>
+### Ques. What is Dictionaries?
+
+* Dictionaries are written with curly brackets, and have keys and values.
+* Dictionary items are ordered, changeable, and does not allow duplicates.
+* Dictionaries are changeable, meaning that we can change, add or remove items after the dictionary has been created.
+
 Example:-
 ```python
 thisdict =	{
@@ -697,6 +701,50 @@ thisdict =	{
 }
 print(thisdict)
 Output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
+```
+
+**Duplicates Not Allowed**
+```python
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964,
+  "year": 2020
+}
+print(thisdict)
+Output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 2020}
+```
+
+**Dictionary Length**
+To determine how many items a dictionary has, use the len() function.
+```python
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964,
+  "year": 2020
+}
+print(len(thisdict))
+Output:- 3
+```
+
+**Dictionary Items - Data Types**
+The values in dictionary items can be of any data type.
+```python
+thisdict = {
+  "brand": "Ford",
+  "electric": False,
+  "year": 1964,
+  "colors": ["red", "white", "blue"]
+}
+print(thisdict)
+Output:- {'brand': 'Ford', 'electric': False, 'year': 1964, 'colors': ['red', 'white', 'blue']}
+```
+
+
+
+
+```python
 =========Accessing Items Type 1========
 thisdict =	{
   "brand": "Ford",
@@ -1067,11 +1115,6 @@ output:-
 
 
 
-### What is pep 8?
-PEP stands for Python Enhancement Proposal. It is a set of rules that specify how to format Python code for maximum readability.
-
-
-
 ### Object-Oriented Programming (OOP)
 __How to create a class__<br>
 To define a class in Python, you can use the class keyword, followed by the class name and a colon. Inside the class, an __init__ method has to be defined with def. This is the initializer that you can later use to instantiate objects. It's similar to a constructor in Java. __init__ must always be present! It takes one argument: self, which refers to the object itself. Inside the method, the pass keyword is used as of now, because Python expects you to type something there.<br>
@@ -1120,18 +1163,5 @@ filou.doginfo()
 Output:-<br>bark bark!<br>
 Skippy is 12 year(s) old.<br>
 Filou is 8 year(s) old.<br>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
