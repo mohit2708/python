@@ -993,23 +993,38 @@ Output:- {'brand': 'Ford', 'electric': False, 'year': 1964, 'colors': ['red', 'w
     Output:- {'child1': {'name': 'Emil', 'year': 2004}, 'child2': {'name': 'Tobias', 'year': 2007}, 'child3': {'name': 'Linus', 'year': 2011}}
 ```
 
-
-
+* __Loop Dictionaries__ Print all key names in the dictionary, one by one.
 ```python
-
-==========Loop Through a Dictionary Type 1=============
-thisdict =	{
+  thisdict =	{
   "brand": "Ford",
   "model": "Mustang",
   "year": 1964
 }
 for x in thisdict:
 print(x)
-Output:- 
+output:- 
 brand
 model
 year
-==========Loop Through a Dictionary Type 2=============
+```
+
+* __Loop Dictionaries__ You can use the **keys()** method to return the keys of a dictionary.
+```python
+thisdict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+for x in thisdict.keys():
+  print(x)
+output:- 
+brand
+model
+year
+```
+
+* __Loop Dictionaries__ Print all values in the dictionary, one by one.
+```python
 thisdict =	{
   "brand": "Ford",
   "model": "Mustang",
@@ -1017,11 +1032,14 @@ thisdict =	{
 }
 for x in thisdict:
 print(thisdict[x])
-Output:- 
+output:- 
 Ford
 Mustang
 1964
-==========Loop Through a Dictionary Type 3=============
+```
+
+* __Loop Dictionaries__ You can also use the **values()** method to return values of a dictionary.
+```python
 thisdict =	{
   "brand": "Ford",
   "model": "Mustang",
@@ -1029,38 +1047,43 @@ thisdict =	{
 }
 for x in thisdict.values():
 print(x)
-Output:- 
+output:- 
 Ford
 Mustang
 1964
-==========Loop Through a Dictionary Type 4=============
+```
+
+* __Loop Dictionaries__ Loop through both keys and values, by using the **items()** method.
+
+```python
 thisdict =	{
   "brand": "Ford",
   "model": "Mustang",
   "year": 1964
 }
 for x, y in thisdict.items():
-print(x, y)
-Output:- 
+  print(x, y)
+output:- 
 brand Ford
 model Mustang
 year 1964
-
-===========Copy a Dictionary===================
-thisdict = {
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
-}
-mydict = thisdict.copy()
-print(mydict)
-Output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
-
-*** Another way to make a copy is to use the built-in function dict()
-mydict = dict(thisdict)
-print(mydict)
-Output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
 ```
+
+### Ques. What is Dictionarie Methods?
+* __clear()__	Removes all the elements from the dictionary,
+* __copy()__	Returns a copy of the dictionary.
+* __fromkeys()__ Returns a dictionary with the specified keys and value.
+* __get()__	Returns the value of the specified key.
+* __items()__	Returns a list containing a tuple for each key value pair.
+* __keys()__	Returns a list containing the dictionary's keys.
+* __pop()__	Removes the element with the specified key.
+* __popitem()__	Removes the last inserted key-value pair.
+* __setdefault()__	Returns the value of the specified key. If the key does not exist: insert the key, with the specified value.
+* __update()__	Updates the dictionary with the specified key-value pairs.
+* __values()__	Returns a list of all the values in the dictionary.
+
+
+
 
 ### Ques. What is Set?
 * Sets are used to store multiple items in a single variable.
@@ -1317,13 +1340,6 @@ filou.doginfo()
 Output:-<br>bark bark!<br>
 Skippy is 12 year(s) old.<br>
 Filou is 8 year(s) old.<br>
-
-
-
-
-
-
-
 
 
 
