@@ -1071,7 +1071,7 @@ year 1964
 
 
 ### Ques. What is Dictionarie Methods?
-* [__clear()__	Removes all the elements from the dictionary](#The-Removing-item-using-clear-methods-method-empties-the-dictionary)
+* [__clear()__	Removes all the elements from the dictionary](#The-Removing-item-using-clear()-methods-method-empties-the-dictionary)
 * __copy()__	Returns a copy of the dictionary.
 * __fromkeys()__ Returns a dictionary with the specified keys and value.
 * __get()__	Returns the value of the specified key.
