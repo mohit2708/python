@@ -1381,6 +1381,44 @@ if b > a:
 Output:- 
 ```
 
+### Ques:- What is Python JSON?
+ * JSON is a syntax for storing and exchanging data.
+ * JSON is text, written with JavaScript object notation.
+ * Python has a built-in package called json, which can be used to work with JSON data.
+ 
+ __Convert from JSON to Python__<br>If you have a JSON string, you can parse it by using the __json.loads()__ method.
+ 
+ ```python
+import json
+
+# some JSON:
+x = '{ "name":"John", "age":30, "city":"New York"}'
+y = json.loads(x)
+# the result is a Python dictionary:
+print(y["age"])
+ 
+Output:- 30
+ ```
+__Convert from Python to JSON__<br>If you have a Python object, you can convert it into a JSON string by using the __json.dumps()__ method.
+ ```python
+ import json
+
+# a Python object (dict):
+x = {
+  "name": "John",
+  "age": 30,
+  "city": "New York"
+}
+
+# convert into JSON:
+y = json.dumps(x)
+
+# the result is a JSON string:
+print(y)
+
+Output:- {"name": "John", "age": 30, "city": "New York"}
+ ```
+
 
 
 ### Object-Oriented Programming (OOP)
