@@ -24,3 +24,32 @@ from crud_function.models import Employee
 # Register your models here.
 admin.site.register(Employee)
 ```
+
+### Regiter URL
+create urls.py file in your app and include the project urls.py
+```python
+//create urls.py
+
+from django.contrib import admin  
+from django.urls import path  
+from crud_function import views
+urlpatterns = [   
+    path('list',views.show),
+    path('emp', views.emp),    
+    path('edit/<int:id>', views.edit),  
+    path('update/<int:id>', views.update),  
+    path('delete/<int:id>', views.destroy),  
+]
+
+//add url.py
+
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('authentication.urls')),
+    path('crud_function/', include('crud_function.urls')),
+]
+
+```
