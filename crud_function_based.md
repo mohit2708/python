@@ -11,6 +11,10 @@ class Employee(models.Model):
     class Meta:  
         db_table = "employee"
 ```
+```python
+python3 manage.py makemigrations
+python3 manage.py migrate  
+```
 
 ### register in admin.py for showing the django admin
 ```python
