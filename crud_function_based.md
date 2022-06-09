@@ -53,3 +53,22 @@ urlpatterns = [
 ]
 
 ```
+
+
+### Delete Data
+In list table
+```python
+<a href="/crud_function/delete/{{ employee.id }}">Delete</a>
+```
+Urls.py
+```python
+path('delete/<int:id>', views.destroy),  
+```
+view.py
+```python
+def destroy(request, id):  
+    del_data = Employee.objects.get(id=id)  
+    del_data.delete()  
+    # return redirect("/list")
+    return HttpResponseRedirect(reverse('list'))
+```
