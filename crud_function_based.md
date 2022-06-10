@@ -54,6 +54,36 @@ urlpatterns = [
 ]
 
 ```
+### Show Data
+create list.html in template folder
+```python
+{% for employee in employees %}
+    <tr>
+	<td>{{ employee.eid }}</td>
+	<td>{{ employee.ename }}</td>
+	<td>{{ employee.eemail }}</td>
+	<td>{{ employee.econtact }}</td>
+	<td>
+	    <a href="/crud_function/edit/{{ employee.id }}" class="edit" ><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+	    <a href="/crud_function/delete/{{ employee.id }}" class="delete"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+	    <!-- <a href="/create/{{ employee.id }}"><span class="glyphicon glyphicon-pencil" >Edit</span></a>   -->
+	</td>
+    </tr>
+{% endfor %}
+```
+create function in view.py
+```python
+from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import render, redirect  
+from django.urls import reverse
+# from crud_function.forms import EmployeeForm  
+from crud_function.models import Employee
+
+def show(request):
+	employees = Employee.objects.all()
+	return render(request,"crud_function/list.html",{'employees':employees})
+```
+
 
 ### Create Data
 create file add.html in template
