@@ -34,11 +34,12 @@ from django.contrib import admin
 from django.urls import path  
 from crud_function import views
 urlpatterns = [   
-    path('list',views.show),
-    path('emp', views.emp),    
+    path('',views.show, name='list'),
+    path('create/', views.create),
+    path('create/store/', views.store, name='store'),
     path('edit/<int:id>', views.edit),  
-    path('update/<int:id>', views.update),  
-    path('delete/<int:id>', views.destroy),  
+    path('edit/update/<int:id>', views.update),  
+    path('delete/<int:id>', views.destroy), 
 ]
 
 //add url.py
@@ -54,6 +55,77 @@ urlpatterns = [
 
 ```
 
+### Create Data
+create file add.html in template
+```python
+<h1>Add member</h1>
+
+<form action="store/" method="post">
+{% csrf_token %}
+Name:<br>
+<input type="text" name="fname">
+<br><br>
+ Email:<br>
+<input type="email" name="email">
+<br><br>
+ Phone:<br>
+<input type="number" name="phone">
+<br><br>
+<input type="submit" value="Submit">
+</form>
+```
+Create function in view.py
+```python
+def create(request):
+	return render(request,"crud_function/add.html")
+
+def store(request):
+	print('storeeee')
+	fname = request.POST['fname']
+	email = request.POST['email']
+	phone = request.POST['phone']
+	storeData = Employee(ename=fname, eemail=email,econtact=phone)
+	storeData.save()
+	return HttpResponseRedirect(reverse('list'))
+```
+
+### Edit Update data
+create Edit file in temlate section
+```python
+<h1>Update member</h1>
+
+<form action="update/{{ employee.id }}" method="post">
+{% csrf_token %}
+Name:<br>
+<input name="fname" value="{{ employee.ename }}">
+<br><br>
+email:<br>
+<input name="email" value="{{ employee.eemail }}">
+<br><br>
+Contact:<br>
+<input name="phone" value="{{ employee.econtact }}">
+<br><br>
+<input type="submit" value="Submit">
+</form>
+```
+Create function in view.py
+```python
+def edit(request, id):
+    employee = Employee.objects.get(id=id)
+    return render(request,'crud_function/edit.html', {'employee':employee})
+
+def update(request, id):
+	fname = request.POST['fname']
+	email = request.POST['email']
+	phone = request.POST['phone']
+	
+	updateData = Employee.objects.get(id=id)
+	updateData.ename = fname
+	updateData.eemail = email
+	updateData.econtact = phone
+	updateData.save()
+	return HttpResponseRedirect(reverse('list'))
+```
 
 ### Delete Data
 In list table
