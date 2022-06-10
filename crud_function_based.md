@@ -36,9 +36,9 @@ from crud_function import views
 urlpatterns = [   
     path('',views.show, name='list'),
     path('create/', views.create),
-    path('create/store/', views.store, name='store'),
+    path('store/', views.store, name='store'),
     path('edit/<int:id>', views.edit),  
-    path('edit/update/<int:id>', views.update),  
+    path('update/<int:id>', views.update, name='update'),  
     path('delete/<int:id>', views.destroy), 
 ]
 
@@ -91,6 +91,7 @@ create file add.html in template
 <h1>Add member</h1>
 
 <form action="store/" method="post">
+<form action="{% url 'store' %}" method="post">
 {% csrf_token %}
 Name:<br>
 <input type="text" name="fname">
@@ -131,6 +132,7 @@ create Edit file in temlate section
 <h1>Update member</h1>
 
 <form action="update/{{ employee.id }}" method="post">
+<form action="{% url 'update' employee.id %}" method="post">
 {% csrf_token %}
 Name:<br>
 <input name="fname" value="{{ employee.ename }}">
