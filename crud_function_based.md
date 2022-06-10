@@ -106,6 +106,12 @@ Name:<br>
 ```
 Create function in view.py
 ```python
+from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import render, redirect  
+from django.urls import reverse
+# from crud_function.forms import EmployeeForm  
+from crud_function.models import Employee
+
 def create(request):
 	return render(request,"crud_function/add.html")
 
@@ -140,6 +146,13 @@ Contact:<br>
 ```
 Create function in view.py
 ```python
+
+from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import render, redirect  
+from django.urls import reverse
+# from crud_function.forms import EmployeeForm  
+from crud_function.models import Employee
+
 def edit(request, id):
     employee = Employee.objects.get(id=id)
     return render(request,'crud_function/edit.html', {'employee':employee})
@@ -168,6 +181,12 @@ path('delete/<int:id>', views.destroy),
 ```
 view.py
 ```python
+from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import render, redirect  
+from django.urls import reverse
+# from crud_function.forms import EmployeeForm  
+from crud_function.models import Employee
+
 def destroy(request, id):  
     del_data = Employee.objects.get(id=id)  
     del_data.delete()  
