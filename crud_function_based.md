@@ -23,6 +23,17 @@ from django.contrib import admin
 from crud_function.models import Employee
 # Register your models here.
 admin.site.register(Employee)
+
+Type1:-
+# from blog.models import Film, Genre
+# admin.site.register(Film)
+# admin.site.register(Genre)
+----------------------------------
+Type2:-
+# @admin.register(Blogs)
+
+# class BlogsAdmin(admin.ModelAdmin):
+# 	list_display = ['id', 'title']
 ```
 
 ### Regiter URL
