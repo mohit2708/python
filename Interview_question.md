@@ -508,7 +508,9 @@ Indentation is necessary for Python. It specifies a block of code. All code with
 * The allocation of heap space for Python objects is done by Python’s memory manager. The core API gives access to some tools for the programmer to code.
 
 ### Ques. What is PEP 8?
-* PEP stands for __Python Enhancement Proposal__. It is a set of rules that specify how to format Python code for maximum readability.
+* PEP stands for __Python Enhancement Proposal__. 
+* PEP8 is a document that provides various guidline to write the readable in python.
+* PEP8 describe how the developers can write the beautiful code.
 
 ### Ques. Global Keyword?
 In Python, global keyword allows you to modify the variable outside of the current scope. It is used to create a global variable and make changes to the variable in a local context.<br>
