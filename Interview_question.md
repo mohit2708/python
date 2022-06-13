@@ -10,7 +10,14 @@
 | 3 | [File Extensions in Python?](#Ques-File-Extensions-in-Python) |
 |   | [Python Comments?](#Ques-Python-Comments) |
 |   | [Python Variables?](#ques-python-variables) |
-| 4 | [What is built-in module in Python?](#Ques-What-is-built-in-module-in-Python) |
+|   | [Global Variables?](#ques-global-variables) |
+|   | [How to check What type of datatype?](#ques-how-to-check-what-type-of-datatype) |
+|   | [Python Strings?](#ques-python-strings) |
+|   | [What is built-in module in Python?](#Ques-What-is-built-in-module-in-Python) |
+|   | [Is indentation required in python?](#ques-is-indentation-required-in-python) |
+|   | [How is memory managed in Python?](#ques-how-is-memory-managed-in-python) |
+|   | [What is PEP 8?](#ques-what-is-pep-8) |
+|   | [Global Keyword?](#ques-global-keyword) |
 
 
 ### Ques. What is Python?
