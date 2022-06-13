@@ -8,7 +8,8 @@
 | 2 | [Features of Python?](#Ques-Features-of-Python) |
 | 2 | [Python Frameworks?](#Ques-Python-Frameworks) |
 | 3 | [File Extensions in Python?](#Ques-File-Extensions-in-Python) |
-|  | [Python Comments?](#Ques-Python-Comments) |
+|   | [Python Comments?](#Ques-Python-Comments) |
+|   | [Python Variables?](#ques-python-variables) |
 | 4 | [What is built-in module in Python?](#Ques-What-is-built-in-module-in-Python) |
 
 
