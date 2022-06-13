@@ -493,7 +493,42 @@ World!
  
 </details>
 
+**[⬆ Back to Top](#table-of-contents)**
+### Ques. Python Shallow Copy and Deep Copy?
+__Deep Copy:-__ In deep copy any changes made to a copy of object do not reflect in the orginal object.
+```python
+import copy
 
+old_list = [[1, 1, 1], [2, 2, 2], [3, 3, 3]]
+new_list = copy.deepcopy(old_list)
+
+new_list[1][0] = 'BB'
+
+print("Old list:", old_list)
+print("New list:", new_list)
+
+Output:- 
+Old list: [[1, 1, 1], [2, 2, 2], [3, 3, 3]]
+New list: [[1, 1, 1], ['BB', 2, 2], [3, 3, 3]]
+```
+__Shallow copy:-__ A shallow copy creates a new object which stores the reference of the original elements.
+```python
+ import copy
+
+old_list = [[1, 1, 1], [2, 2, 2], [3, 3, 3]]
+new_list = copy.copy(old_list)
+
+new_list[1][1] = 'AA'
+
+print("Old list:", old_list)
+print("New list:", new_list)
+
+Output:- 
+Old list: [[1, 1, 1], [2, 'AA', 2], [3, 3, 3]]
+New list: [[1, 1, 1], [2, 'AA', 2], [3, 3, 3]]
+```
+ 
+ 
 
 **[⬆ Back to Top](#table-of-contents)**
 ### Ques. What is built-in module in Python?
