@@ -18,6 +18,12 @@
 |   | [How is memory managed in Python?](#ques-how-is-memory-managed-in-python) |
 |   | [What is PEP 8?](#ques-what-is-pep-8) |
 |   | [Global Keyword?](#ques-global-keyword) |
+|   | [Python Collections (Arrays)?](#python-collections-arrays) |
+|   | [What is List?](#ques-what-is-list) |
+|   | [Difference between List and Tuples in Python?](#ques-difference-between-list-and-tuples-in-python) |
+|   | [What is Dictionaries?](#ques-what-is-dictionaries) |
+|   | [What is Dictionarie Methods?](#ques-what-is-dictionarie-methods) |
+|   | [What is Set?](#ques-what-is-set) |
 
 
 ### Ques. What is Python?
