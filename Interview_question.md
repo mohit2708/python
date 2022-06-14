@@ -1033,92 +1033,7 @@ print(cars)
 
 Output:- 
 [{'car': 'Mitsubishi', 'year': 2000}, {'car': 'Ford', 'year': 2005}, {'car': 'VW', 'year': 2011}, {'car': 'BMW', 'year': 2019}]
-
-
-
-
-
-
 ```
-
-##### Examples Of list
-```python
-thislist = ["apple", "banana", "cherry"]
-thislist[1] = "blackcurrant"                          //List Change/replace Item Value
-thislist.append("orange")                             //List Add Items   
-thislist.insert(1, "orange")                          //add Items in partcular postion
-thislist.remove("banana")                             //Remove Items
-thislist.pop()                                        //remove the last item using pop
-thislist.pop(1)                                       //remove the particular item using pop keyword
-del thislist[0]                                       //The __del__ keyword removes the specified index:
-del thislist                                          //The del keyword can also delete the list completely:
-thislist.clear()                                      //The __clear()__ method empties the list:
-print(thislist)                                        
-
-Output:- 
-['apple', 'blackcurrant', 'cherry']                    //List Change/replace Item Value
-['apple', 'banana', 'cherry', 'orange']                //List Add Items 
-['apple', 'orange', 'banana', 'cherry']                //add Items in partcular postion
-['apple', 'cherry']                                    //Remove Items
-['apple', 'banana']                                    //remove the last item using pop
-['apple', 'cherry']                                    //remove the particular item using pop keyword
-['banana', 'cherry']                                   //The __del__ keyword removes the specified index:
-....................                                   //The del keyword can also delete the list completely:
-[]                                                     //The __clear()__ method empties the list:
-
-```
-
-
-### Copy a List
-* Make a copy of a list with the __copy()__ method:
-```python
-thislist = ["apple", "banana", "cherry"]
-mylist = thislist.copy()
-print(mylist)
-```
-Output:- ['apple', 'banana', 'cherry']
-
-* Make a copy of a list with the __list()__ method:
-```python
-thislist = ["apple", "banana", "cherry"]
-mylist = list(thislist)
-print(mylist)
-```
-Output:- ['apple', 'banana', 'cherry']
-
-### Join Two Lists
-* One of the easiest ways are by using the + operator.
-```python
-list1 = ["a", "b" , "c"]
-list2 = [1, 2, 3]
-list3 = list1 + list2
-print(list3)
-```
-Output:- ['a', 'b', 'c', 1, 2, 3]
-
-* Another way to join two lists are by appending all the items from list2 into list1, one by one:
-```python
-list1 = ["a", "b" , "c"]
-list2 = [1, 2, 3]
-
-for x in list2:
-  list1.append(x)
-
-print(list1)
-```
-Output:- ['a', 'b', 'c', 1, 2, 3]
-
-* Use the __extend()__ method to add list2 at the end of list1:
-```python
-list1 = ["a", "b" , "c"]
-list2 = [1, 2, 3]
-list3 = [1, 1, 3]
-list1.extend(list2)
-list1.extend(list3)
-print(list1)
-```
-Output:-
-['a', 'b', 'c', 1, 2, 3, 1, 2, 3]
 
 ### list() Constructor
 It is also possible to use the __list()__ constructor to make a new list.
@@ -1128,7 +1043,20 @@ print(thislist)
 ```
 output:- ['apple', 'banana', 'cherry']
 
+### Tuples
+* Tuples are used to store multiple items in a single variable.
+* A tuple is a collection which is ordered and unchangeable.
+* Tuples are written with round brackets.
+* Tuple items are ordered, unchangeable, and allow duplicate values.
+```python
+thistuple = ("apple", "banana", "cherry")
+print(thistuple)
 
+Output:- ('apple', 'banana', 'cherry')
+```
+ 
+ 
+ 
 ### Ques. Difference between List and Tuples in Python?
 | List | Tuples |
 |:---:|:---:|
