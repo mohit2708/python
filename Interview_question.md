@@ -20,6 +20,7 @@
 |   | [Global Keyword?](#ques-global-keyword) |
 |   | [Python Collections (Arrays)?](#python-collections-arrays) |
 |   | [What is List?](#ques-what-is-list) |
+|   | [Access List Items?](#access-list-items) |
 |   | [Difference between List and Tuples in Python?](#ques-difference-between-list-and-tuples-in-python) |
 |   | [What is Dictionaries?](#ques-what-is-dictionaries) |
 |   | [What is Dictionarie Methods?](#ques-what-is-dictionarie-methods) |
@@ -650,6 +651,35 @@ if "apple" in thislist:
   print("Yes, 'apple' is in the fruits list")
 
 Output:- Yes, 'apple' is in the fruits list
+```
+ 
+##### Change List Items
+```python
+# Change Item Value:- To change the value of a specific item, refer to the index number.
+thislist = ["apple", "banana", "cherry"]
+thislist[1] = "blackcurrant"
+
+print(thislist)
+
+Output:- ['apple', 'blackcurrant', 'cherry']
+------------------------------------------------
+
+# Change a Range of Item Values:- To change the value of items within a specific range, define a list
+  # with the new values, and refer to the range of index numbers where you want to insert the new values.
+# 1 se 3 wale range ke element hut jaynge
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "mango"]
+thislist[1:3] = ["blackcurrant", "watermelon"]
+print(thislist)
+
+Output:- ['apple', 'blackcurrant', 'watermelon', 'orange', 'kiwi', 'mango']
+---------------------------------------------------------------------------------------------------------
+
+# Insert Items
+thislist = ["apple", "banana", "cherry"]
+thislist.insert(2, "watermelon")
+print(thislist)
+ 
+Output:- ['apple', 'banana', 'watermelon', 'cherry']
 ```
 
  
