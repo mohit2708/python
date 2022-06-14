@@ -1043,19 +1043,70 @@ print(thislist)
 ```
 output:- ['apple', 'banana', 'cherry']
 
-### Tuples
+### Ques. What isTuples?
 * Tuples are used to store multiple items in a single variable.
 * A tuple is a collection which is ordered and unchangeable.
 * Tuples are written with round brackets.
 * Tuple items are ordered, unchangeable, and allow duplicate values.
+* A tuple can contain different data types.
 ```python
 thistuple = ("apple", "banana", "cherry")
+tuple1 = ("abc", 34, True, 40, "male")
 print(thistuple)
 
 Output:- ('apple', 'banana', 'cherry')
 ```
+
+##### Tuple Length
+To determine how many items a tuple has, use the len() function
+```python
+thistuple = tuple(("apple", "banana", "cherry"))
+print(len(thistuple))
+
+Output:- 3
+```
+
+##### Create Tuple With One Item
+To create a tuple with only one item, you have to add a comma after the item, otherwise Python will not recognize it as a tuple.
+```python
+thistuple = ("apple",)
+print(type(thistuple))
+
+#NOT a tuple
+thistuple = ("apple")
+print(type(thistuple))
+
+Output:-
+<class 'tuple'>
+<class 'str'>
+```
+
+##### tuple() Constructor
+```python
+thistuple = tuple(("apple", "banana", "cherry"))
+print(thistuple)
+
+Output:- ('apple', 'banana', 'cherry')
+```
+
+##### Access Tuple Items
+```python
+thistuple = ("apple", "banana", "cherry")
+print(thistuple[1])
+
+Output:- banana
  
+-------------------------------------------------------------------------------
+# Negative Indexing
+thistuple = ("apple", "banana", "cherry")
+print(thistuple[-1])
+
+Output:- Cherry
  
+--------------------------------------------------------------------------------
+# Range of Indexes
+
+```
  
 ### Ques. Difference between List and Tuples in Python?
 | List | Tuples |
