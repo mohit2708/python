@@ -598,44 +598,62 @@ There are four collection data types in the Python programming language:
 ### Ques. What is List?
 * Lists are used to store multiple items in a single variable.
 * List items are ordered, changeable, and allow duplicate values.
- 1. The list is __changeable__, meaning that we can change, add, and remove items in a list after it has been created.
- 2. Since lists are indexed, lists can have items with the __same value.__
-    ```python
-    thislist = ["apple", "banana", "cherry", "apple", "cherry"]
-    print(thislist)
-    output:-
-    ['apple', 'banana', 'cherry', 'apple', 'cherry']
-    ```
 * In Python lists are written with square brackets[], separated by commas.
+ 
+1. The list is __changeable__, meaning that we can change, add, and remove items in a list after it has been created.
+2. Since lists are indexed, lists can have items with the __same value.__
+
 ```python
 my_list = ["apple", "banana", "cherry"]
 my_list = [1, "Hello", 3.4]
 my_list = ["mouse", [8, 4, 6], ['a']] #A list can also have another list as an item. This is called a nested list.
 print(my_list)
-```
-output:-<br>
+ 
+output:-
 ["apple", "banana", "cherry"]
 [1, "Hello", 3.4]
 ["mouse", [8, 4, 6], ['a']]
-
-##### Example of List
-```python
-thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
-print(thislist[1])                //Access Item ke liye
-print(thislist[2:5])              //Range of Indexes (2 sa 5 tak)
-print(thislist[:4])               //Range of Indexes (4 tak)
-print(thislist[2:])               //2 to the end.
-print(thislist[-1])               //Negative Indexing
-print(thislist[-4:-1])            //-4 sa -1 tak
-
-Output:- 
-banana                                                  //Access Item
-['cherry', 'orange', 'kiwi']                            //Range of Indexes (2 sa 5 tak)
-['apple', 'banana', 'cherry', 'orange']                 //Range of Indexes (4 tak)
-['cherry', 'orange', 'kiwi', 'melon', 'mango']          //2 to the end.
-mango                                                  //Negative Indexing
-['orange', 'kiwi', 'melon']                             //-4 sa -1 tak
 ```
+
+##### Access List Items
+```python
+# Access Items
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(thislist[1])
+
+Output:- banana
+-----------------------------------------------------------------------------
+# Negative Indexing
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(thislist[-1])
+
+Output:- mango
+----------------------------------------------------------------------------- 
+ 
+# Range of Indexes
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+
+print(thislist[2:5]) //Range of Indexes (2 sa 5 tak)
+print(thislist[:4])  //Range of Indexes (4 tak)
+print(thislist[2:])  //2 to the end.
+print(thislist[-4:-1]) //-1 sa -4 tak
+
+Output:- ['cherry', 'orange', 'kiwi']
+Output:- ['apple', 'banana', 'cherry', 'orange']
+Output:- ['cherry', 'orange', 'kiwi', 'melon', 'mango']
+Output:- ['orange', 'kiwi', 'melon']
+-----------------------------------------------------------------------------
+
+# Check if Item Exists
+thislist = ["apple", "banana", "cherry"]
+if "apple" in thislist:
+  print("Yes, 'apple' is in the fruits list")
+
+Output:- Yes, 'apple' is in the fruits list
+```
+
+ 
+ 
 
 ##### Examples Of list
 ```python
