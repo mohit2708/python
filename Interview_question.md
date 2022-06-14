@@ -720,7 +720,104 @@ print(thislist)
 
 Output:- ['apple', 'banana', 'cherry', 'kiwi', 'orange']
 ```
+##### Remove List Items
+from msilib.schema import Error
+
+
+```python
+# Remove Specified Item
+thislist = ["apple", "banana", "cherry"]
+thislist.remove("banana")
+print(thislist)
+
+Output:- ['apple', 'cherry']
+-----------------------------------------------------------------------------
+# Remove Specified Index
+# The pop() method removes the specified index.
+thislist = ["apple", "banana", "cherry"]
+thislist.pop(1)
+print(thislist)
+
+Output:- ['apple', 'cherry']
+
+# If you do not specify the index, the pop() method removes the last item.
+thislist = ["apple", "banana", "cherry"]
+thislist.pop()
+print(thislist)
+
+Output:- ['apple', 'banana']
+
+# The del keyword also removes the specified index:
+thislist = ["apple", "banana", "cherry"]
+del thislist[0]
+print(thislist)
+
+Output:- ['banana', 'cherry']
+
+# The del keyword can also delete the list completely.
+thislist = ["apple", "banana", "cherry"]
+del thislist
+print(thislist) #this will cause an error because you have succsesfully deleted "thislist".
+
+Output:- Error
+----------------------------------------------------------------------------- 
  
+# Clear the List:- The clear() method empties the list.
+thislist = ["apple", "banana", "cherry"]
+thislist.clear()
+print(thislist)
+
+Output:- []
+```
+
+##### Loop Lists
+```python
+# Loop Through a List
+thislist = ["apple", "banana", "cherry"]
+for x in thislist:
+  print(x)
+
+Output:- 
+apple
+banana
+cherry
+--------------------------------------------------------------------------------
+
+# Loop Through the Index Numbers
+# You can also loop through the list items by referring to their index number.
+#Use the range() and len() functions to create a suitable iterable.
+thislist = ["apple", "banana", "cherry"]
+for i in range(len(thislist)):
+  print(thislist[i])
+
+Output:-
+ apple
+ banana
+ cherry
+---------------------------------------------------------------------------------
+
+# Using a While Loop
+thislist = ["apple", "banana", "cherry"]
+i = 0
+while i < len(thislist):
+  print(thislist[i])
+  i = i + 1
+
+Output:-
+ apple
+ banana
+ cherry
+-------------------------------------------------------------------------------------
+
+# Looping Using List Comprehension
+thislist = ["apple", "banana", "cherry"]
+[print(x) for x in thislist]
+
+Output:-
+ apple
+ banana
+ cherry
+``` 
  
 
 ##### Examples Of list
