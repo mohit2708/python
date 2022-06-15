@@ -2131,6 +2131,3414 @@ Skippy is 12 year(s) old.<br>
 Filou is 8 year(s) old.<br>
 
 
+++++++++++++++++++
+ <!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Python Interview Questions</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+   </head>
+   <style type="text/css">
+      .code_script{
+      background: #ffffff; overflow: auto; width: auto; border: solid orange; border-width: .1em .1em .1em .8em; padding: .2em .6em;
+      }
+      .code_script_ans{
+      background: #ffffff; overflow: auto; width: auto; border: solid green; border-width: .1em .1em .1em .8em; padding: .2em .6em;
+      }
+      .code{
+      border: 0.1rem solid #cdd5e4;
+      background-color: #f5f8ff;
+      padding: 0.5rem 1rem;
+      }
+      .accordion-item {
+      background-color: #f9f9f9;
+      margin-bottom: 10px;
+      position: relative;
+      border-radius: 40px;
+      overflow: hidden;
+      }
+   </style>
+   <body>
+      <div class="container">
+         <div class="m-4">
+            <div class="accordion" id="myAccordion">
+               <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                     <button type="button" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapse1"><strong>Ques. </strong> What is Python?</button>
+                  </h2>
+                  <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#myAccordion">
+                     <div class="card-body">
+                        <p>
+                        <ul>
+                           <li>Python is a high-level, interpreted, general-purpose programming language.</li>
+                           <li>It supports Object Oriented programming approach to develop applications.</li>
+                           <li>Python supports multiple programming pattern, including object-oriented, imperative, and functional or procedural programming styles.</li>
+                           <li>Python was created by <em><strong>Guido van Rossum</strong></em>, and released in 1991.</li>
+                           <li>It is used for:</li>
+                           <ul>
+                              <li>web development (server-side)</li>
+                              <li>software development</li>
+                              <li>mathematics</li>
+                              <li>system scripting</li>
+                           </ul>
+                        </ul>
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#Frameworks"><strong>Ques. </strong> What is Python Frameworks?</button>
+                  </h2>
+                  <div id="Frameworks" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                     <div class="card-body">
+                        <p>Django, Flask, Pyramid, Tornado, Bottle, web2py, NumPy, SciPy, Pylons</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#Features"><strong>Ques. </strong> What is Python Features?</button>
+                  </h2>
+                  <div id="Features" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                     <div class="card-body">
+                        <p><strong>Easy:- </strong>Python is very easy to learn and understand; any beginner can learn Python easily. When writing code in Python, you need fewer lines of code compared to languages like Java.</p>
+                        <p><strong>Interpreted:- </strong>It is interpreted(executed) line by line. This makes it easy to test and debug.</p>
+                        <p><strong>Object-Oriented:- </strong>The Python programming language supports classes and objects and hence it is object-oriented.</p>
+                        <p><strong>Free and Open Source:- </strong>The language and its source code are available to the public for free; there is no need to buy a costly license.</p>
+                        <p><strong>Portable:- </strong>Since Python is open-source, you can run it on Windows, Mac, Linux or any other platform. Your programs will work without any need to change it for every machine.</p>
+                        <p><strong>GUI Programming:- </strong>You can use it to develop a GUI (Graphical User Interface). One way to do this is through Tkinter.</p>
+                        <p><strong>Large Python Library:- </strong>Python provides you with a large standard library.</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#Extensions"><strong>Ques. </strong> File Extensions in Python?</button>
+                  </h2>
+                  <div id="Extensions" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                     <div class="card-body">
+                        <p>
+                        <ul>
+                           <li><strong>.py– </strong>The normal extension for a Python source file</li>
+                           <li><strong>.pyc- </strong>The compiled bytecode</li>
+                           <li><strong>.pyd- </strong>A Windows DLL file</li>
+                           <li><strong>.pyo- </strong>A file created with optimizations</li>
+                           <li><strong>.pyw- </strong>A Python script for Windows</li>
+                           <li><strong>.pyz- </strong>A Python script archive</li>
+                        </ul>
+                        </p>
+                     </div>
+                  </div>
+               </div>
+			   
+			    <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#Comments"><strong>Ques. </strong>  Python Comments?</button>
+                  </h2>
+                  <div id="Comments" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                     <div class="card-body">
+                        <p>single Line Comments</p>
+						<pre class="code"><code>
+#This is a comment
+print("Hello, World!")
 
+print("Hello, World!") #This is a comment
+</pre></code>
+						<p>Multi Line Comments(OR)Docstring</p>
+							<pre class="code"><code>
+"""
+This is a comment
+written in
+more than just one line
+"""
+print("Hello, World!")
+</pre></code>
+                      
+                     </div>
+                  </div>
+               </div>
+			   
+			   
+			   	<div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#Variables"><strong>Ques. </strong>  Python Variables?</button>
+                  </h2>
+                  <div id="Variables" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                     <div class="card-body">
+					 <ul>
+						<li>A variable name must start with a letter or the underscore character</li>
+						<li>A variable name cannot start with a number</li>
+						<li>A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )</li>
+						<li>Variable names are case-sensitive (age, Age and AGE are three different variables)</li>
+					 </ul>
+                      
+						<pre class="code"><code>
+#Legal variable names:
+myvar = "John"
+my_var = "John"
+_my_var = "John"
+myVar = "John"
+MYVAR = "John"
+myvar2 = "John"
+
+#Illegal variable names:
+2myvar = "John"
+my-var = "John"
+my var = "John"
+</pre></code>
+						<strong>Assign Value to Multiple Variables</strong>
+							<pre class="code"><code>
+x, y, z = "Orange", "Banana", "Cherry"
+print(x)
+print(y)
+print(z)
+
+output:- 
+Orange
+Banana
+Cherry
+</pre></code>
+                      
+                     </div>
+                  </div>
+               </div>
+			   
+			   		    <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#global_variables"><strong>Ques. </strong>  Global Variables?</button>
+                  </h2>
+                  <div id="global_variables" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                     <div class="card-body">
+					 <ul>
+						<li>Variables that are created outside of a function.</li>
+						<li>Global variables can be used by everyone, both inside of functions and outside. </li>						
+					 </ul>
+                      
+						<pre class="code"><code>
+x = "awesome"
+def myfunc():
+  x = "fantastic"
+  print("Python is " + x)
+myfunc()
+print("Python is " + x)
+
+OutPut:- 
+Python is fantastic
+Python is awesome
+</pre></code>
+                      
+                     </div>
+                  </div>
+               </div>
+			   
+			   
+			    <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#global_keyword"><strong>Ques. </strong>Global Keyword?</button>
+                  </h2>
+                  <div id="global_keyword" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                     <div class="card-body">
+					 <p>In Python, global keyword allows you to modify the variable outside of the current scope. It is used to create a global variable and make changes to the variable in a local context.</p>
+					 <strong>Rules of global Keyword</strong>
+					 <ul>
+						<li>When we create a variable inside a function, it is local by default.</li>
+						<li>When we define a variable outside of a function, it is global by default. You don't have to use global keyword.</li>
+						<li>We use global keyword to read and write a global variable inside a function.</li>
+					 </ul>
+
+
+					 <ul>
+						<li>Variables that are created outside of a function.</li>
+						<li>Global variables can be used by everyone, both inside of functions and outside. </li>						
+					 </ul>
+                      
+						<pre class="code"><code>
+x = "awesome"
+def myfunc():
+    global x
+    x = "fantastic"
+myfunc()
+print("Python is " + x)
+
+Output:-
+Python is fantastic
+</pre></code>
+                      
+                     </div>
+                  </div>
+               </div>
+			   
+			   
+			   
+               <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#PEP"><strong>Ques. </strong> What is PEP 8?</button>
+                  </h2>
+                  <div id="PEP" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                     <div class="card-body">
+                        <p>PEP stands for Python Enhancement Proposal. It is a set of rules that specify how to format Python code for maximum readability.</p>
+                     </div>
+                  </div>
+               </div>
+			    <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#data_types"><strong>Ques. </strong> What are the common built-in data types in Python?</button>
+                  </h2>
+                  <div id="data_types" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                     <div class="card-body">
+                        <p>Python has the following data types built-in by default, in these categories:</p>
+						<ul>
+						<p>1. Numbers</p>
+                     </div>
+                  </div>
+               </div>
+			   
+			   
+               <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#operator"><strong>Ques. </strong> What is the operator?</button>
+                  </h2>
+                  <div id="operator" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                     <div class="card-body">
+                        <p>Python language supports the following types of operators.</p>
+                        <ul>
+                           <li>Arithmetic Operators</li>
+                           <li>Comparison (Relational) Operators.</li>
+                           <li>Assignment Operators</li>
+                           <li>Logical Operators</li>
+                           <li>Bitwise Operators</li>
+                           <li>Membership Operators</li>
+                           <li>Identity Operators</li>
+                        </ul>
+                        <strong>Arithmetic Operators</strong>
+                        <table class="table table-striped">
+                           <thead>
+                              <tr>
+                                 <th scope="col">Operators</th>
+                                 <th scope="col">Descrption</th>
+                                 <th scope="col">Result</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td>Addition(+)</td>
+                                 <td>Adds the values on either side of the operator.</td>
+                                 <td>3+4=7</td>
+                              </tr>
+                              <tr>
+                                 <td>Subtraction(-)</td>
+                                 <td>Subtracts the value on the right from the one on the left.</td>
+                                 <td>3+4=-1</td>
+                              </tr>
+                              <tr>
+                                 <td>Multiplication(*)</td>
+                                 <td>Multiplies the values on either side of the operator.</td>
+                                 <td>3*4=12</td>
+                              </tr>
+                              <tr>
+                                 <td>Division(/)</td>
+                                 <td>Divides the value on the left by the one on the right. Notice that division results in a floating-point value.</td>
+                                 <td>3/4=0.75</td>
+                              </tr>
+                              <tr>
+                                 <td>Exponentiation(**)</td>
+                                 <td>Raises the first number to the power of the second.</td>
+                                 <td>3**4=81</td>
+                              </tr>
+                              <tr>
+                                 <td>Floor Division(//)</td>
+                                 <td>Divides and returns the integer value of the quotient. It dumps the digits after the decimal.</td>
+                                 <td>10//3=3</td>
+                              </tr>
+                              <tr>
+                                 <td> Modulus(%)</td>
+                                 <td>Divides and returns the value of the remainder.</td>
+                                 <td>3%4=3</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <strong>Comparison(Relational) Operators</strong>
+                        <table class="table table-striped">
+                           <thead>
+                              <tr>
+                                 <th scope="col">Operators</th>
+                                 <th scope="col">Descrption</th>
+                                 <th scope="col">Result</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td>Less than(<)</td>
+                                 <td>This operator checks if the value on the left of the operator is lesser than the one on the right.</td>
+                                 <td>3<4=True</td>
+                              </tr>
+                              <tr>
+                                 <td>Greater than(>)</td>
+                                 <td>It checks if the value on the left of the operator is greater than the one on the right.</td>
+                                 <td>3>4=False</td>
+                              </tr>
+                              <tr>
+                                 <td>Less than or equal to(<=)</td>
+                                 <td>It checks if the value on the left of the operator is lesser than or equal to the one on the right.</td>
+                                 <td>7<=7 = True</td>
+                              </tr>
+                              <tr>
+                                 <td> Greater than or equal to(>=)</td>
+                                 <td>It checks if the value on the left of the operator is greater than or equal to the one on the right.</td>
+                                 <td>0>=0  = True</td>
+                              </tr>
+                              <tr>
+                                 <td>Equal to(= =)</td>
+                                 <td>This operator checks if the value on the left of the operator is equal to the one on the right.(1 is equal to the Boolean value True, but 2 isn’t. Also, 0 is equal to False.)</td>
+                                 <td>
+                                    3==3.0 = True<br>
+                                    <hr>
+                                    1==True = True<br>
+                                    <hr>
+                                    7==True = False<br>
+                                    <hr>
+                                    0==False = True<br>
+                                    <hr>
+                                    0.5==True = False
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>Not equal to(!=)</td>
+                                 <td>It checks if the value on the left of the operator is not equal to the one on the right.</td>
+                                 <td>1!=1.0 = False</td>
+                           </tbody>
+                        </table>
+                        <strong>Assignment Operators</strong>
+                        <table class="table table-striped">
+                           <thead>
+                              <tr>
+                                 <th scope="col">Operators</th>
+                                 <th scope="col">Descrption</th>
+                                 <th scope="col">Result</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td>Assign(=)</td>
+                                 <td>Assigns a value to the expression on the left. Notice that = = is used for comparing, but = is used for assigning.</td>
+                                 <td>>>> a=7<br>
+                                    >>> print(a)<br> //output:- 7
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>Add and Assign(+=)</td>
+                                 <td>Adds the values on either side and assigns it to the expression on the left. a+=10 is the same as a=a+10.</td>
+                                 <td>>>> a+=2<br>
+                                    >>> print(a)<br> //output:- 9
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>Divide and Assign(/=)</td>
+                                 <td>Divides the value on the left by the one on the right. Then it assigns it to the expression on the left.</td>
+                                 <td>>>> a/=7<br>
+                                    >>> print(a)<br> //output:- 1.0
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>Multiply and Assign(*=)</td>
+                                 <td>Multiplies the values on either sides. Then it assigns it to the expression on the left.</td>
+                                 <td>>>> a*=8<br>
+                                    >>> print(a)<br> // 8.0
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>Modulus and Assign(%=)</td>
+                                 <td>Performs modulus on the values on either side. Then it assigns it to the expression on the left.</td>
+                                 <td>>>> a%=3<br>
+                                    >>> print(a)<br> //output:- 2.0
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>Exponent and Assign(**=)</td>
+                                 <td>Performs exponentiation on the values on either side. Then assigns it to the expression on the left.</td>
+                                 <td>>>> a**=5<br>
+                                    >>> print(a)<br> //output:- 32.0
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>Floor-Divide and Assign(//=)</td>
+                                 <td>Performs floor-division on the values on either side. Then assigns it to the expression on the left.</td>
+                                 <td>>>> a//=3 <br>
+                                    >>> print(a)<br> //output:- 10.0
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <strong>Bitwise Operators</strong>
+                        <table class="table table-striped">
+                           <thead>
+                              <tr>
+                                 <th scope="col">Operators</th>
+                                 <th scope="col">Descrption</th>
+                                 <th scope="col">Result</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td>Binary AND(&) </td>
+                                 <td>It performs bit by bit AND operation on the two values. Here, binary for 2 is 10, and that for 3 is 11. &-ing them results in 10, which is binary for 2.</td>
+                                 <td>>>> 2&3<br>
+                                    //output:- 2
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>Binary OR(|)</td>
+                                 <td>---</td>
+                                 <td>----
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>Binary XOR(^)</td>
+                                 <td>---</td>
+                                 <td>---
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>Binary One’s Complement(~) </td>
+                                 <td>---</td>
+                                 <td>---
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>Binary Left-Shift(<<)</td>
+                                 <td>---</td>
+                                 <td>---
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>Binary Right-Shift(>>)</td>
+                                 <td>--</td>
+                                 <td>---</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+			   
+			   <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#data_types"><strong>Ques. </strong> What is Data Types?</button>
+                  </h2>
+                  <div id="data_types" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                     <div class="card-body">
+					 <p>Python has the following data types built-in by default, in these categories:</p>
+						<ul>
+						<li>Numbers
+							<ul>
+								<li><b>int:-</b> int stores integers eg a=100, b=25, c=526, etc.</li>
+								<li><b>long:-</b> long stores higher range of integers eg a=908090999L, b=-0x1990999L, etc.</li>
+								<li><b>float:-</b> float stores floating-point numbers eg a=25.6, b=45.90, c=1.290, etc.</li>
+								<li><b>complex:-</b> complex stores numbers eg a=3 + 4j, b=2 + 3j, c=complex(4,6), etc.</li>
+							</ul>
+						</li>
+						<li>Sequence Types:
+							<ul>
+								<li><b>list:-</b> Mutable sequence used to store collection of items.</li>
+								<li><b>tuple:-</b> Immutable sequence used to store collection of items.</li>
+								<li><b>range:-</b> Represents an immutable sequence of numbers generated during execution.</li>
+								<li><b>str:-</b> Immutable sequence of Unicode code points to store textual data.</li>
+							</ul>
+						</li>
+						<li>Mapping Types:
+							<ul>
+								<li><b>dict:-</b> Stores comma-separated list of key: value pairs.</li>
+							</ul>
+						</li>
+						<li>Set Types:
+							<ul>
+								<li><b>set:-</b>-----</li>
+								<li><b>frozenset:-</b>-----</li>
+							</ul>
+						</li>
+						<li>Boolean Type:
+							<ul>
+								<li><b>bool:-</b>-----</li>
+							</ul>
+						</li>
+						<li>Binary Types:
+							<ul>
+								<li><b>bytes:-</b>-----</li>
+								<li><b>bytearray:-</b>-----</li>
+								<li><b>memoryview:-</b>-----</li>
+							</ul>
+						</li>		
+						</ul>
+                     </div>
+                  </div>
+               </div>
+			   
+			   
+			   	<div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#pass"><strong>Ques. </strong> What is pass in Python?</button>
+                  </h2>
+                  <div id="pass" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                     <div class="card-body">
+					 <p>The pass keyword represents a null operation in Python.<br> Without the pass statement in the following code, we may run into some errors during code execution.</p>
+					 <pre class="code"><code>
+def myEmptyFunc():
+   # do nothing
+   pass
+myEmptyFunc()    # nothing happens
+## Without the pass keyword
+# File "<stdin>", line 3
+# IndentationError: expected an indented block
+					</code></pre>	
+                     </div>
+                  </div>
+               </div>
+			   
+			   <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#self"><strong>Ques. </strong> What is the use of self in Python?</button>
+                  </h2>
+                  <div id="self" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                     <div class="card-body">
+					 <p>Self is used to represent the instance of the class. With this keyword, you can access the attributes and methods of the class in python. It binds the attributes with the given arguments. self is used in different places and often thought to be a keyword. But unlike in C++, self is not a keyword in Python.</p>
+                     </div>
+                  </div>
+               </div>
+			   
+			   	<div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#__init__"><strong>Ques. </strong> What is __init__?</button>
+                  </h2>
+                  <div id="__init__" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                     <div class="card-body">
+					 <p>__init__ is a contructor method in Python and is automatically called to allocate memory when a new object/instance is created. All classes have a __init__ method associated with them. It helps in distinguishing methods and attributes of a class from local variables.</p>
+		<pre class="code"><code>			 
+class Student:
+   def __init__(self, fname, lname, age, section):
+       self.firstname = fname
+       self.lastname = lname
+       self.age = age
+       self.section = section
+# creating a new object
+stu1 = Student("Sara", "Ansh", 22, "A2")
+</code></pre>
+                     </div>
+                  </div>
+               </div>
+			   
+			   <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#break_continue_pass"><strong>Ques. </strong> What is break, continue and pass in Python?</button>
+                  </h2>
+                  <div id="break_continue_pass" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                     <div class="card-body">
+					 <ul>
+						<li><b>Break:-</b> The break statement terminates the loop immediately and the control flows to the statement after the body of the loop.</li>
+						<li><b>Continue:-</b> The continue statement terminates the current iteration of the statement, skips the rest of the code in the current iteration and the control flows to the next iteration of the loop.</li>
+						<li><b>Pass:-</b> As explained above, the pass keyword in Python is generally used to fill up empty blocks and is similar to an empty statement represented by a semi-colon in languages such as Java, C++, Javascript, etc.</li>
+					 </ul>
+                     </div>
+                  </div>
+               </div>
+			   
+			   
+			   
+               <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#membership_operator"><strong>Ques. </strong> What is membership operator and identity operator?</button>
+                  </h2>
+                  <div id="membership_operator" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                     <div class="card-body">
+                        <p><strong>Membership Operators</strong> These operators help validate whether a given element is present in or is a member of the given sequence of data. This sequence of data can be a list, string or a tuple</p>
+                        <p>There are 2 types of Membership operater</p>
+                        <ul>
+                           <li>in Operator:</li>
+                           <pre class="code"><code>
+lst1 = ['Ajay', 'Bobby','Ashok', 'Vijay', 'Anil', 'Rahul','Alex', 'Christopher']
+if 'Ajay' in lst1: 
+    print('Name Ajay exists in lst1')
+//output:- Name Ajay exists in lst1
+</code></pre>
+                           <pre class="code"><code>
+stri = "I love mohit"
+print("ve" in stri)
+//output:- True
+                           </code></pre>
+                           <li>not in Operator:</li>
+                           <pre class="code"><code>
+lst1 = ['Ajay', 'Bobby','Ashok', 'Vijay', 'Anil', 'Rahul','Alex', 'Christopher']
+  if 'Raghav' not in lst1: print ('Name Raghav does not exists in lst1')
+//output:- Name Raghav exists in lst1
+</code></pre>
+                           <pre class="code"><code>
+stri = "I love mohit"
+print("ve" not in stri)
+//output:- False
+</code></pre>
+                        </ul>
+                        <p><strong>Identity Operators</strong> These operators help in determining whether a value belongs to a certain class or a certain type, i.e they help in determining the identity of the object. It is useful in finding out the data type a variable holds.</p>
+                        <ul>
+                           <li>is</li>
+                           <pre class="code"><code>                        
+a = 'London'
+b = 'London'
+
+if a is b: print ('a is b')
+else: print ('a is not b')
+
+if a is c: print('a is c')
+else: print ('a is not c')   
+//output:- 
+a is b
+a is not c
+</code></pre>
+                           <li>is not</li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#indentation"><strong>Ques. </strong> Is indentation required in python?</button>
+                  </h2>
+                  <div id="indentation" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                     <div class="card-body">
+                        <p>Indentation is necessary for Python. It specifies a block of code. All code within loops, classes, functions, etc is specified within an indented block. It is usually done using four space characters. If your code is not indented necessarily, it will not execute accurately and will throw errors as well.</p>
+                        <img src="images/indentation.png">
+                     </div>
+                  </div>
+               </div>
+               <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#memory"><strong>Ques. </strong> How is memory managed in Python?</button>
+                  </h2>
+                  <div id="memory" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                     <div class="card-body">
+                        <ul>
+                           <li>Python also has an inbuilt garbage collector, which recycles all the unused memory and so that it can be made available to the heap space.</li>
+                           <li>Memory management in python is managed by Python private heap space. All Python objects and data structures are located in a private heap. The programmer does not have access to this private heap. The python interpreter takes care of this instead.</li>
+                           <li>The allocation of heap space for Python objects is done by Python’s memory manager. The core API gives access to some tools for the programmer to code.</li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#typedlang"><strong>Ques. </strong> What is a dynamically typed language?</button>
+                  </h2>
+                  <div id="typedlang" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                     <div class="card-body">
+                        <p>
+                           Typing refers to type-checking in programming languages.                       
+                        </p>
+                        <p>Type-checking can be done at two stages -</p>
+                        <ul>
+                           <li><strong>Static -</strong> Data Types are checked before execution.</li>
+                           <li><strong>Dynamic -</strong> Data Types are checked during execution.</li>
+                        </ul>
+                        <p>Python is an interpreted language, executes each statement line by line and thus type-checking is done on the fly, during execution. Hence, Python is a Dynamically Typed Language.</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#interpretedlang"><strong>Ques. </strong> What is an Interpreted language?</button>
+                  </h2>
+                  <div id="interpretedlang" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                     <div class="card-body">
+                        <p>An Interpreted language executes its statements line by line. Languages such as Python, Javascript, R, PHP, and Ruby are prime examples of Interpreted languages.</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#List"><strong>Ques. </strong> What is List?</button>
+                  </h2>
+                  <div id="List" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                     <div class="card-body">
+                        <ul>
+                           <li>Lists are used to store multiple items in a single variable.</li>
+                           <li>List items are ordered, changeable, and allow duplicate values.</li>
+                           <li>The list is changeable, meaning that we can change, add, and remove items in a list after it has been created.</li>
+                           <li>In Python lists are written with square brackets[], separated by commas.</li>
+                           <li>Since lists are indexed, lists can have items with the same value.</li>
+                        </ul>
+                        <div class="code">
+                           <pre>                       
+my_list = ["apple", "banana", "cherry"]
+my_list = [1, "Hello", 3.4]
+my_list = ["mouse", [8, 4, 6], ['a']] #A list can also have another list as an item. This is called a nested list.
+print(my_list)
+//output:-
+["apple", "banana", "cherry"] [1, "Hello", 3.4] ["mouse", [8, 4, 6], ['a']]
+</pre>
+                        </div>
+                        <strong>Access List Items</strong>
+                        <p>thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]</p>
+                        <table class="table table-hover">
+                           <thead>
+                              <tr>
+                                 <th scope="col">Description</th>
+                                 <th scope="col">Ques</th>
+                                 <th scope="col">Ans</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td>Access Item ke liye</td>
+                                 <td>print(thislist[1])</td>
+                                 <td>banana</td>
+                              </tr>
+                              <tr>
+                                 <td>Range of Indexes (2 sa 5 tak)</td>
+                                 <td>print(thislist[2:5])</td>
+                                 <td>['cherry', 'orange', 'kiwi']</td>
+                              </tr>
+                              <tr>
+                                 <td>Range of Indexes (4 tak)</td>
+                                 <td>print(thislist[:4])</td>
+                                 <td>['apple', 'banana', 'cherry', 'orange']</td>
+                              </tr>
+                              <tr>
+                                 <td>2 to the end.</td>
+                                 <td>print(thislist[2:])</td>
+                                 <td>['cherry', 'orange', 'kiwi', 'melon', 'mango']</td>
+                              </tr>
+                              <tr>
+                                 <td >Negative Indexing</td>
+                                 <td >print(thislist[-1])</td>
+                                 <td>mango</td>
+                              </tr>
+                              <tr>
+                                 <td >-4 sa -1 tak</td>
+                                 <td >print(thislist[-4:-1])</td>
+                                 <td>['orange', 'kiwi', 'melon']</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <strong>Change List Items</strong>
+                        <p>thislist = ["apple", "banana", "cherry"]</p>
+                        <table class="table table-hover">
+                           <thead>
+                              <tr>
+                                 <th scope="col">Description</th>
+                                 <th scope="col">Ques</th>
+                                 <th scope="col">Output</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td>List Change/replace Item Value</td>
+                                 <td>thislist[1] = "blackcurrant"</td>
+                                 <td>['apple', 'blackcurrant', 'cherry']</td>
+                              </tr>
+                              <tr>
+                                 <td>List Add Items</td>
+                                 <td>thislist.<b>append</b>("orange")</td>
+                                 <td>['apple', 'banana', 'cherry', 'orange']</td>
+                              </tr>
+                              <tr>
+                                 <td>add Items in partcular postion</td>
+                                 <td>thislist.<b>insert</b>(1, "orange")</td>
+                                 <td>['apple', 'orange', 'banana', 'cherry']</td>
+                              </tr>
+                              <tr>
+                                 <td>Remove Items.</td>
+                                 <td>thislist.<b>remove</b>("banana")</td>
+                                 <td>['apple', 'cherry']</td>
+                              </tr>
+                              <tr>
+                                 <td >remove the last item using pop</td>
+                                 <td >thislist.<b>pop()</b></td>
+                                 <td>['apple', 'banana']</td>
+                              </tr>
+                              <tr>
+                                 <td >remove the particular item using pop keyword</td>
+                                 <td >thislist.pop(1)</td>
+                                 <td>['apple', 'cherry']</td>
+                              </tr>
+							  <tr>
+                                 <td >The __del__ keyword removes the specified index:</td>
+                                 <td >del thislist[0]</td>
+                                 <td>['banana', 'cherry']</td>
+                              </tr>
+							  <tr>
+                                 <td >The del keyword can also delete the list completely:</td>
+                                 <td >del thislist</td>
+                                 <td>....................</td>
+                              </tr>
+							  <tr>
+                                 <td >The __clear()__ method empties the list:</td>
+                                 <td >thislist.clear()</td>
+                                 <td>[]</td>
+                              </tr>
+                           </tbody>
+                        </table>
+						<strong>Copy a List</strong>
+						<p>1. Make a copy of a list with the <strong>copy()</strong> method:</p>
+<div class="code">
+<pre>            					
+thislist = ["apple", "banana", "cherry"]
+mylist = thislist.copy()
+	print(mylist)
+	
+Output:- ['apple', 'banana', 'cherry']
+</pre>
+</div>
+<p>2. Make a copy of a list with the <strong>list()</strong> method:</p>
+<div class="code">
+<pre>            					
+thislist = ["apple", "banana", "cherry"]
+mylist = list(thislist)
+	print(mylist)
+	
+Output:- ['apple', 'banana', 'cherry']
+</pre>
+</div>
+
+<strong>Join Two Lists</strong>
+<p>1. One of the easiest ways are by using the <b>+</b> operator.</p>
+<div class="code">
+<pre>            					
+list1 = ["a", "b" , "c"]
+list2 = [1, 2, 3]
+list3 = list1 + list2
+	print(list3)
+Output:- ['a', 'b', 'c', 1, 2, 3]
+</pre>
+</div>	
+<p>2. Another way to join two lists are by appending all the items from list2 into list1, one by one:</p>
+<div class="code">
+<pre>            					
+list1 = ["a", "b" , "c"]
+list2 = [1, 2, 3]
+
+for x in list2:
+  list1.append(x)
+
+print(list1)
+Output:- ['a', 'b', 'c', 1, 2, 3]
+</pre>
+</div>	
+<p>3. Use the extend() method to add list2 at the end of list1:</p>
+<div class="code">
+<pre>            					
+list1 = ["a", "b" , "c"]
+list2 = [1, 2, 3]
+list3 = [1, 1, 3]
+list1.extend(list2)
+list1.extend(list3)
+print(list1)
+Output:- ['a', 'b', 'c', 1, 2, 3, 1, 2, 3]
+Output:- ['a', 'b', 'c', 1, 2, 3, 1, 2, 3]
+</pre>
+</div>	
+		
+                     </div>
+                  </div>
+               </div>
+               <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#list_methods"><strong>Ques. </strong> Python - List Methods?</button>                  
+                  </h2>
+                  <div id="list_methods" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                     <div class="card-body">
+                        <p>
+                        <table class="table table-hover table-striped">
+                           <thead>
+                              <tr>
+                                 <th scope="col">#</th>
+                                 <th scope="col">Method</th>
+                                 <th scope="col">Description</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <th scope="row">1</th>
+                                 <td>append()</td>
+                                 <td>Adds an element at the end of the list</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">2</th>
+                                 <td>insert()</td>
+                                 <td>Adds an element at the specified position</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">3</th>
+                                 <td>extend()</td>
+                                 <td>Add the elements of a list (or any iterable), to the end of the current list</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">4</th>
+                                 <td>clear()</td>
+                                 <td>Removes all the elements from the list</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">5</th>
+                                 <td>copy()</td>
+                                 <td>Returns a copy of the list</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">6</th>
+                                 <td>count()</td>
+                                 <td>Returns the number of elements with the specified value</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">7</th>
+                                 <td>index()</td>
+                                 <td>Returns the index of the first element with the specified value</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">8</th>
+                                 <td>pop()</td>
+                                 <td>Removes the element at the specified position</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">9</th>
+                                 <td>remove()</td>
+                                 <td>Removes the item with the specified value</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">10</th>
+                                 <td>reverse()</td>
+                                 <td>Reverses the order of the list</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">11</th>
+                                 <td>sort()</td>
+                                 <td>Sorts the list</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <h5>append() Method</h5>
+                        <p>The append() method appends an element to the end of the list.</p>
+                        <div class="code_script">
+                           <pre>
+fruits = ["apple", "banana", "cherry"]
+fruits.append("orange")
+print(fruits)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           Output:- ['apple', 'banana', 'cherry', 'orange']
+                           </pre>
+                        </div>
+                        <div class="code_script">
+                           <pre>
+a = ["apple", "banana", "cherry"]
+b = ["Ford", "BMW", "Volvo"]
+a.append(b)
+print(a)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           Output:- ['apple', 'banana', 'cherry', ["Ford", "BMW", "Volvo"]]
+                           </pre>
+                        </div>
+                        <h5>clear() Method</h5>
+                        <p>The clear() method removes all the elements from a list.</p>
+                        <div class="code_script">
+                           <pre>
+fruits = ["apple", "banana", "cherry"]
+fruits.clear()
+print(fruits)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           Output:- []
+                           </pre>
+                        </div>
+                        <h5>copy() Method</h5>
+                        <p>The copy() method returns a copy of the specified list.</p>
+                        <div class="code_script">
+                           <pre>
+fruits = ["apple", "banana", "cherry"]
+x = fruits.copy()
+print(x)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           Output:- ['apple', 'banana', 'cherry']
+                           </pre>
+                        </div>
+                        <h5>count() Method</h5>
+                        <p>The count() method returns the number of elements with the specified value.</p>
+                        <div class="code_script">
+                           <pre>
+fruits = ["apple", "banana", "cherry"]
+x = fruits.count("cherry")
+print(x)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           Output:- 1
+                           </pre>
+                        </div>
+                        <div class="code_script">
+                           <pre>
+fruits = [1, 4, 2, 9, 7, 8, 9, 3, 1]
+x = fruits.count(9)
+print(x)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           Output:- 2
+                           </pre>
+                        </div>
+                        <h5>extend() Method</h5>
+                        <p>The extend() method adds the specified list elements (or any iterable) to the end of the current list.</p>
+                        <div class="code_script">
+                           <pre>
+fruits = ['apple', 'banana', 'cherry']
+cars = ['Ford', 'BMW', 'Volvo']
+fruits.extend(cars)
+print(fruits)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           Output:- ['apple', 'banana', 'cherry', 'Ford', 'BMW', 'Volvo']
+                           </pre>
+                        </div>
+                        <div class="code_script">
+                           <pre>
+fruits = ['apple', 'banana', 'cherry']
+points = (1, 4, 5, 9)
+fruits.extend(points)
+print(fruits)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           Output:- ['apple', 'banana', 'cherry', 1, 4, 5, 9]
+                           </pre>
+                        </div>
+                        <h5>index() Method</h5>
+                        <p>The index() method returns the position at the first occurrence of the specified value.</p>
+                        <div class="code_script">
+                           <pre>
+fruits = ['apple', 'banana', 'cherry']
+x = fruits.index("banana")
+print(x)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           Output:- 1
+                           </pre>
+                        </div>
+                        <div class="code_script">
+                           <pre>
+fruits = [4, 55, 64, 32, 16, 32]
+x = fruits.index(32)
+print(x)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           Output:- 3
+                           </pre>
+                        </div>
+                        <h5>insert() Method</h5>
+                        <p>The insert() method inserts the specified value at the specified position.</p>
+                        <div class="code_script">
+                           <pre>
+fruits = ['apple', 'banana', 'cherry']
+fruits.insert(1, "orange")
+print(fruits)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           Output:- ['apple', 'orange', 'banana', 'cherry']
+                           </pre>
+                        </div>
+                        <h5>pop() Method</h5>
+                        <p>The pop() method removes the element at the specified position.</p>
+                        <div class="code_script">
+                           <pre>
+fruits = ['apple', 'banana', 'cherry']
+x = fruits.pop(1)
+print(x)
+print(fruits)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           Output:- banana
+                           ['apple', 'cherry']
+                           </pre>
+                        </div>
+                        <h5>remove() Method</h5>
+                        <p>The remove() method removes the first occurrence of the element with the specified value.</p>
+                        <div class="code_script">
+                           <pre>
+fruits = ['apple', 'banana', 'cherry']
+fruits.remove("banana")
+print(fruits)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           Output:- ['apple', 'cherry']
+                           </pre>
+                        </div>
+                        <h5>reverse() Method</h5>
+                        <p>The reverse() method reverses the sorting order of the elements.</p>
+                        <div class="code_script">
+                           <pre>
+fruits = ['apple', 'banana', 'cherry']
+fruits.reverse("banana")
+print(fruits)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           Output:- ['cherry', 'banana', 'apple']
+                           </pre>
+                        </div>
+                        <h5>sort() Method</h5>
+                        <p>The sort() method sorts the list ascending by default</p>
+                        <div class="code_script">
+                           <pre>
+cars = ['Ford', 'BMW', 'Volvo']
+cars.sort()
+print(cars)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           Output:- ['BMW', 'Ford', 'Volvo']
+                           </pre>
+                        </div>
+                        <p>Optional. reverse=True will sort the list descending. Default is reverse=False</p>
+                        <div class="code_script">
+                           <pre>
+cars = ['Ford', 'BMW', 'Volvo']
+cars.sort(reverse=True)
+print(cars)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           Output:- ['Volvo', 'Ford', 'BMW']
+                           </pre>
+                        </div>
+                        <strong>Sort the list by the length of the values:</strong>
+                        <div class="code_script">
+                           <pre>
+def myFunc(e):
+  return len(e)
+cars = ['Ford', 'Mitsubishi', 'BMW', 'VWhh']
+cars.sort(key=myFunc)
+print(cars)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           Output:- ['BMW', 'Ford', 'VWhh', 'Mitsubishi']
+                           </pre>
+                        </div>
+                        <div class="code_script">
+                           <pre>
+def myFunc(e):
+  return len(e)
+cars = ['Ford', 'Mitsubishi', 'BMW', 'VW']
+cars.sort(reverse=True, key=myFunc)
+print(cars)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           Output:- ['Mitsubishi', 'Ford'', 'BMW', 'VW']
+                           </pre>
+                        </div>
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#list_tuple"><strong>Ques. </strong> What is the difference between a list and a tuple?</button>                  
+                  </h2>
+                  <div id="list_tuple" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                     <div class="card-body">
+                        <p>
+                        <table class="table table-hover">
+                           <thead>
+                              <tr>
+                                 <th scope="col">#</th>
+                                 <th scope="col">List</th>
+                                 <th scope="col">Tuple</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <th scope="row">1</th>
+                                 <td>A list consists of <b>mutable</b> objects. (Objects which can be changed after creation)</td>
+                                 <td>A tuple consists of <b>immutable</b> objects. (Objects which cannot change after creation)</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">2</th>
+                                 <td>List has a large memory.</td>
+                                 <td>Tuple has a small memory.</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">3</th>
+                                 <td >List is stored in two blocks of memory (One is fixed sized and the other is variable sized for storing data)</td>
+                                 <td>Tuple is stored in a single block of memory.</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">4</th>
+                                 <td >Creating a list is slower because two memory blocks need to be accessed.</td>
+                                 <td>Creating a tuple is faster than creating a list.</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">5</th>
+                                 <td >An element in a list can be removed or replaced.</td>
+                                 <td>An element in a tuple cannot be removed or replaced.</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">6</th>
+                                 <td>A list has data stored in  square brackets [] brackets. For example, [1,2,3]</td>
+                                 <td>A tuple has data stored in parantheses () brackets. For example, (1,2,3)</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#list_into_tuple"><strong>Ques. </strong> How would you convert a list into a tuple?</button>
+                  </h2>
+                  <div id="list_into_tuple" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                     <div class="card-body">
+                        <p><strong>1. Using tuple() builtin function</strong><br>
+                        <div style="background: #ffffff; overflow: auto; width: auto; border: solid orange; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+                           <pre style="margin: 0; line-height: 125%;">sample_list <span style="color: #333333;">=</span> [<span style="background-color: #fff0f0;">'Compile'</span>, <span style="background-color: #fff0f0;">'With'</span>, <span style="background-color: #fff0f0;">'Favtutor'</span>]
+
+<span style="color: #888888;">#convert list into tuple</span>
+tuple1 <span style="color: #333333;">=</span> <span style="color: #007020;">tuple</span>(sample_list)
+
+<span style="color: #007020;">print</span>(tuple1)
+<span style="color: #007020;">print</span>(<span style="color: #007020;">type</span>(tuple1))
+</pre>
+                        </div>
+                        <strong>Output:-</strong><br>
+                        <div style="background: #ffffff; overflow: auto; width: auto; border: solid green; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+                           <pre style="margin: 0; line-height: 125%;"><span style="color: #888888;">('Compile', 'With', 'Favtutor')</span>
+<span style="color: #888888;">&lt;class 'tuple'&gt;</span>
+</pre>
+                        </div>
+                        <strong>2.  Using loop inside the tuple</strong>
+                        <div style="background: #ffffff; overflow: auto; width: auto; border: solid orange; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+                           <pre style="margin: 0; line-height: 125%;">sample_list <span style="color: #333333;">=</span> [<span style="background-color: #fff0f0;">'Compile'</span>, <span style="background-color: #fff0f0;">'With'</span>, <span style="background-color: #fff0f0;">'Favtutor'</span>]
+tuple1 <span style="color: #333333;">=</span> <span style="color: #007020;">tuple</span>(i <span style="color: #008800; font-weight: bold;">for</span> i <span style="color: #000000; font-weight: bold;">in</span> sample_list)
+<span style="color: #007020;">print</span>(tuple1)
+</pre>
+                        </div>
+                        <strong>Output:-</strong>
+                        <div style="background: #ffffff; overflow: auto; width: auto; border: solid green; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+                           <pre style="margin: 0; line-height: 125%;"><span style="color: #888888;">('Compile', 'With', 'Favtutor')</span></pre>
+                        </div>
+                        <strong>3. Unpack list inside the parenthesis</strong>
+                        <div style="background: #ffffff; overflow: auto; width: auto; border: solid orange; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+                           <pre style="margin: 0; line-height: 125%;">sample_list <span style="color: #333333;">=</span> [<span style="background-color: #fff0f0;">'Compile'</span>, <span style="background-color: #fff0f0;">'With'</span>, <span style="background-color: #fff0f0;">'Favtutor'</span>]
+
+<span style="color: #888888;">#unpack list items and form tuple</span>
+tuple1 <span style="color: #333333;">=</span> (<span style="color: #333333;">*</span>sample_list,)
+
+<span style="color: #007020;">print</span>(tuple1)
+<span style="color: #007020;">print</span>(<span style="color: #007020;">type</span>(tuple1))
+</pre>
+                        </div>
+                        <strong>Output:- </strong>
+                        <div style="background: #ffffff; overflow: auto; width: auto; border: solid green; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+                           <pre style="margin: 0; line-height: 125%;"><span style="color: #888888;">('Compile', 'With', 'Favtutor')</span>
+<span style="color: #888888;">&lt;class 'tuple'&gt;</span>
+</pre>
+                        </div>
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#list_array"><strong>Ques. </strong> What is the difference between an array and a list?</button>                  
+                  </h2>
+                  <div id="list_array" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                     <div class="card-body">
+                        <p>
+                        <table class="table table-hover">
+                           <thead>
+                              <tr>
+                                 <th scope="col">#</th>
+                                 <th scope="col">List</th>
+                                 <th scope="col">Array</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <th scope="row">1</th>
+                                 <td>It Contains elements of different data types</td>
+                                 <td>It Contains elements of same data types</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">2</th>
+                                 <td>Cannot handle arithmetic operations</td>
+                                 <td>Can handle arithmetic operations</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">3</th>
+                                 <td>We can print the entire list without the help of an explicit loop</td>
+                                 <td>To print or access array elements, we will require an explicit loop</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">4</th>
+                                 <td>It consumes a large memory.</td>
+                                 <td>It is a more compact in memory size comparatively list.</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">5</th>
+                                 <td>---------------</td>
+                                 <td>------------------</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">6</th>
+                                 <td>-----------</td>
+                                 <td>-----------------</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#list_to_array"><strong>Ques. </strong> How would you convert a list to an array?</button>                  
+                  </h2>
+                  <div id="list_to_array" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                     <div class="card-body">
+                        <p>Python list is a linear data structure that can hold heterogeneous elements. Python does not have a built-in array data type. If you want to create an array in Python, then use the numpy library.</p>
+                        <p>To <em>install numpy</em> in your system, type the following command.</p>
+                        <p>python3 -m pip install numpy</p>
+                        <p><strong>1. Using numpy.array()</strong>
+                        <div class="code_script">
+                           <pre>import numpy as np
+
+elon_list = [11, 21, 19, 18, 29]
+elon_array = np.array(elon_list)
+
+print(elon_array)
+print(type(elon_array))</pre>
+                        </div>
+                        <strong>Output:- </strong>
+                        <div class="code_script_ans">
+                           <pre>[11 21 19 18 29]
+&lt;class 'numpy.ndarray'&gt;</pre>
+                        </div>
+                        <strong>2. Using numpy.asarray()</strong>
+                        <div class="code_script">
+                           <pre>import numpy as np
+
+elon_list = [11, 21, 19, 18, 29]
+elon_array = np.asarray(elon_list)
+
+print(elon_array)
+print(type(elon_array))</pre>
+                        </div>
+                        <strong>Output:- </strong>
+                        <div class="code_script_ans">
+                           <pre>
+   [11 21 19 18 29]
+&lt;class 'numpy.ndarray'&gt;
+</pre>
+                        </div>
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#tuple_methods"><strong>Ques. </strong> Python - Tuple Methods?</button>                  
+                  </h2>
+                  <div id="tuple_methods" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                     <div class="card-body">
+                        <p>
+                        <table class="table table-hover table-striped">
+                           <thead>
+                              <tr>
+                                 <th scope="col">#</th>
+                                 <th scope="col">Method</th>
+                                 <th scope="col">Description</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <th scope="row">1</th>
+                                 <td>count()</td>
+                                 <td>Returns the number of times a specified value occurs in a tuple</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">2</th>
+                                 <td>index()</td>
+                                 <td>Searches the tuple for a specified value and returns the position of where it was found</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <h5>count() Method</h5>
+                        <p>The count() method returns the number of times a specified value appears in the tuple.</p>
+                        <div class="code_script">
+                           <pre>
+thistuple = (1, 3, 7, 8, 7, 5, 4, 6, 8, 5)
+x = thistuple.count(5)
+print(x)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>
+Output:- 2
+                           </pre>
+                        </div>
+                        <h5>index() Method</h5>
+                        <p>The index() method finds the first occurrence of the specified value.</p>
+                        <div class="code_script">
+                           <pre>
+thistuple = (1, 3, 7, 8, 7, 5, 4, 6, 8, 5)
+x = thistuple.index(8)
+print(x)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>
+Output:- 3
+                           </pre>
+                        </div>
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#set_methods"><strong>Ques. </strong> Python - Set Methods?</button>                  
+                  </h2>
+                  <div id="set_methods" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                     <div class="card-body">
+                        <p>
+                        <table class="table table-hover table-striped">
+                           <thead>
+                              <tr>
+                                 <th scope="col">#</th>
+                                 <th scope="col">Method</th>
+                                 <th scope="col">Description</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <th scope="row">1</th>
+                                 <td>add()</td>
+                                 <td>Adds an element to the set</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">2</th>
+                                 <td>clear()</td>
+                                 <td>Removes all the elements from the set</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">3</th>
+                                 <td>copy()</td>
+                                 <td>Returns a copy of the set</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">4</th>
+                                 <td>difference()</td>
+                                 <td>Returns a set containing the difference between two or more sets</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">5</th>
+                                 <td>difference_update()</td>
+                                 <td>Removes the items in this set that are also included in another, specified set</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">6</th>
+                                 <td>discard()</td>
+                                 <td>Remove the specified item</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">7</th>
+                                 <td>intersection()</td>
+                                 <td>Returns a set, that is the intersection of two other sets</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">8</th>
+                                 <td>intersection_update()</td>
+                                 <td>Removes the items in this set that are not present in other, specified set(s)</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">9</th>
+                                 <td>isdisjoint()</td>
+                                 <td>Returns whether two sets have a intersection or not</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">10</th>
+                                 <td>issubset()</td>
+                                 <td>Returns whether another set contains this set or not</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">11</th>
+                                 <td>issuperset()</td>
+                                 <td>Returns whether this set contains another set or not</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">12</th>
+                                 <td>pop()</td>
+                                 <td>Removes an element from the set</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">13</th>
+                                 <td>remove()</td>
+                                 <td>Removes the specified element</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">14</th>
+                                 <td>symmetric_difference()</td>
+                                 <td>Returns a set with the symmetric differences of two sets</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">15</th>
+                                 <td>symmetric_difference_update()</td>
+                                 <td>inserts the symmetric differences from this set and another</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">16</th>
+                                 <td>union()</td>
+                                 <td>Return a set containing the union of sets</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">17</th>
+                                 <td>update()</td>
+                                 <td>Update the set with the union of this set and others</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <h5>add() Method</h5>
+                        <p>
+                        <ul>
+                           <li>The add() method adds an element to the set.</li>
+                           <li>If the element already exists, the add() method does not add the element.</li>
+                        </ul>
+                        </p>
+                        <div class="code_script">
+                           <pre>
+thisset = {"apple", "banana", "cherry"}
+thisset.add("orange")
+print(thisset)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>
+Output:- {'banana', 'apple', 'cherry', 'orange'}
+                           </pre>
+                        </div>
+                        <div class="code_script">
+                           <pre>
+thisset = {"apple", "banana", "cherry"}
+thisset.add("apple")
+print(thisset)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>Output:- {'banana', 'cherry', 'apple'}</pre>
+                        </div>
+                        <h5>clear() Method</h5>
+                        <p>The clear() method removes all elements in a set.</p>
+                        <div class="code_script">
+                           <pre>
+thisset = {"apple", "banana", "cherry"}
+thisset.clear()
+print(thisset)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>
+Output:- set()
+                           </pre>
+                        </div>
+                        <h5>copy() Method</h5>
+                        <p>The copy() method copies the set.</p>
+                        <div class="code_script">
+                           <pre>
+fruits = {"apple", "banana", "cherry"}
+x = fruits.copy()
+print(x)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>Output:- {'cherry', 'banana', 'apple'}</pre>
+                        </div>
+                        <h5>difference() Method</h5>
+                        <p>The difference() method returns a set that contains the difference between two sets.</p>
+                        <div class="code_script">
+                           <pre>
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+z = y.difference(x) 
+print(z)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>Output:- {'google', 'microsoft'}</pre>
+                        </div>
+                        <div class="code_script">
+                           <pre>
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+z = x.difference(y) 
+print(z)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>Output:- {'banana', 'cherry'}</pre>
+                        </div>
+                        <h5>difference_update() Method</h5>
+                        <p>The difference_update() method removes the items that exist in both sets.</p>
+                        <P>The difference_update() method is different from the difference() method, because the difference() method returns a new set, without the unwanted items, and the difference_update() method removes the unwanted items from the original set.</P>
+                        <div class="code_script">
+                           <pre>
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+
+x.difference_update(y) 
+
+print(x)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>Output:- {'banana', 'cherry'}</pre>
+                        </div>
+                        <h5>discard() Method</h5>
+                        <p>The discard() method removes the specified item from the set.</p>
+                        <P>This method is different from the remove() method, because the remove() method will raise an error if the specified item does not exist, and the discard() method will not.</P>
+                        <div class="code_script">
+                           <pre>
+thisset = {"apple", "banana", "cherry"}
+thisset.discard("banana")
+print(thisset)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>Output:- {'cherry', 'apple'}</pre>
+                        </div>
+                        <h5>remove() Method</h5>
+                        <p>The remove() method removes the specified element from the set.</p>
+                        <P>This method is different from the discard() method, because the remove() method will raise an error if the specified item does not exist, and the discard() method will not.</P>
+                        <div class="code_script">
+                           <pre>
+thisset = {"apple", "banana", "cherry"}
+thisset.discard("banana")
+print(thisset)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>Output:- {'cherry', 'apple'}</pre>
+                        </div>
+                        <h5>intersection() Method</h5>
+                        <p>The intersection() method returns a set that contains the similarity between two or more sets.</p>
+                        <P>Meaning: The returned set contains only items that exist in both sets, or in all sets if the comparison is done with more than two sets.</P>
+                        <div class="code_script">
+                           <pre>
+x = {"a", "b", "c"}
+y = {"c", "d", "e"}
+z = {"f", "g", "c"}
+
+result = x.intersection(y, z)
+
+print(result)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>Output:- {'c'}</pre>
+                        </div>
+                        <h5>intersection_update() Method</h5>
+                        <p>The intersection_update() method removes the items that is not present in both sets (or in all sets if the comparison is done between more than two sets).</p>
+                        <P>The intersection_update() method is different from the intersection() method, because the intersection() method returns a new set, without the unwanted items, and the intersection_update() method removes the unwanted items from the original set.</P>
+                        <div class="code_script">
+                           <pre>
+x = {"a", "b", "c"}
+y = {"c", "d", "e"}
+z = {"f", "g", "c"}
+
+result = x.intersection_update(y, z)
+
+print(result)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>Output:- {'c'}</pre>
+                        </div>
+                        <h5>isdisjoint() Method</h5>
+                        <p>The isdisjoint() method returns True if none of the items are present in both sets, otherwise it returns False.</p>
+                        <div class="code_script">
+                           <pre>
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "facebook"}
+
+z = x.isdisjoint(y) 
+
+print(z)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>Output:- True</pre>
+                        </div>
+                        <div class="code_script">
+                           <pre>
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+
+z = x.isdisjoint(y) 
+
+print(z)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>Output:- False</pre>
+                        </div>
+                        <h5>issubset() Method</h5>
+                        <p>The issubset() method returns True if all items in the set exists in the specified set, otherwise it retuns False.</p>
+                        <div class="code_script">
+                           <pre>
+x = {"a", "b", "c"}
+y = {"f", "e", "d", "c", "b"}
+
+z = x.issubset(y) 
+
+print(z)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>Output:- False</pre>
+                        </div>
+                        <div class="code_script">
+                           <pre>
+x = {"a", "b", "c"}
+y = {"f", "e", "d", "c", "b", "a"}
+
+z = x.issubset(y) 
+
+print(z)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>Output:- True</pre>
+                        </div>
+                        <h5>issuperset() Method</h5>
+                        <p>The issuperset() method returns True if all items in the specified set exists in the original set, otherwise it retuns False.</p>
+                        <div class="code_script">
+                           <pre>
+x = {"f", "e", "d", "c", "b"}
+y = {"a", "b", "c"}
+
+z = x.issuperset(y) 
+
+print(z)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>Output:- False</pre>
+                        </div>
+                        <div class="code_script">
+                           <pre>
+x = {"f", "e", "d", "c", "b", "a"}
+y = {"a", "b", "c"}
+
+z = x.issuperset(y) 
+
+print(z)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>Output:- True</pre>
+                        </div>
+                        <h5>pop() Method</h5>
+                        <p>The pop() method removes a random item from the set.</p>
+                        <div class="code_script">
+                           <pre>
+x = {"f", "e", "d", "c", "b"}
+y = {"a", "b", "c"}
+
+z = x.issuperset(y) 
+
+print(z)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>Output:- False</pre>
+                        </div>
+                        <div class="code_script">
+                           <pre>
+x = {"f", "e", "d", "c", "b", "a"}
+y = {"a", "b", "c"}
+
+z = x.issuperset(y) 
+
+print(z)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>Output:- True</pre>
+                        </div>
+                        <h5>symmetric_difference() Method</h5>
+                        <p>The symmetric_difference() method returns a set that contains all items from both set, but not the items that are present in both sets.</p>
+                        <p>Meaning: The returned set contains a mix of items that are not present in both sets.</p>
+                        <div class="code_script">
+                           <pre>
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+
+z = x.symmetric_difference(y) 
+
+print(z)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>Output:- {'google', 'microsoft', 'cherry', 'banana'}</pre>
+                        </div>
+                        <h5>symmetric_difference_update() Method</h5>
+                        <p>The symmetric_difference_update() method updates the original set by removing items that are present in both sets, and inserting the other items.</p>
+                        <div class="code_script">
+                           <pre>
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+
+x.symmetric_difference_update(y) 
+
+print(x)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>Output:- {'google', 'microsoft', 'cherry', 'banana'}</pre>
+                        </div>
+                        <h5>union() Method</h5>
+                        <p>The union() method returns a set that contains all items from the original set, and all items from the specified set(s).</p>
+                        <div class="code_script">
+                           <pre>
+x = {"a", "b", "c"}
+y = {"f", "d", "a"}
+z = {"c", "d", "e"}
+
+result = x.union(y, z) 
+
+print(result)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>Output:- {'e', 'a', 'f', 'b', 'c', 'd'}</pre>
+                        </div>
+                        <h5>update() Method</h5>
+                        <p>The update() method updates the current set, by adding items from another set (or any other iterable).</p>
+                        <p>If an item is present in both sets, only one appearance of this item will be present in the updated set.</p>
+                        <div class="code_script">
+                           <pre>
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+
+x.update(y) 
+
+print(x)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>Output:- {'banana', 'cherry', 'microsoft', 'apple', 'google'}</pre>
+                        </div>
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#dictionaries"><strong>Ques. </strong> What is Dictionaries?</button>                  
+                  </h2>
+                  <div id="dictionaries" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                     <div class="card-body">
+                        <p>
+                        <ul>
+                           <li>Dictionaries are used to store data values in key:value pairs and are written with curly brackets.</li>
+                           <li>A dictionary is a collection which is ordered*, changeable and do not allow duplicates.</li>
+                        </ul>
+                        <h2>Add a new item to the original dictionary</h2>
+                        <p>Adding an item to the dictionary is done by using a new index key and assigning a value to it:</p>
+                        <div class="code_script">
+                           <pre>
+car = {
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
+
+x = car.values()
+print(x) #before the change
+
+car["color"] = "red"
+print(x) #after the change
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>
+Output:- dict_values(['Ford', 'Mustang', 1964])
+         dict_values(['Ford', 'Mustang', 1964, 'red'])
+                           </pre>
+                        </div>
+                        <div class="code_script">
+                           <pre>
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.update({"color": "red"})
+
+print(thisdict)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>
+Output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 1964, 'color': 'red'}
+                           </pre>
+                        </div>
+                        <h2>Change Dictionary Items</h2>
+                        <p>You can change the value of a specific item by referring to its key name:</p>
+                        <div class="code_script">
+                           <pre>
+thisdict =  {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+thisdict["year"] = 2018
+print(thisdict)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>
+Output:- {'brand': 'Ford', 'model': 'Mustang', 'year': '1965'}
+                           </pre>
+                        </div>
+                        <div class="code_script">
+                           <pre>
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.update({"year": 2020})
+
+print(thisdict)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>
+Output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 2020}
+                           </pre>
+                        </div>
+                        <h2>Remove Dictionary Items</h2>
+                        <p>There are several methods to remove items from a dictionary:</p>
+                        1. The <strong>pop()</strong> method removes the item with the specified key name:
+                        <div class="code_script">
+                           <pre>
+thisdict =  {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.pop("model")
+print(thisdict)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>
+Output:- {'brand': 'Ford', 'year': 1964}
+                           </pre>
+                        </div>
+                        2. The <strong>popitem()</strong> method removes the last inserted item (in versions before 3.7, a random item is removed instead):                        
+                        <div class="code_script">
+                           <pre>
+thisdict =  {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.popitem()
+print(thisdict)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>
+Output:- {'brand': 'Ford', 'model': 'Mustang'}
+                           </pre>
+                        </div>
+                        3. The <strong>del()</strong> keyword removes the item with the specified key name:
+                        <div class="code_script">
+                           <pre>
+thisdict =  {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+del thisdict["model"]
+print(thisdict)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>
+Output:- {'brand': 'Ford', 'year': 1964}
+                           </pre>
+                        </div>
+                        <p>The <strong>del</strong> keyword can also delete the dictionary completely:</p>
+                        <div class="code_script">
+                           <pre>
+thisdict =  {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+del thisdict
+print(thisdict)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>
+Output:- Error
+                           </pre>
+                        </div>
+                        4. The <strong>clear()</strong> method empties the dictionary:
+                        <div class="code_script">
+                           <pre>
+thisdict =  {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.clear()
+print(thisdict)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>
+Output:- {}
+                           </pre>
+                        </div>
+                        <h2>Loop Dictionaries</h2>
+                        <p>Print all key names in the dictionary, one by one:</p>
+                        <div class="code_script">
+                           <pre>
+thisdict =  {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+for x in thisdict:
+  print(x)
+
+for x in thisdict.keys():
+  print(x)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>
+Output:- 
+brand
+model
+year
+                           </pre>
+                        </div>
+                        <p>Print all values in the dictionary, one by one:</p>
+                        <div class="code_script">
+                           <pre>
+thisdict =  {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+for x in thisdict.values():
+  print(x)
+  
+for x in thisdict:
+  print(thisdict[x])
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>
+Output:- 
+Ford
+Mustang
+1964
+                           </pre>
+                        </div>
+                        <div class="code_script">
+                           <pre>
+thisdict =  {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+for x, y in thisdict.items():
+  print(x, y)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>
+Output:- 
+brand Ford
+model Mustang
+year 1964
+                           </pre>
+                        </div>
+                        <h2>Copy a Dictionary</h2>
+                        <p>Make a copy of a dictionary with the <strong>copy()</strong> method:</p>
+                        <div class="code_script">
+                           <pre>
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+mydict = thisdict.copy()
+print(mydict)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>
+Output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
+                           </pre>
+                        </div>
+                        <p>Another way to make a copy is to use the built-in function <strong>dict().</strong>
+                        </p>
+                        <div class="code_script">
+                           <pre>
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+mydict = dict(thisdict)
+   print(mydict)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>
+Output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
+                           </pre>
+                        </div>
+                        <h2>Nested Dictionaries</h2>
+                        <p>A dictionary can contain dictionaries, this is called nested dictionaries.</p>
+                        <div class="code_script">
+                           <pre>
+myfamily = {
+  "child1" : {
+    "name" : "Emil",
+    "year" : 2004
+  },
+  "child2" : {
+    "name" : "Tobias",
+    "year" : 2007
+  },
+  "child3" : {
+    "name" : "Linus",
+    "year" : 2011
+  }
+}
+
+print(myfamily)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>
+Output:- {'child1': {'name': 'Emil', 'year': 2004}, 'child2': {'name': 'Tobias', 'year': 2007}, 'child3': {'name': 'Linus', 'year': 2011}}
+                           </pre>
+                        </div>
+                        </p>
+                        <div class="code_script">
+                           <pre>
+child1 = {
+  "name" : "Emil",
+  "year" : 2004
+}
+child2 = {
+  "name" : "Tobias",
+  "year" : 2007
+}
+child3 = {
+  "name" : "Linus",
+  "year" : 2011
+}
+
+myfamily = {
+  "child1" : child1,
+  "child2" : child2,
+  "child3" : child3
+}
+
+print(myfamily)
+
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>
+Output:- {'child1': {'name': 'Emil', 'year': 2004}, 'child2': {'name': 'Tobias', 'year': 2007}, 'child3': {'name': 'Linus', 'year': 2011}}
+                           </pre>
+                        </div>
+                        <h2>Access Dictionary Items</h2>
+                        <p>You can access the items of a dictionary by referring to its key name, inside square brackets:</p>
+                        <div class="code_script">
+                           <pre>
+thisdict =  {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = thisdict["model"]     # 1 way
+y = thisdict.get("model") # 2 Way
+print(x)
+print(y)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>
+Output:- Mustang
+Mustang
+                           </pre>
+                        </div>
+                        <h2>Access Dictionary Key And Add Key</h2>
+                        <div class="code_script">
+                           <pre>
+car = {
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
+
+x = car.keys()
+print(x) #before the change
+
+car["color"] = "white"
+print(x) #after the change
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>
+Output:- dict_keys(['brand', 'model', 'year'])
+         dict_keys(['brand', 'model', 'year', 'color'])
+
+                           </pre>
+                        </div>
+                        <h2>Get Values</h2>
+                        <div class="code_script">
+                           <pre>
+car = {
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
+
+x = car.values()
+print(x) #before the change
+
+car["year"] = 2020
+print(x) #after the change
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>
+Output:- dict_values(['Ford', 'Mustang', 1964])
+         dict_values(['Ford', 'Mustang', 2020])
+
+                           </pre>
+                        </div>
+                        <h2>Get item</h2>
+                        <div class="code_script">
+                           <pre>
+car = {
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
+
+x = car.items()
+print(x) #before the change
+
+car["year"] = 2020
+print(x) #after the change
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>
+Output:- dict_items([('brand', 'Ford'), ('model', 'Mustang'), ('year', 1964)])
+         dict_items([('brand', 'Ford'), ('model', 'Mustang'), ('year', 2020)])
+
+                           </pre>
+                        </div>
+                        <div class="code_script">
+                           <pre>
+car = {
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
+
+x = car.items()
+print(x) #before the change
+
+car["color"] = "red"
+print(x) #after the change
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>
+Output:- dict_items([('brand', 'Ford'), ('model', 'Mustang'), ('year', 1964)])
+         dict_items([('brand', 'Ford'), ('model', 'Mustang'), ('year', 1964), ('color', 'red')])
+
+                           </pre>
+                        </div>
+                        <h2>Check if Key Exists</h2>
+                        <div class="code_script">
+                           <pre>
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+if "model" in thisdict:
+  print("Yes, 'model' is one of the keys in the thisdict dictionary")
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>
+Output:- Yes, 'model' is one of the keys in the thisdict dictionary
+
+                           </pre>
+                        </div>
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#dictionary_methods"><strong>Ques. </strong> Python - Dictionary Methods?</button>                  
+                  </h2>
+                  <div id="dictionary_methods" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                     <div class="card-body">
+                        <p>
+                        <table class="table table-hover table-striped">
+                           <thead>
+                              <tr>
+                                 <th scope="col">#</th>
+                                 <th scope="col">Method</th>
+                                 <th scope="col">Description</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <th scope="row">1</th>
+                                 <td>clear()</td>
+                                 <td>Removes all the elements from the dictionary</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">2</th>
+                                 <td>copy()</td>
+                                 <td>Returns a copy of the dictionary</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">3</th>
+                                 <td>fromkeys()</td>
+                                 <td>Returns a dictionary with the specified keys and value</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">4</th>
+                                 <td>fromkeys()</td>
+                                 <td>Returns a dictionary with the specified keys and value</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">5</th>
+                                 <td>get()</td>
+                                 <td>Returns the value of the specified key</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">6</th>
+                                 <td>items()</td>
+                                 <td>Returns a list containing a tuple for each key value pair</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">7</th>
+                                 <td>keys()</td>
+                                 <td>Returns a list containing the dictionary's keys</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">8</th>
+                                 <td>pop()</td>
+                                 <td>Removes the element with the specified key</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">9</th>
+                                 <td>popitem()</td>
+                                 <td>Removes the last inserted key-value pair</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">10</th>
+                                 <td>setdefault()</td>
+                                 <td>Returns the value of the specified key. If the key does not exist: insert the key, with the specified value</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">11</th>
+                                 <td>update()</td>
+                                 <td>Updates the dictionary with the specified key-value pairs</td>
+                              </tr>
+                              <tr>
+                                 <th scope="row">12</th>
+                                 <td>values()</td>
+                                 <td>Returns a list of all the values in the dictionary</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <h5>clear() Method</h5>
+                        <p>The clear() method removes all the elements from a dictionary.</p>
+                        <div class="code_script">
+                           <pre>
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+car.clear()
+
+print(car)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>
+Output:- {}
+                           </pre>
+                        </div>
+                        <h5>copy() Method</h5>
+                        <p>The copy() method returns a copy of the specified dictionary.</p>
+                        <div class="code_script">
+                           <pre>
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+x = car.copy()
+
+print(x)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>
+Output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
+                           </pre>
+                        </div>
+                        <h5>fromkeys() Method</h5>
+                        <p>The fromkeys() method returns a dictionary with the specified keys and the specified value.</p>
+                        <div class="code_script">
+                           <pre>
+x = ('key1', 'key2', 'key3')
+y = 1
+thisdict = dict.fromkeys(x, y)
+print(thisdict)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>
+Output:- {'key1': 1, 'key2': 1, 'key3': 1}
+                           </pre>
+                        </div>
+                        <div class="code_script">
+                           <pre>
+x = ('key1', 'key2', 'key3')
+thisdict = dict.fromkeys(x)
+print(thisdict)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>
+Output:- ['key1': None, 'key2': None, 'key3': None]
+                           </pre>
+                        </div>
+                        <h5>get() Method</h5>
+                        <p>The get() method returns the value of the item with the specified key.</p>
+                        <div class="code_script">
+                           <pre>
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+x = car.get("model")
+
+print(x)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>
+Output:- Mustang
+                           </pre>
+                        </div>
+                        <h5>items() Method</h5>
+                        <p>The items() method returns a view object. The view object contains the key-value pairs of the dictionary, as tuples in a list.</p>
+                        <div class="code_script">
+                           <pre>
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+x = car.items()
+
+print(x)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>
+Output:- dict_items([('brand', 'Ford'), ('model', 'Mustang'), ('year', 1964)])
+                           </pre>
+                        </div>
+                        <div class="code_script">
+                           <pre>
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+x = car.items()
+
+car["year"] = 2018
+
+print(x)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>
+Output:- dict_items([('brand', 'Ford'), ('model', 'Mustang'), ('year', 2018)])
+                           </pre>
+                        </div>
+                        <h5>keys() Method</h5>
+                        <p>The keys() method returns a view object. The view object contains the keys of the dictionary, as a list.</p>
+                        <div class="code_script">
+                           <pre>
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+x = car.keys()
+
+print(x)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>
+Output:- dict_keys(['brand', 'model', 'year'])
+                           </pre>
+                        </div>
+                        <div class="code_script">
+                           <pre>
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+x = car.keys()
+
+car["color"] = "white"
+
+print(x)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>
+Output:- dict_keys(['brand', 'model', 'year', 'color'])
+                           </pre>
+                        </div>
+                        <h5>pop() Method</h5>
+                        <p>The pop() method removes the specified item from the dictionary.</p>
+                        <div class="code_script">
+                           <pre>
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+car.pop("model")
+
+print(car)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>
+Output:- {'brand': 'Ford', 'year': 1964}
+                           </pre>
+                        </div>
+                        <h5>popitem() Method</h5>
+                        <p>The popitem() method removes the item that was last inserted into the dictionary. In versions before 3.7, the popitem() method removes a random item.</p>
+                        <div class="code_script">
+                           <pre>
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+car.popitem()
+
+print(car)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>
+Output:- {'brand': 'Ford', 'model': 'Mustang'}
+                           </pre>
+                        </div>
+                        <h5>setdefault() Method</h5>
+                        <p>The setdefault() method returns the value of the item with the specified key.</p>
+                        <div class="code_script">
+                           <pre>
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+x = car.setdefault("color", "White")
+
+print(car)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>
+Output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 1964, 'color': 'White'}
+                           </pre>
+                        </div>
+                        <h5>setdefault() Method</h5>
+                        <p>The setdefault() method returns the value of the item with the specified key.</p>
+                        <div class="code_script">
+                           <pre>
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+x = car.setdefault("color", "White")
+
+print(car)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>
+Output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 1964, 'color': 'White'}
+                           </pre>
+                        </div>
+                        <h5>update() Method</h5>
+                        <p>The update() method inserts the specified items to the dictionary.</p>
+                        <div class="code_script">
+                           <pre>
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+car.update({"color": "White"})
+
+print(car)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>
+Output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 1964, 'color': 'White'}
+                           </pre>
+                        </div>
+                        <h5>values() Method</h5>
+                        <p>The values() method returns a view object. The view object contains the values of the dictionary, as a list.</p>
+                        <div class="code_script">
+                           <pre>
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+x = car.values()
+
+car["year"] = 2018
+
+print(x)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>
+Output:- dict_values(['Ford', 'Mustang', 2018])
+                           </pre>
+                        </div>
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#lambda"><strong>Ques. </strong> Python - Lambda Function?</button>                  
+                  </h2>
+                  <div id="lambda" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                     <div class="card-body">
+                        <p>
+                        <ul>
+                           <li>A lambda function is a small anonymous function.</li>
+                           <li>In Python, an anonymous function is a function that is defined without a name.</li>
+                           <li>While normal functions are defined using the def keyword in Python, anonymous functions are defined using the lambda keyword.</li>
+                           <li>Hence, anonymous functions are also called lambda functions.</li>
+                        </ul>
+                        <strong>Syntex:- </strong>lambda arguments: expression
+                        <div class="code_script">
+                           <pre>
+def add(a,b):
+   print(a+b)
+add(5,10)
+===Using Lambda function
+x = lambda a: a + 10
+print(x(5))
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>
+Output:- 15
+                           </pre>
+                        </div>
+                        <h5>You can use lambda function in <em>filter()</em></h5>
+                        <p>filter() function is used to filter a given iterable (list like object) using another function that defines the filtering logic.</p>
+                        <p><strong>Syntex:-</strong>filter(object, iterable)</p>
+                        <p>The object here should be a lambda function which returns a boolean value. </p>
+                        <div class="code_script">
+                           <pre>
+mylist = [2,3,4,5,6,7,8,9,10]
+list_new  = list(filter(lambda x : (x%2==0), mylist))
+print(list_new)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>
+Output:- [2, 4, 6, 8, 10]
+                           </pre>
+                        </div>
+                        <h5>You can use lambda function in <em>map()</em></h5>
+                        <p>map() function applies a given function to all the itmes in a list and returns the result. Similar to filter(), simply pass the lambda function and the list (or any iterable, like tuple) as arguments.</p>
+                        <div class="code_script">
+                           <pre>
+mylist = [2,3,4,5,6,7,8,9,10]
+list_new  = list(map(lambda x : x%2, mylist))
+print(list_new)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>
+Output:- [0, 1, 0, 1, 0, 1, 0, 1, 0]
+                           </pre>
+                        </div>
+                        <h5>You can use lambda function in <em>reduce()</em>as well</h5>
+                        <p>reduce() function performs a repetitive operation over the pairs of the elements in the list. Pass the lambda function and the list as arguments to the reduce() function. For using the reduce() function, you need to import reduce from <strong><em>functools</em></strong> librray.</p>
+                        <div class="code_script">
+                           <pre>
+from functools import reduce
+list1 = [1,2,3,4,5,6,7,8,9]
+sum = reduce((lambda x,y: x+y), list1)
+print(sum)
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <pre>
+Output:- 45 //i.e 1+2, 1+2+3 , 1+2+3+4 and so on.
+                           </pre>
+                        </div>
+                        <h5>How to use lambda function to manipulate a Dataframe</h5>
+                        <p>You can also manipulate the columns of the dataframe using the lambda function. It’s a great candidate to use inside the apply method of a dataframe. I will be trying to add a new row in the dataframe in this section as example.</p>
+                        <div class="code_script">
+                           <pre>
+import pandas as pd
+df = pd.DataFrame([[1,2,3],[4,5,6]],columns = ['First','Second','Third'])
+df['Forth']= df.apply(lambda row: row['First']*row['Second']* row['Third'], axis=1)
+df
+</pre>
+                        </div>
+                        <br>
+                        <div class="code_script_ans">
+                           <table class="dataframe" border="1">
+                              <thead>
+                                 <tr style="text-align:right">
+                                    <th>&nbsp;</th>
+                                    <th>First</th>
+                                    <th>Second</th>
+                                    <th>Third</th>
+                                    <th>Forth</th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                    <th>0</th>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>6</td>
+                                 </tr>
+                                 <tr>
+                                    <th>1</th>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                    <td>120</td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <h1>OOPs Concepts</h1>
+               <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#Class"><strong>Ques. </strong> What is Class?</button>                  
+                  </h2>
+                  <div id="Class" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                     <div class="card-body">
+                        <p>The class can be defined as a collection of objects. It is a logical entity that has some specific attributes and methods.<br>
+                           <strong>For example:</strong> if you have an employee class, then it should contain an attribute and method, i.e. an email id, name, age, salary, etc.
+                        </p>
+                        <div>
+                           <pre class="code">
+class ClassName:     
+  &lt;statement-1>     
+            .     
+            .      
+  &lt;statement-N>
+</pre>
+                        </div>
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#Object"><strong>Ques. </strong> What is Object?</button>                  
+                  </h2>
+                  <div id="Object" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                     <div class="card-body">
+                        <p>The object is an entity that has state and behavior. It may be any real-world object like the mouse, keyboard, chair, table, pen, etc.<br>
+                           <strong>For example:</strong> if you have an employee class, then it should contain an attribute and method, i.e. an email id, name, age, salary, etc.
+                        </p>
+                        <div>
+                           <pre class="code">
+class car:  
+    def __init__(self,modelname, year):  
+        self.modelname = modelname  
+        self.year = year  
+    def display(self):  
+        print(self.modelname,self.year)  
+  
+c1 = car("Toyota", 2016)  
+c1.display()
+//output:- Toyota 2016
+</pre>
+                        </div>
+                        <p>Here, the <strong>self</strong> is used as a reference variable, which refers to the current class object. It is always the first argument in the function definition. However, using self is optional in the function call.</p>
+                        <p>The <strong>self-parameter</strong> refers to the current instance of the class and accesses the class variables. We can use anything instead of self, but it must be the first parameter of any function which belongs to the class.</p>
+                        <h3>Delete the Object</h3>
+                        <p>We can delete the properties of the object or object itself by using the del keyword. Consider the following example.</p>
+                        <pre class="code">
+class Employee:  
+  id = 10  
+  name = "John"  
+  def display(self):  
+    print("ID: %d \nName: %s" % (self.id, self.name))  
+      # Creating a emp instance of Employee class  
+      emp = Employee()  
+  
+      # Deleting the property of object  
+      del emp.id  
+
+      # Deleting the object itself  
+      del emp  
+      emp.display()
+</pre>
+                     </div>
+                  </div>
+               </div>
+			   
+			               <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#python_json"><strong>Ques. </strong> What is Python JSON?</button>                  
+                  </h2>
+                  <div id="python_json" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                     <div class="card-body">
+                        <ul>
+							<li>JSON is a syntax for storing and exchanging data.</li>
+							<li>JSON is text, written with JavaScript object notation.</li>
+							<li>Python has a built-in package called json, which can be used to work with JSON data.</li>
+						</ul>
+						#### Convert from JSON to Python
+						<p>If you have a JSON string, you can parse it by using the __json.loads()__ method.</p>
+                        <div>
+                           <pre class="code">
+import json
+
+# some JSON:
+x = '{ "name":"John", "age":30, "city":"New York"}'
+y = json.loads(x)
+# the result is a Python dictionary:
+print(y["age"])
+
+//output:- 30
+</pre>
+                        </div>
+						#### Convert from Python to JSON
+						<p>If you have a Python object, you can convert it into a JSON string by using the __json.dumps()__ method.</p>
+						
+                        <div>
+                        <pre class="code">
+import json
+
+# a Python object (dict):
+x = {
+  "name": "John",
+  "age": 30,
+  "city": "New York"
+}
+
+# convert into JSON:
+y = json.dumps(x)
+
+# the result is a JSON string:
+print(y)
+
+//Output:- {"name": "John", "age": 30, "city": "New York"}
+</pre>
+                     </div>
+                  </div>
+               </div>
+			   
+			   
+			   
+               <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#Method"><strong>Ques. </strong> What is Method?</button>                  
+                  </h2>
+                  <div id="Method" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                     <div class="card-body">
+                        <p>The method is a function that is associated with an object. In Python, a method is not unique to class instances. Any object type can have methods.</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#Inheritance"><strong>Ques. </strong> What is Inheritance?</button>                  
+                  </h2>
+                  <div id="Inheritance" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                     <div class="card-body">
+                        <p>
+                           <strong>Syntex:-</strong><br>
+                        <pre class="code">
+class class-name(parent class):  
+    &lt;class-suite>  
+
+class derive-class(&lt;base class 1>, &lt;base class 2>, ..... &lt;base class n>):  
+    &lt;class - suite>  
+  </pre>
+                        </p>
+                     </div>
+                  </div>
+               </div>
+			   
+				<div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#file_handling"><strong>Ques. </strong> What is File Handling?</button>                  
+                  </h2>
+                  <div id="file_handling" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                     <div class="card-body">
+					 <p>The key function for working with files in Python is the <strong>open()</strong> function.<br>The open() function takes two parameters; filename, and mode.</p>
+                        <p>Python has several functions for creating, reading, updating, and deleting files.</p>
+						<p>Types Of File in Python</p>
+						<ul>
+							<li>Binary file</li>
+								<ul>
+									<li><b>Document files:</b> .pdf, .doc, .xls etc.</li>
+									<li><b>Image files:</b> .png, .jpg, .gif, .bmp etc.</li>
+									<li><b>Video files:</b> .mp4, .3gp, .mkv, .avi etc.</li>
+									<li><b>Audio files:</b> .mp3, .wav, .mka, .aac etc.</li>
+									<li><b>Database files:</b> .mdb, .accde, .frm, .sqlite etc.</li>
+									<li><b>Archive files:</b> .zip, .rar, .iso, .7z etc.</li>
+									<li><b>Executable files:</b> .exe, .dll, .class etc.</li>
+								</ul>
+							<li>Text file</li>
+								<ul>
+									<li><b>Web standards:</b>  html, XML, CSS, JSON etc.</li>
+									<li><b>Source code:</b> c, app, js, py, java etc.</li>
+									<li><b>Documents:</b> txt, tex, RTF etc.</li>
+									<li><b>Tabular data:</b> csv, tsv etc</li>
+									<li><b>Configuration:</b> ini, cfg, reg etc.</li>
+								</ul>							
+						</ul>
+						
+						<ul>
+							<li>"r" - Read - Default value. Opens a file for reading, error if the file does not exist</li>
+							<li>"a" - Append - Opens a file for appending, creates the file if it does not exist</li>
+							<li>"w" - Write - Opens a file for writing, creates the file if it does not exist</li>
+							<li>"x" - Create - Creates the specified file, returns an error if the file exists</li>
+						</ul>
+						syntex:-
+						<pre class="code">
+my_file = open(“C:/Documents/Python/test.txt”, “r”)
+print(my_file.read(5))
+</pre>
+                     </div>
+                  </div>
+               </div>
+			   
+			   
+			   
+			   
+			   
+			   
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
+
+d. How to get Id()?
+e. a=1, b=1 does both have same Id or not?
+f. What is repr()?
+g. WAP to count from a string?
+h. Write methods for the list.
+i. List of zeros python without function or any method.
+j. What are deep copy and shallow copy?
+k. How to use deep copy?
+l. Count occurrence of each number in list.
+m. What is list comprehension? 
+n. Multiply each no by 5 with list comprehension
+o. List_ = ['a', 'aa', 'aaa', 'ababa']. sort the list on the basis of length. 
+p. Convert list element into string. 
+q. Prime numbers program.
+r. Print this Pattern (* * * ***)
+s. Write a custom insert() function for list eg. def custom_insert (list, index, item).
+t. Explain the join method. 
+u. What is the difference between list and tuple?
+v. Discard() and remove() in Python?
+w. Packing, unpacking in tuple?
+x. What is reduce and filter? Examples
+y. What is common between dictionary and set?
+z. Sort in dictionary with key
+aa. How do you add two dictionaries?
+bb. Can we pass list or tuple as a key in dictionary?
+cc. Unique dictionary from list.
+dd. What is a decorator?
+ee. What is property decorator?
+ff. What is a generator?
+gg. Iterator and iterable difference.
+hh. Difference between generator and iterator in python.
+ii. What is lazy evaluation in python?
+jj. What is Monkey Patching in python?
+kk. What is Magic method in python?
+2. File Handling
+a. What is pickling? Format of object stored in file?
+b. Static file contains which type of file normally?
+c. How can be file read in specific location?
+d. How do you remove a file from a folder?
+e. If user upload excel file check file format if it is valid or invalid.
+f. What is context manager?
+g. What is Garbage Collector?
+h. Memory management in Python?
+3. Object Oriented Programming
+a. What is class and object?
+b. Create a new class in oops?
+c. What is constructor?
+d. Why used constructor?
+e. Advantage of constructor
+f. What is the class method?
+g. What is the difference between Static method and Class method?
+h. Private variable and how we can access that?
+i. Inheritance and types of inheritance.
+j. Difference multilevel and multiple inheritance and drawback?
+k. What is MRO?
+l. What is  str?
+4. Exception Handling
+a. How can we handle errors in python ?
+b. How many ways exception in python?
+5. Multithreading
+a. What is GIL?
+6. Numpy
+a. Tell me some python libraries .. Numpy
+b. Convert a list into numpy
+
+Local Scope
+The Variables which are defined in the function are a local scope of the variable. These variables are defined in the function body.
+Example:- 
+def myfunc():
+  x = 300
+  print(x)
+
+myfunc()
+
+Output:- 300
+
+Global Scope
+The Variable which can be read from anywhere in the program is known as a global scope. These variables can be accessed inside and outside the function. 
+x = 300
+
+def myfunc():
+  print(x)
+
+myfunc()
+
+print(x)
+
+Output:- 300
+300
+
+NonLocal or Enclosing Scope
+Built-in Scope
+Global Keyword
+
+
+Ques:- What are the common built-in data types in Python?
+Python has the following data types built-in by default, in these categories:
+<ul>
+<li>Numbers
+	<ul>
+    	<li><b>int:-</b> int stores integers eg a=100, b=25, c=526, etc.</li>
+        <li><b>long:-</b> long stores higher range of integers eg a=908090999L, b=-0x1990999L, etc.</li>
+		<li><b>float:-</b> float stores floating-point numbers eg a=25.6, b=45.90, c=1.290, etc.</li>
+		<li><b>complex:-</b> complex stores numbers eg a=3 + 4j, b=2 + 3j, c=complex(4,6), etc.</li>
+    </ul>
+</li>
+<li>Sequence Types:
+	<ul>
+		<li><b>list:-</b> Mutable sequence used to store collection of items.</li>
+		<li><b>tuple:-</b> Immutable sequence used to store collection of items.</li>
+		<li><b>range:-</b> Represents an immutable sequence of numbers generated during execution.</li>
+		<li><b>str:-</b> Immutable sequence of Unicode code points to store textual data.</li>
+	</ul>
+</li>
+<li>Mapping Types:
+	<ul>
+		<li><b>dict:-</b> Stores comma-separated list of key: value pairs.</li>
+	</ul>
+</li>
+
+</ul>
+
+
+Check Prime Number
+num = 19
+
+Using Flag:- 
+
+flag = False
+# int(num/2)+1
+if num >1 :
+    for i in range(2, num):
+        if(num%i) == 0:
+            flag = True
+            break
+if flag:
+    print(num, "is not a prime number")
+else:
+    print(num, "is a prime number")
+	
+	
+OutPut:- 3 is a prime number
+
+
+Prime Number Print
+==================
+lower_value = int(input ("Please, Enter the Lowest Range Value: "))  
+upper_value = int(input ("Please, Enter the Upper Range Value: "))  
+print ("The Prime Numbers in the range are: ")
+for i in range (lower_value, upper_value + 1):  
+    if i > 1:  
+        for j in range (2, i):
+            if (i % j) == 0:  
+                break  
+        else:  
+            print (i)  
+			
+Output:-
+Please, Enter the Lowest Range Value: 1
+Please, Enter the Upper Range Value: 20
+The Prime Numbers in the range are: 
+2
+3
+5
+7
+11
+13
+17
+19
+
+
+
+
+
+
+
+AbstractUser vs AbstractBaseUser
+The default User model in Django uses a username to uniquely identify a user during authentication. If you'd rather use an email address, you'll need to create a custom User model by either subclassing AbstractUser or AbstractBaseUser.
+
+Options:
+
+AbstractUser: Use this option if you are happy with the existing fields on the User model and just want to remove the username field.
+AbstractBaseUser: Use this option if you want to start from scratch by creating your own, completely new User model.
+
+
+
+
+What is CRUD operations Django?
+Django is a Python-based web framework that follows the MVT (Model View Template) pattern and allows you to quickly create web applications. It offers built-in class-based generic views for CRUD operations. CRUD in general means Creating, Retrieving, Updating and Deleting operations on a table in a database.
+
+What is class based view in Django?
+Class-based view is an alternative to function-based view. They do not replace function-based views, but have some distinct differences and advantages over function-based views.
+
+What is generic views in Django?
+Django generic views have been developed as shortcuts for common usage methods such as displaying object details.
+They take some of the common methods found in view development and abstract them so that you can quickly write common views of data without writing too much code.
+
+What is DetailView in Django?
+Django DetailView should be used when you want to present detail of a single model instance. Its purpose is to use with only one object.
+
+
+
+class Employee(models.Model):
+	id = models.AutoField('Id', primary_key=True)
+	
+	first_name = models.CharField('First name', max_length=15, null = True)
+	last_name = models.CharField('Last name', max_length=16, blank=True)
+	email = models.EmailField(max_length = 255, unique=True, null = True)
+	user_name   = models.CharField(max_length=50, unique=True, null = True, error_messages ={
+                    "unique":"The User Name Field you entered is unique."
+                    })
+	dof = models.DateField('Birthday')
+	
+	
+	gender = models.CharField('Gender', max_length=1)
+	hire_date = models.DateField('hire date')
+
+	class Meta:
+		db_table = 'employees'
+
+	def __str__(self):
+		return "{} {}".formet(self.first_name, self.last_name)
+		
+		
+		
+		https://books.agiliq.com/projects/django-orm-cookbook/en/latest/null_vs_blank.html
+		
+		
+		
+		
+title= models.CharField(max_length=300, unique=True)	
+
+
+Deep Copy:- In deep copy any changes made to a copy of object do not reflect in the orginal object.
+In case of shallow copy, a refrence of object 
 
 
