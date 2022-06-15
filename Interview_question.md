@@ -21,6 +21,14 @@
 |   | [Python Collections (Arrays)?](#python-collections-arrays) |
 |   | [What is List?](#ques-what-is-list) |
 |   | [Access List Items?](#access-list-items) |
+|   | [Change List Items](#change-list-items) |
+|   | [Add List Items](#add-list-items) |
+|   | [Remove List Items](#remove-list-items) | 
+|   | [Loop Lists](#loop-lists) |
+|   | [Copy Lists](#copy-lists) |
+|   | [Join Lists](#join-lists) |
+|   | [List Methods](#list-methods) |
+|   | [list() Constructor](#list-constructor) |
 |   | [Difference between List and Tuples in Python?](#ques-difference-between-list-and-tuples-in-python) |
 |   | [What is Dictionaries?](#ques-what-is-dictionaries) |
 |   | [What is Dictionarie Methods?](#ques-what-is-dictionarie-methods) |
@@ -869,7 +877,33 @@ print(list1)
 
 Output:-['a', 'b', 'c', 1, 2, 3]
 ```
+ 
+##### List Comprehension
+* List comprehension offers a shorter syntax when you want to create a new list based on the values of an existing list.
+__Syntax__ newlist = [expression for item in iterable if condition == True]
+```python
+# Based on a list of fruits, you want a new list, containing only the fruits with the letter "a" in the name.
+
+# Without list comprehension you will have to write a for statement with a conditional test inside.
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = []
+
+for x in fruits:
+  if "a" in x:
+    newlist.append(x)
+
+print(newlist)
+
+# With list comprehension you can do all that with only one line of code:
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = [x for x in fruits if "a" in x]
+
+print(newlist)
+
+Output:- ['apple', 'banana', 'mango']
+```                        
                         
+
 ##### List Methods
                         
 | Method  | Description |
