@@ -1091,21 +1091,212 @@ Output:- ('apple', 'banana', 'cherry')
 
 ##### Access Tuple Items
 ```python
+# Access Tuple Items
 thistuple = ("apple", "banana", "cherry")
 print(thistuple[1])
 
 Output:- banana
- 
--------------------------------------------------------------------------------
+-----------------------------------------------------
+
 # Negative Indexing
 thistuple = ("apple", "banana", "cherry")
 print(thistuple[-1])
 
-Output:- Cherry
- 
---------------------------------------------------------------------------------
-# Range of Indexes
+Output:- cherry
+------------------------------------------------------
 
+# Range of Indexes
+thistuple = ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
+print(thistuple[2:5])
+print(thistuple[:4])
+print(thistuple[2:])
+print(thistuple[-4:-1])
+
+Output:- ('cherry', 'orange', 'kiwi')
+Output:- ('apple', 'banana', 'cherry', 'orange')
+Output:- ('cherry', 'orange', 'kiwi', 'melon', 'mango')
+Output:- ('orange', 'kiwi', 'melon')
+------------------------------------------------------
+
+# Check if Item Exists
+thistuple = ("apple", "banana", "cherry")
+if "apple" in thistuple:
+  print("Yes, 'apple' is in the fruits tuple")
+
+Output:- Yes, 'apple' is in the fruits tuple
+```
+
+##### Update Tuples
+* Once a tuple is created, you cannot change its values. Tuples are unchangeable, or immutable as it also is called.
+* You can convert the tuple into a list, change the list, and convert the list back into a tuple.
+```python
+x = ("apple", "banana", "cherry")
+y = list(x)
+y[1] = "kiwi"
+x = tuple(y)
+
+print(x)
+
+Output:- ("apple", "kiwi", "cherry")
+----------------------------------------------------------------
+
+# Add Items
+thistuple = ("apple", "banana", "cherry")
+y = list(thistuple)
+y.append("orange")
+thistuple = tuple(y)
+
+print(thistuple)
+
+output:- ('apple', 'banana', 'cherry', 'orange')
+---------------------------------------------------------------------
+
+# Remove Items
+thistuple = ("apple", "banana", "cherry")
+y = list(thistuple)
+y.remove("apple")
+thistuple = tuple(y)
+
+print(thistuple)
+
+Output:- ('banana', 'cherry')
+
+# Example2:-
+thistuple = ("apple", "banana", "cherry")
+del thistuple
+print(thistuple)
+
+Output:- Error
+----------------------------------------------------------------------
+
+# Add tuple to a tuple
+thistuple = ("apple", "banana", "cherry")
+y = ("orange",)
+thistuple += y
+
+print(thistuple)
+
+Output:- ('apple', 'banana', 'cherry', 'orange')
+```
+
+##### Unpack Tuples
+```python
+# packing a Tuple:- When we create a tuple, we normally assign values to it. This is called "packing" a tuple.
+fruits = ("apple", "banana", "cherry")
+print(fruits)
+
+Output:- ('apple', 'banana', 'cherry')
+
+# Unpacking a Tuple:- in Python, we are also allowed to extract the values back into variables. This is called "unpacking".
+fruits = ("apple", "banana", "cherry")
+
+(green, yellow, red) = fruits
+
+print(green)
+print(yellow)
+print(red)
+
+Output:- 
+apple
+banana
+cherry
+
+# Example2 Using Asterisk (*):-
+#If the number of variables is less than the number of values, you can add an * to the variable name and the values will be assigned to the variable as a list. 
+fruits = ("apple", "mango", "papaya", "pineapple", "cherry")
+
+(green, *tropic, red) = fruits
+
+print(green)
+print(tropic)
+print(red)
+
+Output:- 
+apple
+['mango', 'papaya', 'pineapple']
+cherry
+```
+
+#####  Loop Tuples
+```python
+# Loop Through a Tuple
+thistuple = ("apple", "banana", "cherry")
+for x in thistuple:
+  print(x)
+  
+Output:- 
+apple
+banana
+cherry
+-----------------------------------------------------------------------
+
+# Loop Through the Index Numbers
+thistuple = ("apple", "banana", "cherry")
+for i in range(len(thistuple)):
+  print(thistuple[i])
+  
+Output:-
+apple
+banana
+cherry
+----------------------------------------------------------------------
+
+# Using a While Loop
+thistuple = ("apple", "banana", "cherry")
+i = 0
+while i < len(thistuple):
+  print(thistuple[i])
+  i = i + 1
+  
+Output:- 
+apple
+banana
+cherry
+```
+
+##### Join Tuples
+```python
+# Join Two Tuples
+tuple1 = ("a", "b" , "c")
+tuple2 = (1, 2, 3)
+
+tuple3 = tuple1 + tuple2
+print(tuple3)
+
+Output:- 
+('a', 'b', 'c', 1, 2, 3)
+-------------------------------------------------------
+
+# Multiply Tuples
+fruits = ("apple", "banana", "cherry")
+mytuple = fruits * 2
+
+print(mytuple)
+
+Output:- ('apple', 'banana', 'cherry', 'apple', 'banana', 'cherry')
+```
+
+##### Tuple Methods
+| Method | Description |
+| ------ | ----------- |
+| count() |	Returns the number of times a specified value occurs in a tuple |
+| index() | Searches the tuple for a specified value and returns the position of where it was found |
+
+```python
+# Tuple count() Method
+thistuple = (1, 3, 7, 8, 7, 5, 4, 6, 8, 5)
+x = thistuple.count(5)
+print(x)
+
+Output:- 2
+-------------------------------------------------------------------------------
+
+# Tuple index() Method:- Search for the first occurrence of the value 8, and return its position.
+thistuple = (1, 3, 7, 8, 7, 5, 4, 6, 8, 5)
+x = thistuple.index(8)
+print(x)
+
+Output:- 3
 ```
  
 ### Ques. Difference between List and Tuples in Python?
