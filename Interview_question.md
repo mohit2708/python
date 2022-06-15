@@ -1069,7 +1069,7 @@ Output:-
 [{'car': 'Mitsubishi', 'year': 2000}, {'car': 'Ford', 'year': 2005}, {'car': 'VW', 'year': 2011}, {'car': 'BMW', 'year': 2019}]
 ```
 
-### list() Constructor
+##### list() Constructor
 It is also possible to use the __list()__ constructor to make a new list.
 ```python
 thislist = list(("apple", "banana", "cherry"))
@@ -1791,56 +1791,60 @@ output:-
 {'apple', 'banana', 'cherry'}
 ```
 
-#### Acesss Items of set:-
-* Loop through the set, and print the values:
-```python
+##### Acesss Items of set
+```python			
+# Loop through the set, and print the values.
 thisset = {"apple", "banana", "cherry"}
 for x in thisset:
   print(x)
+			
 output:-
 apple
 cherry
 banana
-```
-* Check if "banana" is present in the set:
-```python
+-----------------------------------------------------------------
+
+# Check if "banana" is present in the set:
 thisset = {"apple", "banana", "cherry"}
 print("banana" in thisset)
+			
 output:-
 True
 ```
-#### Add Items of set:-
-* To add one item to a set use the add() method.
+			
+##### Add Items of set:-
 ```python
+# To add one item to a set use the add() method.
+			
 thisset = {"apple", "banana", "cherry"}
 thisset.add("orange")
 print(thisset)
+			
 Output:-
 {'cherry', 'orange', 'apple', 'banana'}
-```
-
-#### Add Sets/Update Method
-* To __add__ items from __another set__ into the __current set__, use the __update()__ method.
-```python
+---------------------------------------------------------------------
+			
+# To add items from another set into the current set, use the update() method.
 thisset = {"apple", "banana", "cherry"}
 tropical = {"pineapple", "mango", "papaya"}
 thisset.update(tropical)
 print(thisset)
+			
 output:-
 {'apple', 'mango', 'cherry', 'pineapple', 'banana', 'papaya'}
-```
-#### Add Any Iterable
-* The object in the update() method does not have be a set, it can be any iterable object (tuples, lists, dictionaries etc.).
-```python
+-----------------------------------------------------------------------
+
+# Add Any Iterable:- The object in the update() method does not have to be a set, it can be any iterable object (tuples, lists, dictionaries etc.).
 thisset = {"apple", "banana", "cherry"}
 mylist = ["kiwi", "orange"]
 thisset.update(mylist)
 print(thisset)
+			
 Output:-
 {'banana', 'cherry', 'apple', 'orange', 'kiwi'}
 ```
 
-#### Remove Item
+##### Remove Item
 * To remove an item in a set, use the __remove()__ , or the __discard()__ or __pop()__ method.
 * __Note:-__ If the item to remove does not exist, remove() will raise an error.
 ```python
