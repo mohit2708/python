@@ -1844,51 +1844,57 @@ Output:-
 {'banana', 'cherry', 'apple', 'orange', 'kiwi'}
 ```
 
-##### Remove Item
-* To remove an item in a set, use the __remove()__ , or the __discard()__ or __pop()__ method.
-* __Note:-__ If the item to remove does not exist, remove() will raise an error.
+##### Remove Item of set:-
+			
 ```python
+# To remove an item in a set, use the remove(), or the discard() or pop() method.
+# Note:- If the item to remove does not exist, remove() will raise an error.
 thisset = {"apple", "banana", "cherry"}
 thisset.remove("banana")
 print(thisset)
+			
 Output:-
 {'apple', 'cherry'}
-```
-* __Note:-__ If the item to remove does not exist, __discard()__ will NOT raise an error.
-```python
+
+--------------------------------------------------------------------------------
+# Note:- If the item to remove does not exist, __discard()__ will NOT raise an error.
 thisset = {"apple", "banana", "cherry"}
 thisset.discard("banana")
 print(thisset)
+			
 Output:-
 {'apple', 'cherry'}
-```
-* __Note:-__ You can also use the pop() method to remove an item, but this method will remove the last item. Remember that sets are unordered, so you will not know what item that gets removed.
-```python
+			
+-------------------------------------------------------------------------
+# __Note:-__ You can also use the pop() method to remove an item, but this method will remove the last item. Remember that sets are unordered, so you will not know # # what item that gets removed.
 thisset = {"apple", "banana", "cherry"}
 x = thisset.pop()
 print(x) #removed item
 print(thisset) #the set after removal
+			
 Output:-
 banana
 {'cherry', 'apple'}
-```
-* The clear() method empties the set:
-```python
+			
+---------------------------------------------------------------------
+# The clear() method empties the set:
 thisset = {"apple", "banana", "cherry"}
 thisset.clear()
 print(thisset)
+			
 output:-
 set()
-```
 
-* The del keyword will delete the set completely:
-```python
+--------------------------------------------------------------------
+# The del keyword will delete the set completely:
 thisset = {"apple", "banana", "cherry"}
 del thisset
 print(thisset) #this will raise an error because the set no longer exists
+			
 output:-
 Error
 ```
+
 #### Join Two Set
 You can use the union() method that returns a new set containing all items from both sets, or the update() method that inserts all the items from one set into another.
 
