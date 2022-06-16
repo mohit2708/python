@@ -1824,6 +1824,15 @@ Output:-
 {'cherry', 'orange', 'apple', 'banana'}
 ---------------------------------------------------------------------
 			
+# Try to add an element that already exists:
+thisset = {"apple", "banana", "cherry"}
+thisset.add("apple")
+print(thisset)
+
+Output:- 
+{'banana', 'apple', 'cherry'}			
+--------------------------------------------------------------------------------
+			
 # To add items from another set into the current set, use the update() method.
 thisset = {"apple", "banana", "cherry"}
 tropical = {"pineapple", "mango", "papaya"}
