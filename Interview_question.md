@@ -13,6 +13,7 @@
 |   | [Global Variables?](#ques-global-variables) |
 |   | [How to check What type of datatype?](#ques-how-to-check-what-type-of-datatype) |
 |   | [Python Strings?](#ques-python-strings) |
+|   | [Python Shallow Copy and Deep Copy?](#ques-python-shallow-copy-and-deep-copy) |
 |   | [What is built-in module in Python?](#Ques-What-is-built-in-module-in-Python) |
 |   | [Is indentation required in python?](#ques-is-indentation-required-in-python) |
 |   | [How is memory managed in Python?](#ques-how-is-memory-managed-in-python) |
@@ -27,9 +28,28 @@
 |   | [Loop Lists](#loop-lists) |
 |   | [Copy Lists](#copy-lists) |
 |   | [Join Lists](#join-lists) |
+|   | [List Comprehension](#list-comprehension) |
 |   | [List Methods](#list-methods) |
 |   | [list() Constructor](#list-constructor) |
+|   | [What isTuples?](#ques-what-istuples) |
+|   | [Tuple Length](#tuple-length) |
+|   | [Create Tuple With One Item](#create-tuple-with-one-item) |
+|   | [tuple() Constructor](#tuple-constructor) |
+|   | [Access Tuple Items](#access-tuple-items) |
+|   | [Update Tuples](#update-tuples) |
+|   | [Unpack Tuples](#unpack-tuples) |
+|   | [Loop Tuples](#loop-tuples) |
+|   | [Join Tuples](#join-tuples) |
+|   | [Tuple Methods](#tuple-methods) |
 |   | [Difference between List and Tuples in Python?](#ques-difference-between-list-and-tuples-in-python) |
+|   | [What is Set?](#ques-what-is-set) |
+|   | [Acesss Items of set](#acesss-items-of-set) |
+|   | [Add Items of set](#add-items-of-set-) |
+|   | [Remove Item of set](#remove-item-of-set-) |
+|   | [Loop Sets](#loop-sets) |
+|   | [Join Two Set](#join-two-set) |
+|   | [Set Methods](#set-methods) |
+|   | []() |
 |   | [What is Dictionaries?](#ques-what-is-dictionaries) |
 |   | [What is Dictionarie Methods?](#ques-what-is-dictionarie-methods) |
 |   | [What is Set?](#ques-what-is-set) |
@@ -628,6 +648,7 @@ output:-
 ["mouse", [8, 4, 6], ['a']]
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
 ##### Access List Items
 ```python
 # Access Items
@@ -695,6 +716,7 @@ print(thislist)
 Output:- ['apple', 'banana', 'watermelon', 'cherry']
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
 ##### Add List Items
 ```python
 # Append Items:- add an item to the end of the list, use the append() method.
@@ -733,6 +755,8 @@ print(thislist)
 
 Output:- ['apple', 'banana', 'cherry', 'kiwi', 'orange']
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
 ##### Remove List Items
 ```python
 # Remove Specified Item
@@ -780,6 +804,7 @@ print(thislist)
 Output:- []
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
 ##### Loop Lists
 ```python
 # Loop Through a List
@@ -829,8 +854,8 @@ Output:-
  cherry
 ``` 
 
+**[⬆ Back to Top](#table-of-contents)**
 ##### Copy Lists
-
 ```python
 # Make a copy of a list with the copy() method.
 thislist = ["apple", "banana", "cherry"]
@@ -847,6 +872,7 @@ print(mylist)
 Output:- ['apple', 'banana', 'cherry']
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
 ##### Join Lists
 ```python
 # There are several ways to join, or concatenate, two or more lists in Python.
@@ -879,10 +905,10 @@ list2 = [1, 2, 3]
 list1.extend(list2)
 print(list1)
 
-
 Output:-['a', 'b', 'c', 1, 2, 3]
 ```
- 
+
+**[⬆ Back to Top](#table-of-contents)**
 ##### List Comprehension
 * List comprehension offers a shorter syntax when you want to create a new list based on the values of an existing list.
 __Syntax__ newlist = [expression for item in iterable if condition == True]
@@ -908,7 +934,7 @@ print(newlist)
 Output:- ['apple', 'banana', 'mango']
 ```                        
                         
-
+**[⬆ Back to Top](#table-of-contents)**
 ##### List Methods
                         
 | Method  | Description |
@@ -1074,6 +1100,7 @@ Output:-
 [{'car': 'Mitsubishi', 'year': 2000}, {'car': 'Ford', 'year': 2005}, {'car': 'VW', 'year': 2011}, {'car': 'BMW', 'year': 2019}]
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
 ##### list() Constructor
 It is also possible to use the __list()__ constructor to make a new list.
 ```python
@@ -1082,6 +1109,7 @@ print(thislist)
 ```
 output:- ['apple', 'banana', 'cherry']
 
+**[⬆ Back to Top](#table-of-contents)**
 ### Ques. What isTuples?
 * Tuples are used to store multiple items in a single variable.
 * A tuple is a collection which is ordered and unchangeable.
@@ -1096,6 +1124,7 @@ print(thistuple)
 Output:- ('apple', 'banana', 'cherry')
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
 ##### Tuple Length
 To determine how many items a tuple has, use the len() function
 ```python
@@ -1105,6 +1134,7 @@ print(len(thistuple))
 Output:- 3
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
 ##### Create Tuple With One Item
 To create a tuple with only one item, you have to add a comma after the item, otherwise Python will not recognize it as a tuple.
 ```python
@@ -1120,6 +1150,7 @@ Output:-
 <class 'str'>
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
 ##### tuple() Constructor
 ```python
 thistuple = tuple(("apple", "banana", "cherry"))
@@ -1128,6 +1159,7 @@ print(thistuple)
 Output:- ('apple', 'banana', 'cherry')
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
 ##### Access Tuple Items
 ```python
 # Access Tuple Items
@@ -1165,6 +1197,7 @@ if "apple" in thistuple:
 Output:- Yes, 'apple' is in the fruits tuple
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
 ##### Update Tuples
 * Once a tuple is created, you cannot change its values. Tuples are unchangeable, or immutable as it also is called.
 * You can convert the tuple into a list, change the list, and convert the list back into a tuple.
@@ -1218,6 +1251,7 @@ print(thistuple)
 Output:- ('apple', 'banana', 'cherry', 'orange')
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
 ##### Unpack Tuples
 ```python
 # packing a Tuple:- When we create a tuple, we normally assign values to it. This is called "packing" a tuple.
@@ -1256,6 +1290,7 @@ apple
 cherry
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
 #####  Loop Tuples
 ```python
 # Loop Through a Tuple
@@ -1293,6 +1328,7 @@ banana
 cherry
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
 ##### Join Tuples
 ```python
 # Join Two Tuples
@@ -1337,7 +1373,8 @@ print(x)
 
 Output:- 3
 ```
- 
+
+**[⬆ Back to Top](#table-of-contents)**
 ### Ques. Difference between List and Tuples in Python?
 | List | Tuples |
 |:---:|:---:|
@@ -1351,6 +1388,7 @@ Output:- 3
 |Syntax: list_1 = [10, ‘Chelsea’, 20]	|Syntax: tup_1 = (10, ‘Chelsea’ , 20)|
 
 
+**[⬆ Back to Top](#table-of-contents)**
 ### Ques. What is Dictionaries?
 
 * Dictionaries are written with curly brackets, and have keys and values.
@@ -1734,6 +1772,7 @@ model Mustang
 year 1964
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
 ### Ques. What is Dictionarie Methods?
 
 * __clear()__	Removes all the elements from the dictionary,
@@ -1749,6 +1788,7 @@ year 1964
 * __values()__	Returns a list of all the values in the dictionary.
 
 
+**[⬆ Back to Top](#table-of-contents)**
 ### Ques. What is Set?
 * Sets are used to store multiple items in a single variable.
 * A set is a collection which is both unordered and unindexed.
@@ -1780,13 +1820,16 @@ output:-
 {True, 34, 40, 'male', 'abc'}
 ```
 
- 1. **Get the Length of a Set**
+**[⬆ Back to Top](#table-of-contents)**
+##### Get the Length of a Set
 ```python
 thisset = {"apple", "banana", "cherry"}
 print(len(thisset))
 Output:-
 3
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
 #### set() Constructor:-
 * It is also possible to use the set() constructor to make a set(the double round-brackets).
 ```python
@@ -1796,6 +1839,7 @@ output:-
 {'apple', 'banana', 'cherry'}
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
 ##### Acesss Items of set
 ```python			
 # Loop through the set, and print the values.
@@ -1816,7 +1860,8 @@ print("banana" in thisset)
 output:-
 True
 ```
-			
+
+**[⬆ Back to Top](#table-of-contents)**			
 ##### Add Items of set:-
 ```python
 # To add one item to a set use the add() method.
@@ -1858,8 +1903,8 @@ Output:-
 {'banana', 'cherry', 'apple', 'orange', 'kiwi'}
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
 ##### Remove Item of set:-
-			
 ```python
 # To remove an item in a set, use the remove(), or the discard() or pop() method.
 # Note:- If the item to remove does not exist, remove() will raise an error.
@@ -1908,6 +1953,8 @@ print(thisset) #this will raise an error because the set no longer exists
 output:-
 Error
 ```
+
+**[⬆ Back to Top](#table-of-contents)**
 ##### Loop Sets
 ```python
 # Loop Items
@@ -1921,6 +1968,7 @@ cherry
 apple
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
 ##### Join Two Set
 You can use the union() method that returns a new set containing all items from both sets, or the update() method that inserts all the items from one set into another.
 			
@@ -1989,6 +2037,7 @@ output:-
 {'google', 'banana', 'microsoft', 'cherry'}
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
 ##### Set Methods
 | Method | Description |
 | ------ | ----------- |
