@@ -99,6 +99,7 @@ more than just one line
 print("Hello, World!")
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
 ### Ques. Python Variables?
  * A variable name must start with a letter or the underscore character
  * A variable name cannot start with a number
@@ -183,6 +184,7 @@ print(x + y)
 ```
 output:- TypeError: unsupported operand type(s) for +: 'int' and 'str'
 
+**[⬆ Back to Top](#table-of-contents)**
 ### Ques. Global Variables?
  * Variables that are created outside of a function.
  * Global variables can be used by everyone, both inside of functions and outside.
@@ -204,6 +206,7 @@ print("Python is " + x)
 ```
 output:- Python is fantastic<br>Python is awesome
 
+**[⬆ Back to Top](#table-of-contents)**
 ### Ques. How to check What type of datatype?
 Python has the following data types built-in by default, in these categories:
 | | |
@@ -223,7 +226,7 @@ print(type(x))
 ```
 output:- <class 'int'>
 
-
+**[⬆ Back to Top](#table-of-contents)**
 ### Ques. Python Strings?
 ##### String Literals
 'hello' is the same as "hello".
@@ -377,6 +380,7 @@ ut labore et dolore magna aliqua.<br>
 <details>
   <summary>Format - Strings</summary>
 
+**[⬆ Back to Top](#table-of-contents)**
 ### String Format
 * As we learned in the Python Variables chapter, we cannot combine strings and numbers like this.
  
@@ -543,8 +547,6 @@ Old list: [[1, 1, 1], [2, 'AA', 2], [3, 3, 3]]
 New list: [[1, 1, 1], [2, 'AA', 2], [3, 3, 3]]
 ```
  
- 
-
 **[⬆ Back to Top](#table-of-contents)**
 ### Ques. What is built-in module in Python?
 https://docs.python.org/3/py-modindex.html<br>
@@ -596,7 +598,7 @@ print("Python is " + x)
 ```
 output:-Python is fantastic
 
-
+**[⬆ Back to Top](#table-of-contents)**
 ### Python Collections (Arrays)?
 There are four collection data types in the Python programming language:
  * __List__ is a collection which is ordered and changeable. Allows duplicate members.
@@ -604,6 +606,8 @@ There are four collection data types in the Python programming language:
  * __Set__ is a collection which is unordered and unindexed. No duplicate members.
  * __Dictionary__ is a collection which is unordered, changeable and indexed. No duplicate members.
 
+
+**[⬆ Back to Top](#table-of-contents)**
 ### Ques. What is List?
 * Lists are used to store multiple items in a single variable.
 * List items are ordered, changeable, and allow duplicate values.
@@ -661,6 +665,7 @@ if "apple" in thislist:
 Output:- Yes, 'apple' is in the fruits list
 ```
  
+**[⬆ Back to Top](#table-of-contents)**
 ##### Change List Items
 ```python
 # Change Item Value:- To change the value of a specific item, refer to the index number.
