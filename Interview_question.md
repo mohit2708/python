@@ -706,14 +706,6 @@ thislist[1:3] = ["blackcurrant", "watermelon"]
 print(thislist)
 
 Output:- ['apple', 'blackcurrant', 'watermelon', 'orange', 'kiwi', 'mango']
----------------------------------------------------------------------------------------------------------
-
-# List Insert Items:- To insert a new list item, without replacing any of the existing values, we can use the insert() method.	
-thislist = ["apple", "banana", "cherry"]
-thislist.insert(2, "watermelon")
-print(thislist)
- 
-Output:- ['apple', 'banana', 'watermelon', 'cherry']
 ```
 
 **[⬆ Back to Top](#table-of-contents)**
@@ -726,7 +718,7 @@ print(thislist)
 
 Output:- ['apple', 'banana', 'cherry', 'orange']
 -----------------------------------------------------------------------------
-# Insert Items:- The insert() method inserts an item at the specified index.
+# List Insert Items:- The insert() method inserts an item at the specified index.
 thislist = ["apple", "banana", "cherry"]
 thislist.insert(1, "orange")
 print(thislist)
