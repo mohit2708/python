@@ -700,7 +700,7 @@ Output:- ['apple', 'blackcurrant', 'cherry']
 
 # Change a Range of Item Values:- To change the value of items within a specific range, define a list
   # with the new values, and refer to the range of index numbers where you want to insert the new values.
-# 1 se 3 wale range ke element hut jaynge
+# 1 se 2 wale range ke element hut jaynge
 thislist = ["apple", "banana", "cherry", "orange", "kiwi", "mango"]
 thislist[1:3] = ["blackcurrant", "watermelon"]
 print(thislist)
@@ -924,7 +924,54 @@ newlist = [x for x in fruits if "a" in x]
 print(newlist)
 
 Output:- ['apple', 'banana', 'mango']
-```                        
+```  
+
+**[⬆ Back to Top](#table-of-contents)**
+##### Sort Lists
+```python
+# Sort List Alphanumerically
+thislist = ["orange", "mango", "kiwi", "pineapple", "banana"]
+thislist.sort()
+print(thislist)
+
+Output:- ['banana', 'kiwi', 'mango', 'orange', 'pineapple']
+
+# Example2:-
+thislist = [100, 50, 65, 82, 23]
+thislist.sort()
+print(thislist)
+
+Output:- [23, 50, 65, 82, 100]
+---------------------------------------------------------------------------
+# Sort Descending:- To sort descending, use the keyword argument reverse = True:
+thislist = ["orange", "mango", "kiwi", "pineapple", "banana"]
+thislist.sort(reverse = True)
+print(thislist)
+
+Output:- ['pineapple', 'orange', 'mango', 'kiwi', 'banana']
+-------------------------------------------------------------------------------
+# Case Insensitive Sort:- By default the sort() method is case sensitive, resulting 
+# in all capital letters being sorted before lower case letters:
+thislist = ["banana", "Orange", "Kiwi", "cherry"]
+thislist.sort()
+print(thislist)
+
+Output:- ['Kiwi', 'Orange', 'banana', 'cherry']
+
+# So if you want a case-insensitive sort function, use str.lower as a key function:
+thislist = ["banana", "Orange", "Kiwi", "cherry"]
+thislist.sort(key = str.lower)
+print(thislist)
+
+Output:- ['banana', 'cherry', 'Kiwi', 'Orange']
+------------------------------------------------------------------------------------
+# Reverse Order:- The reverse() method reverses the current sorting order of the elements.
+thislist = ["banana", "Orange", "Kiwi", "cherry"]
+thislist.reverse()
+print(thislist) 
+
+Output:- ['cherry', 'Kiwi', 'Orange', 'banana']
+```
                         
 **[⬆ Back to Top](#table-of-contents)**
 ##### List Methods
