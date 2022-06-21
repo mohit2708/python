@@ -2402,6 +2402,22 @@ if b > a:
 Output:- 
 ```
 
+### Ques. What is Lambda/Anonymous Function?
+* A lambda function is a small anonymous function.
+* In Python, an anonymous function is a function that is defined without a name.
+* While normal functions are defined using the __def__ keyword in Python, anonymous functions are defined using the __lambda__ keyword.
+```python
+def add(a,b):
+print(a+b)
+add(5,10)
+
+# Using Lambda function
+x = lambda a: a + 10
+print(x(5))
+
+Output:- 15
+```
+	
 ### Ques:- What is Python JSON?
  * JSON is a syntax for storing and exchanging data.
  * JSON is text, written with JavaScript object notation.
@@ -2626,30 +2642,7 @@ print(p1._age)        # protected: can be accessed but not advised
       <div class="container">
          <div class="m-4">
             <div class="accordion" id="myAccordion">
-               <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingTwo">
-                     <button type="button" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapse1"><strong>Ques. </strong> What is Python?</button>
-                  </h2>
-                  <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#myAccordion">
-                     <div class="card-body">
-                        <p>
-                        <ul>
-                           <li>Python is a high-level, interpreted, general-purpose programming language.</li>
-                           <li>It supports Object Oriented programming approach to develop applications.</li>
-                           <li>Python supports multiple programming pattern, including object-oriented, imperative, and functional or procedural programming styles.</li>
-                           <li>Python was created by <em><strong>Guido van Rossum</strong></em>, and released in 1991.</li>
-                           <li>It is used for:</li>
-                           <ul>
-                              <li>web development (server-side)</li>
-                              <li>software development</li>
-                              <li>mathematics</li>
-                              <li>system scripting</li>
-                           </ul>
-                        </ul>
-                        </p>
-                     </div>
-                  </div>
-               </div>
+               
                <div class="accordion-item">
                   <h2 class="accordion-header" id="headingTwo">
                      <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#Frameworks"><strong>Ques. </strong> What is Python Frameworks?</button>
