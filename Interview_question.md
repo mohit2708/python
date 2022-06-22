@@ -21,12 +21,7 @@
 |   | [Global Keyword?](#ques-global-keyword) |
 |   | [Python Collections (Arrays)?](#python-collections-arrays) |
 |   | [What is List?](#ques-what-is-list) |
-|   | [Access List Items?](#access-list-items) |
-|   | [Change List Items](#change-list-items) |
-|   | [Add List Items](#add-list-items) |
-|   | [Remove List Items](#remove-list-items) | 
-|   | [Loop Lists](#loop-lists) |
-|   | [Copy Lists](#copy-lists) |
+|   | [Access List Items](#access-list-items) / [Change List Items](#change-list-items) / [Add List Items](#add-list-items) / [Remove List Items](#remove-list-items) / [Loop Lists](#loop-lists) / [Copy Lists](#copy-lists) | 
 |   | [Join Lists](#join-lists) |
 |   | [List Comprehension](#list-comprehension) |
 |   | [List Methods](#list-methods) |
