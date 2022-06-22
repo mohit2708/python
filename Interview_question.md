@@ -26,7 +26,6 @@
 |   | [What is Set?](#ques-what-is-set) / [Length of a Set](#get-the-length-of-a-set) / [Acesss Items of set](#acesss-items-of-set) / [Remove Item of set](#remove-item-of-set-) / [Loop Sets](#loop-sets) / [Join Two Set](#join-two-set) / [set() Constructor](#set-constructor) / [Set Methods](#set-methods) |
 |   | [What is Dictionaries?](#ques-what-is-dictionaries) |
 |   | [What is Dictionarie Methods?](#ques-what-is-dictionarie-methods) |
-|   | [What is Set?](#ques-what-is-set) |
 
 
 ### Ques. What is Python?
@@ -1902,34 +1901,6 @@ print(thisdict)
 Output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
 ```
 
-* __Get Keys:__ The keys() method will return a list of all the keys in the dictionary.
-
-  ```python
-    thisdict = {
-    "brand": "Ford",
-    "model": "Mustang",
-    "year": 1964
-    }
-
-    x = thisdict.keys()
-    print(x)
-    output:- dict_keys(['brand', 'model', 'year'])
-  ```
-
-
-* __Get Values__ The values() method will return a list of all the values in the dictionary.
-  ```python
-    thisdict = {
-    "brand": "Ford",
-    "model": "Mustang",
-    "year": 1964
-    }
-
-    x = thisdict.values()
-
-    print(x)
-    output:-  dict_values(['Ford', 'Mustang', 1964])
-  ```
 
 * __Duplicates Not Allowed__
 ```python
@@ -1981,173 +1952,321 @@ print(thisdict)
 Output:- {'brand': 'Ford', 'electric': False, 'year': 1964, 'colors': ['red', 'white', 'blue']}
 ```
 
-* __Access Item__ You can access the items of a dictionary by referring to its key name, inside square brackets.
-  ```python
-    thisdict =	{
-        "brand": "Ford",
-        "model": "Mustang",
-        "year": 1964
-    }
-    x = thisdict["model"]
-    print(x)
-    output:- Mustang
-  ```
-
-* __Access Item using get() Method__ There is also a method called __get()__ that will give you the same result.
-
-  ```python
-    thisdict =	{
-        "brand": "Ford",
-        "model": "Mustang",
-        "year": 1964
-    }
-    x = thisdict.get("model")
-    print(x)
-    output:- Mustang
-  ```
-
-* __Check if Key Exists__ To determine if a specified key is present in a dictionary use the in keyword.
-    ```python
-    thisdict = {
-        "brand": "Ford",
-        "model": "Mustang",
-        "year": 1964
-    }
-    if "model" in thisdict:
-    print("Yes, 'model' is one of the keys in the thisdict dictionary")
-    output:- Yes, 'model' is one of the keys in the thisdict dictionary
-  ```
-
-* __Change Values__ You can change the value of a specific item by referring to its key name.
-    ```python
-    thisdict =	{
-        "brand": "Ford",
-        "model": "Mustang",
-        "year": 1964
-    }
-    thisdict["year"] = 2018
-    print(thisdict)
-
-    output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 2018}
-  ```
-
-* __Change Values using Update__ The update() method will update the dictionary with the items from the given argument.
-    ```python
-    thisdict = {
-        "brand": "Ford",
-        "model": "Mustang",
-        "year": 1964
-    }
-    thisdict.update({"year": 2020})
-
-    print(thisdict)
-
-    output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 2020}
-  ```
-
-* __Add Dictionary Items__ add a new item to the original dictionary, and see that the values list gets updated as well.
-  ```python
-    car = {
+##### Dictionary Access Item
+```python
+# You can access the items of a dictionary by referring to its key name, inside square brackets.
+thisdict =	{
     "brand": "Ford",
     "model": "Mustang",
     "year": 1964
-    }
+}
+x = thisdict["model"]
+print(x)
 
-    x = car.values()
+Output:- Mustang
 
-    print(x) #before the change
-
-    car["color"] = "red"
-
-    print(x) #after the change
-    output:- 
-    dict_values(['Ford', 'Mustang', 1964])
-    dict_values(['Ford', 'Mustang', 1964, 'red'])
-  ```
-
-* __Removing item using pop() methods__ The pop() method removes the item with the specified key name.
-  ```python
-    thisdict =	{
+# get() Method
+thisdict =	{
     "brand": "Ford",
     "model": "Mustang",
     "year": 1964
-    }
-    thisdict.pop("model")
-    print(thisdict)
-    output:-  {'brand': 'Ford', 'year': 1964}
-  ```
+}
+x = thisdict.get("model")
+print(x)
 
-* The __Removing item using popitem() methods__ method removes the last inserted item (in versions before 3.7, a random item is removed instead).
-  ```python
-    thisdict =	{
-    "brand": "Ford",
-    "model": "Mustang",
-    "year": 1964
-    }
-    thisdict.popitem()
-    print(thisdict)
-    output:-  {'brand': 'Ford', 'model': 'Mustang'}
-  ```
+Output:- Mustang
+--------------------------------------------------------------------------------
+# Get Keys of the Dictionary:- The keys() method will return a list of all the keys in the dictionary.
 
-* The __Removing item using del methods__ keyword removes the item with the specified key name.
-  ```python
-    thisdict =	{
-    "brand": "Ford",
-    "model": "Mustang",
-    "year": 1964
-    }
-    del thisdict["model"]
-    print(thisdict)
-    output:-  {'brand': 'Ford', 'year': 1964}
-  ```
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
 
-* The __Removing item using del methods__ keyword can also delete the dictionary completely.
-  ```python
-    thisdict =	{
-    "brand": "Ford",
-    "model": "Mustang",
-    "year": 1964
-    }
-    del thisdict
-    print(thisdict)
-    output:-  this will cause an error because "thisdict" no longer exists.
-  ```
+x = thisdict.keys()
 
-* The __Removing item using clear() methods__ method empties the dictionary.
-  ```python
-    thisdict =	{
-    "brand": "Ford",
-    "model": "Mustang",
-    "year": 1964
-    }
-    thisdict.clear()
-    print(thisdict)
-    output:-  {}
-  ```
+print(x)
 
-* Copy a Dictionary using __copy()__ method.
-  ```python
-    thisdict =	{
-    "brand": "Ford",
-    "model": "Mustang",
-    "year": 1964
-    }
-    mydict = thisdict.copy()
-    print(mydict)
-    output:-  {'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
-  ```
+Output:- dict_keys(['brand', 'model', 'year'])
 
-* Copy a Dictionary using __dict()__ method.
-  ```python
-    thisdict =	{
-    "brand": "Ford",
-    "model": "Mustang",
-    "year": 1964
-    }
-    mydict = dict(thisdict)
-    print(mydict)
-    output:-  {'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
-  ```
+# Example2
+car = {
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
+
+x = car.keys()
+
+print(x) #before the change
+
+car["color"] = "white"
+
+print(x) #after the change
+
+Output:- 
+dict_keys(['brand', 'model', 'year'])
+dict_keys(['brand', 'model', 'year', 'color'])
+-----------------------------------------------------------------------------
+
+# Get Values of the Dictionary and We can change the value of a specific item by referring to its key name.
+car = {
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
+
+x = car.values()
+
+print(x) #before the change
+
+car["year"] = 2020
+
+print(x) #after the change
+
+Output:-
+dict_values(['Ford', 'Mustang', 1964])
+dict_values(['Ford', 'Mustang', 2020])
+------------------------------------------------------------------------------
+
+# Check if Key Exists
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+if "model" in thisdict:
+  print("Yes, 'model' is one of the keys in the thisdict dictionary")
+
+Output:- Yes, 'model' is one of the keys in the thisdict dictionary
+```
+
+##### Change Dictionary Items
+```python
+# Change Values:- We can change the value of a specific item by referring to its key name.
+thisdict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+thisdict["year"] = 2018
+
+print(thisdict)
+
+Output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 2018}
+---------------------------------------------------------------------------------
+
+# Update Dictionary:- The update() method will update the dictionary with the items from the given argument.
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.update({"year": 2020})
+
+print(thisdict)
+
+Output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 2020}
+```
+
+##### Add Dictionary Items
+```python
+# Adding Items
+thisdict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict["color"] = "red"
+print(thisdict)
+
+Output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 1964, 'color': 'red'}
+
+# Adding Items using Update() Method
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.update({"color": "red"})
+
+print(thisdict)
+
+Output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 1964, 'color': 'red'}
+```
+
+##### Remove Dictionary Items
+```python
+# Removing item using pop() methods.
+# The pop() method removes the item with the specified key name:
+thisdict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.pop("model")
+print(thisdict)
+
+Output:- {'brand': 'Ford', 'year': 1964}
+--------------------------------------------------------------------------------
+
+# Removing item using popitem() methods
+# method removes the last inserted item (in versions before 3.7, a random item is removed instead).
+thisdict =	{
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
+thisdict.popitem()
+print(thisdict)
+
+Output:-  {'brand': 'Ford', 'model': 'Mustang'}
+----------------------------------------------------------------------------------
+
+# Removing item using del methods
+# keyword removes the item with the specified key name.
+thisdict =	{
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
+del thisdict["model"]
+print(thisdict)
+
+Output:-  {'brand': 'Ford', 'year': 1964}
+---------------------------------------------------------------------------------
+
+# The Removing item using del methods keyword can also delete the dictionary completely.
+thisdict =	{
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
+del thisdict
+print(thisdict)
+
+Output:-  this will cause an error because "thisdict" no longer exists.
+----------------------------------------------------------------------------------
+
+# The Removing item using clear() methods method empties the dictionary.
+thisdict =	{
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
+thisdict.clear()
+print(thisdict)
+
+Output:-  {}
+```
+
+##### Copy Dictionaries
+```python
+# Copy a Dictionary using copy() method.
+thisdict =	{
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
+mydict = thisdict.copy()
+print(mydict)
+
+Output:-  {'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
+-----------------------------------------------------------------------
+
+# Another way to make a copy is to use the built-in function dict().
+thisdict =	{
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
+mydict = dict(thisdict)
+print(mydict)
+
+Output:-  {'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
+```
+
+##### Loop Dictionaries
+```python
+# Print all key names in the dictionary, one by one:
+thisdict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+for x in thisdict:
+  print(x)
+
+Output:- 
+brand
+model
+year
+---------------------------------------------------------------------------------
+
+# You can use the keys() method to return the keys of a dictionary:
+thisdict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+for x in thisdict.keys():
+  print(x)
+
+Output:-
+brand
+model
+year
+---------------------------------------------------------------------------------
+
+# Print all values in the dictionary, one by one:
+thisdict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+for x in thisdict:
+  print(thisdict[x])
+
+Output:- 
+Ford
+Mustang
+1964
+-------------------------------------------------------------------------------------
+
+# You can also use the values() method to return values of a dictionary:
+thisdict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+for x in thisdict.values():
+  print(x)
+
+Output:-
+Ford
+Mustang
+1964
+--------------------------------------------------------------------------------------
+
+# Loop through both keys and values, by using the items() method:
+thisdict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+for x, y in thisdict.items():
+  print(x, y)
+
+Output:-
+brand Ford
+model Mustang
+year 1964
+```
+
+
+
 
 * __Python - Nested Dictionaries__ A dictionary can contain dictionaries, this is called nested dictionaries.
 ```python
@@ -2192,96 +2311,76 @@ Output:- {'brand': 'Ford', 'electric': False, 'year': 1964, 'colors': ['red', 'w
     Output:- {'child1': {'name': 'Emil', 'year': 2004}, 'child2': {'name': 'Tobias', 'year': 2007}, 'child3': {'name': 'Linus', 'year': 2011}}
 ```
 
-* __Loop Dictionaries__ Print all key names in the dictionary, one by one.
+##### Nested Dictionaries
+A dictionary can contain dictionaries, this is called nested dictionaries.
 ```python
-  thisdict =	{
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
+myfamily = {
+  "child1" : {
+    "name" : "Emil",
+    "year" : 2004
+  },
+  "child2" : {
+    "name" : "Tobias",
+    "year" : 2007
+  },
+  "child3" : {
+    "name" : "Linus",
+    "year" : 2011
+  }
 }
-for x in thisdict:
-print(x)
-output:- 
-brand
-model
-year
+
+print(myfamily)
+
+Output:-
+{'child1': {'name': 'Emil', 'year': 2004}, 'child2': {'name': 'Tobias', 'year': 2007}, 'child3': {'name': 'Linus', 'year': 2011}}
+-------------------------------------------------------------------------------------------
+
+# Example2:-
+child1 = {
+  "name" : "Emil",
+  "year" : 2004
+}
+child2 = {
+  "name" : "Tobias",
+  "year" : 2007
+}
+child3 = {
+  "name" : "Linus",
+  "year" : 2011
+}
+
+myfamily = {
+  "child1" : child1,
+  "child2" : child2,
+  "child3" : child3
+}
+
+print(myfamily)
+
+Output:- 
+{'child1': {'name': 'Emil', 'year': 2004}, 'child2': {'name': 'Tobias', 'year': 2007}, 'child3': {'name': 'Linus', 'year': 2011}}
+
 ```
 
-* __Loop Dictionaries__ You can use the **keys()** method to return the keys of a dictionary.
+##### Dictionary Methods
 ```python
-thisdict =	{
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
-}
-for x in thisdict.keys():
-  print(x)
-output:- 
-brand
-model
-year
-```
-
-* __Loop Dictionaries__ Print all values in the dictionary, one by one.
-```python
-thisdict =	{
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
-}
-for x in thisdict:
-print(thisdict[x])
-output:- 
-Ford
-Mustang
-1964
-```
-
-* __Loop Dictionaries__ You can also use the **values()** method to return values of a dictionary.
-```python
-thisdict =	{
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
-}
-for x in thisdict.values():
-print(x)
-output:- 
-Ford
-Mustang
-1964
-```
-
-* __Loop Dictionaries__ Loop through both keys and values, by using the **items()** method.
+| Method | Description |
+| ------ | ----------- |
+| clear() |	Removes all the elements from the dictionary |
+| copy() | Returns a copy of the dictionary |
+| fromkeys() | Returns a dictionary with the specified keys and value. |
+| get() | Returns the value of the specified key. |
+| items() | Returns a list containing a tuple for each key value pair. |
+| keys() | Returns a list containing the dictionary's keys. |
+| pop() | Removes the element with the specified key. |
+| popitem() | Removes the last inserted key-value pair. |
+| setdefault() | Returns the value of the specified key. If the key does not exist: insert the key, with the specified value. |
+| update() | Updates the dictionary with the specified key-value pairs. |
+| values() | Returns a list of all the values in the dictionary. |
 
 ```python
-thisdict =	{
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
-}
-for x, y in thisdict.items():
-  print(x, y)
-output:- 
-brand Ford
-model Mustang
-year 1964
+
 ```
-
-**[⬆ Back to Top](#table-of-contents)**
-### Ques. What is Dictionarie Methods?
-
-* __clear()__	Removes all the elements from the dictionary,
-* __copy()__	Returns a copy of the dictionary.
-* __fromkeys()__ Returns a dictionary with the specified keys and value.
-* __get()__	Returns the value of the specified key.
-* __items()__	Returns a list containing a tuple for each key value pair.
-* __keys()__	Returns a list containing the dictionary's keys.
-* __pop()__	Removes the element with the specified key.
-* __popitem()__	Removes the last inserted key-value pair.
-* __setdefault()__	Returns the value of the specified key. If the key does not exist: insert the key, with the specified value.
-* __update()__	Updates the dictionary with the specified key-value pairs.
-* __values()__	Returns a list of all the values in the dictionary.
 
 
 			
