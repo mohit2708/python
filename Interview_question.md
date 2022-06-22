@@ -20,18 +20,8 @@
 |   | [What is PEP 8?](#ques-what-is-pep-8) |
 |   | [Global Keyword?](#ques-global-keyword) |
 |   | [Python Collections (Arrays)?](#python-collections-arrays) |
-|   | [What is List?](#ques-what-is-list) |
-|   | [Access List Items](#access-list-items) / [Change List Items](#change-list-items) / [Add List Items](#add-list-items) / [Remove List Items](#remove-list-items) / [Loop Lists](#loop-lists) / [Copy Lists](#copy-lists) / [Join Lists](#join-lists) /  [List Comprehension](#list-comprehension) / [List Methods](#list-methods) / [list() Constructor](#list-constructor) | 
-|   | [What isTuples?](#ques-what-istuples) |
-|   | [Tuple Length](#tuple-length) |
-|   | [Create Tuple With One Item](#create-tuple-with-one-item) |
-|   | [tuple() Constructor](#tuple-constructor) |
-|   | [Access Tuple Items](#access-tuple-items) |
-|   | [Update Tuples](#update-tuples) |
-|   | [Unpack Tuples](#unpack-tuples) |
-|   | [Loop Tuples](#loop-tuples) |
-|   | [Join Tuples](#join-tuples) |
-|   | [Tuple Methods](#tuple-methods) |
+|   | [What is List?](#ques-what-is-list) / [Access List Items](#access-list-items) / [Change List Items](#change-list-items) / [Add List Items](#add-list-items) / [Remove List Items](#remove-list-items) / [Loop Lists](#loop-lists) / [Copy Lists](#copy-lists) / [Join Lists](#join-lists) /  [List Comprehension](#list-comprehension) / [List Methods](#list-methods) / [list() Constructor](#list-constructor) | 
+|   | [What isTuples?](#ques-what-istuples) / [Tuple Length](#tuple-length) / [Create Tuple With One Item](#create-tuple-with-one-item) / [Access Tuple Items](#access-tuple-items) / [Update Tuples](#update-tuples) / [Unpack Tuples](#unpack-tuples) / [Loop Tuples](#loop-tuples) / [Join Tuples](#join-tuples) / [Tuple Methods](#tuple-methods) / [tuple() Constructor](#tuple-constructor) |
 |   | [Difference between List and Tuples in Python?](#ques-difference-between-list-and-tuples-in-python) |
 |   | [What is Set?](#ques-what-is-set) |
 |   | [Acesss Items of set](#acesss-items-of-set) |
@@ -1140,7 +1130,7 @@ print(thislist)
 output:- ['apple', 'banana', 'cherry']
 
 **[⬆ Back to Top](#table-of-contents)**
-### Ques. What isTuples?
+### Ques. What is Tuples?
 * Tuples are used to store multiple items in a single variable.
 * A tuple is a collection which is ordered and unchangeable.
 * Tuples are written with round brackets.
