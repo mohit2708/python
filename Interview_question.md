@@ -24,8 +24,8 @@
 |   | [What isTuples?](#ques-what-is-tuples) / [Tuple Length](#tuple-length) / [Create Tuple With One Item](#create-tuple-with-one-item) / [Access Tuple Items](#access-tuple-items) / [Update Tuples](#update-tuples) / [Unpack Tuples](#unpack-tuples) / [Loop Tuples](#loop-tuples) / [Join Tuples](#join-tuples) / [Tuple Methods](#tuple-methods) / [tuple() Constructor](#tuple-constructor) |
 |   | [Difference between List and Tuples in Python?](#ques-difference-between-list-and-tuples-in-python) |
 |   | [What is Set?](#ques-what-is-set) / [Length of a Set](#get-the-length-of-a-set) / [Acesss Items of set](#acesss-items-of-set) / [Remove Item of set](#remove-item-of-set-) / [Loop Sets](#loop-sets) / [Join Two Set](#join-two-set) / [set() Constructor](#set-constructor) / [Set Methods](#set-methods) |
-|   | [What is Dictionaries?](#ques-what-is-dictionaries) |
-|   | [What is Dictionarie Methods?](#ques-what-is-dictionarie-methods) |
+|   | [What is Dictionaries?](#ques-what-is-dictionaries) / (Dictionary Length)[#dictionary-length] / [Access Item](#access-item-of-dictionary) / [Change Dictionary Items](#change-dictionary-items) / [Add Dictionary Items](#add-dictionary-items) / [Remove Dictionary Items](#remove-dictionary-items) / [Copy Dictionaries](#copy-dictionaries) / [loop-dictionaries](#loop-dictionaries) / [Nested Dictionaries](#nested-dictionaries) / [Dictionary Methods](#dictionary-methods) |
+
 
 
 ### Ques. What is Python?
@@ -1901,7 +1901,7 @@ print(thisdict)
 Output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
 ```
 
-
+**[⬆ Back to Top](#table-of-contents)**
 * __Duplicates Not Allowed__
 ```python
 thisdict = {
@@ -1914,7 +1914,8 @@ print(thisdict)
 Output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 2020}
 ```
 
-* __Dictionary Length:__ To determine how many items a dictionary has, use the len() function.
+**[⬆ Back to Top](#table-of-contents)**
+###### Dictionary Length:- To determine how many items a dictionary has, use the len() function.
 ```python
 thisdict = {
   "brand": "Ford",
@@ -1926,20 +1927,7 @@ print(len(thisdict))
 Output:- 3
 ```
 
-* __Get Items__ The items() method will return each item in a dictionary, as tuples in a list.
-  ```python
-    thisdict = {
-    "brand": "Ford",
-    "model": "Mustang",
-    "year": 1964
-    }
-
-    x = thisdict.items()
-
-    print(x)
-    output:- dict_items([('brand', 'Ford'), ('model', 'Mustang'), ('year', 1964)])
-  ```
-
+**[⬆ Back to Top](#table-of-contents)**
 * __Dictionary Items - Data Types:__ The values in dictionary items can be of any data type.
 ```python
 thisdict = {
@@ -1952,7 +1940,8 @@ print(thisdict)
 Output:- {'brand': 'Ford', 'electric': False, 'year': 1964, 'colors': ['red', 'white', 'blue']}
 ```
 
-##### Dictionary Access Item
+**[⬆ Back to Top](#table-of-contents)**
+##### Access Item of Dictionary
 ```python
 # You can access the items of a dictionary by referring to its key name, inside square brackets.
 thisdict =	{
@@ -1977,20 +1966,6 @@ print(x)
 Output:- Mustang
 --------------------------------------------------------------------------------
 # Get Keys of the Dictionary:- The keys() method will return a list of all the keys in the dictionary.
-
-thisdict = {
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
-}
-
-x = thisdict.keys()
-
-print(x)
-
-Output:- dict_keys(['brand', 'model', 'year'])
-
-# Example2
 car = {
 "brand": "Ford",
 "model": "Mustang",
@@ -2030,6 +2005,20 @@ dict_values(['Ford', 'Mustang', 1964])
 dict_values(['Ford', 'Mustang', 2020])
 ------------------------------------------------------------------------------
 
+# Get Items :- The items() method will return each item in a dictionary, as tuples in a list.
+thisdict = {
+   "brand": "Ford",
+   "model": "Mustang",
+   "year": 1964
+}
+
+x = thisdict.items()
+
+print(x)
+
+Output:- dict_items([('brand', 'Ford'), ('model', 'Mustang'), ('year', 1964)])
+------------------------------------------------------------------------------
+
 # Check if Key Exists
 thisdict = {
   "brand": "Ford",
@@ -2042,6 +2031,7 @@ if "model" in thisdict:
 Output:- Yes, 'model' is one of the keys in the thisdict dictionary
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
 ##### Change Dictionary Items
 ```python
 # Change Values:- We can change the value of a specific item by referring to its key name.
@@ -2071,6 +2061,7 @@ print(thisdict)
 Output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 2020}
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
 ##### Add Dictionary Items
 ```python
 # Adding Items
@@ -2097,6 +2088,7 @@ print(thisdict)
 Output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 1964, 'color': 'red'}
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
 ##### Remove Dictionary Items
 ```python
 # Removing item using pop() methods.
@@ -2162,6 +2154,7 @@ print(thisdict)
 Output:-  {}
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
 ##### Copy Dictionaries
 ```python
 # Copy a Dictionary using copy() method.
@@ -2188,6 +2181,7 @@ print(mydict)
 Output:-  {'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
 ##### Loop Dictionaries
 ```python
 # Print all key names in the dictionary, one by one:
@@ -2265,52 +2259,7 @@ model Mustang
 year 1964
 ```
 
-
-
-
-* __Python - Nested Dictionaries__ A dictionary can contain dictionaries, this is called nested dictionaries.
-```python
-    myfamily = {
-        "child1" : {
-            "name" : "Emil",
-            "year" : 2004
-        },
-        "child2" : {
-            "name" : "Tobias",
-            "year" : 2007
-        },
-        "child3" : {
-            "name" : "Linus",
-            "year" : 2011
-        }
-    }
-    print(myfamily)
-    Output:- {'child1': {'name': 'Emil', 'year': 2004}, 'child2': {'name': 'Tobias', 'year': 2007}, 'child3': {'name': 'Linus', 'year': 2011}}
-```
-```python
-    child1 = {
-        "name" : "Emil",
-        "year" : 2004
-    }
-    child2 = {
-        "name" : "Tobias",
-        "year" : 2007
-    }
-    child3 = {
-        "name" : "Linus",
-        "year" : 2011
-    }
-
-    myfamily = {
-        "child1" : child1,
-        "child2" : child2,
-        "child3" : child3
-    }
-
-    print(myfamily)
-    Output:- {'child1': {'name': 'Emil', 'year': 2004}, 'child2': {'name': 'Tobias', 'year': 2007}, 'child3': {'name': 'Linus', 'year': 2011}}
-```
-
+**[⬆ Back to Top](#table-of-contents)**
 ##### Nested Dictionaries
 A dictionary can contain dictionaries, this is called nested dictionaries.
 ```python
@@ -2362,6 +2311,7 @@ Output:-
 
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
 ##### Dictionary Methods
 ```python
 | Method | Description |
@@ -2379,7 +2329,203 @@ Output:-
 | values() | Returns a list of all the values in the dictionary. |
 
 ```python
+# Dictionary clear() Method:- The clear() method removes all the elements from a dictionary.
+car =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+car.clear()
 
+print(car)
+
+Output:- {}
+------------------------------------------------------------------------------------
+
+# Dictionary copy() Method:- The copy() method returns a copy of the specified dictionary.
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = car.copy()
+
+print(x)
+
+Output:- 
+{'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
+-----------------------------------------------------------------------------------------
+
+# Dictionary fromkeys() Method:- The fromkeys() method returns a dictionary with the specified keys and the specified value.
+# Example1:-
+x = ('key1', 'key2', 'key3')
+y = 0
+thisdict = dict.fromkeys(x, y)
+print(thisdict)
+
+Output:- ['key1': 0, 'key2': 0, 'key3': 0]
+
+# Example2:- 
+x = ('key1', 'key2', 'key3')
+thisdict = dict.fromkeys(x)
+print(thisdict)
+
+Output:- ['key1': None, 'key2': None, 'key3': None]
+------------------------------------------------------------------------------------------
+
+# Dictionary get() Method:- The get() method returns the value of the item with the specified key.
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = car.get("model")
+
+print(x)
+
+Output:- Mustang
+
+# Example2:-
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = car.get("price", 15000)
+
+print(x)
+
+Output:- 15000
+--------------------------------------------------------------------------------------------
+
+# Dictionary items() Method:- The items() method returns a view object. The view object contains the \n key-value pairs of the dictionary, as tuples in a list.
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = car.items()
+print(x)
+
+Output:- dict_items([('brand', 'Ford'), ('model', 'Mustang'), ('year', 1964)])
+
+# example2:- 
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = car.items()
+car["year"] = 2018
+print(x)
+
+Output:- dict_items([('brand', 'Ford'), ('model', 'Mustang'), ('year', 2018)])
+------------------------------------------------------------------------------------------------------
+
+# Dictionary keys() Method:- The keys() method returns a view object. The view object contains the keys of the dictionary, as a list.
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = car.keys()
+print(x)
+
+car["color"] = "white"
+print(x)
+
+Output:- dict_keys(['brand', 'model', 'year'])
+Output:- dict_keys(['brand', 'model', 'year', 'color'])
+------------------------------------------------------------------------------------------------------
+
+# Dictionary pop() Method:- The pop() method removes the specified item from the dictionary.
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = car.pop("model")
+print(x)
+print(car)
+
+Output:- Mustang
+Output:- {'brand': 'Ford', 'year': 1964}
+-------------------------------------------------------------------------------------------------
+
+# Dictionary popitem() Method:- The popitem() method removes the item that was last inserted into the dictionary.
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+x = car.popitem()
+
+print(x)
+print(car)
+
+Output:- 
+('year', 1964)
+{'brand': 'Ford', 'model': 'Mustang'}
+-------------------------------------------------------------------------------------------------
+
+# Dictionary setdefault() Method:- The setdefault() method returns the value of the item with the specified key.
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+x = car.setdefault("color", "White")
+y = car.setdefault("model", "Bronco")
+
+print(x)
+print(y)
+
+Output:- White
+Output:- Mustang
+---------------------------------------------------------------------------------------------
+
+# Dictionary update() Method:- The update() method inserts the specified items to the dictionary.
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+car.update({"color": "White"})
+
+print(car)
+
+Output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 1964, 'color': 'White'}
+------------------------------------------------------------------------------------------------
+
+# Dictionary values() Method:- The values() method returns a view object. The view object contains the values of the dictionary, as a list.
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = car.values()
+
+print(x)
+
+Output:- dict_values(['Ford', 'Mustang', 1964])
+
+# Example2:-
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+x = car.values()
+
+car["year"] = 2018
+
+print(x)
+
+Output:- dict_values(['Ford', 'Mustang', 2018])
 ```
 
 
