@@ -220,6 +220,7 @@ print(type(x))
 output:- <class 'int'>
 
 **[⬆ Back to Top](#table-of-contents)**
+**[⬆ Back to Top](#table-of-contents)**
 ### Ques. Python Strings?
 ##### String Literals
 'hello' is the same as "hello".
@@ -246,182 +247,133 @@ consectetur adipiscing elit,<br>
 sed do eiusmod tempor incididunt<br>
 ut labore et dolore magna aliqua.<br>
 
-<details>
-  <summary>Slicing Strings</summary>
+```python
+# Slicing Strings
+b = "Hello, World!"
+   print(b[2:5])
  
-* We can return a range of characters by using the slice syntax.
-* Get the characters from position 2 to position 5 (not included).
- 
-  ```python
-    b = "Hello, World!"
-    print(b[2:5])
- 
-    output:- llo
-  ```
- 
-### Slice From the Start
-  * Get the characters from the start to position 5 (not included):
-  ```python
-   b = "Hello, World!"
-   print(b[:5])
- 
-   output:- Hello
-  ```
- 
-### Slice To the End
-   * Get the characters from position 2, and all the way to the end:
-  ```python
-   b = "Hello, World!"
-   print(b[2:])
- 
-   output:- llo, World!
-  ```
- 
-### Negative Indexing
-   * Get the characters from position 2, and all the way to the end:
-  ```python
-   b = "Hello, World!"
-   print(b[-5:-2])
- 
-   output:- orl
-  ```
- 
-</details>
+Output:- llo
 
-<details>
-  <summary>Modify Strings</summary>
- 
-### Upper Case.
-* The __upper()__ method returns the string in upper case:
- 
-  ```python
-    a = "Hello, World!"
-    print(a.upper())
- 
-    output:- HELLO, WORLD!
-  ```
- 
-### Lower Case
-  * The __lower()__ method returns the string in lower case:
+# Slice From the Start:- Get the characters from the start to position 5 (not included):
+b = "Hello, World!"
+print(b[:5])
 
-  ```python
-    a = "Hello, World!"
-    print(a.lower())
- 
-   output:- hello, world!
-  ```
- 
-### Remove Whitespace
-   * Whitespace is the space before and/or after the actual text, and very often you want to remove this space.
-   * The __strip()__ method removes any whitespace from the beginning or the end:
+Output:- Hello
 
-  ```python
-    a = " Hello, World! "
-    print(a.strip())
- 
-   output:- Hello, World!
-  ```
- 
-### Replace String
-   * The __replace()__ method replaces a string with another string:
-  ```python
-    a = "Hello, World!"
-    print(a.replace("H", "J"))
- 
-   output:- Jello, World!
-  ```
+# Slice To the End:- Get the characters from position 2, and all the way to the end:
+b = "Hello, World!"
+print(b[2:])
 
-### Split String
-   * The split() method splits the string into substrings if it finds instances of the separator:
-   ```python
-    a = "Hello, World!"
-    b = a.split(",")
-    print(b)
-
-    output:- ['Hello', ' World!']
-   ```
-
-</details>
-
-<details>
-  <summary>String Concatenation</summary>
+Output:- llo, World!
  
-* To concatenate, or combine, two strings you can use the + operator.
- 
-  ```python
-    a = "Hello"
-    b = "World"
-    c = a + b
-    print(c)
- 
-    output:- HelloWorld
-  ```
- 
-* To add a space between them, add a " ":
+# Negative Indexing:- Get the characters from position 2, and all the way to the end:
+b = "Hello, World!"
+print(b[-5:-2])
 
-  ```python
-    a = "Hello"
-    b = "World"
-    c = a + " " + b
-    print(c)
+Output:- orl
+```
  
-   output:- Hello World
-  ```
- 
-</details>
+##### Modify Strings
+```python
+# Upper Case.:- The __upper()__ method returns the string in upper case.
+a = "Hello, World!"
+print(a.upper())
 
-<details>
-  <summary>Format - Strings</summary>
+Output:- HELLO, WORLD!
+----------------------------------------------------------------------------------
 
-**[⬆ Back to Top](#table-of-contents)**
-### String Format
-* As we learned in the Python Variables chapter, we cannot combine strings and numbers like this.
- 
-  ```python
-    age = 36
-    txt = "My name is John, I am " + age
-    print(txt) 
- 
-    output:- 
-    Traceback (most recent call last):
-    File "demo_string_format_error.py", line 2, in <module>
-        txt = "My name is John, I am " + age
-    TypeError: must be str, not int
-  ```
+# Lower Case:- The __lower()__ method returns the string in lower case.
+a = "Hello, World!"
+print(a.lower())
 
-* we can combine strings and numbers by using the __format()__ method!
-* The format() method takes the passed arguments, formats them, and places them in the string where the placeholders {} are:
+Output:- hello, world!
+----------------------------------------------------------------------------------
 
-  ```python
-    age = 36
+# Remove Whitespace:- 
+# Whitespace is the space before and/or after the actual text, and very often you want to remove this space.
+# The __strip()__ method removes any whitespace from the beginning or the end:
+a = " Hello, World! "
+print(a.strip())
+
+Output:- Hello, World!
+------------------------------------------------------------------------------------- 
+
+# Replace String:- The __replace()__ method replaces a string with another string:
+a = "Hello, World!"
+print(a.replace("H", "J"))
+
+Output:- Jello, World!
+----------------------------------------------------------------------------------------------
+
+# Split String:- The split() method splits the string into substrings if it finds instances of the separator:
+a = "Hello, World!"
+b = a.split(",")
+print(b)
+
+Output:- ['Hello', ' World!']
+```
+
+##### String Concatenation
+```python
+# String Concatenation:- To concatenate, or combine, two strings you can use the + operator.
+a = "Hello"
+b = "World"
+c = a + b
+print(c)
+
+Output:- HelloWorld
+
+# To add a space between them, add a " ":
+a = "Hello"
+b = "World"
+c = a + " " + b
+print(c)
+
+Output:- Hello World
+```
+
+##### Format - Strings
+```python
+# String Format:- As we learned in the Python Variables chapter, we cannot combine strings and numbers like this.
+age = 36
+txt = "My name is John, I am " + age
+print(txt) 
+
+Output:- 
+Traceback (most recent call last):
+File "demo_string_format_error.py", line 2, in <module>
+   txt = "My name is John, I am " + age
+TypeError: must be str, not int
+
+
+# we can combine strings and numbers by using the __format()__ method!
+# The format() method takes the passed arguments, formats them, and places them in the string where the placeholders {} are:
+   age = 36
     txt = "My name is John, and I am {}"
     print(txt.format(age))
  
    output:- My name is John, and I am 36
-  ```
- 
-* The format() method takes unlimited number of arguments, and are placed into the respective placeholders:
-  ```python
-    quantity = 3
-    itemno = 567
-    price = 49.95
-    myorder = "I want {} pieces of item {} for {} dollars."
-    print(myorder.format(quantity, itemno, price)) 
- 
-   output:- I want 3 pieces of item 567 for 49.95 dollars.
-  ```
-* You can use index numbers {0} to be sure the arguments are placed in the correct placeholders:
-    ```python
-        quantity = 3
-        itemno = 567
-        price = 49.95
-        myorder = "I want to pay {2} dollars for {0} pieces of item {1}."
-        print(myorder.format(quantity, itemno, price)) 
 
-        Output:- I want to pay 49.95 dollars for 3 pieces of item 567
-    ```
+ 
+# The format() method takes unlimited number of arguments, and are placed into the respective placeholders:
+quantity = 3
+itemno = 567
+price = 49.95
+myorder = "I want {} pieces of item {} for {} dollars."
+print(myorder.format(quantity, itemno, price)) 
 
-</details>
+output:- I want 3 pieces of item 567 for 49.95 dollars.
+ 
+# You can use index numbers {0} to be sure the arguments are placed in the correct placeholders:
+ 
+quantity = 3
+itemno = 567
+price = 49.95
+myorder = "I want to pay {2} dollars for {0} pieces of item {1}."
+print(myorder.format(quantity, itemno, price)) 
+
+Output:- I want to pay 49.95 dollars for 3 pieces of item 567
+```
  
 <details>
   <summary>Escape Characters</summary>
