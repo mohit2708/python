@@ -12,6 +12,7 @@
 |   | [Python Variables?](#ques-python-variables) |
 |   | [Global Variables?](#ques-global-variables) |
 |   | [How to check What type of datatype?](#ques-how-to-check-what-type-of-datatype) |
+|   | [How to get Id()?](#ques-how-to-get-id) |
 |   | [Python Strings?](#ques-python-strings) |
 |   | [Python Shallow Copy and Deep Copy?](#ques-python-shallow-copy-and-deep-copy) |
 |   | [What is built-in module in Python?](#Ques-What-is-built-in-module-in-Python) |
@@ -26,6 +27,8 @@
 |   | [Difference between List and Tuples in Python?](#ques-difference-between-list-and-tuples-in-python) |
 |   | [What is Set?](#ques-what-is-set) / [Length of a Set](#get-the-length-of-a-set) / [Acesss Items of set](#acesss-items-of-set) / [Remove Item of set](#remove-item-of-set-) / [Loop Sets](#loop-sets) / [Join Two Set](#join-two-set) / [set() Constructor](#set-constructor) / [Set Methods](#set-methods) |
 |   | [What is Dictionaries?](#ques-what-is-dictionaries) / (Dictionary Length)[#dictionary-length] / [Access Item](#access-item-of-dictionary) / [Change Dictionary Items](#change-dictionary-items) / [Add Dictionary Items](#add-dictionary-items) / [Remove Dictionary Items](#remove-dictionary-items) / [Copy Dictionaries](#copy-dictionaries) / [loop-dictionaries](#loop-dictionaries) / [Nested Dictionaries](#nested-dictionaries) / [Dictionary Methods](#dictionary-methods) |
+|   | [What is Decorators?](#ques-what-is-decorators) |
+|   | [What is Generator Functions?](what-is-generator-functions) |
 
 
 
@@ -49,6 +52,7 @@
 5. __Portable:-__ Since it is open-source, you can run Python on Windows, Mac, Linux or any other platform. Your programs will work without needing to the changed for every machine.
 6. __GUI Programming:-__ You can use it to develop a GUI (Graphical User Interface). One way to do this is through Tkinter.
 7. __Large Library:-__ Python provides you with a large standard library. You can use it to implement a variety of functions without needing to reinvent the wheel every time. Just pick the code you need and continue. This lets you focus on other important tasks.
+
 
 
 **[⬆ Back to Top](#table-of-contents)**
@@ -127,19 +131,26 @@ x = 4 # x is of type int
 x = "saxena" # x is now of type str
 x = 'mohit' # x is now of type str
 print(x)
+
+Output:-Mohit
 ```
-output:-Mohit
+
+```python
+x, y, z = "Orange", "Banana", "Cherry"
+   print(x)
+   print(y)
+   print(z)
+
+output:- Orange<br>Banana<br>Cherry
+```
 
 <details>
   <summary>Assign Value to Multiple Variables</summary>
   
   ```python
-     x, y, z = "Orange", "Banana", "Cherry"
-      print(x)
-      print(y)
-      print(z)
+
   ```
-  output:- Orange<br>Banana<br>Cherry
+  
  
    ```python
       x = y = z = "Orange"
@@ -217,10 +228,18 @@ Python has the following data types built-in by default, in these categories:
 ```python
 x = 5
 print(type(x)) 
-```
+
 output:- <class 'int'>
+```
 
 **[⬆ Back to Top](#table-of-contents)**
+### Ques. How to get Id()?
+id() function takes a single parameter object.
+```python
+a = 5
+print(id(a))
+```
+
 **[⬆ Back to Top](#table-of-contents)**
 ### Ques. Python Strings?
 ##### String Literals
@@ -458,13 +477,6 @@ World!
  
 </details>
 
-### Ques. How to get Id()?
-id() function takes a single parameter object.
-```python
-a = 5
-print(id(a))
-```
-
 
 **[⬆ Back to Top](#table-of-contents)**
 ### Ques. Python Shallow Copy and Deep Copy?
@@ -529,6 +541,8 @@ Indentation is necessary for Python. It specifies a block of code. All code with
 * PEP stands for __Python Enhancement Proposal__. 
 * PEP8 is a document that provides various guidline to write the readable in python.
 * PEP8 describe how the developers can write the beautiful code.
+* It is a set of rules that specify how to format Python code for maximum readability.
+             
 
 **[⬆ Back to Top](#table-of-contents)**
 ### Ques. Global Keyword?
@@ -545,7 +559,7 @@ __Rules of global Keyword__
 myfunc()
 print("Python is " + x)
  ```
- Output:-Python is fantastic
+ Output:-Python is fantastic`
   ```python
 x = "awesome"
 def myfunc():
@@ -1292,9 +1306,22 @@ print(fruits)
 
 Output:- ('apple', 'banana', 'cherry')
 
+#Example2
+def fun(*abc):
+    print(abc)
+fun(2,5,6)
+
+Output:- (2, 5, 6)
+
+#Example3
+def fun(**abc):
+    print(abc)
+fun(a=2,b=5,c=6)
+
+Output:- {'a': 2, 'b': 5, 'c': 6}
+-------------------------------------------------------------------------------------------------
 # Unpacking a Tuple:- in Python, we are also allowed to extract the values back into variables. This is called "unpacking".
 fruits = ("apple", "banana", "cherry")
-
 (green, yellow, red) = fruits
 
 print(green)
@@ -1320,6 +1347,21 @@ Output:-
 apple
 ['mango', 'papaya', 'pineapple']
 cherry
+
+# Example3
+def fun(a,b,c,d):
+    print(a,b,c,d)
+list = [2,5,7,4]
+fun(*list)
+
+Output:- 2 5 7 4
+
+
+# Example4
+x=[1,5]
+print(list(range(*x)))
+
+Output:- [1, 2, 3, 4]
 ```
 
 **[⬆ Back to Top](#table-of-contents)**
@@ -2728,7 +2770,7 @@ print(y)
 Output:- {"name": "John", "age": 30, "city": "New York"}
 ```
 
-### Decorators
+### Ques. What is Decorators?
 * Decorators allow us to wrap another function in order to extend the behaviour of the wrapped function, without permanently modifying it.
 * A decorator function is a function that accepts a function as parameter and return a function(decorator ek function hai jo as a argument leta bhi function hai and return bhi function karta hai).
 ```python
@@ -2941,6 +2983,96 @@ print(p1._age)        # protected: can be accessed but not advised
 ```
 	
 	
+
+### Ques. What is Generator Functions?
+* Generator are functions that returns a sequens of value. we use yield statement to return the from function.
+* Yield statement returns the element from a generator function into a genrater object.(EX:- yield a)
+* This function is used to retrieve element by element from a generator object.(Ex:- next(gen_obj))
+* A generator is a special type of function which does not return a single value, instead, it returns an iterator object with a sequence of values.
+* In a generator function, a __yield__ statement is used rather than a return statement.
+* The generator function cannot include the return keyword. If you include it, then it will terminate the function. 
+* The difference between yield and return is that yield returns a value and pauses the execution while maintaining the internal states, whereas the return statement returns a value and terminates the execution of the function.
+
+```python
+def mygenerator():
+    print('First item')
+    yield 10
+
+    print('Second item')
+    yield 20
+
+    print('Last item')
+    yield 30
+
+gen = mygenerator()
+print(next(gen))
+print(gen.__next__())  # 2 option to write the next function
+print(next(gen))
+print(next(gen))
+
+Output:- 
+First item
+10
+Second item
+20
+Last item
+30
+Traceback (most recent call last):
+File "<string>", line 22, in <module>
+StopIteration
+
+---------------------------------------------------------
+# 2nd Option
+gen = mygenerator()
+while True:
+    try:
+        print ("Received on next(): ", next(gen))
+    except StopIteration:
+        break
+Output:-
+First item
+Received on next():  10
+Second item
+Received on next():  20
+Last item
+Received on next():  30
+
+# Example 2:-
+def bhai(a,b):
+    yield a+b
+    yield a-b
+result = bhai(3,2)
+print(next(result))
+print(next(result))
+
+Output:- 
+5
+1
+
+# Example 3:-
+def numberPrint():
+    n = 1
+    while n <= 10:
+        sq = n*n
+        yield sq
+        n += 1
+values = numberPrint()
+for i in values:
+    print(i)
+
+Output:-
+1
+4
+9
+16
+25
+36
+49
+64
+81
+100
+```
+
 	
 ++++++++++++++++++
  <!DOCTYPE html>
@@ -2982,95 +3114,7 @@ print(p1._age)        # protected: can be accessed but not advised
             <div class="accordion" id="myAccordion">
                
 
-               <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingTwo">
-                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#Features"><strong>Ques. </strong> What is Python Features?</button>
-                  </h2>
-                  <div id="Features" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
-                     <div class="card-body">
-                        <p><strong>Easy:- </strong>Python is very easy to learn and understand; any beginner can learn Python easily. When writing code in Python, you need fewer lines of code compared to languages like Java.</p>
-                        <p><strong>Interpreted:- </strong>It is interpreted(executed) line by line. This makes it easy to test and debug.</p>
-                        <p><strong>Object-Oriented:- </strong>The Python programming language supports classes and objects and hence it is object-oriented.</p>
-                        <p><strong>Free and Open Source:- </strong>The language and its source code are available to the public for free; there is no need to buy a costly license.</p>
-                        <p><strong>Portable:- </strong>Since Python is open-source, you can run it on Windows, Mac, Linux or any other platform. Your programs will work without any need to change it for every machine.</p>
-                        <p><strong>GUI Programming:- </strong>You can use it to develop a GUI (Graphical User Interface). One way to do this is through Tkinter.</p>
-                        <p><strong>Large Python Library:- </strong>Python provides you with a large standard library.</p>
-                     </div>
-                  </div>
-               </div>
-               
 			   
-			    <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingTwo">
-                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#Comments"><strong>Ques. </strong>  Python Comments?</button>
-                  </h2>
-                  <div id="Comments" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
-                     <div class="card-body">
-                        <p>single Line Comments</p>
-						<pre class="code"><code>
-#This is a comment
-print("Hello, World!")
-
-print("Hello, World!") #This is a comment
-</pre></code>
-						<p>Multi Line Comments(OR)Docstring</p>
-							<pre class="code"><code>
-"""
-This is a comment
-written in
-more than just one line
-"""
-print("Hello, World!")
-</pre></code>
-                      
-                     </div>
-                  </div>
-               </div>
-			   
-			   
-			   	<div class="accordion-item">
-                  <h2 class="accordion-header" id="headingTwo">
-                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#Variables"><strong>Ques. </strong>  Python Variables?</button>
-                  </h2>
-                  <div id="Variables" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
-                     <div class="card-body">
-					 <ul>
-						<li>A variable name must start with a letter or the underscore character</li>
-						<li>A variable name cannot start with a number</li>
-						<li>A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )</li>
-						<li>Variable names are case-sensitive (age, Age and AGE are three different variables)</li>
-					 </ul>
-                      
-						<pre class="code"><code>
-#Legal variable names:
-myvar = "John"
-my_var = "John"
-_my_var = "John"
-myVar = "John"
-MYVAR = "John"
-myvar2 = "John"
-
-#Illegal variable names:
-2myvar = "John"
-my-var = "John"
-my var = "John"
-</pre></code>
-						<strong>Assign Value to Multiple Variables</strong>
-							<pre class="code"><code>
-x, y, z = "Orange", "Banana", "Cherry"
-print(x)
-print(y)
-print(z)
-
-output:- 
-Orange
-Banana
-Cherry
-</pre></code>
-                      
-                     </div>
-                  </div>
-               </div>
 			   
 			   		    <div class="accordion-item">
                   <h2 class="accordion-header" id="headingTwo">
@@ -4154,10 +4198,7 @@ print(my_file.read(5))
 
 f. What is repr()?
 g. WAP to count from a string?
-h. Write methods for the list.
 i. List of zeros python without function or any method.
-j. What are deep copy and shallow copy?
-k. How to use deep copy?
 l. Count occurrence of each number in list.
 o. List_ = ['a', 'aa', 'aaa', 'ababa']. sort the list on the basis of length. 
 p. Convert list element into string. 
@@ -4165,16 +4206,13 @@ q. Prime numbers program.
 r. Print this Pattern (* * * ***)
 s. Write a custom insert() function for list eg. def custom_insert (list, index, item).
 t. Explain the join method.
-w. Packing, unpacking in tuple?
 x. What is reduce and filter? Examples
 y. What is common between dictionary and set?
 z. Sort in dictionary with key
 aa. How do you add two dictionaries?
 bb. Can we pass list or tuple as a key in dictionary?
 cc. Unique dictionary from list.
-dd. What is a decorator?
 ee. What is property decorator?
-ff. What is a generator?
 gg. Iterator and iterable difference.
 hh. Difference between generator and iterator in python.
 ii. What is lazy evaluation in python?
@@ -4382,4 +4420,79 @@ title= models.CharField(max_length=300, unique=True)
 Deep Copy:- In deep copy any changes made to a copy of object do not reflect in the orginal object.
 In case of shallow copy, a refrence of object 
 
+# Reverse
+list1 = [1, 2, 4, 5, 8, 9]
+print(list1[::-1])
+list1.reverse()
+print(list1)
+list2 = []
+for item in list1:
+    list2.insert(0, item)
+print(list2)    
 
+
+
+*args and **kwargs in Python
+
+
+##### String to array:-
+```python
+thislist = ["apple", "banana", "cherry"]
+str1 = ' '.join(thislist)
+counter = dict.fromkeys(str1, 0)
+print(counter)
+for item in str1:
+    counter[item] += 1
+print(counter)
+
+import collections
+print(collections.Counter("hello"))
+```
+
+
+### program to count the frequency of each character
+```python
+# using "in" operater
+str1 = input ("Enter the string: ")
+d = dict()
+for c in str1:
+    if c in d:
+        d[c] = d[c] + 1
+    else:
+        d[c] = 1
+print(d)
+
+Output:- 
+Enter the string: HheLlo
+{'H': 1, 'h': 1, 'e': 1, 'L': 1, 'l': 1, 'o': 1}
+Enter the string: Hello My name is Mohit Saxena
+{'H': 1, 'e': 3, 'l': 2, 'o': 2, ' ': 5, 'M': 2, 'y': 1, 'n': 2, 'a': 3, 'm': 1, 'i': 2, 's': 1, 'h': 1, 't': 1, 'S': 1, 'x': 1}
+----------------------------------------------------------------------------
+
+# Use of “get()” function
+
+```
+
+
+
+
+a = "mohit kumar"
+new_list = [1,2,3,4,3,2,1,5,6,7]
+list4 = []
+for item in a:
+    list4.append(item)
+print(list4)
+list5 = []
+[list5.append(item*5) for item in new_list if item not in list5]
+print(list5)
+List = ['agffg', 'acmmmmmmmfgz', 'aaa', 'ababxa']
+print(sorted(List))
+dict1 = {}
+# for item in List:
+#   dict1[len(item)] = item
+# print(dict1)
+dict1 = {len(item): item  for item in List}
+print(dict1)
+abc = sorted(dict1)
+list6 = [dict1[item] for item in abc]
+print(list6)
