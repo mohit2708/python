@@ -1,4 +1,11 @@
-### swap two variables in Python
+### Table of Contents
+
+| No. | Questions |
+|:----:| ---------
+| 1 | [swap two variables](##swap-two-variables) |
+| 2 | [prime or not](#program-to-check-if-a-number-is-even-or-odd) |
+
+### swap two variables
 __Using a temporary variable__
 ```python
 a = 11
@@ -45,4 +52,25 @@ P = P / Q
    
 print ("The Value of P after swapping: ", P)  
 print ("The Value of Q after swapping: ", Q)
+```
+
+### Program to check if a number is Even or odd
+```python
+```python
+# 1 Option
+num = int(input("Enter a number: "))
+if (num % 2) == 0:
+   print("{0} is Even".format(num))
+else:
+   print("{0} is Odd".format(num))
+
+# 2 option
+def evenOrOdd(n):
+    if n%2 == 0:
+        print('even Number hai')
+    else:
+        print('Odd Number hai')
+evenOrOdd(6)
+```
+
 ```
