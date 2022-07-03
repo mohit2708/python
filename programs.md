@@ -2,8 +2,9 @@
 
 | No. | Questions |
 |:----:| ---------
-| 1 | [swap two variables](##swap-two-variables) |
+| 1 | [swap two variables](#swap-two-variables) |
 | 2 | [prime or not](#program-to-check-if-a-number-is-even-or-odd) |
+|   | [Count number of characters in a string](#count-number-of-characters-in-a-string) | 
 
 ### swap two variables
 __Using a temporary variable__
@@ -73,4 +74,15 @@ def evenOrOdd(n):
 evenOrOdd(6)
 ```
 
+### Count number of characters in a string
+```python
+ string = "My Name is Mohit Saxena";
+count = 0;
+
+for i in range(0, len(string)):
+    if(string[i] != ' '):
+        count = count + 1;
+print("Total number of characters in a string: " + str(count));
+
+Output:- 19
 ```
