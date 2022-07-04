@@ -29,6 +29,7 @@
 |   | [What is Dictionaries?](#ques-what-is-dictionaries) / (Dictionary Length)[#dictionary-length] / [Access Item](#access-item-of-dictionary) / [Change Dictionary Items](#change-dictionary-items) / [Add Dictionary Items](#add-dictionary-items) / [Remove Dictionary Items](#remove-dictionary-items) / [Copy Dictionaries](#copy-dictionaries) / [loop-dictionaries](#loop-dictionaries) / [Nested Dictionaries](#nested-dictionaries) / [Dictionary Methods](#dictionary-methods) |
 |   | [What is Decorators?](#ques-what-is-decorators) |
 |   | [What is Generator Functions?](what-is-generator-functions) |
+|   | [Combine two dictionary adding values for common keys?](#ques-Combine-two-dictionary-adding-values-for-common-keys) |
 
 
 
@@ -96,6 +97,12 @@ more than just one line
 """
 print("Hello, World!")
 ```
+
+
+			   
+			   
+
+
 
 **[⬆ Back to Top](#table-of-contents)**
 ### Ques. Python Variables?
@@ -188,6 +195,10 @@ y = "John"
 print(x + y)
 ```
 output:- TypeError: unsupported operand type(s) for +: 'int' and 'str'
+
+
+			   
+
 
 **[⬆ Back to Top](#table-of-contents)**
 ### Ques. Global Variables?
@@ -542,7 +553,7 @@ Indentation is necessary for Python. It specifies a block of code. All code with
 * PEP8 is a document that provides various guidline to write the readable in python.
 * PEP8 describe how the developers can write the beautiful code.
 * It is a set of rules that specify how to format Python code for maximum readability.
-             
+ 
 
 **[⬆ Back to Top](#table-of-contents)**
 ### Ques. Global Keyword?
@@ -2620,7 +2631,142 @@ print(x)
 Output:- dict_values(['Ford', 'Mustang', 2018])
 ```
 
+### Ques. How to Merging two Dictionaries?
+```python
+# Using update() method
+dict_1 = {'John': 15, 'Rick': 10, 'Misa' : 12 }
+dict_2 = {'Bonnie': 18,'Rick': 20,'Matt' : 16 }
+dict_1.update(dict_2)
+print(dict_1)
 
+Output:- {'John': 15, 'Rick': 20, 'Misa': 12, 'Bonnie': 18, 'Matt': 16}
+--------------------------------------------------------------------------
+
+# Using ** operator:- The simplest way to merge two dictionaries in python is by using the unpack operator(**)
+dict_1 = {'John': 15, 'Rick': 20, 'Misa' : 12 }
+dict_2 = {'Bonnie': 18,'Rick': 10,'Matt' : 16 }
+dict_3 = {'Stefan': 19, 'Riya': 14, 'Lora': 17}
+dict_4 = {**dict_1,**dict_2, **dict_3}
+print (dict_4)
+
+Output:- {'John': 15, 'Rick': 10, 'Misa': 12, 'Bonnie': 18, 'Matt': 16, 'Stefan': 19, 'Riya': 14, 'Lora': 17}
+--------------------------------------------------------------------------
+
+# Using for loop
+dict1 = {'Alexandra' : 27, 'Shelina' : 22, 'James' : 29, 'Peterson' : 30 }   
+dict2 = {'Jasmine' : 19, 'Maria' : 26, 'Helena' : 30 }                          
+dict3 = dict1.copy()  
+  
+for key, value in dict2.items():
+    dict3[key] = value  
+
+print(dict3)
+Output:- {'Alexandra': 27, 'Shelina': 22, 'James': 29, 'Peterson': 30, 'Jasmine': 19, 'Maria': 26, 'Helena': 30}
+--------------------------------------------------------------------------
+
+# Unpacking the second dictionary
+dict_1={'John': 15, 'Rick': 10, 'Misa' : 12 }
+dict_2={'Bonnie': 18,'Rick': 20,'Matt' : 16 }
+dict_3=dict(dict_1,**dict_2)
+print (dict_3)
+
+Output:- {'John': 15, 'Rick': 20, 'Misa': 12, 'Bonnie': 18, 'Matt': 16}
+--------------------------------------------------------------------------
+
+# Using collection.ChainMap() method
+from collections import ChainMap
+dict_1={'John': 15, 'Rick': 10, 'Misa' : 12 }
+dict_2={'Bonnie': 18,'Rick': 20,'Matt' : 16 }
+dict_3 = ChainMap(dict_1, dict_2)
+print(dict_3)
+print(dict(dict_3))
+
+Output:- 
+ChainMap({'John': 15, 'Rick': 10, 'Misa': 12}, {'Bonnie': 18, 'Rick': 20, 'Matt': 16})
+{'Bonnie': 18, 'Rick': 10, 'Matt': 16, 'John': 15, 'Misa': 12}
+----------------------------------------------------------------------------
+
+# Using itertools.chain()
+import itertools
+dict_1={'John': 15, 'Rick': 10, 'Misa': 12}
+dict_2={'Bonnie': 18, 'Rick': 20, 'Matt': 16}
+dict_3=itertools.chain(dict_1.items(),dict_2.items())
+#Returns an iterator object
+print (dict_3)
+print(dict(dict_3))
+
+Output:-
+<itertools.chain object at 0x7f34fd841220>
+{'John': 15, 'Rick': 20, 'Misa': 12, 'Bonnie': 18, 'Matt': 16}
+----------------------------------------------------------------------------
+
+# Using dictionary comprehension
+dict_1={'John': 15, 'Rick': 10, 'Misa': 12}
+dict_2={'Bonnie': 18, 'Rick': 20, 'Matt': 16}
+dict_3={k:v for d in (dict_1,dict_2) for k,v in d.items()}
+print (dict_3)
+
+Output:- {'John': 15, 'Rick': 20, 'Misa': 12, 'Bonnie': 18, 'Matt': 16}
+----------------------------------------------------------------------------
+
+# Add values of common keys
+dict_1 = {'John': 15, 'Rick': 10, 'Misa': 12}
+dict_2 = {'Bonnie': 18, 'Rick': 20, 'Matt': 16}
+
+def mergeDictionary(dict_1, dict_2):
+   dict_3 = {**dict_1, **dict_2}
+   for key, value in dict_3.items():
+       if key in dict_1 and key in dict_2:
+               dict_3[key] = [value , dict_1[key]]
+   return dict_3
+
+dict_3 = mergeDictionary(dict_1, dict_2)
+print(dict_3)
+
+Output:-
+{'John': 15, 'Rick': [20, 10], 'Misa': 12, 'Bonnie': 18, 'Matt': 16}
+-----------------------------------------------------------------------------
+
+# Using Zip function
+d = {'k1': 1, 'k2': 2}
+
+keys = ['k1', 'k3', 'k4']
+values = [100, 3, 4]
+
+d.update(zip(keys, values))
+print(d)
+
+Output:- {'k1': 100, 'k2': 2, 'k3': 3, 'k4': 4}
+```
+
+### Ques. Combine two dictionary adding values for common keys?
+```python
+# For loop and | Operator
+dictA = {'Mon': 23, 'Tue': 11, 'Sun': 6}
+dictB = {'Wed': 10, 'Mon': 12, 'Sun': 4}
+
+# Add with common key
+for key in dictB:
+   if key in dictA:
+      dictB[key] = dictB[key] + dictA[key]
+   else:
+      pass
+res = dictA | dictB
+print(res)
+
+Output:- {'Mon': 35, 'Tue': 11, 'Sun': 10, 'Wed': 10}
+------------------------------------------------------------
+
+# Using Counter
+from collections import Counter
+dictA = {'Mon': 23, 'Tue': 11, 'Sun': 6}
+dictB = {'Wed': 10, 'Mon': 12, 'Sun': 4}
+
+res = Counter(dictA) + Counter(dictB)
+print(res)
+
+Output:- Counter({'Mon': 35, 'Tue': 11, 'Sun': 10, 'Wed': 10})
+```
 			
 			
 			
@@ -3073,255 +3219,43 @@ Output:-
 100
 ```
 
+### Ques. What is <b>__str__</b> and <b>__repr__</b> ?
+* The repr() method returns a string containing a printable representation of an object. The repr() function calls the underlying __repr__() function of the object.
+* The <b>__str__</b> method returns a string representation of an object that is human-readable while the 
+* <b>__repr__</b> method returns a string representation of an object that is machine-readable.
 	
-++++++++++++++++++
- <!DOCTYPE html>
-<html lang="en">
-   <head>
-      <title>Python Interview Questions</title>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-   </head>
-   <style type="text/css">
-      .code_script{
-      background: #ffffff; overflow: auto; width: auto; border: solid orange; border-width: .1em .1em .1em .8em; padding: .2em .6em;
-      }
-      .code_script_ans{
-      background: #ffffff; overflow: auto; width: auto; border: solid green; border-width: .1em .1em .1em .8em; padding: .2em .6em;
-      }
-      .code{
-      border: 0.1rem solid #cdd5e4;
-      background-color: #f5f8ff;
-      padding: 0.5rem 1rem;
-      }
-      .accordion-item {
-      background-color: #f9f9f9;
-      margin-bottom: 10px;
-      position: relative;
-      border-radius: 40px;
-      overflow: hidden;
-      }
-   </style>
-   <body>
-      <div class="container">
-         <div class="m-4">
-            <div class="accordion" id="myAccordion">
-               
 
-			   
-			   
-			   		    <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingTwo">
-                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#global_variables"><strong>Ques. </strong>  Global Variables?</button>
-                  </h2>
-                  <div id="global_variables" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
-                     <div class="card-body">
-					 <ul>
-						<li>Variables that are created outside of a function.</li>
-						<li>Global variables can be used by everyone, both inside of functions and outside. </li>						
-					 </ul>
-                      
-						<pre class="code"><code>
-x = "awesome"
-def myfunc():
-  x = "fantastic"
-  print("Python is " + x)
-myfunc()
-print("Python is " + x)
+### Ques. What is the operator?
+* [Arithmetic Operators](#arithmetic-operators)
+* [Comparison (Relational) Operators](#comparisonrelational-operator)
+* Assignment Operators
+* Logical Operators
+* Bitwise Operators
+* Membership Operators
+* Identity Operators
 
-OutPut:- 
-Python is fantastic
-Python is awesome
-</pre></code>
-                      
-                     </div>
-                  </div>
-               </div>
-			   
-			   
-			    <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingTwo">
-                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#global_keyword"><strong>Ques. </strong>Global Keyword?</button>
-                  </h2>
-                  <div id="global_keyword" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
-                     <div class="card-body">
-					 <p>In Python, global keyword allows you to modify the variable outside of the current scope. It is used to create a global variable and make changes to the variable in a local context.</p>
-					 <strong>Rules of global Keyword</strong>
-					 <ul>
-						<li>When we create a variable inside a function, it is local by default.</li>
-						<li>When we define a variable outside of a function, it is global by default. You don't have to use global keyword.</li>
-						<li>We use global keyword to read and write a global variable inside a function.</li>
-					 </ul>
+##### Arithmetic Operators
+| Operators | Descrption | Result |
+| --------- | ---------- | ------ |
+| Addition(+) | Adds the values on either side of the operator. | 3+4=7 |
+| Subtraction(-) | Subtracts the value on the right from the one on the left. | 3+4=-1 |
+| Multiplication(*) | Multiplies the values on either side of the operator. | 3*4=12 |
+| Division(/) | Divides the value on the left by the one on the right. Notice that division results in a floating-point value. | 3/4=0.75 |
+| Exponentiation(**) | Raises the first number to the power of the second. | 3**4=81 |
+| Floor Division(//) | Divides and returns the integer value of the quotient. It dumps the digits after the decimal. | 10//3=3 |
+| Modulus(%) | Divides and returns the value of the remainder. | 3%4=3 |
 
+##### Comparison(Relational) Operator
+| Operators | Descrption | Result |
+| --------- | ---------- | ------ |
+| Less than(<) | This operator checks if the value on the left of the operator is lesser than the one on the right. | 3<4=True |
+| Greater than(>) | It checks if the value on the left of the operator is greater than the one on the right. | 3>4=False |
+| Less than or equal to(<=) | It checks if the value on the left of the operator is lesser than or equal to the one on the right. | 7<=7 = True |
+| Greater than or equal to(>=) | It checks if the value on the left of the operator is greater than or equal to the one on the right. | 0>=0  = True |
+| Equal to(==) | This operator checks if the value on the left of the operator is equal to the one on the right.(1 is equal to the Boolean value True, but 2 isn’t. Also, 0 is equal to False.) | 3==3.0 = True<br><hr>1==True = True<br><hr> 7==True = False<br><hr>0==False = True<br><hr>0.5==True = False |
+                        
 
-					 <ul>
-						<li>Variables that are created outside of a function.</li>
-						<li>Global variables can be used by everyone, both inside of functions and outside. </li>						
-					 </ul>
-                      
-						<pre class="code"><code>
-x = "awesome"
-def myfunc():
-    global x
-    x = "fantastic"
-myfunc()
-print("Python is " + x)
-
-Output:-
-Python is fantastic
-</pre></code>
-                      
-                     </div>
-                  </div>
-               </div>
-			   
-			   
-			   
-               <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingTwo">
-                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#PEP"><strong>Ques. </strong> What is PEP 8?</button>
-                  </h2>
-                  <div id="PEP" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
-                     <div class="card-body">
-                        <p>PEP stands for Python Enhancement Proposal. It is a set of rules that specify how to format Python code for maximum readability.</p>
-                     </div>
-                  </div>
-               </div>
-			    <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingTwo">
-                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#data_types"><strong>Ques. </strong> What are the common built-in data types in Python?</button>
-                  </h2>
-                  <div id="data_types" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
-                     <div class="card-body">
-                        <p>Python has the following data types built-in by default, in these categories:</p>
-						<ul>
-						<p>1. Numbers</p>
-                     </div>
-                  </div>
-               </div>
-			   
-			   
-               <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingTwo">
-                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#operator"><strong>Ques. </strong> What is the operator?</button>
-                  </h2>
-                  <div id="operator" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
-                     <div class="card-body">
-                        <p>Python language supports the following types of operators.</p>
-                        <ul>
-                           <li>Arithmetic Operators</li>
-                           <li>Comparison (Relational) Operators.</li>
-                           <li>Assignment Operators</li>
-                           <li>Logical Operators</li>
-                           <li>Bitwise Operators</li>
-                           <li>Membership Operators</li>
-                           <li>Identity Operators</li>
-                        </ul>
-                        <strong>Arithmetic Operators</strong>
-                        <table class="table table-striped">
-                           <thead>
-                              <tr>
-                                 <th scope="col">Operators</th>
-                                 <th scope="col">Descrption</th>
-                                 <th scope="col">Result</th>
-                              </tr>
-                           </thead>
-                           <tbody>
-                              <tr>
-                                 <td>Addition(+)</td>
-                                 <td>Adds the values on either side of the operator.</td>
-                                 <td>3+4=7</td>
-                              </tr>
-                              <tr>
-                                 <td>Subtraction(-)</td>
-                                 <td>Subtracts the value on the right from the one on the left.</td>
-                                 <td>3+4=-1</td>
-                              </tr>
-                              <tr>
-                                 <td>Multiplication(*)</td>
-                                 <td>Multiplies the values on either side of the operator.</td>
-                                 <td>3*4=12</td>
-                              </tr>
-                              <tr>
-                                 <td>Division(/)</td>
-                                 <td>Divides the value on the left by the one on the right. Notice that division results in a floating-point value.</td>
-                                 <td>3/4=0.75</td>
-                              </tr>
-                              <tr>
-                                 <td>Exponentiation(**)</td>
-                                 <td>Raises the first number to the power of the second.</td>
-                                 <td>3**4=81</td>
-                              </tr>
-                              <tr>
-                                 <td>Floor Division(//)</td>
-                                 <td>Divides and returns the integer value of the quotient. It dumps the digits after the decimal.</td>
-                                 <td>10//3=3</td>
-                              </tr>
-                              <tr>
-                                 <td> Modulus(%)</td>
-                                 <td>Divides and returns the value of the remainder.</td>
-                                 <td>3%4=3</td>
-                              </tr>
-                           </tbody>
-                        </table>
-                        <strong>Comparison(Relational) Operators</strong>
-                        <table class="table table-striped">
-                           <thead>
-                              <tr>
-                                 <th scope="col">Operators</th>
-                                 <th scope="col">Descrption</th>
-                                 <th scope="col">Result</th>
-                              </tr>
-                           </thead>
-                           <tbody>
-                              <tr>
-                                 <td>Less than(<)</td>
-                                 <td>This operator checks if the value on the left of the operator is lesser than the one on the right.</td>
-                                 <td>3<4=True</td>
-                              </tr>
-                              <tr>
-                                 <td>Greater than(>)</td>
-                                 <td>It checks if the value on the left of the operator is greater than the one on the right.</td>
-                                 <td>3>4=False</td>
-                              </tr>
-                              <tr>
-                                 <td>Less than or equal to(<=)</td>
-                                 <td>It checks if the value on the left of the operator is lesser than or equal to the one on the right.</td>
-                                 <td>7<=7 = True</td>
-                              </tr>
-                              <tr>
-                                 <td> Greater than or equal to(>=)</td>
-                                 <td>It checks if the value on the left of the operator is greater than or equal to the one on the right.</td>
-                                 <td>0>=0  = True</td>
-                              </tr>
-                              <tr>
-                                 <td>Equal to(= =)</td>
-                                 <td>This operator checks if the value on the left of the operator is equal to the one on the right.(1 is equal to the Boolean value True, but 2 isn’t. Also, 0 is equal to False.)</td>
-                                 <td>
-                                    3==3.0 = True<br>
-                                    <hr>
-                                    1==True = True<br>
-                                    <hr>
-                                    7==True = False<br>
-                                    <hr>
-                                    0==False = True<br>
-                                    <hr>
-                                    0.5==True = False
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td>Not equal to(!=)</td>
-                                 <td>It checks if the value on the left of the operator is not equal to the one on the right.</td>
-                                 <td>1!=1.0 = False</td>
-                           </tbody>
-                        </table>
-                        <strong>Assignment Operators</strong>
+<strong>Assignment Operators</strong>
                         <table class="table table-striped">
                            <thead>
                               <tr>
@@ -3433,6 +3367,114 @@ Python is fantastic
                      </div>
                   </div>
                </div>
+
+
+
+### Ques. What is membership operator and identity operator?
+*  <b>Membership Operators:- </b> These operators help validate whether a given element is present in or is a member of the given sequence of data. This sequence of data can be a list, string or a tuple<br>There are 2 types of Membership operater
+1. in Operator:
+```python
+lst1 = ['Ajay', 'Bobby','Ashok', 'Vijay', 'Anil', 'Rahul','Alex', 'Christopher']
+if 'Ajay' in lst1: 
+    print('Name Ajay exists in lst1')
+
+Output:- Name Ajay exists in lst1
+```
+2. not in Operator:
+```python
+lst1 = ['Ajay', 'Bobby','Ashok', 'Vijay', 'Anil', 'Rahul','Alex', 'Christopher']
+   if 'Raghav' not in lst1: 
+   print ('Name Raghav does not exists in lst1')
+
+output:- Name Raghav exists in lst1
+```
+
+* <b>Identity Operators</b> These operators help in determining whether a value belongs to a certain class or a certain type, i.e they help in determining the identity of the object. It is useful in finding out the data type a variable holds.
+
+1. is
+```python
+a = 'London'
+b = 'London'
+
+if a is b: print ('a is b')
+else: print ('a is not b')
+
+if a is c: print('a is c')
+else: print ('a is not c')   
+
+Output:- 
+a is b
+a is not c
+```
+
+2. is not
+
+
+++++++++++++++++++
+ <!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Python Interview Questions</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+   </head>
+   <style type="text/css">
+      .code_script{
+      background: #ffffff; overflow: auto; width: auto; border: solid orange; border-width: .1em .1em .1em .8em; padding: .2em .6em;
+      }
+      .code_script_ans{
+      background: #ffffff; overflow: auto; width: auto; border: solid green; border-width: .1em .1em .1em .8em; padding: .2em .6em;
+      }
+      .code{
+      border: 0.1rem solid #cdd5e4;
+      background-color: #f5f8ff;
+      padding: 0.5rem 1rem;
+      }
+      .accordion-item {
+      background-color: #f9f9f9;
+      margin-bottom: 10px;
+      position: relative;
+      border-radius: 40px;
+      overflow: hidden;
+      }
+   </style>
+   <body>
+      <div class="container">
+         <div class="m-4">
+            <div class="accordion" id="myAccordion">        
+			   
+      
+			    <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#data_types"><strong>Ques. </strong> What are the common built-in data types in Python?</button>
+                  </h2>
+                  <div id="data_types" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                     <div class="card-body">
+                        <p>Python has the following data types built-in by default, in these categories:</p>
+						<ul>
+						<p>1. Numbers</p>
+                     </div>
+                  </div>
+               </div>
+			   
+			   
+               <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#operator"><strong>Ques. </strong> What is the operator?</button>
+                  </h2>
+                  <div id="operator" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                     <div class="card-body">
+                        <p>Python language supports the following types of operators.</p>
+                        
+                        
+                       
+                        
 			   
 			   <div class="accordion-item">
                   <h2 class="accordion-header" id="headingTwo">
@@ -3556,60 +3598,7 @@ stu1 = Student("Sara", "Ansh", 22, "A2")
 			   
 			   
 			   
-               <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingTwo">
-                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#membership_operator"><strong>Ques. </strong> What is membership operator and identity operator?</button>
-                  </h2>
-                  <div id="membership_operator" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
-                     <div class="card-body">
-                        <p><strong>Membership Operators</strong> These operators help validate whether a given element is present in or is a member of the given sequence of data. This sequence of data can be a list, string or a tuple</p>
-                        <p>There are 2 types of Membership operater</p>
-                        <ul>
-                           <li>in Operator:</li>
-                           <pre class="code"><code>
-lst1 = ['Ajay', 'Bobby','Ashok', 'Vijay', 'Anil', 'Rahul','Alex', 'Christopher']
-if 'Ajay' in lst1: 
-    print('Name Ajay exists in lst1')
-//output:- Name Ajay exists in lst1
-</code></pre>
-                           <pre class="code"><code>
-stri = "I love mohit"
-print("ve" in stri)
-//output:- True
-                           </code></pre>
-                           <li>not in Operator:</li>
-                           <pre class="code"><code>
-lst1 = ['Ajay', 'Bobby','Ashok', 'Vijay', 'Anil', 'Rahul','Alex', 'Christopher']
-  if 'Raghav' not in lst1: print ('Name Raghav does not exists in lst1')
-//output:- Name Raghav exists in lst1
-</code></pre>
-                           <pre class="code"><code>
-stri = "I love mohit"
-print("ve" not in stri)
-//output:- False
-</code></pre>
-                        </ul>
-                        <p><strong>Identity Operators</strong> These operators help in determining whether a value belongs to a certain class or a certain type, i.e they help in determining the identity of the object. It is useful in finding out the data type a variable holds.</p>
-                        <ul>
-                           <li>is</li>
-                           <pre class="code"><code>                        
-a = 'London'
-b = 'London'
-
-if a is b: print ('a is b')
-else: print ('a is not b')
-
-if a is c: print('a is c')
-else: print ('a is not c')   
-//output:- 
-a is b
-a is not c
-</code></pre>
-                           <li>is not</li>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
+               
                
                </div>
                <div class="accordion-item">
@@ -4201,11 +4190,9 @@ g. WAP to count from a string?
 i. List of zeros python without function or any method.
 l. Count occurrence of each number in list.
 o. List_ = ['a', 'aa', 'aaa', 'ababa']. sort the list on the basis of length. 
-p. Convert list element into string. 
 q. Prime numbers program.
 r. Print this Pattern (* * * ***)
 s. Write a custom insert() function for list eg. def custom_insert (list, index, item).
-t. Explain the join method.
 x. What is reduce and filter? Examples
 y. What is common between dictionary and set?
 z. Sort in dictionary with key
@@ -4417,8 +4404,6 @@ class Employee(models.Model):
 title= models.CharField(max_length=300, unique=True)	
 
 
-Deep Copy:- In deep copy any changes made to a copy of object do not reflect in the orginal object.
-In case of shallow copy, a refrence of object 
 
 # Reverse
 list1 = [1, 2, 4, 5, 8, 9]
@@ -4496,3 +4481,44 @@ print(dict1)
 abc = sorted(dict1)
 list6 = [dict1[item] for item in abc]
 print(list6)
+
+
+
+### Python program to convert a list to string
+```python
+def listToString(s):
+    blank =""
+    for element in s:
+        blank = blank + ' ' + element
+    print(blank)
+
+s = ['Hello', 'mohit', 'saxena']
+listToString(s)
+
+Output:- Hellomohitsaxena
+------------------------------------------------------------------
+
+# Using list comprehension 
+s = ['I', 'want', 4, 'apples', 'and', 18, 'bananas']
+listToStr = ' '.join([str(elem) for elem in s])
+print(listToStr)
+
+Output:- I want 4 apples and 18 bananas
+----------------------------------------------------------------
+
+# Using .join() method 
+def listToString(s):
+    str1 = " "
+    return (str1.join(s))
+    
+s = ['Hello', 'Mohit', 'Saxena']
+print(listToString(s))
+
+Output:- Hello Mohit Saxena
+----------------------------------------------------------------
+
+# Using map()
+s = ['I', 'want', 4, 'apples', 'and', 18, 'bananas']
+listToStr = ' '.join(map(str, s))
+print(listToStr)
+```
