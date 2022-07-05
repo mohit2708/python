@@ -4,7 +4,8 @@
 |:----:| ---------
 | 1 | [swap two variables](#swap-two-variables) |
 | 2 | [prime or not](#program-to-check-if-a-number-is-even-or-odd) |
-|   | [Count number of characters in a string](#count-number-of-characters-in-a-string) | 
+|   | [Count number of characters in a string](#count-number-of-characters-in-a-string) |
+|   | [convert a list to string](#python-program-to-convert-a-list-to-string) |
 
 ### swap two variables
 __Using a temporary variable__
@@ -85,4 +86,42 @@ for i in range(0, len(string)):
 print("Total number of characters in a string: " + str(count));
 
 Output:- 19
+```
+### Python program to convert a list to string
+```python
+def listToString(s):
+    blank =""
+    for element in s:
+        blank = blank + ' ' + element
+    print(blank)
+
+s = ['Hello', 'mohit', 'saxena']
+listToString(s)
+
+Output:- Hellomohitsaxena
+------------------------------------------------------------------
+
+# Using list comprehension 
+s = ['I', 'want', 4, 'apples', 'and', 18, 'bananas']
+listToStr = ' '.join([str(elem) for elem in s])
+print(listToStr)
+
+Output:- I want 4 apples and 18 bananas
+----------------------------------------------------------------
+
+# Using .join() method 
+def listToString(s):
+    str1 = " "
+    return (str1.join(s))
+    
+s = ['Hello', 'Mohit', 'Saxena']
+print(listToString(s))
+
+Output:- Hello Mohit Saxena
+----------------------------------------------------------------
+
+# Using map()
+s = ['I', 'want', 4, 'apples', 'and', 18, 'bananas']
+listToStr = ' '.join(map(str, s))
+print(listToStr)
 ```
