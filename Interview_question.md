@@ -9,6 +9,9 @@
 | 2 | [Python Frameworks?](#Ques-Python-Frameworks) |
 | 3 | [File Extensions in Python?](#Ques-File-Extensions-in-Python) |
 |   | [Python Comments?](#Ques-Python-Comments) |
+|   | [What is a dynamically typed language?](#ques-What-is-a-dynamically-typed-language?) |
+|   | [What is the operator](#ques-what-is-the-operator) |
+|   | [What is membership operator and identity operator?](#ques-what-is-membership-operator-and-identity-operator) |
 |   | [Python Variables?](#ques-python-variables) |
 |   | [Global Variables?](#ques-global-variables) |
 |   | [How to check What type of datatype?](#ques-how-to-check-what-type-of-datatype) |
@@ -25,8 +28,10 @@
 |   | [What is difference between Discard() and Remove()?](#) | 
 |   | [What isTuples?](#ques-what-is-tuples) / [Tuple Length](#tuple-length) / [Create Tuple With One Item](#create-tuple-with-one-item) / [Access Tuple Items](#access-tuple-items) / [Update Tuples](#update-tuples) / [Unpack Tuples](#unpack-tuples) / [Loop Tuples](#loop-tuples) / [Join Tuples](#join-tuples) / [Tuple Methods](#tuple-methods) / [tuple() Constructor](#tuple-constructor) |
 |   | [Difference between List and Tuples in Python?](#ques-difference-between-list-and-tuples-in-python) |
+|   | [Convert a list into a tuple](#Ques-convert-a-list-into-a-tuple?) |
 |   | [What is Set?](#ques-what-is-set) / [Length of a Set](#get-the-length-of-a-set) / [Acesss Items of set](#acesss-items-of-set) / [Remove Item of set](#remove-item-of-set-) / [Loop Sets](#loop-sets) / [Join Two Set](#join-two-set) / [set() Constructor](#set-constructor) / [Set Methods](#set-methods) |
 |   | [What is Dictionaries?](#ques-what-is-dictionaries) / (Dictionary Length)[#dictionary-length] / [Access Item](#access-item-of-dictionary) / [Change Dictionary Items](#change-dictionary-items) / [Add Dictionary Items](#add-dictionary-items) / [Remove Dictionary Items](#remove-dictionary-items) / [Copy Dictionaries](#copy-dictionaries) / [loop-dictionaries](#loop-dictionaries) / [Nested Dictionaries](#nested-dictionaries) / [Dictionary Methods](#dictionary-methods) |
+|   | [How to Merging Or Adding two Dictionaries](#ques-How-to-Merging-Or-Adding-two-Dictionaries) |
 |   | [What is Decorators?](#ques-what-is-decorators) |
 |   | [What is Generator Functions?](what-is-generator-functions) |
 |   | [Combine two dictionary adding values for common keys?](#ques-Combine-two-dictionary-adding-values-for-common-keys) |
@@ -98,8 +103,105 @@ more than just one line
 print("Hello, World!")
 ```
 
+**[⬆ Back to Top](#table-of-contents)**
+### Ques. What is a dynamically typed language?
+Type-checking can be done at two stages:-
+1. <strong>Static -</strong> Data Types are checked before execution.
+2. <b>Dynamic -</b> Data Types are checked during execution.
+<p>Python is an interpreted language, executes each statement line by line and thus type-checking is done on the fly, during execution. Hence, Python is a Dynamically Typed Language.</p>
 
-			   
+**[⬆ Back to Top](#table-of-contents)**
+### Ques. What is the operator?
+* [Arithmetic Operators](#arithmetic-operators)
+* [Comparison (Relational) Operators](#comparisonrelational-operator)
+* [Assignment Operators](#assignment-operators)
+* [Logical Operators]()
+* [Bitwise Operators](#bitwise-operators)
+* [Membership Operators](#ques-what-is-membership-operator-and-identity-operator)
+* [Identity Operators](#ques-what-is-membership-operator-and-identity-operator)
+
+##### Arithmetic Operators
+| Operators | Descrption | Result |
+| --------- | ---------- | ------ |
+| Addition(+) | Adds the values on either side of the operator. | 3+4=7 |
+| Subtraction(-) | Subtracts the value on the right from the one on the left. | 3+4=-1 |
+| Multiplication(*) | Multiplies the values on either side of the operator. | 3*4=12 |
+| Division(/) | Divides the value on the left by the one on the right. Notice that division results in a floating-point value. | 3/4=0.75 |
+| Exponentiation(**) | Raises the first number to the power of the second. | 3**4=81 |
+| Floor Division(//) | Divides and returns the integer value of the quotient. It dumps the digits after the decimal. | 10//3=3 |
+| Modulus(%) | Divides and returns the value of the remainder. | 3%4=3 |
+
+##### Comparison(Relational) Operator
+| Operators | Descrption | Result |
+| --------- | ---------- | ------ |
+| Less than(<) | This operator checks if the value on the left of the operator is lesser than the one on the right. | 3<4=True |
+| Greater than(>) | It checks if the value on the left of the operator is greater than the one on the right. | 3>4=False |
+| Less than or equal to(<=) | It checks if the value on the left of the operator is lesser than or equal to the one on the right. | 7<=7 = True |
+| Greater than or equal to(>=) | It checks if the value on the left of the operator is greater than or equal to the one on the right. | 0>=0  = True |
+| Equal to(==) | This operator checks if the value on the left of the operator is equal to the one on the right.(1 is equal to the Boolean value True, but 2 isn’t. Also, 0 is equal to False.) | 3==3.0 = True<br><hr>1==True = True<br><hr> 7==True = False<br><hr>0==False = True<br><hr>0.5==True = False |
+
+##### Assignment Operators
+| Operators | Descrption | Result |
+| --------- | ---------- | ------ |
+| Assign(=) | Assigns a value to the expression on the left. Notice that = = is used for comparing, but = is used for assigning. | >>> a=7<br>   >>> print(a)<br> //output:- 7 |
+|  Add and Assign(+=) | Adds the values on either side and assigns it to the expression on the left. a+=10 is the same as a=a+10. | >>> a+=2<br>
+>>> print(a)<br> //output:- 9 |
+| Divide and Assign(/=) | Divides the value on the left by the one on the right. Then it assigns it to the expression on the left. | >>> a/=7<br>  >>> print(a)<br> //output:- 1.0 |
+| Multiply and Assign(*=) | Multiplies the values on either sides. Then it assigns it to the expression on the left. | >>> a*=8<br>>>> print(a)<br> // 8.0 |
+| Modulus and Assign(%=) | Performs modulus on the values on either side. Then it assigns it to the expression on the left. | >>> a%=3<br>>>> print(a)<br> //output:- 2.0 |
+| Exponent and Assign(**=) | Performs exponentiation on the values on either side. Then assigns it to the expression on the left. | >>> a**=5<br>>>> print(a)<br> //output:- 32.0 |
+| Floor-Divide and Assign(//=) | Performs floor-division on the values on either side. Then assigns it to the expression on the left. | >>> a//=3 <br> >>> print(a)<br> //output:- 10.0 |
+                                 
+##### Bitwise Operators                         
+| Operators | Descrption | Result |
+| --------- | ---------- | ------ |
+| Binary AND(&) | It performs bit by bit AND operation on the two values. Here, binary for 2 is 10, and that for 3 is 11. &-ing them results in 10, which is binary for 2. | >>> 2&3<br>//output:- 2 |
+| Binary OR(|) | -- | -- |
+| Binary XOR(^) | -- | -- |
+| Binary One’s Complement(~) | -- | -- |
+| Binary Left-Shift(<<) | -- | -- |
+| Binary Right-Shift(>>) | -- | -- |
+
+
+**[⬆ Back to Top](#table-of-contents)**                
+### Ques. What is membership operator and identity operator?
+*  <b>Membership Operators:- </b> These operators help validate whether a given element is present in or is a member of the given sequence of data. This sequence of data can be a list, string or a tuple<br>There are 2 types of Membership operater
+1. in Operator:
+```python
+lst1 = ['Ajay', 'Bobby','Ashok', 'Vijay', 'Anil', 'Rahul','Alex', 'Christopher']
+if 'Ajay' in lst1: 
+    print('Name Ajay exists in lst1')
+
+Output:- Name Ajay exists in lst1
+```
+2. not in Operator:
+```python
+lst1 = ['Ajay', 'Bobby','Ashok', 'Vijay', 'Anil', 'Rahul','Alex', 'Christopher']
+   if 'Raghav' not in lst1: 
+   print ('Name Raghav does not exists in lst1')
+
+output:- Name Raghav exists in lst1
+```
+
+* <b>Identity Operators</b> These operators help in determining whether a value belongs to a certain class or a certain type, i.e they help in determining the identity of the object. It is useful in finding out the data type a variable holds.
+
+1. is
+```python
+a = 'London'
+b = 'London'
+
+if a is b: print ('a is b')
+else: print ('a is not b')
+
+if a is c: print('a is c')
+else: print ('a is not c')   
+
+Output:- 
+a is b
+a is not c
+```
+
+2. is not			   
 			   
 
 
@@ -546,6 +648,7 @@ Indentation is necessary for Python. It specifies a block of code. All code with
 * Python also has an inbuilt garbage collector, which recycles all the unused memory and so that it can be made available to the heap space.
 * Memory management in python is managed by Python private heap space. All Python objects and data structures are located in a private heap. The programmer does not have access to this private heap. The python interpreter takes care of this instead.
 * The allocation of heap space for Python objects is done by Python’s memory manager. The core API gives access to some tools for the programmer to code.
+
 
 **[⬆ Back to Top](#table-of-contents)**
 ### Ques. What is PEP 8?
@@ -1466,13 +1569,45 @@ Output:- 3
 |List is mutable. i.e they can be edited.|Tuple is immutable. (tuples are lists which can’t be edited).|
 |List iteration is slower and is time consuming.|Tuple iteration is faster.|
 |List is useful for insertion and deletion operations.|Tuple is useful for readonly operations like accessing elements.|
-|List consumes more memory.|Tuples consumes less memory.|
+|List has a large memory.|Tuple has a small memory.|
 |List is stored in two blocks of memory (One is fixed sized and the other is variable sized for storing data)|Tuple is stored in a single block of memory.|
 |List provides many in-built methods.|Tuples have less in-built methods.|
 |List operations are more error prone|Tuples operations are safe.|
-|Syntax: list_1 = [10, ‘Chelsea’, 20]	|Syntax: tup_1 = (10, ‘Chelsea’ , 20)|
+| A list has data stored in  square brackets [] brackets. For example, list_1 = [10, ‘Chelsea’, 20] | A tuple has data stored in parantheses () brackets. For example, tup_1 = (10, ‘Chelsea’ , 20) |
 
 
+**[⬆ Back to Top](#table-of-contents)**
+### Ques. Convert a list into a tuple?
+```python
+# Using tuple() builtin function
+list = [1,2,3,4]
+result = tuple(list)
+print(type(result))
+
+Output:- <class 'tuple'>
+-------------------------------------------------------------
+
+# Using loop inside the tuple
+sample_list = ['Compile', 'With', 'Favtutor']
+tuple1 = tuple(i for i in sample_list)
+print(tuple1)
+
+Output:- ('Compile', 'With', 'Favtutor')
+-------------------------------------------------------------
+
+# Unpack list inside the parenthesis
+sample_list = ['Compile', 'With', 'Favtutor']
+
+#unpack list items and form tuple
+tuple1 = (*sample_list,)
+
+print(tuple1)
+print(type(tuple1))
+
+Output:- 
+('Compile', 'With', 'Favtutor')
+<class 'tuple'>
+```
 
 **[⬆ Back to Top](#table-of-contents)**
 ### Ques. What is Set?
@@ -1879,6 +2014,7 @@ z = {"f", "g", "c"}
 x.intersection_update(y, z)
 
 print(x)
+
 
 Output:- {'c'}
 ------------------------------------------------------------------------------------------------
@@ -2287,6 +2423,19 @@ Output:-  {'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
 **[⬆ Back to Top](#table-of-contents)**
 ##### Loop Dictionaries
 ```python
+# print Dictionaries by key, value and item
+a = {1:12 ,2:11 ,4:16 ,3:14 ,6:15 ,5:13 }
+print(sorted(a.keys()))
+print(sorted(a.values()))
+print(sorted(a.items()))
+
+Output:-
+[1, 2, 3, 4, 5, 6]
+[11, 12, 13, 14, 15, 16]
+[(1, 12), (2, 11), (3, 14), (4, 16), (5, 13), (6, 15)]
+
+
+
 # Print all key names in the dictionary, one by one:
 thisdict =	{
   "brand": "Ford",
@@ -2631,7 +2780,7 @@ print(x)
 Output:- dict_values(['Ford', 'Mustang', 2018])
 ```
 
-### Ques. How to Merging two Dictionaries?
+### Ques. How to Merging Or Adding two Dictionaries?
 ```python
 # Using update() method
 dict_1 = {'John': 15, 'Rick': 10, 'Misa' : 12 }
@@ -2877,7 +3026,57 @@ print(x(5))
 
 Output:- 15
 ```
-	
+
+```python
+# You can use lambda function in filter()
+# filter() function is used to filter a given iterable (list like object) using another function that defines the filtering logic.
+# Syntex:- filter(object, iterable)
+# The object here should be a lambda function which returns a boolean value.
+mylist = [2,3,4,5,6,7,8,9,10]
+list_new  = list(filter(lambda x : (x%2==0), mylist))
+print(list_new)
+
+Output:- [2, 4, 6, 8, 10]
+-----------------------------------------------------------------------
+
+# You can use lambda function in map()
+# map() function applies a given function to all the itmes in a list and returns the result. Similar to filter(), simply pass the lambda function and the list (or any iterable, like tuple) as arguments.
+
+mylist = [2,3,4,5,6,7,8,9,10]
+list_new  = list(map(lambda x : x%2, mylist))
+print(list_new)
+
+Output:- [0, 1, 0, 1, 0, 1, 0, 1, 0]
+------------------------------------------------------------------------
+
+# You can use lambda function in reduce() as well
+# reduce() function performs a repetitive operation over the pairs of the elements in the list. Pass the lambda function and the list as arguments to the reduce() function. For using the reduce() function, you need to import reduce from functools librray.
+
+from functools import reduce
+list1 = [1,2,3,4,5,6,7,8,9]
+sum = reduce((lambda x,y: x+y), list1)
+print(sum)
+
+Output:- 45 //i.e 1+2, 1+2+3 , 1+2+3+4 and so on.
+----------------------------------------------------------------------------
+
+# How to use lambda function to manipulate a Dataframe
+# You can also manipulate the columns of the dataframe using the lambda function. It’s a great candidate to use inside the apply method of a dataframe. I will be trying to add a new row in the dataframe in this section as example.
+
+import pandas as pd
+df = pd.DataFrame([[1,2,3],[4,5,6]],columns = ['First','Second','Third'])
+df['Forth']= df.apply(lambda row: row['First']*row['Second']* row['Third'], axis=1)
+df
+```
+Output:- 
+|   | First | Second | Third | Forth |
+| 0 |  1    |    2   |   3   |  6    |
+| 1 |  4    |  5     |   6   |  120  | 
+                        
+                       
+      
+                      
+
 ### Ques:- What is Python JSON?
  * JSON is a syntax for storing and exchanging data.
  * JSON is text, written with JavaScript object notation.
@@ -2984,10 +3183,19 @@ Output:- 15
 ```
 
 
-### Object-Oriented Programming (OOP)
-__How to create a class__<br>
-To define a class in Python, you can use the class keyword, followed by the class name and a colon. Inside the class, an __init__ method has to be defined with def. This is the initializer that you can later use to instantiate objects. It's similar to a constructor in Java. __init__ must always be present! It takes one argument: self, which refers to the object itself. Inside the method, the pass keyword is used as of now, because Python expects you to type something there.<br>
+# Object-Oriented Programming (OOP)
 
+### Ques.  What is Class?
+* The class can be defined as a collection of objects. It is a logical entity that has some specific attributes and methods.
+* To define a class in Python, you can use the class keyword, followed by the class name and a colon. Inside the class, an __init__ method has to be defined with def. This is the initializer that you can later use to instantiate objects. It's similar to a constructor in Java. __init__ must always be present! It takes one argument: self, which refers to the object itself. Inside the method, the pass keyword is used as of now, because Python expects you to type something there.<br>
+
+```python
+class ClassName:     
+  <statement-1>     
+            .     
+            .      
+  <statement-N>
+```
 __Instantiating objects__<br>
 ```python
 mohit = Person()
@@ -3033,10 +3241,59 @@ Output:-<br>bark bark!<br>
 Skippy is 12 year(s) old.<br>
 Filou is 8 year(s) old.<br>
 
+### Ques. What is Object?
+* The object is an entity that has state and behavior. It may be any real-world object like the mouse, keyboard, chair, table, pen, etc.<br> <strong>For example:</strong> if you have an employee class, then it should contain an attribute and method, i.e. an email id, name, age, salary, etc.
+```python
+class car:  
+    def __init__(self,modelname, year):  
+        self.modelname = modelname  
+        self.year = year  
+    def display(self):  
+        print(self.modelname,self.year)  
+  
+c1 = car("Toyota", 2016)  
+c1.display()
+//output:- Toyota 2016
+```
+* Here, the <strong>self</strong> is used as a reference variable, which refers to the current class object. It is always the first argument in the function definition. However, using self is optional in the function call.
+* The <strong>self-parameter</strong> refers to the current instance of the class and accesses the class variables. We can use anything instead of self, but it must be the first parameter of any function which belongs to the class
 
-	
-	
-	
+### Ques. Delete the Object
+We can delete the properties of the object or object itself by using the del keyword. Consider the following example.
+```python
+class Employee:  
+  id = 10  
+  name = "John"  
+  def display(self):  
+    print("ID: %d \nName: %s" % (self.id, self.name))  
+      # Creating a emp instance of Employee class  
+      emp = Employee()  
+  
+      # Deleting the property of object  
+      del emp.id  
+
+      # Deleting the object itself  
+      del emp  
+      emp.display()
+```
+
+### Ques. What is the use of self in Python?
+Self is used to represent the instance of the class. With this keyword, you can access the attributes and methods of the class in python. It binds the attributes with the given arguments. self is used in different places and often thought to be a keyword. But unlike in C++, self is not a keyword in Python.
+
+### Ques.  What is __init__?
+<b>__init__</b> is a contructor method in Python and is automatically called to allocate memory when a new object/instance is created. All classes have a __init__ method associated with them. It helps in distinguishing methods and attributes of a class from local variables.
+```python
+class Student:
+   def __init__(self, fname, lname, age, section):
+       self.firstname = fname
+       self.lastname = lname
+       self.age = age
+       self.section = section
+# creating a new object
+stu1 = Student("Sara", "Ansh", 22, "A2")
+```
+
+
 ### Python Access Modifiers
 ```python
 #defining class Student
@@ -3225,189 +3482,52 @@ Output:-
 * <b>__repr__</b> method returns a string representation of an object that is machine-readable.
 	
 
-### Ques. What is the operator?
-* [Arithmetic Operators](#arithmetic-operators)
-* [Comparison (Relational) Operators](#comparisonrelational-operator)
-* Assignment Operators
-* Logical Operators
-* Bitwise Operators
-* Membership Operators
-* Identity Operators
+### Ques. What are the common built-in data types in Python?
+* Numeric
+   * Integers :- int stores integers eg a=100, b=25, c=526, etc.
+   * Float :- float stores floating-point numbers eg a=25.6, b=45.90, c=1.290, etc.
+   * Complex Numbers:- complex stores numbers eg a=3 + 4j, b=2 + 3j, c=complex(4,6), etc.
 
-##### Arithmetic Operators
-| Operators | Descrption | Result |
-| --------- | ---------- | ------ |
-| Addition(+) | Adds the values on either side of the operator. | 3+4=7 |
-| Subtraction(-) | Subtracts the value on the right from the one on the left. | 3+4=-1 |
-| Multiplication(*) | Multiplies the values on either side of the operator. | 3*4=12 |
-| Division(/) | Divides the value on the left by the one on the right. Notice that division results in a floating-point value. | 3/4=0.75 |
-| Exponentiation(**) | Raises the first number to the power of the second. | 3**4=81 |
-| Floor Division(//) | Divides and returns the integer value of the quotient. It dumps the digits after the decimal. | 10//3=3 |
-| Modulus(%) | Divides and returns the value of the remainder. | 3%4=3 |
+* Sequence Type
+   * String
+   * List
+   * Tuple
 
-##### Comparison(Relational) Operator
-| Operators | Descrption | Result |
-| --------- | ---------- | ------ |
-| Less than(<) | This operator checks if the value on the left of the operator is lesser than the one on the right. | 3<4=True |
-| Greater than(>) | It checks if the value on the left of the operator is greater than the one on the right. | 3>4=False |
-| Less than or equal to(<=) | It checks if the value on the left of the operator is lesser than or equal to the one on the right. | 7<=7 = True |
-| Greater than or equal to(>=) | It checks if the value on the left of the operator is greater than or equal to the one on the right. | 0>=0  = True |
-| Equal to(==) | This operator checks if the value on the left of the operator is equal to the one on the right.(1 is equal to the Boolean value True, but 2 isn’t. Also, 0 is equal to False.) | 3==3.0 = True<br><hr>1==True = True<br><hr> 7==True = False<br><hr>0==False = True<br><hr>0.5==True = False |
-                        
-
-<strong>Assignment Operators</strong>
-                        <table class="table table-striped">
-                           <thead>
-                              <tr>
-                                 <th scope="col">Operators</th>
-                                 <th scope="col">Descrption</th>
-                                 <th scope="col">Result</th>
-                              </tr>
-                           </thead>
-                           <tbody>
-                              <tr>
-                                 <td>Assign(=)</td>
-                                 <td>Assigns a value to the expression on the left. Notice that = = is used for comparing, but = is used for assigning.</td>
-                                 <td>>>> a=7<br>
-                                    >>> print(a)<br> //output:- 7
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td>Add and Assign(+=)</td>
-                                 <td>Adds the values on either side and assigns it to the expression on the left. a+=10 is the same as a=a+10.</td>
-                                 <td>>>> a+=2<br>
-                                    >>> print(a)<br> //output:- 9
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td>Divide and Assign(/=)</td>
-                                 <td>Divides the value on the left by the one on the right. Then it assigns it to the expression on the left.</td>
-                                 <td>>>> a/=7<br>
-                                    >>> print(a)<br> //output:- 1.0
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td>Multiply and Assign(*=)</td>
-                                 <td>Multiplies the values on either sides. Then it assigns it to the expression on the left.</td>
-                                 <td>>>> a*=8<br>
-                                    >>> print(a)<br> // 8.0
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td>Modulus and Assign(%=)</td>
-                                 <td>Performs modulus on the values on either side. Then it assigns it to the expression on the left.</td>
-                                 <td>>>> a%=3<br>
-                                    >>> print(a)<br> //output:- 2.0
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td>Exponent and Assign(**=)</td>
-                                 <td>Performs exponentiation on the values on either side. Then assigns it to the expression on the left.</td>
-                                 <td>>>> a**=5<br>
-                                    >>> print(a)<br> //output:- 32.0
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td>Floor-Divide and Assign(//=)</td>
-                                 <td>Performs floor-division on the values on either side. Then assigns it to the expression on the left.</td>
-                                 <td>>>> a//=3 <br>
-                                    >>> print(a)<br> //output:- 10.0
-                                 </td>
-                              </tr>
-                           </tbody>
-                        </table>
-                        <strong>Bitwise Operators</strong>
-                        <table class="table table-striped">
-                           <thead>
-                              <tr>
-                                 <th scope="col">Operators</th>
-                                 <th scope="col">Descrption</th>
-                                 <th scope="col">Result</th>
-                              </tr>
-                           </thead>
-                           <tbody>
-                              <tr>
-                                 <td>Binary AND(&) </td>
-                                 <td>It performs bit by bit AND operation on the two values. Here, binary for 2 is 10, and that for 3 is 11. &-ing them results in 10, which is binary for 2.</td>
-                                 <td>>>> 2&3<br>
-                                    //output:- 2
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td>Binary OR(|)</td>
-                                 <td>---</td>
-                                 <td>----
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td>Binary XOR(^)</td>
-                                 <td>---</td>
-                                 <td>---
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td>Binary One’s Complement(~) </td>
-                                 <td>---</td>
-                                 <td>---
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td>Binary Left-Shift(<<)</td>
-                                 <td>---</td>
-                                 <td>---
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td>Binary Right-Shift(>>)</td>
-                                 <td>--</td>
-                                 <td>---</td>
-                              </tr>
-                           </tbody>
-                        </table>
-                     </div>
-                  </div>
-               </div>
+* Boolean:- There can be only two types of value in the Boolean data type of Python, and that is True or False. 
+* Set
+* Dictionary
+* long:- long stores higher range of integers eg a=908090999L, b=-0x1990999L, etc.
 
 
-
-### Ques. What is membership operator and identity operator?
-*  <b>Membership Operators:- </b> These operators help validate whether a given element is present in or is a member of the given sequence of data. This sequence of data can be a list, string or a tuple<br>There are 2 types of Membership operater
-1. in Operator:
+### Ques. What is pass in Python?
+The pass keyword represents a null operation in Python.<br> Without the pass statement in the following code, we may run into some errors during code execution.
 ```python
-lst1 = ['Ajay', 'Bobby','Ashok', 'Vijay', 'Anil', 'Rahul','Alex', 'Christopher']
-if 'Ajay' in lst1: 
-    print('Name Ajay exists in lst1')
-
-Output:- Name Ajay exists in lst1
-```
-2. not in Operator:
-```python
-lst1 = ['Ajay', 'Bobby','Ashok', 'Vijay', 'Anil', 'Rahul','Alex', 'Christopher']
-   if 'Raghav' not in lst1: 
-   print ('Name Raghav does not exists in lst1')
-
-output:- Name Raghav exists in lst1
+def myEmptyFunc():
+   # do nothing
+   pass
+myEmptyFunc()    # nothing happens
+## Without the pass keyword
+# File "<stdin>", line 3
+# IndentationError: expected an indented block
 ```
 
-* <b>Identity Operators</b> These operators help in determining whether a value belongs to a certain class or a certain type, i.e they help in determining the identity of the object. It is useful in finding out the data type a variable holds.
+### Ques. What is break, continue and pass in Python?
+* <b>Break:- </b>The break statement terminates the loop immediately and the control flows to the statement after the body of the loop.
+* <b>Continue:- </b>The continue statement terminates the current iteration of the statement, skips the rest of the code in the current iteration and the control flows to the next iteration of the loop.
+* <b>Pass:-</b> As explained above, the pass keyword in Python is generally used to fill up empty blocks and is similar to an empty statement represented by a semi-colon in languages such as Java, C++, Javascript, etc.
 
-1. is
-```python
-a = 'London'
-b = 'London'
 
-if a is b: print ('a is b')
-else: print ('a is not b')
+### Ques. What is the difference between an array and a list?
+| # | List | Array |
+| - | ---- | ----- |
+| 1 | It Contains elements of different data types | It Contains elements of same data types |
+| 2 | Cannot handle arithmetic operations | Can handle arithmetic operations |
+| 3 | We can print the entire list without the help of an explicit loop | To print or access array elements, we will require an explicit loop |
+| 4 | It consumes a large memory | It is a more compact in memory size comparatively list. | 
 
-if a is c: print('a is c')
-else: print ('a is not c')   
 
-Output:- 
-a is b
-a is not c
-```
 
-2. is not
+
 
 
 ++++++++++++++++++
@@ -3448,191 +3568,15 @@ a is not c
       <div class="container">
          <div class="m-4">
             <div class="accordion" id="myAccordion">        
-			   
-      
-			    <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingTwo">
-                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#data_types"><strong>Ques. </strong> What are the common built-in data types in Python?</button>
-                  </h2>
-                  <div id="data_types" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
-                     <div class="card-body">
-                        <p>Python has the following data types built-in by default, in these categories:</p>
-						<ul>
-						<p>1. Numbers</p>
-                     </div>
-                  </div>
-               </div>
+
 			   
 			   
-               <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingTwo">
-                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#operator"><strong>Ques. </strong> What is the operator?</button>
-                  </h2>
-                  <div id="operator" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
-                     <div class="card-body">
-                        <p>Python language supports the following types of operators.</p>
-                        
-                        
-                       
-                        
+			   	
 			   
-			   <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingTwo">
-                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#data_types"><strong>Ques. </strong> What is Data Types?</button>
-                  </h2>
-                  <div id="data_types" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
-                     <div class="card-body">
-					 <p>Python has the following data types built-in by default, in these categories:</p>
-						<ul>
-						<li>Numbers
-							<ul>
-								<li><b>int:-</b> int stores integers eg a=100, b=25, c=526, etc.</li>
-								<li><b>long:-</b> long stores higher range of integers eg a=908090999L, b=-0x1990999L, etc.</li>
-								<li><b>float:-</b> float stores floating-point numbers eg a=25.6, b=45.90, c=1.290, etc.</li>
-								<li><b>complex:-</b> complex stores numbers eg a=3 + 4j, b=2 + 3j, c=complex(4,6), etc.</li>
-							</ul>
-						</li>
-						<li>Sequence Types:
-							<ul>
-								<li><b>list:-</b> Mutable sequence used to store collection of items.</li>
-								<li><b>tuple:-</b> Immutable sequence used to store collection of items.</li>
-								<li><b>range:-</b> Represents an immutable sequence of numbers generated during execution.</li>
-								<li><b>str:-</b> Immutable sequence of Unicode code points to store textual data.</li>
-							</ul>
-						</li>
-						<li>Mapping Types:
-							<ul>
-								<li><b>dict:-</b> Stores comma-separated list of key: value pairs.</li>
-							</ul>
-						</li>
-						<li>Set Types:
-							<ul>
-								<li><b>set:-</b>-----</li>
-								<li><b>frozenset:-</b>-----</li>
-							</ul>
-						</li>
-						<li>Boolean Type:
-							<ul>
-								<li><b>bool:-</b>-----</li>
-							</ul>
-						</li>
-						<li>Binary Types:
-							<ul>
-								<li><b>bytes:-</b>-----</li>
-								<li><b>bytearray:-</b>-----</li>
-								<li><b>memoryview:-</b>-----</li>
-							</ul>
-						</li>		
-						</ul>
-                     </div>
-                  </div>
-               </div>
-			   
-			   
-			   	<div class="accordion-item">
-                  <h2 class="accordion-header" id="headingTwo">
-                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#pass"><strong>Ques. </strong> What is pass in Python?</button>
-                  </h2>
-                  <div id="pass" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
-                     <div class="card-body">
-					 <p>The pass keyword represents a null operation in Python.<br> Without the pass statement in the following code, we may run into some errors during code execution.</p>
-					 <pre class="code"><code>
-def myEmptyFunc():
-   # do nothing
-   pass
-myEmptyFunc()    # nothing happens
-## Without the pass keyword
-# File "<stdin>", line 3
-# IndentationError: expected an indented block
-					</code></pre>	
-                     </div>
-                  </div>
-               </div>
-			   
-			   <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingTwo">
-                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#self"><strong>Ques. </strong> What is the use of self in Python?</button>
-                  </h2>
-                  <div id="self" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
-                     <div class="card-body">
-					 <p>Self is used to represent the instance of the class. With this keyword, you can access the attributes and methods of the class in python. It binds the attributes with the given arguments. self is used in different places and often thought to be a keyword. But unlike in C++, self is not a keyword in Python.</p>
-                     </div>
-                  </div>
-               </div>
-			   
-			   	<div class="accordion-item">
-                  <h2 class="accordion-header" id="headingTwo">
-                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#__init__"><strong>Ques. </strong> What is __init__?</button>
-                  </h2>
-                  <div id="__init__" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
-                     <div class="card-body">
-					 <p>__init__ is a contructor method in Python and is automatically called to allocate memory when a new object/instance is created. All classes have a __init__ method associated with them. It helps in distinguishing methods and attributes of a class from local variables.</p>
-		<pre class="code"><code>			 
-class Student:
-   def __init__(self, fname, lname, age, section):
-       self.firstname = fname
-       self.lastname = lname
-       self.age = age
-       self.section = section
-# creating a new object
-stu1 = Student("Sara", "Ansh", 22, "A2")
-</code></pre>
-                     </div>
-                  </div>
-               </div>
-			   
-			   <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingTwo">
-                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#break_continue_pass"><strong>Ques. </strong> What is break, continue and pass in Python?</button>
-                  </h2>
-                  <div id="break_continue_pass" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
-                     <div class="card-body">
-					 <ul>
-						<li><b>Break:-</b> The break statement terminates the loop immediately and the control flows to the statement after the body of the loop.</li>
-						<li><b>Continue:-</b> The continue statement terminates the current iteration of the statement, skips the rest of the code in the current iteration and the control flows to the next iteration of the loop.</li>
-						<li><b>Pass:-</b> As explained above, the pass keyword in Python is generally used to fill up empty blocks and is similar to an empty statement represented by a semi-colon in languages such as Java, C++, Javascript, etc.</li>
-					 </ul>
-                     </div>
-                  </div>
-               </div>
-			   
-			   
+			  
 			   
                
-               
-               </div>
-               <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingOne">
-                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#memory"><strong>Ques. </strong> How is memory managed in Python?</button>
-                  </h2>
-                  <div id="memory" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
-                     <div class="card-body">
-                        <ul>
-                           <li>Python also has an inbuilt garbage collector, which recycles all the unused memory and so that it can be made available to the heap space.</li>
-                           <li>Memory management in python is managed by Python private heap space. All Python objects and data structures are located in a private heap. The programmer does not have access to this private heap. The python interpreter takes care of this instead.</li>
-                           <li>The allocation of heap space for Python objects is done by Python’s memory manager. The core API gives access to some tools for the programmer to code.</li>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
-               <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingOne">
-                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#typedlang"><strong>Ques. </strong> What is a dynamically typed language?</button>
-                  </h2>
-                  <div id="typedlang" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
-                     <div class="card-body">
-                        <p>
-                           Typing refers to type-checking in programming languages.                       
-                        </p>
-                        <p>Type-checking can be done at two stages -</p>
-                        <ul>
-                           <li><strong>Static -</strong> Data Types are checked before execution.</li>
-                           <li><strong>Dynamic -</strong> Data Types are checked during execution.</li>
-                        </ul>
-                        <p>Python is an interpreted language, executes each statement line by line and thus type-checking is done on the fly, during execution. Hence, Python is a Dynamically Typed Language.</p>
-                     </div>
-                  </div>
-               </div>
+
                <div class="accordion-item">
                   <h2 class="accordion-header" id="headingOne">
                      <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#interpretedlang"><strong>Ques. </strong> What is an Interpreted language?</button>
@@ -3644,166 +3588,9 @@ stu1 = Student("Sara", "Ansh", 22, "A2")
                   </div>
                </div>
               
-              
-               <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingOne">
-                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#list_tuple"><strong>Ques. </strong> What is the difference between a list and a tuple?</button>                  
-                  </h2>
-                  <div id="list_tuple" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
-                     <div class="card-body">
-                        <p>
-                        <table class="table table-hover">
-                           <thead>
-                              <tr>
-                                 <th scope="col">#</th>
-                                 <th scope="col">List</th>
-                                 <th scope="col">Tuple</th>
-                              </tr>
-                           </thead>
-                           <tbody>
-                              <tr>
-                                 <th scope="row">1</th>
-                                 <td>A list consists of <b>mutable</b> objects. (Objects which can be changed after creation)</td>
-                                 <td>A tuple consists of <b>immutable</b> objects. (Objects which cannot change after creation)</td>
-                              </tr>
-                              <tr>
-                                 <th scope="row">2</th>
-                                 <td>List has a large memory.</td>
-                                 <td>Tuple has a small memory.</td>
-                              </tr>
-                              <tr>
-                                 <th scope="row">3</th>
-                                 <td >List is stored in two blocks of memory (One is fixed sized and the other is variable sized for storing data)</td>
-                                 <td>Tuple is stored in a single block of memory.</td>
-                              </tr>
-                              <tr>
-                                 <th scope="row">4</th>
-                                 <td >Creating a list is slower because two memory blocks need to be accessed.</td>
-                                 <td>Creating a tuple is faster than creating a list.</td>
-                              </tr>
-                              <tr>
-                                 <th scope="row">5</th>
-                                 <td >An element in a list can be removed or replaced.</td>
-                                 <td>An element in a tuple cannot be removed or replaced.</td>
-                              </tr>
-                              <tr>
-                                 <th scope="row">6</th>
-                                 <td>A list has data stored in  square brackets [] brackets. For example, [1,2,3]</td>
-                                 <td>A tuple has data stored in parantheses () brackets. For example, (1,2,3)</td>
-                              </tr>
-                           </tbody>
-                        </table>
-                        </p>
-                     </div>
-                  </div>
-               </div>
-               <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingOne">
-                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#list_into_tuple"><strong>Ques. </strong> How would you convert a list into a tuple?</button>
-                  </h2>
-                  <div id="list_into_tuple" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
-                     <div class="card-body">
-                        <p><strong>1. Using tuple() builtin function</strong><br>
-                        <div style="background: #ffffff; overflow: auto; width: auto; border: solid orange; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
-                           <pre style="margin: 0; line-height: 125%;">sample_list <span style="color: #333333;">=</span> [<span style="background-color: #fff0f0;">'Compile'</span>, <span style="background-color: #fff0f0;">'With'</span>, <span style="background-color: #fff0f0;">'Favtutor'</span>]
+          
+               
 
-<span style="color: #888888;">#convert list into tuple</span>
-tuple1 <span style="color: #333333;">=</span> <span style="color: #007020;">tuple</span>(sample_list)
-
-<span style="color: #007020;">print</span>(tuple1)
-<span style="color: #007020;">print</span>(<span style="color: #007020;">type</span>(tuple1))
-</pre>
-                        </div>
-                        <strong>Output:-</strong><br>
-                        <div style="background: #ffffff; overflow: auto; width: auto; border: solid green; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
-                           <pre style="margin: 0; line-height: 125%;"><span style="color: #888888;">('Compile', 'With', 'Favtutor')</span>
-<span style="color: #888888;">&lt;class 'tuple'&gt;</span>
-</pre>
-                        </div>
-                        <strong>2.  Using loop inside the tuple</strong>
-                        <div style="background: #ffffff; overflow: auto; width: auto; border: solid orange; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
-                           <pre style="margin: 0; line-height: 125%;">sample_list <span style="color: #333333;">=</span> [<span style="background-color: #fff0f0;">'Compile'</span>, <span style="background-color: #fff0f0;">'With'</span>, <span style="background-color: #fff0f0;">'Favtutor'</span>]
-tuple1 <span style="color: #333333;">=</span> <span style="color: #007020;">tuple</span>(i <span style="color: #008800; font-weight: bold;">for</span> i <span style="color: #000000; font-weight: bold;">in</span> sample_list)
-<span style="color: #007020;">print</span>(tuple1)
-</pre>
-                        </div>
-                        <strong>Output:-</strong>
-                        <div style="background: #ffffff; overflow: auto; width: auto; border: solid green; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
-                           <pre style="margin: 0; line-height: 125%;"><span style="color: #888888;">('Compile', 'With', 'Favtutor')</span></pre>
-                        </div>
-                        <strong>3. Unpack list inside the parenthesis</strong>
-                        <div style="background: #ffffff; overflow: auto; width: auto; border: solid orange; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
-                           <pre style="margin: 0; line-height: 125%;">sample_list <span style="color: #333333;">=</span> [<span style="background-color: #fff0f0;">'Compile'</span>, <span style="background-color: #fff0f0;">'With'</span>, <span style="background-color: #fff0f0;">'Favtutor'</span>]
-
-<span style="color: #888888;">#unpack list items and form tuple</span>
-tuple1 <span style="color: #333333;">=</span> (<span style="color: #333333;">*</span>sample_list,)
-
-<span style="color: #007020;">print</span>(tuple1)
-<span style="color: #007020;">print</span>(<span style="color: #007020;">type</span>(tuple1))
-</pre>
-                        </div>
-                        <strong>Output:- </strong>
-                        <div style="background: #ffffff; overflow: auto; width: auto; border: solid green; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
-                           <pre style="margin: 0; line-height: 125%;"><span style="color: #888888;">('Compile', 'With', 'Favtutor')</span>
-<span style="color: #888888;">&lt;class 'tuple'&gt;</span>
-</pre>
-                        </div>
-                        </p>
-                     </div>
-                  </div>
-               </div>
-               <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingOne">
-                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#list_array"><strong>Ques. </strong> What is the difference between an array and a list?</button>                  
-                  </h2>
-                  <div id="list_array" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
-                     <div class="card-body">
-                        <p>
-                        <table class="table table-hover">
-                           <thead>
-                              <tr>
-                                 <th scope="col">#</th>
-                                 <th scope="col">List</th>
-                                 <th scope="col">Array</th>
-                              </tr>
-                           </thead>
-                           <tbody>
-                              <tr>
-                                 <th scope="row">1</th>
-                                 <td>It Contains elements of different data types</td>
-                                 <td>It Contains elements of same data types</td>
-                              </tr>
-                              <tr>
-                                 <th scope="row">2</th>
-                                 <td>Cannot handle arithmetic operations</td>
-                                 <td>Can handle arithmetic operations</td>
-                              </tr>
-                              <tr>
-                                 <th scope="row">3</th>
-                                 <td>We can print the entire list without the help of an explicit loop</td>
-                                 <td>To print or access array elements, we will require an explicit loop</td>
-                              </tr>
-                              <tr>
-                                 <th scope="row">4</th>
-                                 <td>It consumes a large memory.</td>
-                                 <td>It is a more compact in memory size comparatively list.</td>
-                              </tr>
-                              <tr>
-                                 <th scope="row">5</th>
-                                 <td>---------------</td>
-                                 <td>------------------</td>
-                              </tr>
-                              <tr>
-                                 <th scope="row">6</th>
-                                 <td>-----------</td>
-                                 <td>-----------------</td>
-                              </tr>
-                           </tbody>
-                        </table>
-                        </p>
-                     </div>
-                  </div>
-               </div>
                <div class="accordion-item">
                   <h2 class="accordion-header" id="headingOne">
                      <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#list_to_array"><strong>Ques. </strong> How would you convert a list to an array?</button>                  
@@ -3851,199 +3638,6 @@ print(type(elon_array))</pre>
                </div>
            
 
-              
-               <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingOne">
-                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#lambda"><strong>Ques. </strong> Python - Lambda Function?</button>                  
-                  </h2>
-                  <div id="lambda" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
-                     <div class="card-body">
-                        <p>
-                        <ul>
-                           <li>A lambda function is a small anonymous function.</li>
-                           <li>In Python, an anonymous function is a function that is defined without a name.</li>
-                           <li>While normal functions are defined using the def keyword in Python, anonymous functions are defined using the lambda keyword.</li>
-                           <li>Hence, anonymous functions are also called lambda functions.</li>
-                        </ul>
-                        <strong>Syntex:- </strong>lambda arguments: expression
-                        <div class="code_script">
-                           <pre>
-def add(a,b):
-   print(a+b)
-add(5,10)
-===Using Lambda function
-x = lambda a: a + 10
-print(x(5))
-</pre>
-                        </div>
-                        <br>
-                        <div class="code_script_ans">
-                           <pre>
-Output:- 15
-                           </pre>
-                        </div>
-                        <h5>You can use lambda function in <em>filter()</em></h5>
-                        <p>filter() function is used to filter a given iterable (list like object) using another function that defines the filtering logic.</p>
-                        <p><strong>Syntex:-</strong>filter(object, iterable)</p>
-                        <p>The object here should be a lambda function which returns a boolean value. </p>
-                        <div class="code_script">
-                           <pre>
-mylist = [2,3,4,5,6,7,8,9,10]
-list_new  = list(filter(lambda x : (x%2==0), mylist))
-print(list_new)
-</pre>
-                        </div>
-                        <br>
-                        <div class="code_script_ans">
-                           <pre>
-Output:- [2, 4, 6, 8, 10]
-                           </pre>
-                        </div>
-                        <h5>You can use lambda function in <em>map()</em></h5>
-                        <p>map() function applies a given function to all the itmes in a list and returns the result. Similar to filter(), simply pass the lambda function and the list (or any iterable, like tuple) as arguments.</p>
-                        <div class="code_script">
-                           <pre>
-mylist = [2,3,4,5,6,7,8,9,10]
-list_new  = list(map(lambda x : x%2, mylist))
-print(list_new)
-</pre>
-                        </div>
-                        <br>
-                        <div class="code_script_ans">
-                           <pre>
-Output:- [0, 1, 0, 1, 0, 1, 0, 1, 0]
-                           </pre>
-                        </div>
-                        <h5>You can use lambda function in <em>reduce()</em>as well</h5>
-                        <p>reduce() function performs a repetitive operation over the pairs of the elements in the list. Pass the lambda function and the list as arguments to the reduce() function. For using the reduce() function, you need to import reduce from <strong><em>functools</em></strong> librray.</p>
-                        <div class="code_script">
-                           <pre>
-from functools import reduce
-list1 = [1,2,3,4,5,6,7,8,9]
-sum = reduce((lambda x,y: x+y), list1)
-print(sum)
-</pre>
-                        </div>
-                        <br>
-                        <div class="code_script_ans">
-                           <pre>
-Output:- 45 //i.e 1+2, 1+2+3 , 1+2+3+4 and so on.
-                           </pre>
-                        </div>
-                        <h5>How to use lambda function to manipulate a Dataframe</h5>
-                        <p>You can also manipulate the columns of the dataframe using the lambda function. It’s a great candidate to use inside the apply method of a dataframe. I will be trying to add a new row in the dataframe in this section as example.</p>
-                        <div class="code_script">
-                           <pre>
-import pandas as pd
-df = pd.DataFrame([[1,2,3],[4,5,6]],columns = ['First','Second','Third'])
-df['Forth']= df.apply(lambda row: row['First']*row['Second']* row['Third'], axis=1)
-df
-</pre>
-                        </div>
-                        <br>
-                        <div class="code_script_ans">
-                           <table class="dataframe" border="1">
-                              <thead>
-                                 <tr style="text-align:right">
-                                    <th>&nbsp;</th>
-                                    <th>First</th>
-                                    <th>Second</th>
-                                    <th>Third</th>
-                                    <th>Forth</th>
-                                 </tr>
-                              </thead>
-                              <tbody>
-                                 <tr>
-                                    <th>0</th>
-                                    <td>1</td>
-                                    <td>2</td>
-                                    <td>3</td>
-                                    <td>6</td>
-                                 </tr>
-                                 <tr>
-                                    <th>1</th>
-                                    <td>4</td>
-                                    <td>5</td>
-                                    <td>6</td>
-                                    <td>120</td>
-                                 </tr>
-                              </tbody>
-                           </table>
-                        </div>
-                        </p>
-                     </div>
-                  </div>
-               </div>
-	       
-               <h1>OOPs Concepts</h1>
-               <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingOne">
-                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#Class"><strong>Ques. </strong> What is Class?</button>                  
-                  </h2>
-                  <div id="Class" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
-                     <div class="card-body">
-                        <p>The class can be defined as a collection of objects. It is a logical entity that has some specific attributes and methods.<br>
-                           <strong>For example:</strong> if you have an employee class, then it should contain an attribute and method, i.e. an email id, name, age, salary, etc.
-                        </p>
-                        <div>
-                           <pre class="code">
-class ClassName:     
-  &lt;statement-1>     
-            .     
-            .      
-  &lt;statement-N>
-</pre>
-                        </div>
-                        </p>
-                     </div>
-                  </div>
-               </div>
-               <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingOne">
-                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#Object"><strong>Ques. </strong> What is Object?</button>                  
-                  </h2>
-                  <div id="Object" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
-                     <div class="card-body">
-                        <p>The object is an entity that has state and behavior. It may be any real-world object like the mouse, keyboard, chair, table, pen, etc.<br>
-                           <strong>For example:</strong> if you have an employee class, then it should contain an attribute and method, i.e. an email id, name, age, salary, etc.
-                        </p>
-                        <div>
-                           <pre class="code">
-class car:  
-    def __init__(self,modelname, year):  
-        self.modelname = modelname  
-        self.year = year  
-    def display(self):  
-        print(self.modelname,self.year)  
-  
-c1 = car("Toyota", 2016)  
-c1.display()
-//output:- Toyota 2016
-</pre>
-                        </div>
-                        <p>Here, the <strong>self</strong> is used as a reference variable, which refers to the current class object. It is always the first argument in the function definition. However, using self is optional in the function call.</p>
-                        <p>The <strong>self-parameter</strong> refers to the current instance of the class and accesses the class variables. We can use anything instead of self, but it must be the first parameter of any function which belongs to the class.</p>
-                        <h3>Delete the Object</h3>
-                        <p>We can delete the properties of the object or object itself by using the del keyword. Consider the following example.</p>
-                        <pre class="code">
-class Employee:  
-  id = 10  
-  name = "John"  
-  def display(self):  
-    print("ID: %d \nName: %s" % (self.id, self.name))  
-      # Creating a emp instance of Employee class  
-      emp = Employee()  
-  
-      # Deleting the property of object  
-      del emp.id  
-
-      # Deleting the object itself  
-      del emp  
-      emp.display()
-</pre>
-                     </div>
-                  </div>
-               </div>
 			   
 			               <div class="accordion-item">
                   <h2 class="accordion-header" id="headingOne">
@@ -4174,11 +3768,7 @@ print(my_file.read(5))
                   </div>
                </div>
 			   
-			   
-			   
-			   
-			   
-			   
+
             </div>
          </div>
       </div>
@@ -4196,7 +3786,6 @@ s. Write a custom insert() function for list eg. def custom_insert (list, index,
 x. What is reduce and filter? Examples
 y. What is common between dictionary and set?
 z. Sort in dictionary with key
-aa. How do you add two dictionaries?
 bb. Can we pass list or tuple as a key in dictionary?
 cc. Unique dictionary from list.
 ee. What is property decorator?
@@ -4205,7 +3794,7 @@ hh. Difference between generator and iterator in python.
 ii. What is lazy evaluation in python?
 jj. What is Monkey Patching in python?
 kk. What is Magic method in python?
-2. File Handling
+1. File Handling
 a. What is pickling? Format of object stored in file?
 b. Static file contains which type of file normally?
 c. How can be file read in specific location?
@@ -4313,36 +3902,6 @@ else:
 	
 	
 OutPut:- 3 is a prime number
-
-
-Prime Number Print
-==================
-lower_value = int(input ("Please, Enter the Lowest Range Value: "))  
-upper_value = int(input ("Please, Enter the Upper Range Value: "))  
-print ("The Prime Numbers in the range are: ")
-for i in range (lower_value, upper_value + 1):  
-    if i > 1:  
-        for j in range (2, i):
-            if (i % j) == 0:  
-                break  
-        else:  
-            print (i)  
-			
-Output:-
-Please, Enter the Lowest Range Value: 1
-Please, Enter the Upper Range Value: 20
-The Prime Numbers in the range are: 
-2
-3
-5
-7
-11
-13
-17
-19
-
-
-
 
 
 
@@ -4458,7 +4017,32 @@ Enter the string: Hello My name is Mohit Saxena
 
 ```
 
-
+### Prime Number Print
+```python
+lower_value = int(input ("Please, Enter the Lowest Range Value: "))  
+upper_value = int(input ("Please, Enter the Upper Range Value: "))  
+print ("The Prime Numbers in the range are: ")
+for i in range (lower_value, upper_value + 1):  
+    if i > 1:  
+        for j in range (2, i):
+            if (i % j) == 0:  
+                break  
+        else:  
+            print (i)  
+			
+Output:-
+Please, Enter the Lowest Range Value: 1
+Please, Enter the Upper Range Value: 20
+The Prime Numbers in the range are: 
+2
+3
+5
+7
+11
+13
+17
+19
+```
 
 
 a = "mohit kumar"
@@ -4482,43 +4066,3 @@ abc = sorted(dict1)
 list6 = [dict1[item] for item in abc]
 print(list6)
 
-
-
-### Python program to convert a list to string
-```python
-def listToString(s):
-    blank =""
-    for element in s:
-        blank = blank + ' ' + element
-    print(blank)
-
-s = ['Hello', 'mohit', 'saxena']
-listToString(s)
-
-Output:- Hellomohitsaxena
-------------------------------------------------------------------
-
-# Using list comprehension 
-s = ['I', 'want', 4, 'apples', 'and', 18, 'bananas']
-listToStr = ' '.join([str(elem) for elem in s])
-print(listToStr)
-
-Output:- I want 4 apples and 18 bananas
-----------------------------------------------------------------
-
-# Using .join() method 
-def listToString(s):
-    str1 = " "
-    return (str1.join(s))
-    
-s = ['Hello', 'Mohit', 'Saxena']
-print(listToString(s))
-
-Output:- Hello Mohit Saxena
-----------------------------------------------------------------
-
-# Using map()
-s = ['I', 'want', 4, 'apples', 'and', 18, 'bananas']
-listToStr = ' '.join(map(str, s))
-print(listToStr)
-```
