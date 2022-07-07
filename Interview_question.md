@@ -2,39 +2,43 @@
 
 ### Table of Contents
 
-| No. | Questions |
-|:----:| ---------
-| 1 | [What Is Python?](#Ques-what-is-Python) |
-| 2 | [Features of Python?](#Ques-Features-of-Python) |
-| 2 | [Python Frameworks?](#Ques-Python-Frameworks) |
-| 3 | [File Extensions in Python?](#Ques-File-Extensions-in-Python) |
-|   | [Python Comments?](#Ques-Python-Comments) |
-|   | [What is a dynamically typed language?](#ques-What-is-a-dynamically-typed-language?) |
-|   | [What is the operator](#ques-what-is-the-operator) |
-|   | [What is membership operator and identity operator?](#ques-what-is-membership-operator-and-identity-operator) |
-|   | [Python Variables?](#ques-python-variables) |
-|   | [Global Variables?](#ques-global-variables) |
-|   | [How to check What type of datatype?](#ques-how-to-check-what-type-of-datatype) |
-|   | [How to get Id()?](#ques-how-to-get-id) |
-|   | [Python Strings?](#ques-python-strings) |
-|   | [Python Shallow Copy and Deep Copy?](#ques-python-shallow-copy-and-deep-copy) |
-|   | [What is built-in module in Python?](#Ques-What-is-built-in-module-in-Python) |
-|   | [Is indentation required in python?](#ques-is-indentation-required-in-python) |
-|   | [How is memory managed in Python?](#ques-how-is-memory-managed-in-python) |
-|   | [What is PEP 8?](#ques-what-is-pep-8) |
-|   | [Global Keyword?](#ques-global-keyword) |
-|   | [Python Collections (Arrays)?](#python-collections-arrays) |
-|   | [What is List?](#ques-what-is-list) / [Access List Items](#access-list-items) / [Change List Items](#change-list-items) / [Add List Items](#add-list-items) / [Remove List Items](#remove-list-items) / [Loop Lists](#loop-lists) / [Copy Lists](#copy-lists) / [Join Lists](#join-lists) /  [List Comprehension](#list-comprehension) / [List Methods](#list-methods) / [list() Constructor](#list-constructor) | 
-|   | [What is difference between Discard() and Remove()?](#) | 
-|   | [What isTuples?](#ques-what-is-tuples) / [Tuple Length](#tuple-length) / [Create Tuple With One Item](#create-tuple-with-one-item) / [Access Tuple Items](#access-tuple-items) / [Update Tuples](#update-tuples) / [Unpack Tuples](#unpack-tuples) / [Loop Tuples](#loop-tuples) / [Join Tuples](#join-tuples) / [Tuple Methods](#tuple-methods) / [tuple() Constructor](#tuple-constructor) |
-|   | [Difference between List and Tuples in Python?](#ques-difference-between-list-and-tuples-in-python) |
-|   | [Convert a list into a tuple](#Ques-convert-a-list-into-a-tuple?) |
-|   | [What is Set?](#ques-what-is-set) / [Length of a Set](#get-the-length-of-a-set) / [Acesss Items of set](#acesss-items-of-set) / [Remove Item of set](#remove-item-of-set-) / [Loop Sets](#loop-sets) / [Join Two Set](#join-two-set) / [set() Constructor](#set-constructor) / [Set Methods](#set-methods) |
-|   | [What is Dictionaries?](#ques-what-is-dictionaries) / (Dictionary Length)[#dictionary-length] / [Access Item](#access-item-of-dictionary) / [Change Dictionary Items](#change-dictionary-items) / [Add Dictionary Items](#add-dictionary-items) / [Remove Dictionary Items](#remove-dictionary-items) / [Copy Dictionaries](#copy-dictionaries) / [loop-dictionaries](#loop-dictionaries) / [Nested Dictionaries](#nested-dictionaries) / [Dictionary Methods](#dictionary-methods) |
-|   | [How to Merging Or Adding two Dictionaries](#ques-How-to-Merging-Or-Adding-two-Dictionaries) |
-|   | [What is Decorators?](#ques-what-is-decorators) |
-|   | [What is Generator Functions?](what-is-generator-functions) |
-|   | [Combine two dictionary adding values for common keys?](#ques-Combine-two-dictionary-adding-values-for-common-keys) |
+|  No.  | Questions                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| :---: | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|   1   | [What Is Python?](#Ques-what-is-Python)                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+|   2   | [Features of Python?](#Ques-Features-of-Python)                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+|   2   | [Python Frameworks?](#Ques-Python-Frameworks)                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+|   3   | [File Extensions in Python?](#Ques-File-Extensions-in-Python)                                                                                                                                                                                                                                                                                                                                                                                                                       |
+|       | [Python Comments?](#Ques-Python-Comments)                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+|       | [What is a dynamically typed language?](#ques-What-is-a-dynamically-typed-language?)                                                                                                                                                                                                                                                                                                                                                                                                |
+|       | [What is the operator](#ques-what-is-the-operator)                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+|       | [What is membership operator and identity operator?](#ques-what-is-membership-operator-and-identity-operator)                                                                                                                                                                                                                                                                                                                                                                       |
+|       | [Python Variables?](#ques-python-variables)                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+|       | [Global Variables?](#ques-global-variables)                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+|       | [How to check What type of datatype?](#ques-how-to-check-what-type-of-datatype)                                                                                                                                                                                                                                                                                                                                                                                                     |
+|       | [How to get Id()?](#ques-how-to-get-id)                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+|       | [Python Strings?](#ques-python-strings)                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+|       | [Python Shallow Copy and Deep Copy?](#ques-python-shallow-copy-and-deep-copy)                                                                                                                                                                                                                                                                                                                                                                                                       |
+|       | [What is built-in module in Python?](#Ques-What-is-built-in-module-in-Python)                                                                                                                                                                                                                                                                                                                                                                                                       |
+|       | [Is indentation required in python?](#ques-is-indentation-required-in-python)                                                                                                                                                                                                                                                                                                                                                                                                       |
+|       | [How is memory managed in Python?](#ques-how-is-memory-managed-in-python)                                                                                                                                                                                                                                                                                                                                                                                                           |
+|       | [What is PEP 8?](#ques-what-is-pep-8)                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+|       | [Global Keyword?](#ques-global-keyword)                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+|       | [Python Collections (Arrays)?](#python-collections-arrays)                                                                                                                                                                                                                                                                                                                                                                                                                          |
+|       | [What is List?](#ques-what-is-list) / [Access List Items](#access-list-items) / [Change List Items](#change-list-items) / [Add List Items](#add-list-items) / [Remove List Items](#remove-list-items) / [Loop Lists](#loop-lists) / [Copy Lists](#copy-lists) / [Join Lists](#join-lists) /  [List Comprehension](#list-comprehension) / [List Methods](#list-methods) / [list() Constructor](#list-constructor)                                                                    |
+|       | [What is difference between Discard() and Remove()?](#)                                                                                                                                                                                                                                                                                                                                                                                                                             |
+|       | [What isTuples?](#ques-what-is-tuples) / [Tuple Length](#tuple-length) / [Create Tuple With One Item](#create-tuple-with-one-item) / [Access Tuple Items](#access-tuple-items) / [Update Tuples](#update-tuples) / [Unpack Tuples](#unpack-tuples) / [Loop Tuples](#loop-tuples) / [Join Tuples](#join-tuples) / [Tuple Methods](#tuple-methods) / [tuple() Constructor](#tuple-constructor)                                                                                        |
+|       | [Difference between List and Tuples in Python?](#ques-difference-between-list-and-tuples-in-python)                                                                                                                                                                                                                                                                                                                                                                                 |
+|       | [Convert a list into a tuple](#Ques-convert-a-list-into-a-tuple?)                                                                                                                                                                                                                                                                                                                                                                                                                   |
+|       | [What is Set?](#ques-what-is-set) / [Length of a Set](#get-the-length-of-a-set) / [Acesss Items of set](#acesss-items-of-set) / [Remove Item of set](#remove-item-of-set-) / [Loop Sets](#loop-sets) / [Join Two Set](#join-two-set) / [set() Constructor](#set-constructor) / [Set Methods](#set-methods)                                                                                                                                                                          |
+|       | [What is Dictionaries?](#ques-what-is-dictionaries) / (Dictionary Length)[#dictionary-length] / [Access Item](#access-item-of-dictionary) / [Change Dictionary Items](#change-dictionary-items) / [Add Dictionary Items](#add-dictionary-items) / [Remove Dictionary Items](#remove-dictionary-items) / [Copy Dictionaries](#copy-dictionaries) / [loop-dictionaries](#loop-dictionaries) / [Nested Dictionaries](#nested-dictionaries) / [Dictionary Methods](#dictionary-methods) |
+|       | [How to Merging Or Adding two Dictionaries](#ques-How-to-Merging-Or-Adding-two-Dictionaries)                                                                                                                                                                                                                                                                                                                                                                                        |
+|       | [What is Decorators?](#ques-what-is-decorators)                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+|       | [What is Generator Functions?](what-is-generator-functions)                                                                                                                                                                                                                                                                                                                                                                                                                         |
+|       | [Combine two dictionary adding values for common keys?](#ques-Combine-two-dictionary-adding-values-for-common-keys)                                                                                                                                                                                                                                                                                                                                                                 |
+|       | [What is Class](#ques-what-is-Class)                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+|       | [What is Object](#Ques-What-is-Object)                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+|       | [Delete the Object?](#Ques-Delete-the-Object)                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+|       | [What is MRO(Method Resolution Order) / Diamond Problam?](#Ques-What-is-MROMethod-Resolution-Order-/-Diamond-Problam)                                                                                                                                                                                                                                                                                                                                                               |
 
 
 
@@ -121,46 +125,46 @@ Type-checking can be done at two stages:-
 * [Identity Operators](#ques-what-is-membership-operator-and-identity-operator)
 
 ##### Arithmetic Operators
-| Operators | Descrption | Result |
-| --------- | ---------- | ------ |
-| Addition(+) | Adds the values on either side of the operator. | 3+4=7 |
-| Subtraction(-) | Subtracts the value on the right from the one on the left. | 3+4=-1 |
-| Multiplication(*) | Multiplies the values on either side of the operator. | 3*4=12 |
-| Division(/) | Divides the value on the left by the one on the right. Notice that division results in a floating-point value. | 3/4=0.75 |
-| Exponentiation(**) | Raises the first number to the power of the second. | 3**4=81 |
-| Floor Division(//) | Divides and returns the integer value of the quotient. It dumps the digits after the decimal. | 10//3=3 |
-| Modulus(%) | Divides and returns the value of the remainder. | 3%4=3 |
+| Operators          | Descrption                                                                                                     | Result   |
+| ------------------ | -------------------------------------------------------------------------------------------------------------- | -------- |
+| Addition(+)        | Adds the values on either side of the operator.                                                                | 3+4=7    |
+| Subtraction(-)     | Subtracts the value on the right from the one on the left.                                                     | 3+4=-1   |
+| Multiplication(*)  | Multiplies the values on either side of the operator.                                                          | 3*4=12   |
+| Division(/)        | Divides the value on the left by the one on the right. Notice that division results in a floating-point value. | 3/4=0.75 |
+| Exponentiation(**) | Raises the first number to the power of the second.                                                            | 3**4=81  |
+| Floor Division(//) | Divides and returns the integer value of the quotient. It dumps the digits after the decimal.                  | 10//3=3  |
+| Modulus(%)         | Divides and returns the value of the remainder.                                                                | 3%4=3    |
 
 ##### Comparison(Relational) Operator
-| Operators | Descrption | Result |
-| --------- | ---------- | ------ |
-| Less than(<) | This operator checks if the value on the left of the operator is lesser than the one on the right. | 3<4=True |
-| Greater than(>) | It checks if the value on the left of the operator is greater than the one on the right. | 3>4=False |
-| Less than or equal to(<=) | It checks if the value on the left of the operator is lesser than or equal to the one on the right. | 7<=7 = True |
-| Greater than or equal to(>=) | It checks if the value on the left of the operator is greater than or equal to the one on the right. | 0>=0  = True |
-| Equal to(==) | This operator checks if the value on the left of the operator is equal to the one on the right.(1 is equal to the Boolean value True, but 2 isn’t. Also, 0 is equal to False.) | 3==3.0 = True<br><hr>1==True = True<br><hr> 7==True = False<br><hr>0==False = True<br><hr>0.5==True = False |
+| Operators                    | Descrption                                                                                                                                                                     | Result                                                                                                      |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
+| Less than(<)                 | This operator checks if the value on the left of the operator is lesser than the one on the right.                                                                             | 3<4=True                                                                                                    |
+| Greater than(>)              | It checks if the value on the left of the operator is greater than the one on the right.                                                                                       | 3>4=False                                                                                                   |
+| Less than or equal to(<=)    | It checks if the value on the left of the operator is lesser than or equal to the one on the right.                                                                            | 7<=7 = True                                                                                                 |
+| Greater than or equal to(>=) | It checks if the value on the left of the operator is greater than or equal to the one on the right.                                                                           | 0>=0  = True                                                                                                |
+| Equal to(==)                 | This operator checks if the value on the left of the operator is equal to the one on the right.(1 is equal to the Boolean value True, but 2 isn’t. Also, 0 is equal to False.) | 3==3.0 = True<br><hr>1==True = True<br><hr> 7==True = False<br><hr>0==False = True<br><hr>0.5==True = False |
 
 ##### Assignment Operators
-| Operators | Descrption | Result |
-| --------- | ---------- | ------ |
-| Assign(=) | Assigns a value to the expression on the left. Notice that = = is used for comparing, but = is used for assigning. | >>> a=7<br>   >>> print(a)<br> //output:- 7 |
-|  Add and Assign(+=) | Adds the values on either side and assigns it to the expression on the left. a+=10 is the same as a=a+10. | >>> a+=2<br>
->>> print(a)<br> //output:- 9 |
-| Divide and Assign(/=) | Divides the value on the left by the one on the right. Then it assigns it to the expression on the left. | >>> a/=7<br>  >>> print(a)<br> //output:- 1.0 |
-| Multiply and Assign(*=) | Multiplies the values on either sides. Then it assigns it to the expression on the left. | >>> a*=8<br>>>> print(a)<br> // 8.0 |
-| Modulus and Assign(%=) | Performs modulus on the values on either side. Then it assigns it to the expression on the left. | >>> a%=3<br>>>> print(a)<br> //output:- 2.0 |
-| Exponent and Assign(**=) | Performs exponentiation on the values on either side. Then assigns it to the expression on the left. | >>> a**=5<br>>>> print(a)<br> //output:- 32.0 |
-| Floor-Divide and Assign(//=) | Performs floor-division on the values on either side. Then assigns it to the expression on the left. | >>> a//=3 <br> >>> print(a)<br> //output:- 10.0 |
+| Operators                     | Descrption                                                                                                         | Result                                          |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------- |
+| Assign(=)                     | Assigns a value to the expression on the left. Notice that = = is used for comparing, but = is used for assigning. | >>> a=7<br>   >>> print(a)<br> //output:- 7     |
+| Add and Assign(+=)            | Adds the values on either side and assigns it to the expression on the left. a+=10 is the same as a=a+10.          | >>> a+=2<br>                                    |
+| >>> print(a)<br> //output:- 9 |
+| Divide and Assign(/=)         | Divides the value on the left by the one on the right. Then it assigns it to the expression on the left.           | >>> a/=7<br>  >>> print(a)<br> //output:- 1.0   |
+| Multiply and Assign(*=)       | Multiplies the values on either sides. Then it assigns it to the expression on the left.                           | >>> a*=8<br>>>> print(a)<br> // 8.0             |
+| Modulus and Assign(%=)        | Performs modulus on the values on either side. Then it assigns it to the expression on the left.                   | >>> a%=3<br>>>> print(a)<br> //output:- 2.0     |
+| Exponent and Assign(**=)      | Performs exponentiation on the values on either side. Then assigns it to the expression on the left.               | >>> a**=5<br>>>> print(a)<br> //output:- 32.0   |
+| Floor-Divide and Assign(//=)  | Performs floor-division on the values on either side. Then assigns it to the expression on the left.               | >>> a//=3 <br> >>> print(a)<br> //output:- 10.0 |
                                  
 ##### Bitwise Operators                         
-| Operators | Descrption | Result |
-| --------- | ---------- | ------ |
-| Binary AND(&) | It performs bit by bit AND operation on the two values. Here, binary for 2 is 10, and that for 3 is 11. &-ing them results in 10, which is binary for 2. | >>> 2&3<br>//output:- 2 |
-| Binary OR(|) | -- | -- |
-| Binary XOR(^) | -- | -- |
-| Binary One’s Complement(~) | -- | -- |
-| Binary Left-Shift(<<) | -- | -- |
-| Binary Right-Shift(>>) | -- | -- |
+| Operators                  | Descrption                                                                                                                                               | Result                  |
+| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- |
+| Binary AND(&)              | It performs bit by bit AND operation on the two values. Here, binary for 2 is 10, and that for 3 is 11. &-ing them results in 10, which is binary for 2. | >>> 2&3<br>//output:- 2 |
+| Binary OR(                 | )                                                                                                                                                        | --                      | -- |
+| Binary XOR(^)              | --                                                                                                                                                       | --                      |
+| Binary One’s Complement(~) | --                                                                                                                                                       | --                      |
+| Binary Left-Shift(<<)      | --                                                                                                                                                       | --                      |
+| Binary Right-Shift(>>)     | --                                                                                                                                                       | --                      |
 
 
 **[⬆ Back to Top](#table-of-contents)**                
@@ -327,15 +331,15 @@ output:- Python is fantastic<br>Python is awesome
 **[⬆ Back to Top](#table-of-contents)**
 ### Ques. How to check What type of datatype?
 Python has the following data types built-in by default, in these categories:
-| | |
-|:----:| ---------|
-|Text Type | str("Hello World") |
-| Numeric Types | int(20), float(20.5), complex(1j) |
-| Sequence Types | list, tuple, range |
-| Mapping Type | dict
-| Set Types | set, frozenset |
-| Boolean Type | bool |
-| Binary Types |	bytes, bytearray, memoryview |
+|                |                                   |
+| :------------: | --------------------------------- |
+|   Text Type    | str("Hello World")                |
+| Numeric Types  | int(20), float(20.5), complex(1j) |
+| Sequence Types | list, tuple, range                |
+|  Mapping Type  | dict                              |
+|   Set Types    | set, frozenset                    |
+|  Boolean Type  | bool                              |
+|  Binary Types  | bytes, bytearray, memoryview      |
 
 * We can get the data type of any object by using the __type()__ function.
 ```python
@@ -373,12 +377,13 @@ consectetur adipiscing elit,
 sed do eiusmod tempor incididunt
 ut labore et dolore magna aliqua."""
 print(a)
+
+Output:-
+Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua.
 ```
-Output:-<br>
-Lorem ipsum dolor sit amet,<br>
-consectetur adipiscing elit,<br>
-sed do eiusmod tempor incididunt<br>
-ut labore et dolore magna aliqua.<br>
 
 ##### Slicing Strings
 ```python
@@ -1075,25 +1080,25 @@ Output:- ['cherry', 'Kiwi', 'Orange', 'banana']
 **[⬆ Back to Top](#table-of-contents)**
 ##### List Methods
                         
-| Method  | Description |
-| ------------- | ------------- |
-| append()  | Adds an element at the end of the list  |
-| clear()  | Removes all the elements from the list  |
-| copy() | Returns a copy of the list |
-| count() | Returns the number of elements with the specified value |
-| extend() | Add the elements of a list (or any iterable), to the end of the current list |
-| index() | Returns the index of the first element with the specified value |
-| insert() | Adds an element at the specified position |
-| pop() | Removes the element at the specified position |
-| remove() | Removes the item with the specified value |
-| reverse() | Reverses the order of the list |
-| sort() | Sorts the list |
+| Method    | Description                                                                  |
+| --------- | ---------------------------------------------------------------------------- |
+| append()  | Adds an element at the end of the list                                       |
+| clear()   | Removes all the elements from the list                                       |
+| copy()    | Returns a copy of the list                                                   |
+| count()   | Returns the number of elements with the specified value                      |
+| extend()  | Add the elements of a list (or any iterable), to the end of the current list |
+| index()   | Returns the index of the first element with the specified value              |
+| insert()  | Adds an element at the specified position                                    |
+| pop()     | Removes the element at the specified position                                |
+| remove()  | Removes the item with the specified value                                    |
+| reverse() | Reverses the order of the list                                               |
+| sort()    | Sorts the list                                                               |
 
 ```python
 # append():- Adds an element at the end of the list
 fruits = ["apple", "banana", "cherry"]
 fruits.append("orange")
-print(fruits)
+print(fruits) 
 
 Output:- ['apple', 'banana', 'cherry', 'orange']
 
@@ -1540,9 +1545,9 @@ Output:- ('apple', 'banana', 'cherry', 'apple', 'banana', 'cherry')
 ```
 
 ##### Tuple Methods
-| Method | Description |
-| ------ | ----------- |
-| count() |	Returns the number of times a specified value occurs in a tuple |
+| Method  | Description                                                                             |
+| ------- | --------------------------------------------------------------------------------------- |
+| count() | Returns the number of times a specified value occurs in a tuple                         |
 | index() | Searches the tuple for a specified value and returns the position of where it was found |
 
 ```python
@@ -1564,16 +1569,16 @@ Output:- 3
 
 **[⬆ Back to Top](#table-of-contents)**
 ### Ques. Difference between List and Tuples in Python?
-| List | Tuples |
-|:---:|:---:|
-|List is mutable. i.e they can be edited.|Tuple is immutable. (tuples are lists which can’t be edited).|
-|List iteration is slower and is time consuming.|Tuple iteration is faster.|
-|List is useful for insertion and deletion operations.|Tuple is useful for readonly operations like accessing elements.|
-|List has a large memory.|Tuple has a small memory.|
-|List is stored in two blocks of memory (One is fixed sized and the other is variable sized for storing data)|Tuple is stored in a single block of memory.|
-|List provides many in-built methods.|Tuples have less in-built methods.|
-|List operations are more error prone|Tuples operations are safe.|
-| A list has data stored in  square brackets [] brackets. For example, list_1 = [10, ‘Chelsea’, 20] | A tuple has data stored in parantheses () brackets. For example, tup_1 = (10, ‘Chelsea’ , 20) |
+|                                                     List                                                     |                                            Tuples                                             |
+| :----------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------: |
+|                                   List is mutable. i.e they can be edited.                                   |                 Tuple is immutable. (tuples are lists which can’t be edited).                 |
+|                               List iteration is slower and is time consuming.                                |                                  Tuple iteration is faster.                                   |
+|                            List is useful for insertion and deletion operations.                             |               Tuple is useful for readonly operations like accessing elements.                |
+|                                           List has a large memory.                                           |                                   Tuple has a small memory.                                   |
+| List is stored in two blocks of memory (One is fixed sized and the other is variable sized for storing data) |                         Tuple is stored in a single block of memory.                          |
+|                                     List provides many in-built methods.                                     |                              Tuples have less in-built methods.                               |
+|                                     List operations are more error prone                                     |                                  Tuples operations are safe.                                  |
+|      A list has data stored in  square brackets [] brackets. For example, list_1 = [10, ‘Chelsea’, 20]       | A tuple has data stored in parantheses () brackets. For example, tup_1 = (10, ‘Chelsea’ , 20) |
 
 
 **[⬆ Back to Top](#table-of-contents)**
@@ -1890,25 +1895,25 @@ Output:- Error
 
 **[⬆ Back to Top](#table-of-contents)**
 ##### Set Methods
-| Method | Description |
-| ------ | ----------- |
-| add() | Adds an element to the set |
-| clear() | Removes all the elements from the set |
-| copy() | Returns a copy of the set |
-| difference() | Returns a set containing the difference between two or more sets |
-| difference_update() | Removes the items in this set that are also included in another, specified set |
-| discard() | Remove the specified item |
-| intersection() | Returns a set, that is the intersection of two other sets |
-| intersection_update() | Removes the items in this set that are not present in other, specified set(s) |
-| isdisjoint() | Returns whether two sets have a intersection or not |
-| issubset() | Returns whether another set contains this set or not |
-| issuperset() | Returns whether this set contains another set or not |
-| pop()	| Removes an element from the set |
-| remove() | Removes the specified element |
-| symmetric_difference() | Returns a set with the symmetric differences of two sets |
-| symmetric_difference_update() | inserts the symmetric differences from this set and another |
-| union() | Return a set containing the union of sets |
-| update() | Update the set with the union of this set and others |
+| Method                        | Description                                                                    |
+| ----------------------------- | ------------------------------------------------------------------------------ |
+| add()                         | Adds an element to the set                                                     |
+| clear()                       | Removes all the elements from the set                                          |
+| copy()                        | Returns a copy of the set                                                      |
+| difference()                  | Returns a set containing the difference between two or more sets               |
+| difference_update()           | Removes the items in this set that are also included in another, specified set |
+| discard()                     | Remove the specified item                                                      |
+| intersection()                | Returns a set, that is the intersection of two other sets                      |
+| intersection_update()         | Removes the items in this set that are not present in other, specified set(s)  |
+| isdisjoint()                  | Returns whether two sets have a intersection or not                            |
+| issubset()                    | Returns whether another set contains this set or not                           |
+| issuperset()                  | Returns whether this set contains another set or not                           |
+| pop()                         | Removes an element from the set                                                |
+| remove()                      | Removes the specified element                                                  |
+| symmetric_difference()        | Returns a set with the symmetric differences of two sets                       |
+| symmetric_difference_update() | inserts the symmetric differences from this set and another                    |
+| union()                       | Return a set containing the union of sets                                      |
+| update()                      | Update the set with the union of this set and others                           |
 
 ```python
 # add():-  Adds an element to the set
@@ -2566,19 +2571,19 @@ Output:-
 **[⬆ Back to Top](#table-of-contents)**
 ##### Dictionary Methods
 ```python
-| Method | Description |
-| ------ | ----------- |
-| clear() |	Removes all the elements from the dictionary |
-| copy() | Returns a copy of the dictionary |
-| fromkeys() | Returns a dictionary with the specified keys and value. |
-| get() | Returns the value of the specified key. |
-| items() | Returns a list containing a tuple for each key value pair. |
-| keys() | Returns a list containing the dictionary's keys. |
-| pop() | Removes the element with the specified key. |
-| popitem() | Removes the last inserted key-value pair. |
+| Method       | Description                                                                                                  |
+| ------------ | ------------------------------------------------------------------------------------------------------------ |
+| clear()      | Removes all the elements from the dictionary                                                                 |
+| copy()       | Returns a copy of the dictionary                                                                             |
+| fromkeys()   | Returns a dictionary with the specified keys and value.                                                      |
+| get()        | Returns the value of the specified key.                                                                      |
+| items()      | Returns a list containing a tuple for each key value pair.                                                   |
+| keys()       | Returns a list containing the dictionary's keys.                                                             |
+| pop()        | Removes the element with the specified key.                                                                  |
+| popitem()    | Removes the last inserted key-value pair.                                                                    |
 | setdefault() | Returns the value of the specified key. If the key does not exist: insert the key, with the specified value. |
-| update() | Updates the dictionary with the specified key-value pairs. |
-| values() | Returns a list of all the values in the dictionary. |
+| update()     | Updates the dictionary with the specified key-value pairs.                                                   |
+| values()     | Returns a list of all the values in the dictionary.                                                          |
 
 ```python
 # Dictionary clear() Method:- The clear() method removes all the elements from a dictionary.
@@ -3185,6 +3190,7 @@ Output:- 15
 
 # Object-Oriented Programming (OOP)
 
+**[⬆ Back to Top](#table-of-contents)**
 ### Ques.  What is Class?
 * The class can be defined as a collection of objects. It is a logical entity that has some specific attributes and methods.
 * To define a class in Python, you can use the class keyword, followed by the class name and a colon. Inside the class, an __init__ method has to be defined with def. This is the initializer that you can later use to instantiate objects. It's similar to a constructor in Java. __init__ must always be present! It takes one argument: self, which refers to the object itself. Inside the method, the pass keyword is used as of now, because Python expects you to type something there.<br>
@@ -3241,6 +3247,7 @@ Output:-<br>bark bark!<br>
 Skippy is 12 year(s) old.<br>
 Filou is 8 year(s) old.<br>
 
+**[⬆ Back to Top](#table-of-contents)**
 ### Ques. What is Object?
 * The object is an entity that has state and behavior. It may be any real-world object like the mouse, keyboard, chair, table, pen, etc.<br> <strong>For example:</strong> if you have an employee class, then it should contain an attribute and method, i.e. an email id, name, age, salary, etc.
 ```python
@@ -3258,7 +3265,9 @@ c1.display()
 * Here, the <strong>self</strong> is used as a reference variable, which refers to the current class object. It is always the first argument in the function definition. However, using self is optional in the function call.
 * The <strong>self-parameter</strong> refers to the current instance of the class and accesses the class variables. We can use anything instead of self, but it must be the first parameter of any function which belongs to the class
 
-### Ques. Delete the Object
+
+**[⬆ Back to Top](#table-of-contents)**
+### Ques. Delete the Object?
 We can delete the properties of the object or object itself by using the del keyword. Consider the following example.
 ```python
 class Employee:  
@@ -3483,20 +3492,27 @@ Output:-
 	
 
 ### Ques. What are the common built-in data types in Python?
+Python has the following data types built-in by default, in these categories:
 * Numeric
    * Integers :- int stores integers eg a=100, b=25, c=526, etc.
    * Float :- float stores floating-point numbers eg a=25.6, b=45.90, c=1.290, etc.
    * Complex Numbers:- complex stores numbers eg a=3 + 4j, b=2 + 3j, c=complex(4,6), etc.
+   * long:- long stores higher range of integers eg a=908090999L, b=-0x1990999L, etc.
 
 * Sequence Type
    * String
    * List
    * Tuple
+   * range
 
 * Boolean:- There can be only two types of value in the Boolean data type of Python, and that is True or False. 
 * Set
 * Dictionary
 * long:- long stores higher range of integers eg a=908090999L, b=-0x1990999L, etc.
+
+* Mapping Types:
+  * dict:- Stores comma-separated list of key: value pairs.
+
 
 
 ### Ques. What is pass in Python?
@@ -3518,142 +3534,21 @@ myEmptyFunc()    # nothing happens
 
 
 ### Ques. What is the difference between an array and a list?
-| # | List | Array |
-| - | ---- | ----- |
-| 1 | It Contains elements of different data types | It Contains elements of same data types |
-| 2 | Cannot handle arithmetic operations | Can handle arithmetic operations |
-| 3 | We can print the entire list without the help of an explicit loop | To print or access array elements, we will require an explicit loop |
-| 4 | It consumes a large memory | It is a more compact in memory size comparatively list. | 
+| #   | List                                                              | Array                                                               |
+| --- | ----------------------------------------------------------------- | ------------------------------------------------------------------- |
+| 1   | It Contains elements of different data types                      | It Contains elements of same data types                             |
+| 2   | Cannot handle arithmetic operations                               | Can handle arithmetic operations                                    |
+| 3   | We can print the entire list without the help of an explicit loop | To print or access array elements, we will require an explicit loop |
+| 4   | It consumes a large memory                                        | It is a more compact in memory size comparatively list.             |
 
 
-
-
-
-
-++++++++++++++++++
- <!DOCTYPE html>
-<html lang="en">
-   <head>
-      <title>Python Interview Questions</title>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-   </head>
-   <style type="text/css">
-      .code_script{
-      background: #ffffff; overflow: auto; width: auto; border: solid orange; border-width: .1em .1em .1em .8em; padding: .2em .6em;
-      }
-      .code_script_ans{
-      background: #ffffff; overflow: auto; width: auto; border: solid green; border-width: .1em .1em .1em .8em; padding: .2em .6em;
-      }
-      .code{
-      border: 0.1rem solid #cdd5e4;
-      background-color: #f5f8ff;
-      padding: 0.5rem 1rem;
-      }
-      .accordion-item {
-      background-color: #f9f9f9;
-      margin-bottom: 10px;
-      position: relative;
-      border-radius: 40px;
-      overflow: hidden;
-      }
-   </style>
-   <body>
-      <div class="container">
-         <div class="m-4">
-            <div class="accordion" id="myAccordion">        
-
-			   
-			   
-			   	
-			   
-			  
-			   
-               
-
-               <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingOne">
-                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#interpretedlang"><strong>Ques. </strong> What is an Interpreted language?</button>
-                  </h2>
-                  <div id="interpretedlang" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
-                     <div class="card-body">
-                        <p>An Interpreted language executes its statements line by line. Languages such as Python, Javascript, R, PHP, and Ruby are prime examples of Interpreted languages.</p>
-                     </div>
-                  </div>
-               </div>
-              
-          
-               
-
-               <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingOne">
-                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#list_to_array"><strong>Ques. </strong> How would you convert a list to an array?</button>                  
-                  </h2>
-                  <div id="list_to_array" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
-                     <div class="card-body">
-                        <p>Python list is a linear data structure that can hold heterogeneous elements. Python does not have a built-in array data type. If you want to create an array in Python, then use the numpy library.</p>
-                        <p>To <em>install numpy</em> in your system, type the following command.</p>
-                        <p>python3 -m pip install numpy</p>
-                        <p><strong>1. Using numpy.array()</strong>
-                        <div class="code_script">
-                           <pre>import numpy as np
-
-elon_list = [11, 21, 19, 18, 29]
-elon_array = np.array(elon_list)
-
-print(elon_array)
-print(type(elon_array))</pre>
-                        </div>
-                        <strong>Output:- </strong>
-                        <div class="code_script_ans">
-                           <pre>[11 21 19 18 29]
-&lt;class 'numpy.ndarray'&gt;</pre>
-                        </div>
-                        <strong>2. Using numpy.asarray()</strong>
-                        <div class="code_script">
-                           <pre>import numpy as np
-
-elon_list = [11, 21, 19, 18, 29]
-elon_array = np.asarray(elon_list)
-
-print(elon_array)
-print(type(elon_array))</pre>
-                        </div>
-                        <strong>Output:- </strong>
-                        <div class="code_script_ans">
-                           <pre>
-   [11 21 19 18 29]
-&lt;class 'numpy.ndarray'&gt;
-</pre>
-                        </div>
-                        </p>
-                     </div>
-                  </div>
-               </div>
-           
-
-			   
-			               <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingOne">
-                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#python_json"><strong>Ques. </strong> What is Python JSON?</button>                  
-                  </h2>
-                  <div id="python_json" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
-                     <div class="card-body">
-                        <ul>
-							<li>JSON is a syntax for storing and exchanging data.</li>
-							<li>JSON is text, written with JavaScript object notation.</li>
-							<li>Python has a built-in package called json, which can be used to work with JSON data.</li>
-						</ul>
-						#### Convert from JSON to Python
-						<p>If you have a JSON string, you can parse it by using the __json.loads()__ method.</p>
-                        <div>
-                           <pre class="code">
+### Ques. What is Python JSON?
+* JSON is a syntax for storing and exchanging data.
+* JSON is text, written with JavaScript object notation.
+* Python has a built-in package called json, which can be used to work with JSON data.
+  
+##### Convert from JSON to Python
+```python
 import json
 
 # some JSON:
@@ -3662,14 +3557,12 @@ y = json.loads(x)
 # the result is a Python dictionary:
 print(y["age"])
 
-//output:- 30
-</pre>
-                        </div>
-						#### Convert from Python to JSON
-						<p>If you have a Python object, you can convert it into a JSON string by using the __json.dumps()__ method.</p>
-						
-                        <div>
-                        <pre class="code">
+Output:- 30
+```
+
+#### Convert from Python to JSON
+If you have a Python object, you can convert it into a JSON string by using the <b>__json.dumps()__</b> method.
+```python
 import json
 
 # a Python object (dict):
@@ -3685,95 +3578,235 @@ y = json.dumps(x)
 # the result is a JSON string:
 print(y)
 
-//Output:- {"name": "John", "age": 30, "city": "New York"}
-</pre>
-                     </div>
-                  </div>
-               </div>
-			   
-			   
-			   
-               <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingOne">
-                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#Method"><strong>Ques. </strong> What is Method?</button>                  
-                  </h2>
-                  <div id="Method" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
-                     <div class="card-body">
-                        <p>The method is a function that is associated with an object. In Python, a method is not unique to class instances. Any object type can have methods.</p>
-                     </div>
-                  </div>
-               </div>
-               <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingOne">
-                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#Inheritance"><strong>Ques. </strong> What is Inheritance?</button>                  
-                  </h2>
-                  <div id="Inheritance" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
-                     <div class="card-body">
-                        <p>
-                           <strong>Syntex:-</strong><br>
-                        <pre class="code">
-class class-name(parent class):  
-    &lt;class-suite>  
+Output:- {"name": "John", "age": 30, "city": "New York"}
+```
 
-class derive-class(&lt;base class 1>, &lt;base class 2>, ..... &lt;base class n>):  
-    &lt;class - suite>  
-  </pre>
-                        </p>
-                     </div>
-                  </div>
-               </div>
+
+### How would you convert a list to an array?
+* Python list is a linear data structure that can hold heterogeneous elements. Python does not have a built-in array data type. If you want to create an array in Python, then use the numpy library.
+* To <em>install numpy</em> in your system, type the following command.
+* python3 -m pip install numpy
+* <strong>1. Using numpy.array()</strong>
+```python
+import numpy as np
+
+elon_list = [11, 21, 19, 18, 29]
+elon_array = np.array(elon_list)
+
+print(elon_array)
+print(type(elon_array))
+                       
+Output:- 
+[11 21 19 18 29]
+<class 'numpy.ndarray'>
+
+# 2. Using numpy.asarray()
+import numpy as np
+
+elon_list = [11, 21, 19, 18, 29]
+elon_array = np.asarray(elon_list)
+
+print(elon_array)
+print(type(elon_array))
+
+Output:- [11 21 19 18 29]
+<class 'numpy.ndarray'>
+```       
+
 			   
-				<div class="accordion-item">
-                  <h2 class="accordion-header" id="headingOne">
-                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#file_handling"><strong>Ques. </strong> What is File Handling?</button>                  
-                  </h2>
-                  <div id="file_handling" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
-                     <div class="card-body">
-					 <p>The key function for working with files in Python is the <strong>open()</strong> function.<br>The open() function takes two parameters; filename, and mode.</p>
-                        <p>Python has several functions for creating, reading, updating, and deleting files.</p>
-						<p>Types Of File in Python</p>
-						<ul>
-							<li>Binary file</li>
-								<ul>
-									<li><b>Document files:</b> .pdf, .doc, .xls etc.</li>
-									<li><b>Image files:</b> .png, .jpg, .gif, .bmp etc.</li>
-									<li><b>Video files:</b> .mp4, .3gp, .mkv, .avi etc.</li>
-									<li><b>Audio files:</b> .mp3, .wav, .mka, .aac etc.</li>
-									<li><b>Database files:</b> .mdb, .accde, .frm, .sqlite etc.</li>
-									<li><b>Archive files:</b> .zip, .rar, .iso, .7z etc.</li>
-									<li><b>Executable files:</b> .exe, .dll, .class etc.</li>
-								</ul>
-							<li>Text file</li>
-								<ul>
-									<li><b>Web standards:</b>  html, XML, CSS, JSON etc.</li>
-									<li><b>Source code:</b> c, app, js, py, java etc.</li>
-									<li><b>Documents:</b> txt, tex, RTF etc.</li>
-									<li><b>Tabular data:</b> csv, tsv etc</li>
-									<li><b>Configuration:</b> ini, cfg, reg etc.</li>
-								</ul>							
-						</ul>
-						
-						<ul>
-							<li>"r" - Read - Default value. Opens a file for reading, error if the file does not exist</li>
-							<li>"a" - Append - Opens a file for appending, creates the file if it does not exist</li>
-							<li>"w" - Write - Opens a file for writing, creates the file if it does not exist</li>
-							<li>"x" - Create - Creates the specified file, returns an error if the file exists</li>
-						</ul>
-						syntex:-
-						<pre class="code">
+### Ques.  What is Method?
+* The method is a function that is associated with an object. In Python, a method is not unique to class instances. Any object type can have methods.
+
+### Ques. What is Inheritance?
+Syntex:-
+```python
+class class-name(parent class):  
+    <class-suite>  
+
+class derive-class(<base class 1>, <base class 2>, ..... <base class n>):  
+    <class - suite>  
+```
+
+### Ques. What is MRO(Method Resolution Order) / Diamond Problam?
+* MRO is a concept used in inheritance.
+* If a class is derived from more then one class, then it is called multiple inheritance.
+* In Python, the MRO is from bottom to top and left to right. This means that, first, the method is searched in the class of the object. If it’s not found, it is searched in the immediate super class. In the case of multiple super classes, it is searched left to right, in the order by which was declared by the developer.
+
+```python
+class father():
+    def showF(self):
+        print("fathe class method")
+
+class mother():
+    def showM(self):
+        print("mother class method")
+class son(father, mother):
+    def showS(self):
+        print("son class method")
+
+obj = son()
+obj.showS()
+obj.showF()
+obj.showM()
+------------------------------------------------------------------
+
+# Example:-
+class father():
+    def display(self):
+        print("father class method")
+
+class mother():
+    def display(self):
+        print("mother class method")
+        
+        
+class son(mother,father):                  # left to right 
+    def showS(self):
+        print("son class method")
+
+obj = son()
+obj.display()
+
+Output:-
+mother class method
+
+++++++++++++++++++++
+class son(father, mother):                  # left to right 
+    def showS(self):
+        print("son class method")
+
+obj = son()
+obj.display()
+
+Output:- father class method
+-------------------------------------------------------------------------
+# Using Constructor
+class father():
+    def __init__(self):
+        super().__init__()      # Calling Parent Class Constructor
+        print("father class Constructor")
+    def showF(self):
+        print("father class method")
+
+class mother():
+    def __init__(self):
+        super().__init__()      # Calling Parent Class Constructor
+        print("mother class Constructor")
+    def showM(self):
+        print("mother class method")
+class son(father, mother):                  # left to right 
+    def __init__(self):
+        super().__init__()      # Calling Parent Class Constructor 1st Wala
+        print("son class Constructor")
+    def showS(self):
+        print("son class method")
+
+obj = son()
+
+Output:-
+mother class Constructor
+father class Constructor
+son class Constructor
+```
+
+
+
+### Ques. What is File Handling?
+* The key function for working with files in Python is the <strong>open()</strong> function.<br>The open() function takes two parameters; filename, and mode.
+* Python has several functions for creating, reading, updating, and deleting files.
+* Types Of File in Python
+* Binary file
+  * <b>Document files:</b> .pdf, .doc, .xls etc.
+  * <b>Image files:</b> .png, .jpg, .gif, .bmp etc.
+  * <b>Video files:</b> .mp4, .3gp, .mkv, .avi etc.
+  * <b>Audio files:</b> .mp3, .wav, .mka, .aac etc.
+  * <b>Database files:</b> .mdb, .accde, .frm, .sqlite etc.
+  * <b>Archive files:</b> .zip, .rar, .iso, .7z etc.
+  * <b>Executable files:</b> .exe, .dll, .class etc.
+* Text file
+  * <b>Web standards:</b>  html, XML, CSS, JSON etc.
+  * Source code:</b> c, app, js, py, java etc.
+  * Documents:</b> txt, tex, RTF etc.
+  * Tabular data:</b> csv, tsv etc
+  * Configuration:</b> ini, cfg, reg etc.
+		
+
+* "r" - Read - Default value. Opens a file for reading, error if the file does not exist
+* "a" - Append - Opens a file for appending, creates the file if it does not exist
+* "w" - Write - Opens a file for writing, creates the file if it does not exist
+* "x" - Create - Creates the specified file, returns an error if the file exists
+syntex:-
+```python
 my_file = open(“C:/Documents/Python/test.txt”, “r”)
 print(my_file.read(5))
-</pre>
-                     </div>
-                  </div>
-               </div>
-			   
+```					
 
-            </div>
-         </div>
-      </div>
-   </body>
-</html>
+### Ques. What is Map, Filter, Reduce
+
+### What is Iterators?
+* An iterator is an object that contains a countable number of values.
+* An iterator is an object that can be iterated upon, meaning that you can traverse through all the values.
+* Technically, in Python, an iterator is an object which implements the iterator protocol, which consist of the methods __iter__() and __next__().
+```python
+# Example1
+mytuple = ("apple", "banana", "cherry")
+myit = iter(mytuple)
+
+print(next(myit))
+print(next(myit))
+print(next(myit))
+
+Output:-
+apple
+banana
+cherry
+
+# Example 2
+mystr = "banana"
+myit = iter(mystr)
+
+print(next(myit))
+print(next(myit))
+print(next(myit))
+print(next(myit))
+print(next(myit))
+print(next(myit))
+
+Output:- 
+b
+a
+n
+a
+n
+a
+
+# Looping Through an Iterator
+# The for loop actually creates an iterator object and executes the next() method for each loop
+mytuple = ("apple", "banana", "cherry")
+
+for x in mytuple:
+  print(x)
+
+Output:-
+apple
+banana
+cherry
+```
+### Difference between Iterators and iterable?
+
+
+### Ques. Difference between generator and iterators in python?
+| Iterator                                                                                            | Generator                                                                                                                                       |
+| --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| Class is used to implement an iterator                                                              | Function is used to implement a generator.                                                                                                      |
+| Local Variables aren’t used here.                                                                   | All the local variables before the yield function are stored.                                                                                   |
+| Iterators are used mostly to iterate or convert other objects to an iterator using iter() function. | Generators are mostly used in loops to generate an iterator by returning all the values in the loop without affecting the iteration of the loop |
+| Iterator uses iter() and next() functions                                                           | Generator uses yield keyword                                                                                                                    |
+| Every iterator is not a generator                                                                   | Every generator is an iterator                                                                                                                  |
+
+
+
+
 
 f. What is repr()?
 g. WAP to count from a string?
@@ -3789,7 +3822,7 @@ z. Sort in dictionary with key
 bb. Can we pass list or tuple as a key in dictionary?
 cc. Unique dictionary from list.
 ee. What is property decorator?
-gg. Iterator and iterable difference.
+gg. Iterators and iterable difference.
 hh. Difference between generator and iterator in python.
 ii. What is lazy evaluation in python?
 jj. What is Monkey Patching in python?
@@ -3802,8 +3835,7 @@ d. How do you remove a file from a folder?
 e. If user upload excel file check file format if it is valid or invalid.
 f. What is context manager?
 g. What is Garbage Collector?
-h. Memory management in Python?
-3. Object Oriented Programming
+1. Object Oriented Programming
 a. What is class and object?
 b. Create a new class in oops?
 c. What is constructor?
@@ -3814,9 +3846,7 @@ g. What is the difference between Static method and Class method?
 h. Private variable and how we can access that?
 i. Inheritance and types of inheritance.
 j. Difference multilevel and multiple inheritance and drawback?
-k. What is MRO?
-l. What is  str?
-4. Exception Handling
+1. Exception Handling
 a. How can we handle errors in python ?
 b. How many ways exception in python?
 5. Multithreading
@@ -3855,32 +3885,7 @@ Built-in Scope
 Global Keyword
 
 
-Ques:- What are the common built-in data types in Python?
-Python has the following data types built-in by default, in these categories:
-<ul>
-<li>Numbers
-	<ul>
-    	<li><b>int:-</b> int stores integers eg a=100, b=25, c=526, etc.</li>
-        <li><b>long:-</b> long stores higher range of integers eg a=908090999L, b=-0x1990999L, etc.</li>
-		<li><b>float:-</b> float stores floating-point numbers eg a=25.6, b=45.90, c=1.290, etc.</li>
-		<li><b>complex:-</b> complex stores numbers eg a=3 + 4j, b=2 + 3j, c=complex(4,6), etc.</li>
-    </ul>
-</li>
-<li>Sequence Types:
-	<ul>
-		<li><b>list:-</b> Mutable sequence used to store collection of items.</li>
-		<li><b>tuple:-</b> Immutable sequence used to store collection of items.</li>
-		<li><b>range:-</b> Represents an immutable sequence of numbers generated during execution.</li>
-		<li><b>str:-</b> Immutable sequence of Unicode code points to store textual data.</li>
-	</ul>
-</li>
-<li>Mapping Types:
-	<ul>
-		<li><b>dict:-</b> Stores comma-separated list of key: value pairs.</li>
-	</ul>
-</li>
 
-</ul>
 
 
 Check Prime Number
@@ -4065,4 +4070,3 @@ print(dict1)
 abc = sorted(dict1)
 list6 = [dict1[item] for item in abc]
 print(list6)
-
