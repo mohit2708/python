@@ -2159,7 +2159,8 @@ Output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 2020}
 ```
 
 **[⬆ Back to Top](#table-of-contents)**
-###### Dictionary Length:- To determine how many items a dictionary has, use the len() function.
+###### Dictionary Length
+To determine how many items a dictionary has, use the len() function.
 ```python
 thisdict = {
   "brand": "Ford",
