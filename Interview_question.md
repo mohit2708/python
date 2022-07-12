@@ -30,7 +30,7 @@
 |       | [Difference between List and Tuples in Python?](#ques-difference-between-list-and-tuples-in-python)                                                                                                                                                                                                                                                                                                                                                                                 |
 |       | [Convert a list into a tuple](#Ques-convert-a-list-into-a-tuple?)                                                                                                                                                                                                                                                                                                                                                                                                                   |
 |       | [What is Set?](#ques-what-is-set) / [Length of a Set](#get-the-length-of-a-set) / [Acesss Items of set](#acesss-items-of-set) / [Remove Item of set](#remove-item-of-set-) / [Loop Sets](#loop-sets) / [Join Two Set](#join-two-set) / [set() Constructor](#set-constructor) / [Set Methods](#set-methods)                                                                                                                                                                          |
-|       | [What is Dictionaries?](#ques-what-is-dictionaries) / [Dictionary Length](#dictionary-length) / [Access Item](#access-item-of-dictionary) / [Change Dictionary Items](#change-dictionary-items) / [Add Dictionary Items](#add-dictionary-items) / [Remove Dictionary Items](#remove-dictionary-items) / [Copy Dictionaries](#copy-dictionaries) / [loop-dictionaries](#loop-dictionaries) / [Nested Dictionaries](#nested-dictionaries) / [Dictionary Methods](#dictionary-methods) |
+|       | [What is Dictionaries?](#ques-what-is-dictionaries) / (Dictionary Length)[#dictionary-length] / [Access Item](#access-item-of-dictionary) / [Change Dictionary Items](#change-dictionary-items) / [Add Dictionary Items](#add-dictionary-items) / [Remove Dictionary Items](#remove-dictionary-items) / [Copy Dictionaries](#copy-dictionaries) / [loop-dictionaries](#loop-dictionaries) / [Nested Dictionaries](#nested-dictionaries) / [Dictionary Methods](#dictionary-methods) |
 |       | [How to Merging Or Adding two Dictionaries](#ques-How-to-Merging-Or-Adding-two-Dictionaries)                                                                                                                                                                                                                                                                                                                                                                                        |
 |       | [What is Decorators?](#ques-what-is-decorators)                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 |       | [What is Generator Functions?](what-is-generator-functions)                                                                                                                                                                                                                                                                                                                                                                                                                         |
@@ -255,38 +255,37 @@ x, y, z = "Orange", "Banana", "Cherry"
    print(z)
 
 output:- Orange<br>Banana<br>Cherry
+
+# Assign Value to Multiple Variables
+x = y = z = "Orange"
+print(x)
+print(y)
+print(z)
+
+Output:-
+Orange
+Orange
+Orange
 ```
 
-<details>
-  <summary>Assign Value to Multiple Variables</summary>
-  
-  ```python
-
-  ```
-  
- 
-   ```python
-      x = y = z = "Orange"
-      print(x)
-      print(y)
-      print(z)
-  ```
-  output:- Orange<br>Orange<br>Orange
-</details>
 
 __Output Variables(combine both text and a variable)__
 ```python
 x = "awesome"
 print("Python is " + x)
-```
+
 output:- Python is awesome
-```python
+
+# Example 2
+-----------
 x = "Python is "
 y = "awesome"
 z =  x + y
 print(z)
-```
+
 output:-Python is awesome
+```
+
 ```python
 x = 5
 y = 10
@@ -303,9 +302,6 @@ print(x + y)
 output:- TypeError: unsupported operand type(s) for +: 'int' and 'str'
 
 
-			   
-
-
 **[⬆ Back to Top](#table-of-contents)**
 ### Ques. Global Variables?
  * Variables that are created outside of a function.
@@ -316,8 +312,10 @@ x = "awesome"
 def myfunc():
   print("Python is " + x)
 myfunc()
-```
+
 output:- Python is awesome
+```
+
 ```python
 x = "awesome"
 def myfunc():
@@ -325,8 +323,9 @@ def myfunc():
   print("Python is " + x)
 myfunc()
 print("Python is " + x)
-```
+
 output:- Python is fantastic<br>Python is awesome
+```
 
 **[⬆ Back to Top](#table-of-contents)**
 ### Ques. How to check What type of datatype?
@@ -340,6 +339,7 @@ Python has the following data types built-in by default, in these categories:
 |   Set Types    | set, frozenset                    |
 |  Boolean Type  | bool                              |
 |  Binary Types  | bytes, bytearray, memoryview      |
+
 
 * We can get the data type of any object by using the __type()__ function.
 ```python
@@ -386,89 +386,25 @@ ut labore et dolore magna aliqua.
 ```
 
 ##### Slicing Strings
-```python
-b = "Hello, World!"
-   print(b[2:5])
- 
-Output:- llo
-
-# Slice From the Start:- Get the characters from the start to position 5 (not included):
-b = "Hello, World!"
-print(b[:5])
-
-Output:- Hello
-
-# Slice To the End:- Get the characters from position 2, and all the way to the end:
-b = "Hello, World!"
-print(b[2:])
-
-Output:- llo, World!
- 
-# Negative Indexing:- Get the characters from position 2, and all the way to the end:
-b = "Hello, World!"
-print(b[-5:-2])
-
-Output:- orl
-```
- 
 ##### Modify Strings
-```python
-# Upper Case.:- The __upper()__ method returns the string in upper case.
-a = "Hello, World!"
-print(a.upper())
-
-Output:- HELLO, WORLD!
-----------------------------------------------------------------------------------
-
-# Lower Case:- The __lower()__ method returns the string in lower case.
-a = "Hello, World!"
-print(a.lower())
-
-Output:- hello, world!
-----------------------------------------------------------------------------------
-
-# Remove Whitespace:- 
-# Whitespace is the space before and/or after the actual text, and very often you want to remove this space.
-# The __strip()__ method removes any whitespace from the beginning or the end:
-a = " Hello, World! "
-print(a.strip())
-
-Output:- Hello, World!
-------------------------------------------------------------------------------------- 
-
-# Replace String:- The __replace()__ method replaces a string with another string:
-a = "Hello, World!"
-print(a.replace("H", "J"))
-
-Output:- Jello, World!
-----------------------------------------------------------------------------------------------
-
-# Split String:- The split() method splits the string into substrings if it finds instances of the separator:
-a = "Hello, World!"
-b = a.split(",")
-print(b)
-
-Output:- ['Hello', ' World!']
-```
-
 ##### String Concatenation
-```python
-# String Concatenation:- To concatenate, or combine, two strings you can use the + operator.
-a = "Hello"
-b = "World"
-c = a + b
-print(c)
 
-Output:- HelloWorld
+| Description b = "Hello, World!" | Question | Output |
+| ----------- | -------- | ------ |
+| Slice from the start position and end position | print(b[2:5]) | llo |
+| Slice From the Start:- Get the characters from the start to position 5 (not included) | print(b[:5]) | Hello |
+| Slice To the End:- Get the characters from position 2, and all the way to the end | print(b[2:]) | llo, World! |
+| Negative Indexing:- Get the characters from position 2, and all the way to the end | print(b[-5:-2]) | orl |
+| Upper Case | print(a.upper()) | HELLO, WORLD! |
+| Lower Case | print(a.lower()) | hello, world! |
+| __Modify Strings__  |  | |
+| Remove Whitespace (The __strip()__ method removes any whitespace from the beginning or the end) | a = " Hello, World! " <br> print(a.strip()) | Hello, World! |
+| Replace String (The __replace()__ method replaces a string with another string) | print(a.replace("H", "J")) | Jello, World! |
+| Split String (The __split()__ method splits the string into substrings if it finds instances of the separator) | b = a.split(",") | ['Hello', ' World!'] |
+| __String Concatenation__ | | |
+| To concatenate, or combine, two strings you can use the + operator | a = "Hello" <br>b = "World"<br>c = a + b<br>print(c) | HelloWorld |
+| To add a space between them, add a " " | a = "Hello" <br>b = "World"<br>c = a + " " + b<br>print(c) | Hello World |
 
-# To add a space between them, add a " ":
-a = "Hello"
-b = "World"
-c = a + " " + b
-print(c)
-
-Output:- Hello World
-```
 
 ##### Format - Strings
 ```python
@@ -671,15 +607,17 @@ __Rules of global Keyword__
  * When we define a variable outside of a function, it is global by default. You don't have to use global keyword.
  * We use global keyword to read and write a global variable inside a function.
  __Example__
- ```python
+```python
  def myfunc():
   global x
   x = "fantastic"
 myfunc()
 print("Python is " + x)
- ```
- Output:-Python is fantastic`
-  ```python
+
+Output:-Python is fantastic
+```
+
+```python
 x = "awesome"
 def myfunc():
   global x
@@ -754,33 +692,52 @@ output:-
 
 **[⬆ Back to Top](#table-of-contents)**
 ##### Access List Items
+<table id="unique-table-id">
+  <thead>
+    <tr>
+      <th scope="col">Description</th>
+      <th scope="col">Question</th>
+      <th scope="col">Answer</th>
+    </tr>
+    
+  </thead>
+  <tbody>
+    <tr>
+      <td>Access List Items</td>
+      <td>thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"] <br> print(thislist[1])</td>
+      <td>banana</td>
+    </tr>
+    <tr>
+      <td>Negative Indexing</td>
+      <td>thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"] <br> print(thislist[-1])</td>
+      <td>mango</td>
+    </tr>
+    <tr>
+      <td rowspan="5">Range of Indexes</td>
+      <td>thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>print(thislist[2:5]) //Range of Indexes (2 sa 5 tak)</td>
+      <td>['cherry', 'orange', 'kiwi']</td>
+    </tr>
+    <tr>
+      <td>print(thislist[:4]) //Range of Indexes (4 tak)</td>
+      <td>['apple', 'banana', 'cherry', 'orange']</td>
+    </tr>
+    <tr>
+      <td>print(thislist[2:]) //2 to the end.</td>
+      <td>['cherry', 'orange', 'kiwi', 'melon', 'mango']</td>
+    </tr>
+    <tr>
+      <td>print(thislist[-4:-1]) //-1 sa -4 tak</td>
+      <td>['orange', 'kiwi', 'melon']</td>
+    </tr>
+  </tbody>
+</table>
+
+
 ```python
-# Access Items
-thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
-print(thislist[1])
-
-Output:- banana
------------------------------------------------------------------------------
-# Negative Indexing
-thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
-print(thislist[-1])
-
-Output:- mango
------------------------------------------------------------------------------ 
- 
-# Range of Indexes
-thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
-
-print(thislist[2:5]) //Range of Indexes (2 sa 5 tak)
-print(thislist[:4])  //Range of Indexes (4 tak)
-print(thislist[2:])  //2 to the end.
-print(thislist[-4:-1]) //-1 sa -4 tak
-
-Output:- ['cherry', 'orange', 'kiwi']
-Output:- ['apple', 'banana', 'cherry', 'orange']
-Output:- ['cherry', 'orange', 'kiwi', 'melon', 'mango']
-Output:- ['orange', 'kiwi', 'melon']
------------------------------------------------------------------------------
 
 # Check if Item Exists
 thislist = ["apple", "banana", "cherry"]
@@ -2159,8 +2116,7 @@ Output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 2020}
 ```
 
 **[⬆ Back to Top](#table-of-contents)**
-###### Dictionary Length
-To determine how many items a dictionary has, use the len() function.
+###### Dictionary Length:- To determine how many items a dictionary has, use the len() function.
 ```python
 thisdict = {
   "brand": "Ford",
@@ -2922,7 +2878,7 @@ print(res)
 
 Output:- Counter({'Mon': 35, 'Tue': 11, 'Sun': 10, 'Wed': 10})
 ```
-			
+		
 			
 			
 ### Ques. What is If Else?
@@ -3189,7 +3145,15 @@ Output:- 15
 ```
 
 
-# Object-Oriented Programming (OOP)
+# Object-Oriented Programming (OOPS)
+Main Concepts of Object-Oriented Programming (OOPs) 
+* Class
+* Objects
+* Polymorphism
+* Encapsulation
+* Inheritance
+* Data Abstraction
+  
 
 **[⬆ Back to Top](#table-of-contents)**
 ### Ques.  What is Class?
@@ -3243,14 +3207,18 @@ filou = Dog("Filou", 8)
 ozzy.bark()
 skippy.doginfo()
 filou.doginfo()
+
+Output:-
+bark bark!
+Skippy is 12 year(s) old.
+Filou is 8 year(s) old.
 ```
-Output:-<br>bark bark!<br>
-Skippy is 12 year(s) old.<br>
-Filou is 8 year(s) old.<br>
+
 
 **[⬆ Back to Top](#table-of-contents)**
 ### Ques. What is Object?
 * The object is an entity that has state and behavior. It may be any real-world object like the mouse, keyboard, chair, table, pen, etc.<br> <strong>For example:</strong> if you have an employee class, then it should contain an attribute and method, i.e. an email id, name, age, salary, etc.
+  
 ```python
 class car:  
     def __init__(self,modelname, year):  
@@ -3292,6 +3260,7 @@ Self is used to represent the instance of the class. With this keyword, you can 
 
 ### Ques.  What is __init__?
 <b>__init__</b> is a contructor method in Python and is automatically called to allocate memory when a new object/instance is created. All classes have a __init__ method associated with them. It helps in distinguishing methods and attributes of a class from local variables.
+
 ```python
 class Student:
    def __init__(self, fname, lname, age, section):
@@ -3303,6 +3272,22 @@ class Student:
 stu1 = Student("Sara", "Ansh", 22, "A2")
 ```
 
+### Ques. What is pass in Python?
+The pass keyword represents a null operation in Python.<br> Without the pass statement in the following code, we may run into some errors during code execution.
+```python
+def myEmptyFunc():
+   # do nothing
+   pass
+myEmptyFunc()    # nothing happens
+## Without the pass keyword
+# File "<stdin>", line 3
+# IndentationError: expected an indented block
+```
+
+### Ques. What is break, continue and pass in Python?
+* <b>Break:- </b>The break statement terminates the loop immediately and the control flows to the statement after the body of the loop.
+* <b>Continue:- </b>The continue statement terminates the current iteration of the statement, skips the rest of the code in the current iteration and the control flows to the next iteration of the loop.
+* <b>Pass:-</b> As explained above, the pass keyword in Python is generally used to fill up empty blocks and is similar to an empty statement represented by a semi-colon in languages such as Java, C++, Javascript, etc.
 
 ### Python Access Modifiers
 ```python
@@ -3322,9 +3307,8 @@ class Student:
 
 # object creation
 obj = Student('Mohit',53434)
-
-
 ```
+
 
 ##### Public Access Modifier
 By default, all the variables and member functions of a class are public in a python program.
@@ -3516,22 +3500,7 @@ Python has the following data types built-in by default, in these categories:
 
 
 
-### Ques. What is pass in Python?
-The pass keyword represents a null operation in Python.<br> Without the pass statement in the following code, we may run into some errors during code execution.
-```python
-def myEmptyFunc():
-   # do nothing
-   pass
-myEmptyFunc()    # nothing happens
-## Without the pass keyword
-# File "<stdin>", line 3
-# IndentationError: expected an indented block
-```
 
-### Ques. What is break, continue and pass in Python?
-* <b>Break:- </b>The break statement terminates the loop immediately and the control flows to the statement after the body of the loop.
-* <b>Continue:- </b>The continue statement terminates the current iteration of the statement, skips the rest of the code in the current iteration and the control flows to the next iteration of the loop.
-* <b>Pass:-</b> As explained above, the pass keyword in Python is generally used to fill up empty blocks and is similar to an empty statement represented by a semi-colon in languages such as Java, C++, Javascript, etc.
 
 
 ### Ques. What is the difference between an array and a list?
@@ -3806,6 +3775,47 @@ cherry
 | Every iterator is not a generator                                                                   | Every generator is an iterator                                                                                                                  |
 
 
+### Sort in dictionary with key, Value and Items.
+```python
+dict = {6:'George' ,2:'John' ,1:'Potter' ,9:'Micheal' ,7:'Robert' ,8:'Gayle' }  
+ 
+b = sorted(dict.keys())
+print("Sorted keys",b)  
+
+d = sorted(dict.values())
+print("Sorted Values",d) 
+
+c = sorted(dict.items())
+print("Sorted Values",c) 
+
+Output:-
+Sorted keys [1, 2, 6, 7, 8, 9]
+Sorted Values ['Gayle', 'George', 'John', 'Micheal', 'Potter', 'Robert']
+Sorted Values [(1, 'Potter'), (2, 'John'), (6, 'George'), (7, 'Robert'), (8, 'Gayle'), (9, 'Micheal')]
+```
+
+
+### Ques. What is Magic Methodor Or Dunder Methods?
+* Magic methods in Python are the special methods that start and end with the double underscores. They are also called dunder methods.
+* Built-in classes in Python define many magic methods.
+* The dir() function can be used to see the number of magic methods inherited by a class.
+```python
+['__abs__', '__add__', '__and__', '__bool__', '__ceil__', '__class__', '__delattr__', '__dir__', '__divmod__', '__doc__', '__eq__', '__float__', '__floor__', '__floordiv__', '__format__', '__ge__', '__getattribute__', '__getnewargs__', '__gt__', '__hash__', '__index__', '__init__', '__init_subclass__', '__int__', '__invert__', '__le__', '__lshift__', '__lt__', '__mod__', '__mul__', '__ne__', '__neg__', '__new__', '__or__', '__pos__', '__pow__', '__radd__', '__rand__', '__rdivmod__', '__reduce__', '__reduce_ex__', '__repr__', '__rfloordiv__', '__rlshift__', '__rmod__', '__rmul__', '__ror__', '__round__', '__rpow__', '__rrshift__', '__rshift__', '__rsub__', '__rtruediv__', '__rxor__', '__setattr__', '__sizeof__', '__str__', '__sub__', '__subclasshook__', '__truediv__', '__trunc__', '__xor__', 'bit_length', 'conjugate', 'denominator', 'from_bytes', 'imag', 'numerator', 'real', 'to_bytes']
+```
+```python
+class emp():
+    def __init__(self,name,salery):
+        self.name = name
+        self.salery = salery
+        
+    def __len__(self):                # Magic method
+        return len(self.name)
+        
+obj = emp('mohit', 422573)
+print(len(obj))
+
+Output:- 5
+```
 
 
 
@@ -3827,7 +3837,6 @@ gg. Iterators and iterable difference.
 hh. Difference between generator and iterator in python.
 ii. What is lazy evaluation in python?
 jj. What is Monkey Patching in python?
-kk. What is Magic method in python?
 1. File Handling
 a. What is pickling? Format of object stored in file?
 b. Static file contains which type of file normally?
@@ -3837,8 +3846,6 @@ e. If user upload excel file check file format if it is valid or invalid.
 f. What is context manager?
 g. What is Garbage Collector?
 1. Object Oriented Programming
-a. What is class and object?
-b. Create a new class in oops?
 c. What is constructor?
 d. Why used constructor?
 e. Advantage of constructor
@@ -4071,3 +4078,72 @@ print(dict1)
 abc = sorted(dict1)
 list6 = [dict1[item] for item in abc]
 print(list6)
+
+
+
+### Meta Class in Models?
+Model Meta is basically the inner class of your model class. Model Meta is basically used to change the behavior of your model fields like changing order options,verbose_name, and a lot of other options. It’s completely optional to add a Meta class to your model.
+```python
+class student(models.Model):
+    class Meta:
+        options........
+```
+
+##### Model Meta Options:-
+1. abstract
+   If abstract = True, this model will be an abstract  base class
+```python
+class student(models.Model):
+  class Meta:
+      abstract = True
+```
+
+2. app_label
+   If a model is defined outside of applications in INSTALLED_APPS, it must declare which app  it belongs to:
+```python
+class student(models.Model):
+  class Meta:
+      app_label = 'myapp' # add app name here
+```
+
+3. verbose_name:- verbose_name is basically a human-readable name for your model
+```python
+class student(models.Model):
+  class Meta:
+      verbose_name = "stu" # add verbose_name  here
+```
+
+4. ordering:- Ordering is basically used to change the order of your model fields.
+```python
+class student(models.Model):
+  class Meta:
+      ordering = [-1]
+```
+
+5. proxy:- If we add proxy = True a model which subclasses another model will be treated as a proxy model
+```python
+class Student(Teacher):
+  class Meta:
+      proxy = True
+```
+
+6. permissions:- Extra permissions to enter into the permissions table when creating this object. Add, change, delete and view permissions are automatically created for each model.
+```python
+class student(models.Model):
+  class Meta:
+      permissions = []
+```
+
+7. db_table:- We can overwrite the table name by using db_table in meta class.
+```python
+class student(models.Model):
+  class Meta:
+      db_table = 'table_name'
+```
+
+8. get_latest_by:- It returns the latest object in the table based on the given field, used for typically DateField, DateTimeField, or IntegerField.
+```python
+class student(models.Model):
+  class Meta:
+      get_latest_by = "order_date"
+```
