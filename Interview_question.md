@@ -391,12 +391,6 @@ ut labore et dolore magna aliqua.
 
 | Description b = "Hello, World!" | Question | Output |
 | ----------- | -------- | ------ |
-| Slice from the start position and end position | print(b[2:5]) | llo |
-| Slice From the Start:- Get the characters from the start to position 5 (not included) | print(b[:5]) | Hello |
-| Slice To the End:- Get the characters from position 2, and all the way to the end | print(b[2:]) | llo, World! |
-| Negative Indexing:- Get the characters from position 2, and all the way to the end | print(b[-5:-2]) | orl |
-| Upper Case | print(a.upper()) | HELLO, WORLD! |
-| Lower Case | print(a.lower()) | hello, world! |
 | __Modify Strings__  |  | |
 | Remove Whitespace (The __strip()__ method removes any whitespace from the beginning or the end) | a = " Hello, World! " <br> print(a.strip()) | Hello, World! |
 | Replace String (The __replace()__ method replaces a string with another string) | print(a.replace("H", "J")) | Jello, World! |
@@ -405,6 +399,52 @@ ut labore et dolore magna aliqua.
 | To concatenate, or combine, two strings you can use the + operator | a = "Hello" <br>b = "World"<br>c = a + b<br>print(c) | HelloWorld |
 | To add a space between them, add a " " | a = "Hello" <br>b = "World"<br>c = a + " " + b<br>print(c) | Hello World |
 
+
+<table id="unique-table-id">
+  <thead>
+    <tr>
+      <th scope="col">Description</th>
+      <th scope="col">Question</th>
+      <th scope="col">Answer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Slice from the start position and end position</td>
+      <td>b = "Hello, World!" <br>print(b[2:5]) </td>
+      <td>llo</td>
+    </tr>
+    <tr>
+      <td>Slice From the Start: Get the characters from the start to position 5 (not included</td>
+      <td>b = "Hello, World!" <br>print(b[:5])</td>
+      <td>Hello</td>
+    </tr>
+    <tr>
+      <td>Slice To the End: Get the characters from position 2, and all the way to the end</td>
+      <td>b = "Hello, World!" <br>print(b[2:])</td>
+      <td>llo, World!</td>
+    </tr>
+    <tr>
+      <td>Negative Indexing: Get the characters from position 2, and all the way to the end</td>
+      <td>b = "Hello, World!" <br>print(b[-5:-2])</td>
+      <td>orl</td>
+    </tr>
+    <tr>
+      <td>Upper Case</td>
+      <td>b = "Hello, World!" <br>print(a.upper())</td>
+      <td>HELLO, WORLD!</td>
+    </tr>
+    <tr>
+      <td>Lower Case</td>
+      <td>b = "Hello, World!" <br>print(a.lower())</td>
+      <td>hello, world!</td>
+    </tr>
+    <tr>
+      <td colspan="3"><b>Modify Strings</b></td>
+    </tr>
+    
+  </tbody>
+</table>
 
 ##### Format - Strings
 ```python
@@ -713,7 +753,7 @@ output:-
       <td>mango</td>
     </tr>
     <tr>
-      <td rowspan="5">Range of Indexes</td>
+      <td rowspan="5"> <b>Range of Indexes</b> </td>
       <td>thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]</td>
       <td></td>
     </tr>
@@ -909,21 +949,29 @@ Output:-
 
 **[⬆ Back to Top](#table-of-contents)**
 ##### Copy Lists
-```python
-# Make a copy of a list with the copy() method.
-thislist = ["apple", "banana", "cherry"]
-mylist = thislist.copy()
-print(mylist)
 
-Output:- ['apple', 'banana', 'cherry']
------------------------------------------------------------------------------
-# Another way to make a copy is to use the built-in method list().
-thislist = ["apple", "banana", "cherry"]
-mylist = list(thislist)
-print(mylist)
-
-Output:- ['apple', 'banana', 'cherry']
-```
+<table id="unique-table-id">
+  <thead>
+    <tr>
+      <th scope="col">Description</th>
+      <th scope="col">Question</th>
+      <th scope="col">Answer</th>
+    </tr>
+    
+  </thead>
+  <tbody>
+    <tr>
+      <td>Make a copy of a list with the <b>copy()</b> method.</td>
+      <td>thislist = ["apple", "banana", "cherry"] <br> mylist = thislist.copy() <br> print(mylist)</td>
+      <td>['apple', 'banana', 'cherry']</td>
+    </tr>
+    <tr>
+      <td>a copy is to use the built-in method <b>list()</b>.</td>
+      <td>thislist = ["apple", "banana", "cherry"] <br> mylist = list(thislist) <br> print(mylist)</td>
+      <td>['apple', 'banana', 'cherry']</td>
+    </tr>
+  </tbody>
+</table>
 
 **[⬆ Back to Top](#table-of-contents)**
 ##### Join Lists
