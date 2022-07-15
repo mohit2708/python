@@ -335,7 +335,7 @@ import os
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-========urls.py==========
+========main urls.py mai==========
 from django.conf.urls.static import static
 from django.conf import settings
 
