@@ -25,15 +25,54 @@ A model is a class that represents table or collection in our DB, and where ever
 from django.db import models
 
 class Employee(models.Model):
-
-   first_name = models.CharField(max_length = 50)
-   middle_name = models.CharField(max_length = 50)
-   last_name = models.CharField(max_length = 50)
-   number = models.IntegerField()
-
-   class Meta:
-      db_table = "employee"
+    id = models.AutoField(primary_key=True)
+    first_name = models.CharField(max_length=50, null=True, verbose_name = "First Name")  
+    last_name = models.CharField(max_length=50, null=True) 
+    email = models.EmailField(unique=True, max_length=50)  
+    phone_number = models.CharField(max_length=15)
+    country = models.CharField(max_length=50, null=True)
+    city = models.CharField(max_length=50, null=True)
+    city = models.CharField(max_length=50, null=True)
+    message = models.TextField()
 ```
+
+### How to Show tables in admin Panel
+```python
+# 1 Option
+# In model file
+class Employee(models.Model):
+    id = models.AutoField(primary_key=True)
+    first_name = models.CharField(max_length=50, null=True, verbose_name = "First Name")  
+    last_name = models.CharField(max_length=50, null=True)
+    
+    def __str__(self):
+        ret = self.first_name + ', ' + self.last_name
+        return ret
+# Add below code in admin.py
+from employeeFunctionBased.models import Employee
+ admin.site.register(Employee)
+
+# 2 Option in admin.py
+from employeeFunctionBased.models import Employee
+
+@admin.register(Employee)
+class EmployeeModelAdmin(admin.ModelAdmin):
+	list_display = ['first_name', 'last_name']
+```
+
+### Include Css and js in django
+ ```python
+ # 1. Create the Static Folder where manage.py
+ # 2. Add Code in setting.py
+
+STATIC_URL = 'static/'
+STATICFILES_DIRS = [ os.path.join(BASE_DIR,'static') ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
+
+# 3. Add code in html file
+{% load static %}
+<link rel="stylesheet" type="text/css"  href="{% static 'admin/css/adminlte.min.css' %}" />
+ ```
 
 #### Ques. Name some companies that make use of Django?
 Some of the companies that make use of Django are Instagram, DISCUS, Mozilla Firefox, YouTube, Pinterest, Reddit, etc.
