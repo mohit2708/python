@@ -80,6 +80,22 @@ from blog_app.models import Post, Comment, Category
 admin.site.register(Post)     //app supar admin mai show hone ke liye
 admin.site.register(Comment)     //app supar admin mai show hone ke liye
 admin.site.register(Category)     //app supar admin mai show hone ke liye
+--------------------------------------------------------------------------
+from django.contrib import admin
+from employeeFunctionBased.models import Employee
+
+# Register your models here.
+# admin.site.register(Employee)
+
+@admin.register(Employee)
+class EmployeeModelAdmin(admin.ModelAdmin):
+	list_display = ['first_name', 'last_name']
+	list_editable = ['last_name']				# Field Editable in the admin pannel.
+	search_fields = ('last_name',)				# Serach field option in admin pannel
+	list_filter = ('first_name','last_name')		# list filter in admin pannel
+ 
+# admin.site.register(Employee,EmployeeModelAdmin) 		# instead of @admin.register(Employee)
+
 ```
 
 ## Create Model
