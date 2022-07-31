@@ -357,6 +357,53 @@ a = 5
 print(id(a))
 ```
 
+### Ques. Type Casting / Type Conversion
+* Jab bhi hum ek data type ki value ko dusre data type ki value mai convert karte hai to usi ko hum bolte hai type conversion.
+```python
+# int 
+
+x = int(1)
+y = int(2.8)
+z = int("3")
+print(x)
+print(y)
+print(z)
+
+Output:-
+1
+2
+3
+
+# Flot
+x = float(1)
+y = float(2.8)
+z = float("3")
+w = float("4.2")
+print(x)
+print(y)
+print(z)
+print(w)
+
+Output:-
+1.0
+2.8
+3.0
+4.2
+
+# String
+x = str("s1")
+y = str(2)
+z = str(3.0)
+print(x)
+print(y)
+print(z)
+
+Output:-
+s1
+2
+3.0
+```
+
 **[⬆ Back to Top](#table-of-contents)**
 ### Ques. Python Strings?
 ##### String Literals
@@ -400,7 +447,7 @@ ut labore et dolore magna aliqua.
   <tbody>
    <tr>
       <td><b>Replace String</b> (The <b>replace()</b> method replaces a string with another string)</td>
-      <td>a = " Hello, World! " <br> print(a.replace("H", "J"))</td>
+      <td>a = "Hello, World!" <br> print(a.replace("H", "J"))</td>
       <td>Jello, World!</td>
     </tr>
     <tr>
@@ -459,7 +506,7 @@ ut labore et dolore magna aliqua.
     </tr>
 	<tr>
       <td><b>Remove Whitespace</b> (The <b>strip()</b> method removes any whitespace from the beginning or the end)</td>
-      <td>a = "Hello, World!" <br> print(a.strip())</td>
+      <td>a = "   Hello, World!  " <br> print(a.strip())</td>
       <td>Hello, World!</td>
     </tr>
 
