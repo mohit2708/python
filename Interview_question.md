@@ -398,12 +398,7 @@ ut labore et dolore magna aliqua.
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td><b>Remove Whitespace</b> (The <b>strip()</b> method removes any whitespace from the beginning or the end)</td>
-      <td>a = "Hello, World!" <br> print(a.strip())</td>
-      <td>Hello, World!</td>
-    </tr>
-    <tr>
+   <tr>
       <td><b>Replace String</b> (The <b>replace()</b> method replaces a string with another string)</td>
       <td>a = " Hello, World! " <br> print(a.replace("H", "J"))</td>
       <td>Jello, World!</td>
@@ -426,6 +421,9 @@ ut labore et dolore magna aliqua.
   		<td>a = "Hello" <br>b = "World"<br>c = a + " " + b<br>print(c) </td>
   		<td> Hello World </td>
   	</tr>
+  	<tr>
+      <td colspan="3"><b>Slicing Strings</b></td>
+    </tr>
     <tr>
       <td>Slice from the start position and end position</td>
       <td>b = "Hello, World!" <br>print(b[2:5]) </td>
@@ -447,6 +445,9 @@ ut labore et dolore magna aliqua.
       <td>orl</td>
     </tr>
     <tr>
+    	<td colspan="3">Modify Strings</td>
+    </tr>
+    <tr>
       <td>Upper Case</td>
       <td>b = "Hello, World!" <br>print(a.upper())</td>
       <td>HELLO, WORLD!</td>
@@ -456,11 +457,16 @@ ut labore et dolore magna aliqua.
       <td>b = "Hello, World!" <br>print(a.lower())</td>
       <td>hello, world!</td>
     </tr>
-    <tr>
-      <td colspan="3"><b>Modify Strings</b></td>
+	<tr>
+      <td><b>Remove Whitespace</b> (The <b>strip()</b> method removes any whitespace from the beginning or the end)</td>
+      <td>a = "Hello, World!" <br> print(a.strip())</td>
+      <td>Hello, World!</td>
     </tr>
+
   </tbody>
 </table>
+
+
 
 ##### Format - Strings
 ```python
