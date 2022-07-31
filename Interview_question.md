@@ -389,17 +389,6 @@ ut labore et dolore magna aliqua.
 ##### Modify Strings
 ##### String Concatenation
 
-| Description b = "Hello, World!" | Question | Output |
-| ----------- | -------- | ------ |
-| __Modify Strings__  |  | |
-| Remove Whitespace (The __strip()__ method removes any whitespace from the beginning or the end) | a = " Hello, World! " <br> print(a.strip()) | Hello, World! |
-| Replace String (The __replace()__ method replaces a string with another string) | print(a.replace("H", "J")) | Jello, World! |
-| Split String (The __split()__ method splits the string into substrings if it finds instances of the separator) | b = a.split(",") | ['Hello', ' World!'] |
-| __String Concatenation__ | | |
-| To concatenate, or combine, two strings you can use the + operator | a = "Hello" <br>b = "World"<br>c = a + b<br>print(c) | HelloWorld |
-| To add a space between them, add a " " | a = "Hello" <br>b = "World"<br>c = a + " " + b<br>print(c) | Hello World |
-
-
 <table id="unique-table-id">
   <thead>
     <tr>
@@ -409,6 +398,34 @@ ut labore et dolore magna aliqua.
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td><b>Remove Whitespace</b> (The <b>strip()</b> method removes any whitespace from the beginning or the end)</td>
+      <td>a = "Hello, World!" <br> print(a.strip())</td>
+      <td>Hello, World!</td>
+    </tr>
+    <tr>
+      <td><b>Replace String</b> (The <b>replace()</b> method replaces a string with another string)</td>
+      <td>a = " Hello, World! " <br> print(a.replace("H", "J"))</td>
+      <td>Jello, World!</td>
+    </tr>
+    <tr>
+    	<td><b>Split String</b> (The <b>split()</b> method splits the string into substrings if it finds instances of the separator) </td>
+    	<td> a = "Hello, World!"<br> b = a.split(",") </td>
+    	<td> ['Hello', ' World!'] </td>
+    </tr>
+    <tr>
+      <td colspan="3"><b>String Concatenation</b></td>
+    </tr>
+    <tr>
+      <td>To concatenate, or combine, two strings you can use the + operator </td>
+      <td> a = "Hello" <br>b = "World"<br>c = a + b<br>print(c) </td>
+      <td> HelloWorld </td>
+  	</tr>
+  	<tr>
+  		<td>To add a space between them, add a " " </td>
+  		<td>a = "Hello" <br>b = "World"<br>c = a + " " + b<br>print(c) </td>
+  		<td> Hello World </td>
+  	</tr>
     <tr>
       <td>Slice from the start position and end position</td>
       <td>b = "Hello, World!" <br>print(b[2:5]) </td>
@@ -442,7 +459,6 @@ ut labore et dolore magna aliqua.
     <tr>
       <td colspan="3"><b>Modify Strings</b></td>
     </tr>
-    
   </tbody>
 </table>
 
