@@ -406,10 +406,8 @@ s1
 
 **[⬆ Back to Top](#table-of-contents)**
 ### Ques. Python Strings?
-Once a string object has been created, it cannot be changed. “Modifying” that string creates a whole new object in memory.
-
-##### String Literals
-'hello' is the same as "hello".
+* Once a string object has been created, it cannot be changed. “Modifying” that string creates a whole new object in memory.
+* 'hello' is the same as "hello".
 
 ##### Assign String to a Variable
 ```python
@@ -436,6 +434,23 @@ ut labore et dolore magna aliqua.
 ```
 
 ##### Slicing Strings
+* Slice from the start position and end position
+```python
+b = "Hello, World!" 
+print(b[2:5])
+
+Output:- llo
+```
+* Slice From the Start: Get the characters from the start to position 5 (not included
+```python
+b = "Hello, World!" 
+print(b[:5])
+
+Output:- Hello
+```
+   
+
+
 ##### Modify Strings
 ##### String Concatenation
 
@@ -474,16 +489,8 @@ ut labore et dolore magna aliqua.
   	<tr>
       <td colspan="3"><b>Slicing Strings</b></td>
     </tr>
-    <tr>
-      <td>Slice from the start position and end position</td>
-      <td>b = "Hello, World!" <br>print(b[2:5]) </td>
-      <td>llo</td>
-    </tr>
-    <tr>
-      <td>Slice From the Start: Get the characters from the start to position 5 (not included</td>
-      <td>b = "Hello, World!" <br>print(b[:5])</td>
-      <td>Hello</td>
-    </tr>
+
+   
     <tr>
       <td>Slice To the End: Get the characters from position 2, and all the way to the end</td>
       <td>b = "Hello, World!" <br>print(b[2:])</td>
