@@ -890,6 +890,10 @@ output:-
       <td></td>
     </tr>
     <tr>
+      <td>print(thislist[:])</td>
+      <td>["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]</td>
+    </tr>
+    <tr>
       <td>print(thislist[2:5]) //Range of Indexes (2 sa 5 tak)</td>
       <td>['cherry', 'orange', 'kiwi']</td>
     </tr>
@@ -905,25 +909,19 @@ output:-
       <td>print(thislist[-4:-1]) //-1 sa -4 tak</td>
       <td>['orange', 'kiwi', 'melon']</td>
     </tr>
-    <tr>
-      <td rowspan="3"> <b>Change List Items</b><br>Change Item Value:- To change the value of a specific item, refer to the index number. </td>
-      <td>thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>print(thislist[2:]) //2 to the end.</td>
-      <td>['cherry', 'orange', 'kiwi', 'melon', 'mango']</td>
-    </tr>
-    <tr>
-      <td>print(thislist[-4:-1]) //-1 sa -4 tak</td>
-      <td>['orange', 'kiwi', 'melon']</td>
-    </tr>
   </tbody>
 </table>
 
 
 ```python
+list = [9,3,6,4,7,3,1,4]
+# Get the Items at Specified Intervals
+print(list[::2])    # Output:- [9, 6, 7, 1]
+print(list[::-2])   # Output:- [4, 3, 4, 3]
+print(list[::-1])   # Output:- [4, 1, 3, 7, 4, 6, 3, 9]  #reverse the List using slice
+```
 
+```python
 # Check if Item Exists
 thislist = ["apple", "banana", "cherry"]
 if "apple" in thislist:
@@ -996,45 +994,48 @@ Output:- ['apple', 'banana', 'cherry', 'kiwi', 'orange']
 
 **[⬆ Back to Top](#table-of-contents)**
 ##### Remove List Items
+* Remove Specified Item from the List
 ```python
-# Remove Specified Item
 thislist = ["apple", "banana", "cherry"]
 thislist.remove("banana")
 print(thislist)
 
 Output:- ['apple', 'cherry']
------------------------------------------------------------------------------
-# Remove Specified Index
-# The pop() method removes the specified index.
+```
+* Remove Specified Index:- The <b>pop()</b> method removes the specified index.
+* if you do not specify the index, the <b>pop()</b> method removes the last item.
+```python
 thislist = ["apple", "banana", "cherry"]
 thislist.pop(1)
 print(thislist)
 
 Output:- ['apple', 'cherry']
-
-# If you do not specify the index, the pop() method removes the last item.
+```
+```python
 thislist = ["apple", "banana", "cherry"]
 thislist.pop()
 print(thislist)
 
 Output:- ['apple', 'banana']
-
-# The del keyword also removes the specified index:
+```
+* The <b>del</b> keyword also removes the specified index.
+* The <b>del</b> keyword can also delete the list completely.
+```python
 thislist = ["apple", "banana", "cherry"]
 del thislist[0]
 print(thislist)
 
 Output:- ['banana', 'cherry']
-
-# The del keyword can also delete the list completely.
+```
+```python
 thislist = ["apple", "banana", "cherry"]
 del thislist
 print(thislist) #this will cause an error because you have succsesfully deleted "thislist".
 
 Output:- Error
------------------------------------------------------------------------------ 
- 
-# Clear the List:- The clear() method empties the list.
+```
+* Clear the List:- The <b>clear()</b> method empties the list.
+```python
 thislist = ["apple", "banana", "cherry"]
 thislist.clear()
 print(thislist)
@@ -1093,36 +1094,30 @@ Output:-
 ``` 
 
 **[⬆ Back to Top](#table-of-contents)**
-##### Copy Lists
+##### Copy Lists?
+* Make a copy of a list with the <b>copy()</b> method.
+```python
+thislist = ["apple", "banana", "cherry"]
+mylist = thislist.copy()
+print(mylist)
 
-<table id="unique-table-id">
-  <thead>
-    <tr>
-      <th scope="col">Description</th>
-      <th scope="col">Question</th>
-      <th scope="col">Answer</th>
-    </tr>
-    
-  </thead>
-  <tbody>
-    <tr>
-      <td>Make a copy of a list with the <b>copy()</b> method.</td>
-      <td>thislist = ["apple", "banana", "cherry"] <br> mylist = thislist.copy() <br> print(mylist)</td>
-      <td>['apple', 'banana', 'cherry']</td>
-    </tr>
-    <tr>
-      <td>a copy is to use the built-in method <b>list()</b>.</td>
-      <td>thislist = ["apple", "banana", "cherry"] <br> mylist = list(thislist) <br> print(mylist)</td>
-      <td>['apple', 'banana', 'cherry']</td>
-    </tr>
-  </tbody>
-</table>
+Output:- ['apple', 'banana', 'cherry']
+```
+
+* A copy is to use the built-in method <b>list()</b>
+```python
+thislist = ["apple", "banana", "cherry"]
+mylist = list(thislist)
+print(mylist)
+
+Output:- ['apple', 'banana', 'cherry']
+```
 
 **[⬆ Back to Top](#table-of-contents)**
 ##### Join Lists
+* There are several ways to join, or concatenate, two or more lists in Python.
+* One of the easiest ways are by using the <b>+</b> operator.
 ```python
-# There are several ways to join, or concatenate, two or more lists in Python.
-# One of the easiest ways are by using the + operator.
 list1 = ["a", "b", "c"]
 list2 = [1, 2, 3]
 
@@ -1130,9 +1125,9 @@ list3 = list1 + list2
 print(list3)
 
 Output:- ['a', 'b', 'c', 1, 2, 3]
---------------------------------------------------------------------------------
-
-# Another way to join two lists is by appending all the items from list2 into list1, one by one:
+```
+* Another way to join two list is by <b>append</b> method all the items from list2 into list1, one by one.
+```python
 list1 = ["a", "b" , "c"]
 list2 = [1, 2, 3]
 
@@ -1142,9 +1137,9 @@ for x in list2:
 print(list1)
 
 Output:- ['a', 'b', 'c', 1, 2, 3]
----------------------------------------------------------------------------------
-
-# Or you can use the extend() method, which purpose is to add elements from one list to another list.
+```
+* Or you can use the <b>extend()</b> method, which purpose is to add elements from one list to another list.
+```python
 list1 = ["a", "b" , "c"]
 list2 = [1, 2, 3]
 
@@ -1259,14 +1254,7 @@ a.append(b)
 print(a)
 
 Output:- ['apple', 'banana', 'cherry', ["Ford", "BMW", "Volvo"]]
-------------------------------------------------------------------
-                        
-# clear():-	Removes all the elements from the list
-fruits = ["apple", "banana", "cherry"]
-fruits.clear()
-print(fruits)
 
-Output:- []
 -------------------------------------------------------------------
 # copy():-	Returns a copy of the list
 fruits = ["apple", "banana", "cherry"]
@@ -1326,6 +1314,15 @@ fruits.remove("banana")
 print(fruits)
                         
 Output:- ['apple', 'cherry']
+
+------------------------------------------------------------------
+                        
+# clear():-	Removes all the elements from the list
+fruits = ["apple", "banana", "cherry"]
+fruits.clear()
+print(fruits)
+
+Output:- []
 ----------------------------------------------------------------------
                         
 # reverse():-	Reverses the order of the list
@@ -1344,7 +1341,7 @@ print(cars)
 Output:- ['BMW', 'Ford', 'Volvo']
 
 # Parameter Values in sort()
- 1. reverse:- tional. reverse=True will sort the list descending. Default is reverse=False
+ 1. reverse:- optional. reverse=True will sort the list descending. Default is reverse=False
  2. key	Optional. A function to specify the sorting criteria(s)
 
 Example:- 
