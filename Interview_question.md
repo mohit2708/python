@@ -406,6 +406,8 @@ s1
 
 **[⬆ Back to Top](#table-of-contents)**
 ### Ques. Python Strings?
+Once a string object has been created, it cannot be changed. “Modifying” that string creates a whole new object in memory.
+
 ##### String Literals
 'hello' is the same as "hello".
 
@@ -413,8 +415,9 @@ s1
 ```python
 a = "Hello"
 print(a)
-```
+
 Output:- Hello
+```
 
 ##### Multiline Strings
 You can assign a multiline string to a variable by using three quotes:
@@ -492,7 +495,7 @@ ut labore et dolore magna aliqua.
       <td>orl</td>
     </tr>
     <tr>
-    	<td colspan="3">Modify Strings</td>
+    	<td colspan="3"><b>Modify Strings</b></td>
     </tr>
     <tr>
       <td>Upper Case</td>
@@ -558,87 +561,147 @@ print(myorder.format(quantity, itemno, price))
 Output:- I want to pay 49.95 dollars for 3 pieces of item 567
 ```
  
-<details>
-  <summary>Escape Characters</summary>
-
+##### Escape Characters
 * An escape character is a backslash \ followed by the character you want to insert.
- 
-  ```python
-    txt = "We are the so-called \"Vikings\" from the north."
-    print(txt) 
+```python
+txt = "We are the so-called \"Vikings\" from the north."
+print(txt) 
 
-    output:- We are the so-called "Vikings" from the north.
-  ```
+Output:- We are the so-called "Vikings" from the north.
 
-### Single Quote
-  ```python
-    txt = 'It\'s alright.'
-    print(txt)  
+# Single Quote
+txt = 'It\'s alright.'
+print(txt)  
 
-    output:- It's alright.
-  ```
+Output:- It's alright.
 
-### Backslash 
-  ```python
-    txt = "This will insert one \\ (backslash)."
-    print(txt)   
+# Backslash
+txt = "This will insert one \\ (backslash)."
+print(txt)   
 
-    output:- This will insert one \ (backslash).
-  ```
+Output:- This will insert one \ (backslash).
 
-### New Line 
-  ```python
-    txt = "Hello\nWorld!"
-    print(txt)    
+# New Line
+txt = "Hello\nWorld!"
+print(txt)    
 
-    output:- 
+Output:- 
 Hello
 World!
-  ```
 
-### Carriage Return
-    ```python
-    txt = "Hello\rWorld!"
-    print(txt)
+# Carriage Return
+txt = "Hello\rWorld!"
+print(txt)
 
-    Output:-
+Output:-
 Hello
 World!
-    ```
 
-### Tab
-    ```python
-    txt = "Hello\tWorld!"
-    print(txt)
+# Tab
+txt = "Hello\tWorld!"
+print(txt)
 
-    Output:- Hello   World!
-    ```
+Output:- Hello   World!
 
-### Backspace
-    ```python
-    txt = "Hello \bWorld!"
-    print(txt)
+# Backspace
+txt = "Hello \bWorld!"
+print(txt)
 
-    Output:- HelloWorld!
-    ```
+Output:- HelloWorld!
 
-### Octal value	
-    ```python
-    txt = "\110\145\154\154\157"
-    print(txt)
+# Octal value	
+txt = "\110\145\154\154\157"
+print(txt)
 
-    Output:- Hello
-    ```
+Output:- Hello
 
-### Hex value
-    ```python
-    txt = "\x48\x65\x6c\x6c\x6f"
-    print(txt) 
+# Hex value
+txt = "\x48\x65\x6c\x6c\x6f"
+print(txt) 
 
-    Output:- Hello
-    ```
- 
-</details>
+Output:- Hello
+```
+
+# Other String Questions
+
+### What is an f-string and how do you use it?
+New in python 3.6, f-strings make string interpolation really easy. Using f-strings is similar to using format(). and F-strings are denoted by an f before the opening quote.
+```python
+name = 'Chris'
+food = 'creme brulee'
+print(f'Hello. My name is {name} and I like {food}.')
+
+Output:- Hello. My name is Chris and I like creme brulee.
+```
+
+### How would you confirm that 2 strings have the same identity?
+The <b>is</b> operator returns True if 2 names point to the same location in memory.
+```python
+animals           = ['python','gopher']
+more_animals      = animals
+
+print(animals == more_animals) #=> True
+print(animals is more_animals) #=> True
+Output:-
+True
+True
+-------------------------------------------------
+animals           = ['python','gopher']
+even_more_animals = ['python','gopher']
+print(animals == even_more_animals) #=> True
+print(animals is even_more_animals) #=> False
+Output:-
+True
+False
+```
+
+### How would you check if each word in a string begins with a capital letter?
+The <b>istitle()</b> function checks if each word is capitalized.
+```python
+print( 'The Hilton'.istitle() ) #=> True
+print( 'The dog'.istitle() ) #=> False
+print( 'sticky rice'.istitle() ) #=> False
+```
+
+### Check if a string contains a specific substring?
+The <b>in</b> operator will return <b>True</b> if a string contains a substring.
+```python
+str = "My name is mohit saxena"
+
+print( 'saxena' in str ) #=> True
+print( 'car' in 'The worlds fastest plane' ) #=> False
+```
+
+### Count the number of a specific character in a string?
+<b>count()</b> will return the number of occurrences of a specific character.
+```python
+print('The first president of the organization..'.count('o')) # 3
+```
+
+### Remove vowels from a string?
+```python
+string = 'Hello mohit saxena'
+vowels = ('a','e','i','o','u')
+new_string = ''
+for ele in string:
+    if ele not in vowels:
+        new_string = new_string + ele
+print(new_string)
+
+# Using comprehension
+print(''.join([c for c in string if c not in vowels]))
+
+Output:- Hll mht sxn
+```
+
+### When would you use rfind() ?
+<b>rfind()</b> is like find() but it starts searching from the right of a string and return the first matching substring.
+```python
+story = 'The price is right said Bob. The price is right.'
+story.rfind('is')
+
+Output:- 39
+```
 
 
 **[⬆ Back to Top](#table-of-contents)**
@@ -746,7 +809,7 @@ There are four collection data types in the Python programming language:
 
 
 **[⬆ Back to Top](#table-of-contents)**
-### a=1, b=1 does both have same Id or not?
+#### Ques. a=1, b=1 does both have same Id or not?
 Two variables in Python have same id, but not lists.
 ```python
 a = 10
@@ -774,7 +837,7 @@ Output:- True
 ```
 
 **[⬆ Back to Top](#table-of-contents)**
-### What is the Difference Between “is” and “==” in Python?
+#### Ques. What is the Difference Between “is” and “==” in Python?
 * ==operator is used to check whether two variables reference objects with the same value.
 * is operator is used to check whether two variables point to the same object in memory.
 
@@ -833,6 +896,19 @@ output:-
     <tr>
       <td>print(thislist[:4]) //Range of Indexes (4 tak)</td>
       <td>['apple', 'banana', 'cherry', 'orange']</td>
+    </tr>
+    <tr>
+      <td>print(thislist[2:]) //2 to the end.</td>
+      <td>['cherry', 'orange', 'kiwi', 'melon', 'mango']</td>
+    </tr>
+    <tr>
+      <td>print(thislist[-4:-1]) //-1 sa -4 tak</td>
+      <td>['orange', 'kiwi', 'melon']</td>
+    </tr>
+    <tr>
+      <td rowspan="3"> <b>Change List Items</b><br>Change Item Value:- To change the value of a specific item, refer to the index number. </td>
+      <td>thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]</td>
+      <td></td>
     </tr>
     <tr>
       <td>print(thislist[2:]) //2 to the end.</td>
@@ -1345,6 +1421,222 @@ numbers = [1, 2, 3, 4, 5]
 multiplied = [number * 2 for number in numbers]
 print(multiplied)
 Output:- [2, 4, 6, 8, 10]
+```
+
+### Other List Interview Questoions.
+
+```python
+list = [9,3,6,4,7,3,1,4]
+print(list[:])      # Output:- [9, 3, 6, 4, 7, 3, 1, 4]
+print(list[2:])     # Output:- [6, 4, 7, 3, 1, 4]
+print(list[:3])     # Output:- [9,3,6]
+print(list[2:5])    # Output:- [6, 4, 7]
+# Get the Items at Specified Intervals
+print(list[::2])    # Output:- [9, 6, 7, 1]
+print(list[::-2])   # Output:- [4, 3, 4, 3]
+print(list[::-1])   # Output:- [4, 1, 3, 7, 4, 6, 3, 9]  #reverse the List using slice
+```
+
+### Check if a list contains an element?
+```python
+li = [1,2,3,'a','b','c']
+print('a' in li)
+
+Output:- True
+```
+
+### convert a list into string?
+```python
+list = ['my','name','is','Mohit','Saxena']
+listtostring = ' '.join(list)
+print('list after shuffling =',listtostring)
+
+Output:-
+list after shuffling = my name is Mohit Saxena
+```
+
+
+### Print duplicate list
+```python
+list = [9,3,6,4,7,3,1,4]
+duplicate = []
+for i in list:
+    if list.count(i) > 1 and i not in duplicate:
+        duplicate.append(i)
+print(duplicate)
+
+# Using List comprehension
+[duplicate.append(i) for i in list if list.count(i) > 1 and i not in duplicate]
+print(duplicate)
+
+Output:- [3,4]
+```
+
+### remove duplicate from list using List comprehension 
+```python
+lstnum = [12, 36, 56, 36, 36, 50, 56, 12] 
+unique_lst = [] 
+
+[unique_lst.append(ele) for ele in lstnum if ele not in unique_lst]  
+print ("unique elements list  : " ,unique_lst)
+```
+
+### find the max, min number from the list user input.
+```python
+number = int(input('enter the number of items in list '))
+list = []
+for num in range(number):
+    item = int(input('Entered number '))
+    list.append(item)
+print('entered list=', list)
+print('Max Number= ', max(list))
+print('min number= ', min(list))
+
+Output:-
+enter the number of items in list 5
+Entered number 6
+Entered number 4
+Entered number 15
+Entered number 85
+Entered number 5
+entered list= [6, 4, 15, 85, 5]
+Max Number=  85
+min number=  4
+```
+
+### find the sum of list elements?
+```python
+num = [12, 36, 56, 36, 36, 50, 56, 12]
+sum = 0
+for ele in range(len(num)):
+    sum = sum + num[ele]
+print(sum)
+
+Output:- 294
+```
+
+### Generate a number list between two ranges?
+```python
+listnum = list(range(1, 7))
+print ("list between two range : " ,listnum)
+
+Output:- list between two range :  [1, 2, 3, 4, 5, 6]
+```
+
+### How to flatten a list of lists with a list comprehension
+```python
+def flatten_list(d_list):
+    flat_list = []
+    # Iterate through the outer list
+    for element in d_list:
+        if type(element) is list:
+            # If the element is of type list, iterate through the sublist
+            for item in element:
+                flat_list.append(item)
+        else:
+            flat_list.append(element)
+    return flat_list
+
+nested_list = [[1, 2, 3, 4], [5, 6, 7], [8, 9, 10]]
+print('Original List', nested_list)
+print('Transformed Flat List', flatten_list(nested_list))
+----------------------------------------------------------------------
+listnum = [[5,6,7,'C#'], ['C++',2,3]]
+flatten_list = [ele for sublist in listnum for ele in sublist]
+print('flatten list =',flatten_list)
+
+Output:- 
+Original List [[1, 2, 3, 4], [5, 6, 7], [8, 9, 10]]
+Transformed Flat List [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+```
+
+### How to Intersect two list?
+```python
+listnum = ['C++',2,3,6,7,5,'C#']
+listnum1 = ['C++',5,6,7,'C#']
+intersect_res= []
+for ele in listnum:
+    if ele in listnum1:
+        intersect_res.append(ele)
+print(intersect_res)
+
+# Using comprehension
+intersect_res = [item for item in listnum if item in listnum1]
+ 
+print('intersect of two list =',intersect_res)
+
+Output:- ['C++', 6, 7, 5, 'C#']
+```
+
+###  get the difference between two List using comprehension?
+```python
+lstnum = [15, 78, 4]
+lstnum1 = [80, 4, 89]
+diffra = []
+for num in lstnum:
+    if num not in lstnum1:
+        diffra.append(num)
+
+print(diffra)
+
+Output:- [15, 78]
+```
+
+### even values from a list using list comprehension?
+```python
+lstnum = [12, 18, 14,17,15,6]
+evenNum = []
+for ele in lstnum:
+    if ele%2==0:
+        evenNum.append(ele)
+print(evenNum)
+
+evenNum1 = [ele for ele in lstnum if ele%2==0]
+print(evenNum1)
+
+Output:- [12, 18, 14, 6]
+```
+
+### Remove the negative index:
+```python
+lstnum = [-5, 27, 1000, -4, 0, -80,56,-67]
+# //Removing negative values
+posNum = []
+for item in lstnum:
+    if item >= 0:
+        posNum.append(item)
+print(posNum)
+
+res_lst = [item for item in lstnum if item >= 0] 
+print('list after removing negative values =',res_lst)
+
+Output:-
+[27, 1000, 0, 56]
+```
+
+### How to iterate over 2+ lists at the same time?
+```python
+name = ['Snowball', 'Chewy', 'Bubbles', 'Gruff']
+animal = ['Cat', 'Dog', 'Fish', 'Goat']
+age = [1, 2, 2, 6]
+z = zip(name, animal, age)
+for name,animal,age in z:
+    print("%s the %s is %d" % (name, animal, age))
+
+Output:-
+Snowball the Cat is 1
+Chewy the Dog is 2
+Bubbles the Fish is 2
+Gruff the Goat is 6
+```
+
+### Combine 2 lists into a list of tuples with the zip function 
+```python
+name = ['Snowball', 'Chewy', 'Bubbles', 'Gruff']
+animal = ['Cat', 'Dog', 'Fish', 'Goat']
+print(list(zip(name,animal)))
+
+Output:- [('Snowball', 'Cat'), ('Chewy', 'Dog'), ('Bubbles', 'Fish'), ('Gruff', 'Goat')]
 ```
 
 
@@ -4366,3 +4658,9 @@ class student(models.Model):
   class Meta:
       get_latest_by = "order_date"
 ```
+
+
+
+ What are pickling and unpickling in Python?
+
+
