@@ -1,17 +1,23 @@
 ### Table of Contents
 
-|  No.  | Questions                                                                         |
-| :---: | --------------------------------------------------------------------------------- |
-|   1   | [swap two variables](#swap-two-variables)                                         |
-|   2   | [prime or not](#program-to-check-if-a-number-is-even-or-odd)                      |
-|       | [Count number of characters in a string](#count-number-of-characters-in-a-string) |
-|       | [convert a list to string](#python-program-to-convert-a-list-to-string)           |
-|       | [Reverse a Number](#reverse-a-number)                                             |
+|  No.  | Questions                                                                                        |
+| :---: | ------------------------------------------------------------------------------------------------ |
+|   1   | [swap two variables](#swap-two-variables)                                                        |
+|   2   | [check if a number is Even or odd](#program-to-check-if-a-number-is-even-or-odd)                 |
+|       | [To Check if a String is a Palindrome](#To-Check-if-a-String-is-a-Palindrome)                    |
+|       | [To Check if a Number is a Palindrome](#To-Check-if-a-Number-is-a-Palindrome)                    |
+|       | [Find the Factorial of a Number](#Find-the-Factorial-of-a-Number)                                |
+|       | [find Fibonacci series up to n](#find-Fibonacci-series-up-to-n)                                  |
+|       | [generate a random number between 0 and 9](#Program-to-generate-a-random-number-between-0-and-9) |
+|       | [Get a Substring of a String](#Get-a-Substring-of-a-String)                                      |
 
 
-https://www.sanfoundry.com/python-problems-solutions/#python-basic-programs
+# String Program
+|       | [How to reverse a sentence in Python input by User?](#How-to-reverse-a-sentence-in-Python-input-by-User)  |
+|       | [Count number of characters in a string](#count-number-of-characters-in-a-string)                |
+|       | [convert a list to string](#program-to-convert-a-list-to-string)                                 |
 
-### swap two variables
+### swap two variables?
 __Using a temporary variable__
 ```python
 a = 11
@@ -58,10 +64,17 @@ P = P / Q
    
 print ("The Value of P after swapping: ", P)  
 print ("The Value of Q after swapping: ", Q)
+
+# XOR swap
+P = P ^ Q    
+Q = P ^ Q   
+P = P ^ Q  
+   
+print ("The Value of P after swapping: ", P)  
+print ("The Value of Q after swapping: ", Q)
 ```
 
 ### Program to check if a number is Even or odd
-```python
 ```python
 # 1 Option
 num = int(input("Enter a number: "))
@@ -79,75 +92,116 @@ def evenOrOdd(n):
 evenOrOdd(6)
 ```
 
-### Prime Number Print
+### To Check if a String is a Palindrome
 ```python
-lower_value = int(input ("Please, Enter the Lowest Range Value: "))  
-upper_value = int(input ("Please, Enter the Upper Range Value: "))  
-print ("The Prime Numbers in the range are: ")
-for i in range (lower_value, upper_value + 1):  
-    if i > 1:  
-        for j in range (2, i):
-            if (i % j) == 0:  
-                break  
-        else:  
-            print (i)  
-			
-Output:-
-Please, Enter the Lowest Range Value: 1
-Please, Enter the Upper Range Value: 20
-The Prime Numbers in the range are: 
-2
-3
-5
-7
+def isPalindrome(string):
+    rev = string[::-1]
+    # rev = ''.join(reversed(s))    # 2nd Option to reversed string
+    if(rev == string):
+        print("The string is a palindrome!");
+    else:
+        print("The string isn't a palindrome!");
+
+s = "malayalam"
+isPalindrome(s)
+
+Output:- The string is a palindrome!
+=========================================================
+x = "malayalam"
+ 
+w = ""
+for i in x:
+    w = i + w 
+if (x == w):
+    print("Yes")
+else:
+    print("No")
+
+Output:- Yes
+```
+
+### To Check if a Number is a Palindrome
+```python
+num = int(input("Enter a number:"))
+temp = num
+reverse = 0
+while temp > 0:
+    remainder = temp%10
+    reverse = (reverse*10)+remainder
+    temp = temp//10
+if num == reverse:
+  print('Palindrome')
+else:
+  print("Not Palindrome")
+```
+
+### Prime Number Print between lower to upper
+```python
+lower = int(input(" Please Enter the Minimum Value: "))
+upper = int(input(" Please Enter the Maximum Value: "))
+
+print("Prime numbers between", lower, "and", upper, "are:")
+
+for num in range(lower, upper + 1):
+   # all prime numbers are greater than 1
+   if num > 1:
+       for i in range(2, num):
+           if (num % i) == 0:
+               break
+       else:
+           print(num)
+
+Output:- 
 11
 13
 17
 19
 ```
 
-### Reverse a Number
+### Find the Factorial of a Number
+* factorial of 6 is 6*5*4*3*2*1 which is 720.
 ```python
-# using a while loop
-Number = int(input("Please Enter any Number: "))
-Reverse = 0
-while(Number > 0):
-    Reminder = Number %10
-    Reverse = (Reverse *10) + Reminder
-    Number = Number //10
-
-print("Reverse of entered number is = %d" %Reverse)
-
-Output:-
-Please Enter any Number: 68765
-Reverse of entered number is = 56786
-
-# Using String slicing
-num = 9412
-print(str(num)[::-1])
-
-Output:-
-num = 2149
-
-# Using Recursion
-num = int(input("Enter the number: "))  
-revr_num = 0    # initial value is 0. It will hold the reversed number  
-def recur_reverse(num):  
-    global revr_num   # We can use it out of the function  
-    if (num > 0):  
-        Reminder = num % 10  
-        revr_num = (revr_num * 10) + Reminder  
-        recur_reverse(num // 10)  
-    return revr_num  
-  
-  
-revr_num = recur_reverse(num)  
-print("Reverse of entered number is = %d" % revr_num)
+num = int(input("Enter a number: "))    
+factorial = 1    
+if num < 0:    
+   print(" Factorial does not exist for negative numbers")    
+elif num == 0:    
+   print("The factorial of 0 is 1")    
+else:    
+   for i in range(1,num + 1):    
+       factorial = factorial*i    
+   print("The factorial of",num,"is",factorial) 
 
 Output:- 
-Enter the number: 1284
-Reverse of entered number is = 4821
+Enter a number: 6
+The factorial of 6 is 720
 ```
+
+### Find Fibonacci series up to n
+```python
+def fibonacci(n):
+    first = 0
+    second = 1
+    if n < 0:
+        print("Incorrect input")
+    elif n == 0:
+        return 0
+    elif n == 1:
+        return second
+    else:
+        for i in range(2, n):
+            third = first + second
+            first = second
+            second = third
+            print(third)
+
+fibonacci(9)
+
+Output:- 1 2 3 5 8 13 21
+```
+
+
+
 
 ### Count number of characters in a string
 ```python
@@ -161,7 +215,8 @@ print("Total number of characters in a string: " + str(count));
 
 Output:- 19
 ```
-### Python program to convert a list to string
+
+### program to convert a list to string
 ```python
 def listToString(s):
     blank =""
@@ -201,25 +256,75 @@ print(listToStr)
 ```
 
 
-### program to count the frequency of each character
+### Program to generate a random number between 0 and 9?
 ```python
-# using "in" operater
-str1 = input ("Enter the string: ")
-d = dict()
-for c in str1:
-    if c in d:
-        d[c] = d[c] + 1
-    else:
-        d[c] = 1
-print(d)
+import random
+print(random.randint(0,9))
 
-Output:- 
-Enter the string: HheLlo
-{'H': 1, 'h': 1, 'e': 1, 'L': 1, 'l': 1, 'o': 1}
-Enter the string: Hello My name is Mohit Saxena
-{'H': 1, 'e': 3, 'l': 2, 'o': 2, ' ': 5, 'M': 2, 'y': 1, 'n': 2, 'a': 3, 'm': 1, 'i': 2, 's': 1, 'h': 1, 't': 1, 'S': 1, 'x': 1}
-----------------------------------------------------------------------------
+Output:- 0 se 9 tak ka koi bhi number aa sakta hai.
+```
 
-# Use of “get()” function
+### Get a Substring of a String
+```python
+my_string = "I love python."
+
+print(my_string[2:6])   # You need to specify the starting index and the ending index of the substring. In this case, love starts at index 2 and ends at index 6.
+
+print(my_string[2:])    # All the text from index 2 to the end are selected
+
+print(my_string[:-1])   # All the text before the last index is selected.
+
+Output:-
+love
+love python.
+I love python
+```
+
+
+
+### 
+
+
+
+### 
+
+
+## String Programes
+
+### How to reverse a sentence in Python input by User?
+```python
+inputsentence = input("Please input  a sentence : ")
+splitString = inputsentence.split()      # ['i', 'love', 'Mohit', 'Saxena']
+reversedString = reversed(splitString)
+print(" ".join(reversedString))
+
+Output:- i love Mohit Saxena
+Saxena Mohit love i
+
+# 2 Option 
 
 ```
+
+### How to reverse a Word, String or Sentence in Python input by User?
+```python
+my_str = input("Please enter your own String : ")
+str = ''
+for i in my_str:
+    str = i + str
+print("\nThe Original String is: ", my_str)
+print("The Reversed String is: ", str)
+
+Output:-
+The Original String is:  i love Mohit Saxena
+The Reversed String is:  anexaS tihoM evol i
+```
+
+
+
+
+
+
+
+
+
+https://prepinsta.com/python-program/find-a-number-is-palindrome-or-not/
