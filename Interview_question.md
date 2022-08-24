@@ -168,7 +168,7 @@ Type-checking can be done at two stages:-
 
 
 **[⬆ Back to Top](#table-of-contents)**                
-### Ques. What is membership operator and identity operator?
+### Ques. What is membership operator and identity operators?
 *  <b>Membership Operators:- </b> These operators help validate whether a given element is present in or is a member of the given sequence of data. This sequence of data can be a list, string or a tuple<br>There are 2 types of Membership operater
 1. in Operator:
 ```python
@@ -206,8 +206,20 @@ a is not c
 ```
 
 2. is not			   
-			   
+```python
+x = ["apple", "banana"]
+y = ["apple", "banana"]
+z = x
 
+print(x is not z)
+print(x is not y)
+print(x != y)
+
+Output:- 
+False
+True
+False
+```		   
 
 
 **[⬆ Back to Top](#table-of-contents)**
@@ -434,6 +446,7 @@ ut labore et dolore magna aliqua.
 ```
 
 ##### Slicing Strings
+
 * Slice from the start position and end position
 ```python
 b = "Hello, World!" 
@@ -441,18 +454,51 @@ print(b[2:5])
 
 Output:- llo
 ```
-* Slice From the Start: Get the characters from the start to position 5 (not included
+
+* Slice From the Start: Get the characters from the start to position (5 not included)
 ```python
 b = "Hello, World!" 
 print(b[:5])
 
 Output:- Hello
 ```
-   
-
 
 ##### Modify Strings
+* <b>Replace String:- </b> The <b>replace()</b> method replaces a string with another string)
+```python
+a = "Hello, World!"
+print(a.replace("H", "J"))
+
+Output:- Jello, World!
+```
+* <b>Split String</b> (The <b>split()</b> method splits the string into substrings if it finds instances of the separator)
+```python
+a = "Hello, World!"
+b = a.split(",")
+
+Output:- ['Hello', ' World!']
+```
+      
 ##### String Concatenation
+* To concatenate, or combine, two strings you can use the + operator.
+```python
+a = "Hello"
+b = "World"
+c = a + b
+print(c)
+
+Output:- HelloWorld 
+```
+* To add a space between them, add a " "
+```python
+a = "Hello"
+b = "World"
+c = a + b
+print(c)
+
+Output:- Hello World 
+```
+
 
 <table id="unique-table-id">
   <thead>
@@ -463,34 +509,9 @@ Output:- Hello
     </tr>
   </thead>
   <tbody>
-   <tr>
-      <td><b>Replace String</b> (The <b>replace()</b> method replaces a string with another string)</td>
-      <td>a = "Hello, World!" <br> print(a.replace("H", "J"))</td>
-      <td>Jello, World!</td>
-    </tr>
-    <tr>
-    	<td><b>Split String</b> (The <b>split()</b> method splits the string into substrings if it finds instances of the separator) </td>
-    	<td> a = "Hello, World!"<br> b = a.split(",") </td>
-    	<td> ['Hello', ' World!'] </td>
-    </tr>
-    <tr>
-      <td colspan="3"><b>String Concatenation</b></td>
-    </tr>
-    <tr>
-      <td>To concatenate, or combine, two strings you can use the + operator </td>
-      <td> a = "Hello" <br>b = "World"<br>c = a + b<br>print(c) </td>
-      <td> HelloWorld </td>
-  	</tr>
-  	<tr>
-  		<td>To add a space between them, add a " " </td>
-  		<td>a = "Hello" <br>b = "World"<br>c = a + " " + b<br>print(c) </td>
-  		<td> Hello World </td>
-  	</tr>
   	<tr>
       <td colspan="3"><b>Slicing Strings</b></td>
-    </tr>
-
-   
+    </tr>   
     <tr>
       <td>Slice To the End: Get the characters from position 2, and all the way to the end</td>
       <td>b = "Hello, World!" <br>print(b[2:])</td>
@@ -631,7 +652,7 @@ Output:- Hello
 
 # Other String Questions
 
-### What is an f-string and how do you use it?
+##### What is an f-string and how do you use it?
 New in python 3.6, f-strings make string interpolation really easy. Using f-strings is similar to using format(). and F-strings are denoted by an f before the opening quote.
 ```python
 name = 'Chris'
@@ -641,7 +662,7 @@ print(f'Hello. My name is {name} and I like {food}.')
 Output:- Hello. My name is Chris and I like creme brulee.
 ```
 
-### How would you confirm that 2 strings have the same identity?
+##### How would you confirm that 2 strings have the same identity?
 The <b>is</b> operator returns True if 2 names point to the same location in memory.
 ```python
 animals           = ['python','gopher']
@@ -662,7 +683,7 @@ True
 False
 ```
 
-### How would you check if each word in a string begins with a capital letter?
+##### How would you check if each word in a string begins with a capital letter?
 The <b>istitle()</b> function checks if each word is capitalized.
 ```python
 print( 'The Hilton'.istitle() ) #=> True
@@ -1697,31 +1718,18 @@ Output:- ('apple', 'banana', 'cherry')
 **[⬆ Back to Top](#table-of-contents)**
 ##### Access Tuple Items
 ```python
-# Access Tuple Items
-thistuple = ("apple", "banana", "cherry")
-print(thistuple[1])
+thistuple = ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
 
-Output:- banana
------------------------------------------------------
+# Access Tuple Items 
+print(thistuple[1])   # banana
+print(thistuple[2:])  # ('cherry', 'orange', 'kiwi', 'melon', 'mango')
+print(thistuple[:4])  # ('apple', 'banana', 'cherry', 'orange')
+print(thistuple[2:5]) # ('cherry', 'orange', 'kiwi')
 
 # Negative Indexing
-thistuple = ("apple", "banana", "cherry")
-print(thistuple[-1])
+print(thistuple[-1])    # mango
+print(thistuple[-4:-1]) # ('orange', 'kiwi', 'melon')
 
-Output:- cherry
-------------------------------------------------------
-
-# Range of Indexes
-thistuple = ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
-print(thistuple[2:5])
-print(thistuple[:4])
-print(thistuple[2:])
-print(thistuple[-4:-1])
-
-Output:- ('cherry', 'orange', 'kiwi')
-Output:- ('apple', 'banana', 'cherry', 'orange')
-Output:- ('cherry', 'orange', 'kiwi', 'melon', 'mango')
-Output:- ('orange', 'kiwi', 'melon')
 ------------------------------------------------------
 
 # Check if Item Exists
@@ -2049,24 +2057,21 @@ True
 
 **[⬆ Back to Top](#table-of-contents)**			
 ##### Add Items of set:-
+* To add one item to a set use the <b>add()</b> method.
 ```python
-# To add one item to a set use the add() method.
-			
 thisset = {"apple", "banana", "cherry"}
 thisset.add("orange")
 print(thisset)
 			
-Output:-
-{'cherry', 'orange', 'apple', 'banana'}
----------------------------------------------------------------------
-			
-# Try to add an element that already exists:
+Output:- {'cherry', 'orange', 'apple', 'banana'}
+```
+* Try to add an element that already exists.
+```python
 thisset = {"apple", "banana", "cherry"}
 thisset.add("apple")
 print(thisset)
 
-Output:- 
-{'banana', 'apple', 'cherry'}			
+Output:- {'banana', 'apple', 'cherry'}
 --------------------------------------------------------------------------------
 			
 # To add items from another set into the current set, use the update() method.
@@ -2077,9 +2082,10 @@ print(thisset)
 			
 output:-
 {'apple', 'mango', 'cherry', 'pineapple', 'banana', 'papaya'}
------------------------------------------------------------------------
+```
 
-# Add Any Iterable:- The object in the update() method does not have to be a set, it can be any iterable object (tuples, lists, dictionaries etc.).
+* <b>Add Any Iterable:-</b> The object in the <b>update()</b> method does not have to be a set, it can be any iterable object (tuples, lists, dictionaries etc.).
+```python
 thisset = {"apple", "banana", "cherry"}
 mylist = ["kiwi", "orange"]
 thisset.update(mylist)
@@ -2111,7 +2117,8 @@ Output:-
 {'apple', 'cherry'}
 			
 -------------------------------------------------------------------------
-# __Note:-__ You can also use the pop() method to remove an item, but this method will remove the last item. Remember that sets are unordered, so you will not know # # what item that gets removed.
+# __Note:-__ You can also use the pop() method to remove an item, but this method will remove the last item. Remember that sets are unordered, so you will not know 
+# what item that gets removed.
 thisset = {"apple", "banana", "cherry"}
 x = thisset.pop()
 print(x) #removed item
@@ -2234,7 +2241,7 @@ output:-
 ```
 
 ##### What is difference between Discard() and Remove()?
-This method is different from the discard() method, because the remove() method will raise an error if the specified item does not exist, and the discard() method will not.
+* This method is different from the discard() method, because the remove() method will raise an error if the specified item does not exist, and the discard() method will not.
 ```python
 # Discard
 numbers = {1, 2, 3, 4, 5}
@@ -2284,6 +2291,7 @@ Output:- Error
 | symmetric_difference_update() | inserts the symmetric differences from this set and another                    |
 | union()                       | Return a set containing the union of sets                                      |
 | update()                      | Update the set with the union of this set and others                           |
+
 
 ```python
 # add():-  Adds an element to the set
@@ -2489,8 +2497,7 @@ Output:- {'b', 'e', 'f', 'd', 'c', 'a'}
 x = {"apple", "banana", "cherry"}
 y = {"google", "microsoft", "apple"}
 
-x.update(y) 
-
+x.update(y)
 print(x)
 
 Output:- {'microsoft', 'banana', 'cherry', 'google', 'apple'}
@@ -2516,7 +2523,7 @@ Output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
 ```
 
 **[⬆ Back to Top](#table-of-contents)**
-* __Duplicates Not Allowed__
+* <b>Duplicates Not Allowed</b>
 ```python
 thisdict = {
   "brand": "Ford",
@@ -2529,7 +2536,7 @@ Output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 2020}
 ```
 
 **[⬆ Back to Top](#table-of-contents)**
-###### Dictionary Length:- To determine how many items a dictionary has, use the len() function.
+* <b>Dictionary Length:-</b> To determine how many items a dictionary has, use the <b>len()</b> function.
 ```python
 thisdict = {
   "brand": "Ford",
@@ -2556,8 +2563,8 @@ Output:- {'brand': 'Ford', 'electric': False, 'year': 1964, 'colors': ['red', 'w
 
 **[⬆ Back to Top](#table-of-contents)**
 ##### Access Item of Dictionary
+* You can access the items of a dictionary by referring to its key name, inside square brackets.
 ```python
-# You can access the items of a dictionary by referring to its key name, inside square brackets.
 thisdict =	{
     "brand": "Ford",
     "model": "Mustang",
@@ -2567,8 +2574,9 @@ x = thisdict["model"]
 print(x)
 
 Output:- Mustang
-
-# get() Method
+```
+* Using the <b>get()</b> Method
+```python
 thisdict =	{
     "brand": "Ford",
     "model": "Mustang",
@@ -2578,8 +2586,9 @@ x = thisdict.get("model")
 print(x)
 
 Output:- Mustang
---------------------------------------------------------------------------------
-# Get Keys of the Dictionary:- The keys() method will return a list of all the keys in the dictionary.
+```
+* Get <b>All Keys</b> of the Dictionary:- The keys() method will return a list of all the keys in the dictionary.
+```python
 car = {
 "brand": "Ford",
 "model": "Mustang",
@@ -2598,8 +2607,9 @@ Output:-
 dict_keys(['brand', 'model', 'year'])
 dict_keys(['brand', 'model', 'year', 'color'])
 -----------------------------------------------------------------------------
-
-# Get Values of the Dictionary and We can change the value of a specific item by referring to its key name.
+```
+* Get <b>All Values</b> of the Dictionary and We can change the value of a specific item by referring to its key name.
+```python
 car = {
 "brand": "Ford",
 "model": "Mustang",
@@ -2617,9 +2627,9 @@ print(x) #after the change
 Output:-
 dict_values(['Ford', 'Mustang', 1964])
 dict_values(['Ford', 'Mustang', 2020])
-------------------------------------------------------------------------------
-
-# Get Items :- The items() method will return each item in a dictionary, as tuples in a list.
+```
+* Get <b>All Items</b> :- The items() method will return each item in a dictionary, as tuples in a list.
+```python
 thisdict = {
    "brand": "Ford",
    "model": "Mustang",
@@ -2631,9 +2641,9 @@ x = thisdict.items()
 print(x)
 
 Output:- dict_items([('brand', 'Ford'), ('model', 'Mustang'), ('year', 1964)])
-------------------------------------------------------------------------------
-
-# Check if Key Exists
+```
+* Check if Key Exists
+```python
 thisdict = {
   "brand": "Ford",
   "model": "Mustang",
@@ -2716,19 +2726,7 @@ thisdict.pop("model")
 print(thisdict)
 
 Output:- {'brand': 'Ford', 'year': 1964}
---------------------------------------------------------------------------------
 
-# Removing item using popitem() methods
-# method removes the last inserted item (in versions before 3.7, a random item is removed instead).
-thisdict =	{
-"brand": "Ford",
-"model": "Mustang",
-"year": 1964
-}
-thisdict.popitem()
-print(thisdict)
-
-Output:-  {'brand': 'Ford', 'model': 'Mustang'}
 ----------------------------------------------------------------------------------
 
 # Removing item using del methods
@@ -2742,6 +2740,20 @@ del thisdict["model"]
 print(thisdict)
 
 Output:-  {'brand': 'Ford', 'year': 1964}
+--------------------------------------------------------------------------------
+
+# Removing item using popitem() methods
+# method removes the last inserted item (in versions before 3.7, a random item is removed instead).
+thisdict =	{
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
+thisdict.popitem()
+print(thisdict)
+
+Output:-  {'brand': 'Ford', 'model': 'Mustang'}
+
 ---------------------------------------------------------------------------------
 
 # The Removing item using del methods keyword can also delete the dictionary completely.
@@ -2940,7 +2952,7 @@ Output:-
 
 **[⬆ Back to Top](#table-of-contents)**
 ##### Dictionary Methods
-```python
+
 | Method       | Description                                                                                                  |
 | ------------ | ------------------------------------------------------------------------------------------------------------ |
 | clear()      | Removes all the elements from the dictionary                                                                 |
@@ -2954,6 +2966,7 @@ Output:-
 | setdefault() | Returns the value of the specified key. If the key does not exist: insert the key, with the specified value. |
 | update()     | Updates the dictionary with the specified key-value pairs.                                                   |
 | values()     | Returns a list of all the values in the dictionary.                                                          |
+
 
 ```python
 # Dictionary clear() Method:- The clear() method removes all the elements from a dictionary.
@@ -3155,7 +3168,7 @@ print(x)
 Output:- dict_values(['Ford', 'Mustang', 2018])
 ```
 
-### Ques. How to Merging Or Adding two Dictionaries?
+##### Ques. How to Merging Or Adding two Dictionaries?
 ```python
 # Using update() method
 dict_1 = {'John': 15, 'Rick': 10, 'Misa' : 12 }
@@ -3264,36 +3277,47 @@ Output:- {'k1': 100, 'k2': 2, 'k3': 3, 'k4': 4}
 ```
 
 ### Ques. Combine two dictionary adding values for common keys?
+*  Using collections.Counter()
 ```python
-# For loop and | Operator
-dictA = {'Mon': 23, 'Tue': 11, 'Sun': 6}
-dictB = {'Wed': 10, 'Mon': 12, 'Sun': 4}
-
-# Add with common key
-for key in dictB:
-   if key in dictA:
-      dictB[key] = dictB[key] + dictA[key]
-   else:
-      pass
-res = dictA | dictB
-print(res)
-
-Output:- {'Mon': 35, 'Tue': 11, 'Sun': 10, 'Wed': 10}
-------------------------------------------------------------
-
-# Using Counter
 from collections import Counter
-dictA = {'Mon': 23, 'Tue': 11, 'Sun': 6}
-dictB = {'Wed': 10, 'Mon': 12, 'Sun': 4}
-
-res = Counter(dictA) + Counter(dictB)
+# initializing two dictionaries
+dict1 = {'a': 12, 'for': 25, 'c': 9}
+dict2 = {'Geeks': 100, 'geek': 200, 'for': 300}
+ 
+res = Counter(dict1) + Counter(dict2)
 print(res)
 
-Output:- Counter({'Mon': 35, 'Tue': 11, 'Sun': 10, 'Wed': 10})
+Output:- Counter({'for': 325, 'geek': 200, 'Geeks': 100, 'a': 12, 'c': 9})
 ```
-		
-			
-			
+*  Naive method
+```python
+dict1 = {'a': 12, 'for': 25, 'c': 9}
+dict2 = {'Geeks': 100, 'geek': 200, 'for': 300}
+# adding the values with common key
+for key in dict2:
+    if key in dict1:
+        dict2[key] = dict2[key] + dict1[key]
+print(dict2)
+
+Output:- {'Geeks': 100, 'geek': 200, 'for': 325}
+```
+
+##### Ques. What will the output of following Program
+```python
+dictlang = {'c#': 6, 'GO': 89, 'python': 4,'Rust':10,'Apple':51,'apple':21}
+ 
+for _ in sorted(dictlang):
+    print (dictlang[_])	
+
+Output:- 
+51
+89
+10
+21
+6
+4
+```
+
 ### Ques. What is If Else?
 * Equals: a == b
 * Not Equals: a != b
@@ -3491,8 +3515,10 @@ Output:- {"name": "John", "age": 30, "city": "New York"}
 ```
 
 ### Ques. What is Decorators?
-* Decorators allow us to wrap another function in order to extend the behaviour of the wrapped function, without permanently modifying it.
+* Decorators are used to add some design patterns to a function without changing its structure.
 * A decorator function is a function that accepts a function as parameter and return a function(decorator ek function hai jo as a argument leta bhi function hai and return bhi function karta hai).
+* Decorators allow us to wrap another function in order to extend the behaviour of the wrapped function, without permanently modifying it.
+
 ```python
 def decor(fun):
     def inner():
@@ -3547,6 +3573,7 @@ def num_decor(num):
         add = a + 5
         return add
     return inner
+
 def num():
     return 10
 
@@ -4668,3 +4695,10 @@ class student(models.Model):
  What are pickling and unpickling in Python?
 
 
+What are Python namespaces?
+A namespace in python refers to the name which is assigned to each object in python. The objects are variables and functions. As each object is created, its name along with space(the address of the outer function in which the object is), gets created. The namespaces are maintained in python like a dictionary where the key is the namespace and value is the address of the object. There 4 types of namespace in python-
+
+Built-in namespace– These namespaces contain all the built-in objects in python and are available whenever python is running.
+Global namespace– These are namespaces for all the objects created at the level of the main program.
+Enclosing namespaces– These namespaces are at the higher level or outer function.
+Local namespaces– These namespaces are at the local or inner function.
