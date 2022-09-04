@@ -1,15 +1,16 @@
 ### Table of Contents
 
-|  No.  | Questions                                                                                        |
-| :---: | ------------------------------------------------------------------------------------------------ |
-|   1   | [swap two variables](#swap-two-variables)                                                        |
-|   2   | [check if a number is Even or odd](#program-to-check-if-a-number-is-even-or-odd)                 |
-|       | [To Check if a String is a Palindrome](#To-Check-if-a-String-is-a-Palindrome)                    |
-|       | [To Check if a Number is a Palindrome](#To-Check-if-a-Number-is-a-Palindrome)                    |
-|       | [Find the Factorial of a Number](#Find-the-Factorial-of-a-Number)                                |
-|       | [find Fibonacci series up to n](#find-Fibonacci-series-up-to-n)                                  |
-|       | [generate a random number between 0 and 9](#Program-to-generate-a-random-number-between-0-and-9) |
-|       | [Get a Substring of a String](#Get-a-Substring-of-a-String)                                      |
+|  No.  | Questions                                                                                               |
+| :---: | ------------------------------------------------------------------------------------------------------- |
+|   1   | [swap two variables](#swap-two-variables)                                                               |
+|   2   | [check if a number is Even or odd](#program-to-check-if-a-number-is-even-or-odd)                        |
+|       | [To Check if a String is a Palindrome](#To-Check-if-a-String-is-a-Palindrome)                           |
+|       | [To Check if a Number is a Palindrome](#To-Check-if-a-Number-is-a-Palindrome)                           |
+|       | [Find the Factorial of a Number](#Find-the-Factorial-of-a-Number)                                       |
+|       | [find Fibonacci series up to n](#find-Fibonacci-series-up-to-n)                                         |
+|       | [check if the number is an Armstrong number or not](#check-if-the-number-is-an-Armstrong-number-or-not) |
+|       | [generate a random number between 0 and 9](#Program-to-generate-a-random-number-between-0-and-9)        |
+|       | [Get a Substring of a String](#Get-a-Substring-of-a-String)                                             |
 
 
 # String Program
@@ -189,6 +190,8 @@ def fibonacci(n):
     elif n == 1:
         return second
     else:
+        print(first)
+        print(second)
         for i in range(2, n):
             third = first + second
             first = second
@@ -197,10 +200,118 @@ def fibonacci(n):
 
 fibonacci(9)
 
-Output:- 1 2 3 5 8 13 21
+Output:- 0 1 1 2 3 5 8 13 21
+=======================================================
+# Using While Loop
+def fibonacci(n):
+    first = 0
+    second = 1
+    count = 0
+    if n < 0:
+        print("Incorrect input")
+    elif n == 0:
+        return 0
+    elif n == 1:
+        return second
+    else:
+        while count < n:
+            print(first)  
+            third = first + second  
+           # At last, we will update values  
+            first = second  
+            second = third  
+            count += 1
+fibonacci(9)
 ```
 
+### check if the number is an Armstrong number or not?
+* 153 = 1*1*1 + 5*5*5 + 3*3*3 = 153
+* 1634 = 1*1*1*1 + 6*6*6*6 + 3*3*3*3 + 4*4*4*4 = 1634
+```python
+num = int(input("Enter a number: "))
+len = len(str(num))
+sum = 0
+temp = num
 
+while temp > 0:
+   digit = temp % 10
+   sum = sum + digit ** len
+   temp = temp//10
+
+if num == sum:
+   print(num,"is an Armstrong number")
+else:
+   print(num,"is not an Armstrong number")
+
+Output:- 
+Enter a number: 1634
+1634 is an Armstrong number
+```
+
+### Check Prime Number Or Not
+```python
+num = int(input("Enter a number: "))
+if num > 1:
+   for i in range(2,num):
+       if (num % i) == 0:
+           print(num,"is not a prime number")
+           break
+   else:
+       print(num,"is a prime number")
+       
+else:
+   print(num,"is not a prime number")
+
+Output:- 3
+3 is a prime number
+```
+
+### print prime numbers from 1 to N.
+```python
+lower_value = int(input ("Please, Enter the Lowest Range Value: "))  
+upper_value = int(input ("Please, Enter the Upper Range Value: "))  
+  
+print ("The Prime Numbers in the range are: ")  
+for number in range (lower_value, upper_value + 1):  
+    if number > 1:  
+        for i in range (2, number):  
+            if (number % i) == 0:  
+                break  
+        else:  
+            print (number)  
+
+Output:-
+Please, Enter the Lowest Range Value: 1
+Please, Enter the Upper Range Value: 10
+The Prime Numbers in the range are: 
+2
+3
+5
+7
+```
+
+### Extract numbers from string?
+```python
+new_string = "Germany26China47Australia88"
+ 
+emp_str = ""
+for m in new_string:
+    if m.isdigit():
+        emp_str = emp_str + m
+print("Find numbers from string:",emp_str)
+
+Output:- Find numbers from string: 264788
+
+# 2 Example
+new_str = "Micheal 89 George 94"
+
+emp_lis = []
+for z in new_str.split():
+   if z.isdigit():
+      emp_lis.append(int(z))
+
+print("Find number in string:",emp_lis)
+```
 
 
 ### Count number of characters in a string
@@ -319,7 +430,59 @@ The Original String is:  i love Mohit Saxena
 The Reversed String is:  anexaS tihoM evol i
 ```
 
+### Find repeated characters in a string python?
+```python
+string = "Great responsibility";  
+  
+for i in range(0, len(string)):  
+    count = 1;  
+    for j in range(i+1, len(string)):  
+        if(string[i] == string[j] and string[i] != ' '):  
+            count = count + 1;  
+            string = string[:j] + '0' + string[j+1:];  
+ 
+    if(count > 1 and string[i] != '0'):  
+        print(string[i]);
 
+output:- r
+e
+t
+s
+i
+```
+
+### String Pattern
+```python
+str1 = input("enter the string: ")
+len = len(str1)
+for i in range(len):
+    for j in range(i+1):
+        print(str1[i], end="")
+    print()
+
+Output:-
+enter the string: Mohit
+M
+oo
+hhh
+iiii
+ttttt
+========================================================================
+str1 = input("enter the string: ")
+len = len(str1)
+for i in range(len):
+    for j in range(i+1):
+        print(str1[j], end="")
+    print()
+
+Output:-
+enter the string: mohit
+m
+mo
+moh
+mohi
+mohit
+```
 
 
 
