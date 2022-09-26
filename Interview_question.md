@@ -340,17 +340,33 @@ output:- Python is fantastic<br>Python is awesome
 ```
 
 **[⬆ Back to Top](#table-of-contents)**
-### Ques. How to check What type of datatype?
+### Ques. What are the common built-in data types in Python?
 Python has the following data types built-in by default, in these categories:
-|                |                                   |
-| :------------: | --------------------------------- |
-|   Text Type    | str("Hello World")                |
-| Numeric Types  | int(20), float(20.5), complex(1j) |
-| Sequence Types | list, tuple, range                |
-|  Mapping Type  | dict                              |
-|   Set Types    | set, frozenset                    |
-|  Boolean Type  | bool                              |
-|  Binary Types  | bytes, bytearray, memoryview      |
+* <b>Numeric</b>
+   * Integers :- int stores integers eg a=100, b=25, c=526, etc.
+   * Float :- float stores floating-point numbers eg a=25.6, b=45.90, c=1.290, etc.
+   * Complex Numbers:- complex stores numbers eg a=3 + 4j, b=2 + 3j, c=complex(4,6), etc.
+   * long:- long stores higher range of integers eg a=908090999L, b=-0x1990999L, etc.
+
+* Sequence Type
+   * String
+   * List
+   * Tuple
+   * range
+
+* Boolean:- There can be only two types of value in the Boolean data type of Python, and that is True or False. 
+* Set Type:-
+  *  set:-
+  *  frozenset:-
+* Dictionary
+* long:- long stores higher range of integers eg a=908090999L, b=-0x1990999L, etc.
+
+* Mapping Types:
+  * dict:- Stores comma-separated list of key: value pairs.
+* Binary Types:-
+  * bytes
+  * bytearray
+  * memoryview 
 
 
 * We can get the data type of any object by using the __type()__ function.
@@ -447,21 +463,22 @@ ut labore et dolore magna aliqua.
 
 ##### Slicing Strings
 
-* Slice from the start position and end position
 ```python
 b = "Hello, World!" 
-print(b[2:5])
 
+print(b[2:5])   # Slice from the start position and end position
 Output:- llo
-```
 
-* Slice From the Start: Get the characters from the start to position (5 not included)
-```python
-b = "Hello, World!" 
-print(b[:5])
-
+print(b[:5])    # Slice From the Start: Get the characters from the start to position (5 not included)
 Output:- Hello
+
+print(b[2:])    # Slice To the End: Get the characters from position 2, and all the way to the end.
+Output:- llo, World!
+
+print(b[-5:-2]) # Negative Indexing: Get the characters from position 2, and all the way to the end.
+Output:- orl
 ```
+     
 
 ##### Modify Strings
 * <b>Replace String:- </b> The <b>replace()</b> method replaces a string with another string)
@@ -478,7 +495,32 @@ b = a.split(",")
 
 Output:- ['Hello', ' World!']
 ```
-      
+
+* Upper Case
+```python
+b = "Hello, World!"
+print(a.upper())
+
+Output:- HELLO, WORLD!
+```
+
+* Lower Case
+```python
+b = "Hello, World!"
+print(a.lower())
+
+Output:- hello, world!
+```
+
+* Remove Whitespace :- The <b>strip()</b> method removes any whitespace from the beginning or the end.
+```python
+b = "      Hello, World!     "
+print(a.strip())
+
+Output:- Hello, World!
+``` 
+ 
+
 ##### String Concatenation
 * To concatenate, or combine, two strings you can use the + operator.
 ```python
@@ -493,56 +535,12 @@ Output:- HelloWorld
 ```python
 a = "Hello"
 b = "World"
-c = a + b
+c = a+" "+b
+
 print(c)
 
 Output:- Hello World 
 ```
-
-
-<table id="unique-table-id">
-  <thead>
-    <tr>
-      <th scope="col">Description</th>
-      <th scope="col">Question</th>
-      <th scope="col">Answer</th>
-    </tr>
-  </thead>
-  <tbody>
-  	<tr>
-      <td colspan="3"><b>Slicing Strings</b></td>
-    </tr>   
-    <tr>
-      <td>Slice To the End: Get the characters from position 2, and all the way to the end</td>
-      <td>b = "Hello, World!" <br>print(b[2:])</td>
-      <td>llo, World!</td>
-    </tr>
-    <tr>
-      <td>Negative Indexing: Get the characters from position 2, and all the way to the end</td>
-      <td>b = "Hello, World!" <br>print(b[-5:-2])</td>
-      <td>orl</td>
-    </tr>
-    <tr>
-    	<td colspan="3"><b>Modify Strings</b></td>
-    </tr>
-    <tr>
-      <td>Upper Case</td>
-      <td>b = "Hello, World!" <br>print(a.upper())</td>
-      <td>HELLO, WORLD!</td>
-    </tr>
-    <tr>
-      <td>Lower Case</td>
-      <td>b = "Hello, World!" <br>print(a.lower())</td>
-      <td>hello, world!</td>
-    </tr>
-	<tr>
-      <td><b>Remove Whitespace</b> (The <b>strip()</b> method removes any whitespace from the beginning or the end)</td>
-      <td>a = "   Hello, World!  " <br> print(a.strip())</td>
-      <td>Hello, World!</td>
-    </tr>
-
-  </tbody>
-</table>
 
 
 
@@ -562,11 +560,11 @@ TypeError: must be str, not int
 
 # we can combine strings and numbers by using the __format()__ method!
 # The format() method takes the passed arguments, formats them, and places them in the string where the placeholders {} are:
-   age = 36
-    txt = "My name is John, and I am {}"
-    print(txt.format(age))
+  age = 36
+  txt = "My name is John, and I am {}"
+  print(txt.format(age))
  
-   output:- My name is John, and I am 36
+  output:- My name is John, and I am 36
 
  
 # The format() method takes unlimited number of arguments, and are placed into the respective placeholders:
@@ -589,6 +587,17 @@ print(myorder.format(quantity, itemno, price))
 Output:- I want to pay 49.95 dollars for 3 pieces of item 567
 ```
  
+##### What is an f-string and how do you use it?
+New in python 3.6, f-strings make string interpolation really easy. Using f-strings is similar to using format(). and F-strings are denoted by an f before the opening quote.
+```python
+name = 'Chris'
+food = 'creme brulee'
+print(f'Hello. My name is {name} and I like {food}.')
+
+Output:- Hello. My name is Chris and I like creme brulee.
+```
+
+
 ##### Escape Characters
 * An escape character is a backslash \ followed by the character you want to insert.
 ```python
@@ -652,16 +661,6 @@ Output:- Hello
 
 # Other String Questions
 
-##### What is an f-string and how do you use it?
-New in python 3.6, f-strings make string interpolation really easy. Using f-strings is similar to using format(). and F-strings are denoted by an f before the opening quote.
-```python
-name = 'Chris'
-food = 'creme brulee'
-print(f'Hello. My name is {name} and I like {food}.')
-
-Output:- Hello. My name is Chris and I like creme brulee.
-```
-
 ##### How would you confirm that 2 strings have the same identity?
 The <b>is</b> operator returns True if 2 names point to the same location in memory.
 ```python
@@ -701,9 +700,11 @@ print( 'car' in 'The worlds fastest plane' ) #=> False
 ```
 
 ### Count the number of a specific character in a string?
-<b>count()</b> will return the number of occurrences of a specific character.
+* <b>count()</b> will return the number of occurrences of a specific character.
 ```python
 print('The first president of the organization..'.count('o')) # 3
+
+Output:- 3
 ```
 
 ### Remove vowels from a string?
@@ -723,7 +724,7 @@ Output:- Hll mht sxn
 ```
 
 ### When would you use rfind() ?
-<b>rfind()</b> is like find() but it starts searching from the right of a string and return the first matching substring.
+* <b>rfind()</b> is like find() but it starts searching from the right of a string and return the first matching substring.
 ```python
 story = 'The price is right said Bob. The price is right.'
 story.rfind('is')
@@ -879,67 +880,26 @@ Output:- True
 2. Since lists are indexed, lists can have items with the __same value.__
 
 ```python
-my_list = ["apple", "banana", "cherry"]
-my_list = [1, "Hello", 3.4]
-my_list = ["mouse", [8, 4, 6], ['a']] #A list can also have another list as an item. This is called a nested list.
+my_list = ["apple", "banana", "cherry"]   #Output:- ["apple", "banana", "cherry"]
+my_list = [1, "Hello", 3.4]               #Output:- [1, "Hello", 3.4]
+my_list = ["mouse", [8, 4, 6], ['a']] #A list can also have another list as an item. This is called a nested list.  #Output:- ["mouse", [8, 4, 6], ['a']]
 print(my_list)
- 
-output:-
-["apple", "banana", "cherry"]
-[1, "Hello", 3.4]
-["mouse", [8, 4, 6], ['a']]
 ```
 
 **[⬆ Back to Top](#table-of-contents)**
 ##### Access List Items
-<table id="unique-table-id">
-  <thead>
-    <tr>
-      <th scope="col">Description</th>
-      <th scope="col">Question</th>
-      <th scope="col">Answer</th>
-    </tr>
-    
-  </thead>
-  <tbody>
-    <tr>
-      <td>Access List Items</td>
-      <td>thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"] <br> print(thislist[1])</td>
-      <td>banana</td>
-    </tr>
-    <tr>
-      <td>Negative Indexing</td>
-      <td>thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"] <br> print(thislist[-1])</td>
-      <td>mango</td>
-    </tr>
-    <tr>
-      <td rowspan="5"> <b>Range of Indexes</b> </td>
-      <td>thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>print(thislist[:])</td>
-      <td>["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]</td>
-    </tr>
-    <tr>
-      <td>print(thislist[2:5]) //Range of Indexes (2 sa 5 tak)</td>
-      <td>['cherry', 'orange', 'kiwi']</td>
-    </tr>
-    <tr>
-      <td>print(thislist[:4]) //Range of Indexes (4 tak)</td>
-      <td>['apple', 'banana', 'cherry', 'orange']</td>
-    </tr>
-    <tr>
-      <td>print(thislist[2:]) //2 to the end.</td>
-      <td>['cherry', 'orange', 'kiwi', 'melon', 'mango']</td>
-    </tr>
-    <tr>
-      <td>print(thislist[-4:-1]) //-1 sa -4 tak</td>
-      <td>['orange', 'kiwi', 'melon']</td>
-    </tr>
-  </tbody>
-</table>
-
+```python
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(thislist[1])          #Output:- banana
+print(thislist[-1])         #Output:- mango
+print(thislist[:])          #Output:- ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(thislist[2:5])        #Output:- ['cherry', 'orange', 'kiwi']
+print(thislist[:4])         #Output:- ['apple', 'banana', 'cherry', 'orange']
+print(thislist[2:])         #Output:- ['cherry', 'orange', 'kiwi', 'melon', 'mango']
+print(thislist[-4:-1])      #Output:- ['orange', 'kiwi', 'melon']
+print(thislist[-4:-1])      #Output:- ['orange', 'kiwi', 'melon']
+print(thislist[:-1])        #Output:- ['apple', 'banana', 'cherry', 'orange', 'kiwi', 'melon']
+```
 
 ```python
 list = [9,3,6,4,7,3,1,4]
@@ -959,7 +919,7 @@ Output:- Yes, 'apple' is in the fruits list
 ```
  
 **[⬆ Back to Top](#table-of-contents)**
-##### Change List Items
+##### Change or Update List Items
 ```python
 # Change Item Value:- To change the value of a specific item, refer to the index number.
 thislist = ["apple", "banana", "cherry"]
@@ -982,23 +942,26 @@ Output:- ['apple', 'blackcurrant', 'watermelon', 'orange', 'kiwi', 'mango']
 
 **[⬆ Back to Top](#table-of-contents)**
 ##### Add List Items
+
+* Append Items:- add an item to the end of the list, use the <b>append()</b> method.
 ```python
-# Append Items:- add an item to the end of the list, use the append() method.
 thislist = ["apple", "banana", "cherry"]
 thislist.append("orange")
 print(thislist)
 
 Output:- ['apple', 'banana', 'cherry', 'orange']
------------------------------------------------------------------------------
-# List Insert Items:- The insert() method inserts an item at the specified index.
+```
+* List Insert Items:- The <b>insert()</b> method inserts an item at the specified index.
+```python
 thislist = ["apple", "banana", "cherry"]
 thislist.insert(1, "orange")
 print(thislist)
 
 Output:- ['apple', 'orange', 'banana', 'cherry']
------------------------------------------------------------------------------ 
- 
-# Extend List:- To append elements from another list to the current list, use the extend() method.
+```
+
+* Extend List:- To append elements from another list to the current list, use the <b>extend()</b> method.
+```python
 thislist = ["apple", "banana", "cherry"]
 tropical = ["mango", "pineapple", "papaya"]
 
@@ -1007,9 +970,10 @@ thislist.extend(tropical)
 print(thislist)
 
 Output:- ['apple', 'banana', 'cherry', 'mango', 'pineapple', 'papaya']
------------------------------------------------------------------------------
+```
 
-# Add Any Iterable:- The extend() method does not have to append lists, you can add any iterable object (tuples, sets, dictionaries etc.).
+* <b>Add Any Iterable</b>:- The extend() method does not have to append lists, you can add any iterable object (tuples, sets, dictionaries etc.).
+```python
 thislist = ["apple", "banana", "cherry"]
 thistuple = ("kiwi", "orange")
 
@@ -1019,6 +983,7 @@ print(thislist)
 
 Output:- ['apple', 'banana', 'cherry', 'kiwi', 'orange']
 ```
+
 
 **[⬆ Back to Top](#table-of-contents)**
 ##### Remove List Items
@@ -1030,6 +995,7 @@ print(thislist)
 
 Output:- ['apple', 'cherry']
 ```
+
 * Remove Specified Index:- The <b>pop()</b> method removes the specified index.
 * if you do not specify the index, the <b>pop()</b> method removes the last item.
 ```python
@@ -1106,9 +1072,9 @@ while i < len(thislist):
   i = i + 1
 
 Output:-
- apple
- banana
- cherry
+apple
+banana
+cherry
 -------------------------------------------------------------------------------------
 
 # Looping Using List Comprehension
@@ -1462,6 +1428,17 @@ print(list[::-2])   # Output:- [4, 3, 4, 3]
 print(list[::-1])   # Output:- [4, 1, 3, 7, 4, 6, 3, 9]  #reverse the List using slice
 ```
 
+### Ques. Write a program to print a list in reverse order using slice method?
+```python
+def revlist(list):
+    return list[::-1];
+    
+list = [24,55,78,64,25,12,22,11,1,2,44]
+print(revlist(list))
+
+Output:- [44, 2, 1, 11, 22, 12, 25, 64, 78, 55, 24]
+```
+
 ### Check if a list contains an element?
 ```python
 li = [1,2,3,'a','b','c']
@@ -1664,6 +1641,33 @@ print(list(zip(name,animal)))
 Output:- [('Snowball', 'Cat'), ('Chewy', 'Dog'), ('Bubbles', 'Fish'), ('Gruff', 'Goat')]
 ```
 
+### Ques. List Sorting in descending order?
+```python
+list = [24,55,78,64,25,12,22,11,1,2,44]
+list.sort(reverse = True)
+print(list)
+
+# 2nd Option Using For Loop
+# list = [24,55,78,64,25,12,22,11,1,2,44]
+list = []
+intlistTot = int(input("Total Number of List Items to Sort = "))
+for i in range(1, intlistTot + 1):
+    intlistvalue = int(input("Please enter the %d List Item = "  %i))
+    list.append(intlistvalue)
+    
+for i in range(len(list)):
+    for j in range(i + 1, len(list)):
+        if(list[i] < list[j]):
+            temp = list[i]
+            list[i] = list[j]
+            list[j] = temp
+    
+print(list)
+
+Output:- [78, 64, 55, 44, 25, 24, 22, 12, 11, 2, 1]
+```
+
+
 
 **[⬆ Back to Top](#table-of-contents)**
 ### Ques. What is Tuples?
@@ -1672,17 +1676,15 @@ Output:- [('Snowball', 'Cat'), ('Chewy', 'Dog'), ('Bubbles', 'Fish'), ('Gruff', 
 * Tuples are written with round brackets.
 * Tuple items are ordered, unchangeable, and allow duplicate values.
 * A tuple can contain different data types.
+  
 ```python
-thistuple = ("apple", "banana", "cherry")
-tuple1 = ("abc", 34, True, 40, "male")
-print(thistuple)
-
-Output:- ('apple', 'banana', 'cherry')
+thistuple = ("apple", "banana", "cherry","apple") #Output:- ('apple', 'banana', 'cherry','apple')
+tuple1 = ("abc", 34, True, 40, "male")            #Output:- ('abc', 34, True, 40, 'male')
 ```
 
 **[⬆ Back to Top](#table-of-contents)**
 ##### Tuple Length
-To determine how many items a tuple has, use the len() function
+* To determine how many items a tuple has, use the len() function
 ```python
 thistuple = tuple(("apple", "banana", "cherry"))
 print(len(thistuple))
@@ -1692,7 +1694,7 @@ Output:- 3
 
 **[⬆ Back to Top](#table-of-contents)**
 ##### Create Tuple With One Item
-To create a tuple with only one item, you have to add a comma after the item, otherwise Python will not recognize it as a tuple.
+* To create a tuple with only one item, you have to add a comma after the item, otherwise Python will not recognize it as a tuple.
 ```python
 thistuple = ("apple",)
 print(type(thistuple))
@@ -1721,14 +1723,14 @@ Output:- ('apple', 'banana', 'cherry')
 thistuple = ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
 
 # Access Tuple Items 
-print(thistuple[1])   # banana
-print(thistuple[2:])  # ('cherry', 'orange', 'kiwi', 'melon', 'mango')
-print(thistuple[:4])  # ('apple', 'banana', 'cherry', 'orange')
-print(thistuple[2:5]) # ('cherry', 'orange', 'kiwi')
-
+print(thistuple[1])   #Output:- banana
+print(thistuple[2:])  #Output:- ('cherry', 'orange', 'kiwi', 'melon', 'mango')
+print(thistuple[:4])  #Output:- ('apple', 'banana', 'cherry', 'orange')
+print(thistuple[2:5]) #Output:- ('cherry', 'orange', 'kiwi')
 # Negative Indexing
-print(thistuple[-1])    # mango
-print(thistuple[-4:-1]) # ('orange', 'kiwi', 'melon')
+print(thistuple[-1])    #Output:- mango
+print(thistuple[-4:-1]) #Output:- ('orange', 'kiwi', 'melon')
+print(thistuple[:-4])   #output:- ('apple', 'banana', 'cherry'))
 
 ------------------------------------------------------
 
@@ -1753,6 +1755,16 @@ x = tuple(y)
 print(x)
 
 Output:- ("apple", "kiwi", "cherry")
+
+# 2 Example
+thistuple = ("apple", "banana", "cherry", "orange", "kiwi", "mango")
+y = list(thistuple)
+y[1:3] = ["blackcurrant", "watermelon"]
+thistuple = tuple(y)
+
+print(thistuple)
+
+Output:- ('apple', 'blackcurrant', 'watermelon', 'orange', 'kiwi', 'mango'))
 ----------------------------------------------------------------
 
 # Add Items
@@ -1764,9 +1776,20 @@ thistuple = tuple(y)
 print(thistuple)
 
 output:- ('apple', 'banana', 'cherry', 'orange')
----------------------------------------------------------------------
 
-# Remove Items
+# Using insert method 
+thistuple = ("apple", "banana", "cherry")
+y = list(thistuple)
+y.insert(0,"orange")
+thistuple = tuple(y)
+
+print(thistuple)
+
+Output:- ('orange', 'apple', 'banana', 'cherry')
+---------------------------------------------------------------------
+```
+* Remove Items of the Tuple using <b>remove</b> method
+```python
 thistuple = ("apple", "banana", "cherry")
 y = list(thistuple)
 y.remove("apple")
@@ -1775,7 +1798,9 @@ thistuple = tuple(y)
 print(thistuple)
 
 Output:- ('banana', 'cherry')
-
+```
+* Remove Items of the Tuple using <b>del</b> method
+```python
 # Example2:-
 thistuple = ("apple", "banana", "cherry")
 del thistuple
@@ -2512,16 +2537,6 @@ Output:- {'microsoft', 'banana', 'cherry', 'google', 'apple'}
 * Dictionaries are changeable, meaning that we can change, add or remove items after the dictionary has been created.
 
 Example:-
-```python
-thisdict =	{
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
-}
-print(thisdict)
-Output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
-```
-
 **[⬆ Back to Top](#table-of-contents)**
 * <b>Duplicates Not Allowed</b>
 ```python
@@ -2549,7 +2564,7 @@ Output:- 3
 ```
 
 **[⬆ Back to Top](#table-of-contents)**
-* __Dictionary Items - Data Types:__ The values in dictionary items can be of any data type.
+* __Dictionary Items Data Types:__ The values in dictionary items can be of any data type.
 ```python
 thisdict = {
   "brand": "Ford",
@@ -2642,6 +2657,7 @@ print(x)
 
 Output:- dict_items([('brand', 'Ford'), ('model', 'Mustang'), ('year', 1964)])
 ```
+
 * Check if Key Exists
 ```python
 thisdict = {
@@ -2656,7 +2672,7 @@ Output:- Yes, 'model' is one of the keys in the thisdict dictionary
 ```
 
 **[⬆ Back to Top](#table-of-contents)**
-##### Change Dictionary Items
+##### Change Or Update Dictionary Items
 ```python
 # Change Values:- We can change the value of a specific item by referring to its key name.
 thisdict =	{
@@ -2665,14 +2681,11 @@ thisdict =	{
   "year": 1964
 }
 
-thisdict["year"] = 2018
-
-print(thisdict)
-
-Output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 2018}
----------------------------------------------------------------------------------
-
-# Update Dictionary:- The update() method will update the dictionary with the items from the given argument.
+thisdict["year"] = 2018   # We can change the value of a specific item by referring to its key name.
+print(thisdict)           # {'brand': 'Ford', 'model': 'Mustang', 'year': 2018}
+```
+* Update Dictionary:- The <b>update()</b> method will update the dictionary with the items from the given argument.
+```python
 thisdict = {
   "brand": "Ford",
   "model": "Mustang",
@@ -2714,9 +2727,9 @@ Output:- {'brand': 'Ford', 'model': 'Mustang', 'year': 1964, 'color': 'red'}
 
 **[⬆ Back to Top](#table-of-contents)**
 ##### Remove Dictionary Items
+*  Removing item using pop() methods.
+* The pop() method removes the item with the specified key name:
 ```python
-# Removing item using pop() methods.
-# The pop() method removes the item with the specified key name:
 thisdict =	{
   "brand": "Ford",
   "model": "Mustang",
@@ -2726,11 +2739,10 @@ thisdict.pop("model")
 print(thisdict)
 
 Output:- {'brand': 'Ford', 'year': 1964}
-
-----------------------------------------------------------------------------------
-
-# Removing item using del methods
-# keyword removes the item with the specified key name.
+```
+* Removing item using del methods
+* keyword removes the item with the specified key name.
+```python
 thisdict =	{
 "brand": "Ford",
 "model": "Mustang",
@@ -2741,6 +2753,17 @@ print(thisdict)
 
 Output:-  {'brand': 'Ford', 'year': 1964}
 --------------------------------------------------------------------------------
+# The Removing item using del methods keyword can also delete the dictionary completely.
+thisdict =	{
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
+del thisdict
+print(thisdict)
+
+Output:-  this will cause an error because "thisdict" no longer exists.
+----------------------------------------------------------------------------------
 
 # Removing item using popitem() methods
 # method removes the last inserted item (in versions before 3.7, a random item is removed instead).
@@ -2755,19 +2778,6 @@ print(thisdict)
 Output:-  {'brand': 'Ford', 'model': 'Mustang'}
 
 ---------------------------------------------------------------------------------
-
-# The Removing item using del methods keyword can also delete the dictionary completely.
-thisdict =	{
-"brand": "Ford",
-"model": "Mustang",
-"year": 1964
-}
-del thisdict
-print(thisdict)
-
-Output:-  this will cause an error because "thisdict" no longer exists.
-----------------------------------------------------------------------------------
-
 # The Removing item using clear() methods method empties the dictionary.
 thisdict =	{
 "brand": "Ford",
@@ -2820,7 +2830,6 @@ Output:-
 [1, 2, 3, 4, 5, 6]
 [11, 12, 13, 14, 15, 16]
 [(1, 12), (2, 11), (3, 14), (4, 16), (5, 13), (6, 15)]
-
 
 
 # Print all key names in the dictionary, one by one:
@@ -3306,8 +3315,8 @@ Output:- {'Geeks': 100, 'geek': 200, 'for': 325}
 ```python
 dictlang = {'c#': 6, 'GO': 89, 'python': 4,'Rust':10,'Apple':51,'apple':21}
  
-for _ in sorted(dictlang):
-    print (dictlang[_])	
+for i in sorted(dictlang):
+    print (dictlang[i])	
 
 Output:- 
 51
@@ -3317,6 +3326,26 @@ Output:-
 6
 4
 ```
+
+### Sort in dictionary with key, Value and Items.
+```python
+dict = {6:'George' ,2:'John' ,1:'Potter' ,9:'Micheal' ,7:'Robert' ,8:'Gayle' }  
+ 
+b = sorted(dict.keys())
+print("Sorted keys",b)  
+
+d = sorted(dict.values())
+print("Sorted Values",d) 
+
+c = sorted(dict.items())
+print("Sorted Values",c) 
+
+Output:-
+Sorted keys [1, 2, 6, 7, 8, 9]
+Sorted Values ['Gayle', 'George', 'John', 'Micheal', 'Potter', 'Robert']
+Sorted Values [(1, 'Potter'), (2, 'John'), (6, 'George'), (7, 'Robert'), (8, 'Gayle'), (9, 'Micheal')]
+```
+
 
 ### Ques. What is If Else?
 * Equals: a == b
@@ -3413,7 +3442,7 @@ Output:-
 ### Ques. What is Lambda/Anonymous Function?
 * A lambda function is a small anonymous function.
 * In Python, an anonymous function is a function that is defined without a name.
-* While normal functions are defined using the __def__ keyword in Python, anonymous functions are defined using the __lambda__ keyword.
+* While normal functions are defined using the <b>def</b> keyword in Python, anonymous functions are defined using the <b>lambda</b> keyword.
 ```python
 def add(a,b):
 print(a+b)
@@ -3916,28 +3945,6 @@ Output:-
 * <b>__repr__</b> method returns a string representation of an object that is machine-readable.
 	
 
-### Ques. What are the common built-in data types in Python?
-Python has the following data types built-in by default, in these categories:
-* Numeric
-   * Integers :- int stores integers eg a=100, b=25, c=526, etc.
-   * Float :- float stores floating-point numbers eg a=25.6, b=45.90, c=1.290, etc.
-   * Complex Numbers:- complex stores numbers eg a=3 + 4j, b=2 + 3j, c=complex(4,6), etc.
-   * long:- long stores higher range of integers eg a=908090999L, b=-0x1990999L, etc.
-
-* Sequence Type
-   * String
-   * List
-   * Tuple
-   * range
-
-* Boolean:- There can be only two types of value in the Boolean data type of Python, and that is True or False. 
-* Set
-* Dictionary
-* long:- long stores higher range of integers eg a=908090999L, b=-0x1990999L, etc.
-
-* Mapping Types:
-  * dict:- Stores comma-separated list of key: value pairs.
-
 
 
 
@@ -4215,24 +4222,7 @@ cherry
 | Every iterator is not a generator                                                                   | Every generator is an iterator                                                                                                                  |
 
 
-### Sort in dictionary with key, Value and Items.
-```python
-dict = {6:'George' ,2:'John' ,1:'Potter' ,9:'Micheal' ,7:'Robert' ,8:'Gayle' }  
- 
-b = sorted(dict.keys())
-print("Sorted keys",b)  
 
-d = sorted(dict.values())
-print("Sorted Values",d) 
-
-c = sorted(dict.items())
-print("Sorted Values",c) 
-
-Output:-
-Sorted keys [1, 2, 6, 7, 8, 9]
-Sorted Values ['Gayle', 'George', 'John', 'Micheal', 'Potter', 'Robert']
-Sorted Values [(1, 'Potter'), (2, 'John'), (6, 'George'), (7, 'Robert'), (8, 'Gayle'), (9, 'Micheal')]
-```
 
 ### Ques. Types Of Methods In Python?
 There are three types of methods in Python.
@@ -4337,7 +4327,7 @@ This is a static method
 
 
 
-### Ques. What is Magic Methodor Or Dunder Methods?
+### Ques. What is Magic Method Or Dunder Methods?
 * Magic methods in Python are the special methods that start and end with the double underscores. They are also called dunder methods.
 * Built-in classes in Python define many magic methods.
 * The dir() function can be used to see the number of magic methods inherited by a class.
@@ -4350,7 +4340,7 @@ class emp():
         self.name = name
         self.salery = salery
         
-    def __len__(self):                # Magic method
+    def __len__(self):             # Magic method
         return len(self.name)
         
 obj = emp('mohit', 422573)
@@ -4359,15 +4349,31 @@ print(len(obj))
 Output:- 5
 ```
 
+### Ques. What is Monkey Patching?
+* The term monkey patching refers to dynamic(or run time) modifictaion of class or method.
+* A class or method can be changed at the runtime.
+```python
+class A:  
+   def hello(self):  
+      print ("The hello() function is being called") 
+      
+def monkey_f():
+    print ("monkey_f() is being called")
 
+#normal class method call   
+obj = A()
+obj.hello()
+
+#calling class method after monkey patch
+obj.hello = monkey_f
+obj.hello()
+```
 
 f. What is repr()?
 g. WAP to count from a string?
 i. List of zeros python without function or any method.
 l. Count occurrence of each number in list.
 o. List_ = ['a', 'aa', 'aaa', 'ababa']. sort the list on the basis of length. 
-q. Prime numbers program.
-r. Print this Pattern (* * * ***)
 s. Write a custom insert() function for list eg. def custom_insert (list, index, item).
 x. What is reduce and filter? Examples
 y. What is common between dictionary and set?
@@ -4378,7 +4384,6 @@ ee. What is property decorator?
 gg. Iterators and iterable difference.
 hh. Difference between generator and iterator in python.
 ii. What is lazy evaluation in python?
-jj. What is Monkey Patching in python?
 1. File Handling
 a. What is pickling? Format of object stored in file?
 b. Static file contains which type of file normally?
@@ -4435,28 +4440,6 @@ Built-in Scope
 Global Keyword
 
 
-
-
-
-Check Prime Number
-num = 19
-
-Using Flag:- 
-
-flag = False
-# int(num/2)+1
-if num >1 :
-    for i in range(2, num):
-        if(num%i) == 0:
-            flag = True
-            break
-if flag:
-    print(num, "is not a prime number")
-else:
-    print(num, "is a prime number")
-	
-	
-OutPut:- 3 is a prime number
 
 
 
@@ -4572,33 +4555,7 @@ Enter the string: Hello My name is Mohit Saxena
 
 ```
 
-### Prime Number Print
 ```python
-lower_value = int(input ("Please, Enter the Lowest Range Value: "))  
-upper_value = int(input ("Please, Enter the Upper Range Value: "))  
-print ("The Prime Numbers in the range are: ")
-for i in range (lower_value, upper_value + 1):  
-    if i > 1:  
-        for j in range (2, i):
-            if (i % j) == 0:  
-                break  
-        else:  
-            print (i)  
-			
-Output:-
-Please, Enter the Lowest Range Value: 1
-Please, Enter the Upper Range Value: 20
-The Prime Numbers in the range are: 
-2
-3
-5
-7
-11
-13
-17
-19
-```
-
 
 a = "mohit kumar"
 new_list = [1,2,3,4,3,2,1,5,6,7]
